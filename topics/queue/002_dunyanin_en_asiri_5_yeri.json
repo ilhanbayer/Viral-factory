@@ -1,0 +1,198 @@
+{
+ "id": "002_dunyanin_en_asiri_5_yeri",
+ "category": "doğa",
+ "format": "countdown",
+ "series_title": "DÜNYANIN EN AŞIRI 5 YERİ",
+ "intro": {
+  "lines": [
+   "DÜNYANIN EN",
+   "AŞIRI",
+   "5 YERİ"
+  ],
+  "narration": "Burada termometre eksi 89 dereceyi gördü. İşte dünyanın en aşırı 5 yeri!",
+  "scene": {
+   "type": "terrain",
+   "preset": "dunes",
+   "mood": "night",
+   "palette": "ice",
+   "seed": 41,
+   "particles": "snow",
+   "orbit": 1.2
+  }
+ },
+ "items": [
+  {
+   "rank": 5,
+   "name": "Atacama",
+   "place": "Şili",
+   "stats": [
+    [
+     "◆",
+     "En kurak çöl",
+     null
+    ],
+    [
+     "☀",
+     "Yıllarca yağmursuz",
+     null
+    ]
+   ],
+   "danger": 0.4,
+   "narration": "Beşinci, Atacama Çölü. Bazı bölgelerinde yıllarca tek damla yağmur düşmez.",
+   "scene": {
+    "type": "terrain",
+    "preset": "canyon",
+    "mood": "desert",
+    "palette": "canyon",
+    "seed": 52,
+    "particles": "dust",
+    "height_scale": 140
+   }
+  },
+  {
+   "rank": 4,
+   "name": "Ölüm Vadisi",
+   "place": "ABD · Kaliforniya",
+   "stats": [
+    [
+     "▲",
+     "56,7°C",
+     null
+    ],
+    [
+     "★",
+     "Dünya rekoru",
+     null
+    ]
+   ],
+   "danger": 0.6,
+   "narration": "Dördüncü, Ölüm Vadisi. 1913'te 56,7 derece ile sıcaklık rekoru kırıldı.",
+   "scene": {
+    "type": "terrain",
+    "preset": "dunes",
+    "mood": "golden",
+    "palette": "sand",
+    "seed": 63,
+    "particles": "dust",
+    "height_scale": 120
+   }
+  },
+  {
+   "rank": 3,
+   "name": "Dallol",
+   "place": "Etiyopya · Danakil",
+   "stats": [
+    [
+     "▲",
+     "~34°C ortalama",
+     null
+    ],
+    [
+     "⚠",
+     "Asit gölleri",
+     null
+    ]
+   ],
+   "danger": 0.75,
+   "narration": "Üçüncü, Dallol. İnsanların yaşadığı en sıcak yer; gölleri asitle kaynar.",
+   "scene": {
+    "type": "terrain",
+    "preset": "volcano",
+    "mood": "blood",
+    "palette": "volcano",
+    "seed": 74,
+    "particles": "ash",
+    "lava": true
+   }
+  },
+  {
+   "rank": 2,
+   "name": "Mariana Çukuru",
+   "place": "Pasifik Okyanusu",
+   "stats": [
+    [
+     "▼",
+     "~10.900 m",
+     null
+    ],
+    [
+     "⚠",
+     "1000+ atmosfer",
+     null
+    ]
+   ],
+   "danger": 0.9,
+   "narration": "İkinci, Mariana Çukuru. Yaklaşık 11 kilometre derinde basınç 1000 atmosferi aşar.",
+   "scene": {
+    "type": "terrain",
+    "preset": "ocean",
+    "mood": "night",
+    "palette": "ocean",
+    "seed": 85,
+    "particles": "spray",
+    "waves": true,
+    "height_scale": 30,
+    "cam_height": 3.0
+   }
+  },
+  {
+   "rank": 1,
+   "name": "Vostok",
+   "place": "Antarktika",
+   "stats": [
+    [
+     "❄",
+     "-89,2°C",
+     null
+    ],
+    [
+     "★",
+     "En soğuk ölçüm",
+     null
+    ]
+   ],
+   "danger": 1.0,
+   "narration": "Ve birinci: Vostok İstasyonu. 1983'te eksi 89,2 derece ölçüldü!",
+   "scene": {
+    "type": "terrain",
+    "preset": "dome",
+    "mood": "arctic",
+    "palette": "ice",
+    "seed": 96,
+    "particles": "snow",
+    "snowline": 0.1
+   }
+  }
+ ],
+ "outro": {
+  "lines": [
+   "BİR GÜN",
+   "HANGİSİNE",
+   "DAYANIRDIN?"
+  ],
+  "narration": "Sen hangisinde bir gün dayanırdın? Yorumlara yaz, takip et!",
+  "scene": {
+   "type": "space",
+   "seed": 7,
+   "planet": [
+    0.3,
+    0.5,
+    0.9
+   ],
+   "rings": true
+  }
+ },
+ "publish": {
+  "title": "Dünyanın En Aşırı 5 Yeri 🌋❄️ #shorts",
+  "description": "Eksi 89 dereceden 56,7 dereceye: gezegenimizin en uç noktaları.",
+  "hashtags": [
+   "#shorts",
+   "#reels",
+   "#tiktok",
+   "#bilgi",
+   "#keşfet",
+   "#doğa",
+   "#ilginçbilgiler"
+  ]
+ }
+}

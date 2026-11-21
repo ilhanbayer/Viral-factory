@@ -1,0 +1,344 @@
+{
+ "id": "001_en_tehlikeli_10_dag",
+ "category": "dağ",
+ "format": "countdown",
+ "series_title": "DÜNYANIN EN TEHLİKELİ 10 DAĞI",
+ "intro": {
+  "lines": [
+   "DÜNYANIN EN",
+   "TEHLİKELİ",
+   "10 DAĞI"
+  ],
+  "narration": "Bir dağda her üç zirveye bir ölüm düştü. İşte dünyanın en tehlikeli 10 dağı!",
+  "scene": {
+   "type": "terrain",
+   "preset": "horn",
+   "mood": "night",
+   "palette": "rock",
+   "seed": 101,
+   "orbit": 1.4,
+   "radius": 230,
+   "particles": "snow"
+  }
+ },
+ "items": [
+  {
+   "rank": 10,
+   "name": "Denali",
+   "place": "ABD · Alaska",
+   "stats": [
+    [
+     "▲",
+     "6.190 m",
+     6190
+    ],
+    [
+     "❄",
+     "-40°C",
+     null
+    ]
+   ],
+   "danger": 0.45,
+   "narration": "Onuncu, Denali. Zirvede sıcaklık eksi 40 dereceye kadar düşebilir.",
+   "scene": {
+    "type": "terrain",
+    "preset": "dome",
+    "mood": "arctic",
+    "palette": "rock",
+    "seed": 210,
+    "particles": "snow",
+    "snowline": 0.3
+   }
+  },
+  {
+   "rank": 9,
+   "name": "Mont Blanc",
+   "place": "Fransa · İtalya",
+   "stats": [
+    [
+     "▲",
+     "4.808 m",
+     4808
+    ],
+    [
+     "☠",
+     "Ölüm Koridoru",
+     null
+    ]
+   ],
+   "danger": 0.5,
+   "narration": "Dokuzuncu, Mont Blanc. Ölüm Koridoru'nda kayalar yağmur gibi düşer.",
+   "scene": {
+    "type": "terrain",
+    "preset": "dome",
+    "mood": "alpine",
+    "palette": "rock",
+    "seed": 377,
+    "particles": "",
+    "snowline": 0.4
+   }
+  },
+  {
+   "rank": 8,
+   "name": "Everest",
+   "place": "Nepal · Çin",
+   "stats": [
+    [
+     "▲",
+     "8.849 m",
+     8849
+    ],
+    [
+     "☠",
+     "340+ ölüm",
+     null
+    ]
+   ],
+   "danger": 0.55,
+   "narration": "Sekizinci, Everest. Zirve yolunda 340'tan fazla kişi öldü.",
+   "scene": {
+    "type": "terrain",
+    "preset": "everest",
+    "mood": "golden",
+    "palette": "rock",
+    "seed": 488,
+    "particles": "snow",
+    "snowline": 0.5
+   }
+  },
+  {
+   "rank": 7,
+   "name": "Matterhorn",
+   "place": "İsviçre · İtalya",
+   "stats": [
+    [
+     "▲",
+     "4.478 m",
+     4478
+    ],
+    [
+     "☠",
+     "~500 ölüm",
+     null
+    ]
+   ],
+   "danger": 0.6,
+   "narration": "Yedinci, Matterhorn. 1865'ten beri yaklaşık 500 can aldı.",
+   "scene": {
+    "type": "terrain",
+    "preset": "horn",
+    "mood": "dusk",
+    "palette": "rock",
+    "seed": 712,
+    "particles": "",
+    "snowline": 0.55,
+    "radius": 165
+   }
+  },
+  {
+   "rank": 6,
+   "name": "Eiger",
+   "place": "İsviçre",
+   "stats": [
+    [
+     "▲",
+     "3.967 m",
+     3967
+    ],
+    [
+     "☠",
+     "60+ ölüm",
+     null
+    ]
+   ],
+   "danger": 0.65,
+   "narration": "Altıncı, Eiger. Kuzey yüzünün adı Mordwand: Cinayet Duvarı.",
+   "scene": {
+    "type": "terrain",
+    "preset": "wall",
+    "mood": "storm",
+    "palette": "dark",
+    "seed": 640,
+    "particles": "snow",
+    "snowline": 0.45,
+    "radius": 185
+   }
+  },
+  {
+   "rank": 5,
+   "name": "Kangchenjunga",
+   "place": "Nepal · Hindistan",
+   "stats": [
+    [
+     "▲",
+     "8.586 m",
+     8586
+    ],
+    [
+     "⚠",
+     "Çığ riski",
+     null
+    ]
+   ],
+   "danger": 0.72,
+   "narration": "Beşinci, Kangchenjunga. Yamaçları sürekli çığlarla sarsılır.",
+   "scene": {
+    "type": "terrain",
+    "preset": "massif",
+    "mood": "night",
+    "palette": "rock",
+    "seed": 951,
+    "particles": "snow",
+    "snowline": 0.4
+   }
+  },
+  {
+   "rank": 4,
+   "name": "Dhaulagiri",
+   "place": "Nepal",
+   "stats": [
+    [
+     "▲",
+     "8.167 m",
+     8167
+    ],
+    [
+     "☠",
+     "%13 ölüm",
+     null
+    ]
+   ],
+   "danger": 0.78,
+   "narration": "Dördüncü, Dhaulagiri. Her 100 tırmanışa yaklaşık 13 ölüm düştü.",
+   "scene": {
+    "type": "terrain",
+    "preset": "pyramid",
+    "mood": "alpine",
+    "palette": "rock",
+    "seed": 433,
+    "particles": "snow",
+    "snowline": 0.35
+   }
+  },
+  {
+   "rank": 3,
+   "name": "Nanga Parbat",
+   "place": "Pakistan",
+   "stats": [
+    [
+     "▲",
+     "8.126 m",
+     8126
+    ],
+    [
+     "☠",
+     "Katil Dağ",
+     null
+    ]
+   ],
+   "danger": 0.86,
+   "narration": "Üçüncü, Nanga Parbat: Katil Dağ. İlk zirveden önce 31 kişi öldü.",
+   "scene": {
+    "type": "terrain",
+    "preset": "wall",
+    "mood": "blood",
+    "palette": "dark",
+    "seed": 1312,
+    "particles": "snow",
+    "snowline": 0.5,
+    "radius": 185
+   }
+  },
+  {
+   "rank": 2,
+   "name": "K2",
+   "place": "Pakistan · Çin",
+   "stats": [
+    [
+     "▲",
+     "8.611 m",
+     8611
+    ],
+    [
+     "☠",
+     "~%25 ölüm",
+     null
+    ]
+   ],
+   "danger": 0.93,
+   "narration": "İkinci, K2: Vahşi Dağ. Uzun yıllar her dört zirveye bir ölüm düştü.",
+   "scene": {
+    "type": "terrain",
+    "preset": "pyramid",
+    "mood": "storm",
+    "palette": "rock",
+    "seed": 2028,
+    "particles": "snow",
+    "snowline": 0.45
+   }
+  },
+  {
+   "rank": 1,
+   "name": "Annapurna",
+   "place": "Nepal",
+   "stats": [
+    [
+     "▲",
+     "8.091 m",
+     8091
+    ],
+    [
+     "☠",
+     "%30+ ölüm",
+     null
+    ]
+   ],
+   "danger": 1.0,
+   "narration": "Ve birinci: Annapurna. Ölüm oranı bir dönem yüzde 30'u aştı!",
+   "scene": {
+    "type": "terrain",
+    "preset": "massif",
+    "mood": "dusk",
+    "palette": "rock",
+    "seed": 3001,
+    "particles": "snow",
+    "snowline": 0.42,
+    "orbit": 1.2
+   }
+  }
+ ],
+ "outro": {
+  "lines": [
+   "SENCE EN",
+   "KORKUTUCUSU",
+   "HANGİSİ?"
+  ],
+  "narration": "Sence hangisi daha korkunç? Yorumlara yaz, takip et!",
+  "scene": {
+   "type": "terrain",
+   "preset": "massif",
+   "mood": "dusk",
+   "palette": "rock",
+   "seed": 3001,
+   "particles": "snow",
+   "orbit": 0.5,
+   "radius": 300
+  }
+ },
+ "publish": {
+  "title": "Dünyanın En Tehlikeli 10 Dağı 🏔️☠️ #shorts",
+  "description": "Zirveye ulaşan her 3 kişiye karşılık 1 kişinin öldüğü dağ hangisi? Dünyanın en tehlikeli 10 dağı, 60 saniyede. Rakamlar tarihsel tahminlerdir; kaynaklara göre değişebilir.",
+  "hashtags": [
+   "#shorts",
+   "#reels",
+   "#tiktok",
+   "#dağ",
+   "#bilgi",
+   "#keşfet",
+   "#everest",
+   "#k2",
+   "#annapurna",
+   "#ilginçbilgiler"
+  ]
+ }
+}

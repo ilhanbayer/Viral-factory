@@ -1,0 +1,8 @@
+numpy
+scipy
+opencv-python-headless
+Pillow
+gTTS
+google-api-python-client
+google-auth
+edge-tts
