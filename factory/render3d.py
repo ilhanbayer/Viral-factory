@@ -374,8 +374,8 @@ class SpaceScene:
             y = int(sy * H)
             img[y, x] += b * (0.6 + 0.4 * np.sin(t * 2 + sx * 50))
         s = t / T
-        R = H * (0.26 + 0.06 * s)
-        cx, cy = W * 0.5, H * 0.42
+        R = H * (0.2 + 0.04 * s)
+        cx, cy = W * 0.5, H * 0.7
         yy, xx = np.mgrid[0:H, 0:W].astype(np.float32)
         nx = (xx - cx) / R
         ny = (yy - cy) / R
@@ -408,7 +408,7 @@ class SpaceScene:
             front = (ry > 0) | (~m)
             a = ring * front * 0.75
             img = img * (1 - a[..., None]) + np.array([0.85, 0.75, 0.6]) * a[..., None] * 0.9
-        return img, {"peak_xy": (cx, cy - R)}
+        return img, {}
 
     def draw_particles(self, *a, **k):
         pass

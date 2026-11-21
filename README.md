@@ -1,3 +1,17 @@
+<!-- PANEL:START -->
+
+# 🎬 Video Paneli
+
+**1 video** · yeni videolar her gün otomatik eklenir · [tüm sürümler](https://github.com/ilhanbayer/viral-factory/releases)
+
+| Kapak | Video | İndir |
+|:-:|---|:-:|
+| <a href="https://github.com/ilhanbayer/Viral-factory/releases/download/video-1-001_en_tehlikeli_10_dag/001_en_tehlikeli_10_dag.mp4"><img src="https://github.com/ilhanbayer/Viral-factory/releases/download/video-1-001_en_tehlikeli_10_dag/001_en_tehlikeli_10_dag_kapak.jpg" width="120"></a> | **Dünyanın En Tehlikeli 10 Dağı 🏔️☠️**<br>2026-11-21 | [▶️ MP4 (123 MB)](https://github.com/ilhanbayer/Viral-factory/releases/download/video-1-001_en_tehlikeli_10_dag/001_en_tehlikeli_10_dag.mp4)<br>[💬 Altyazı](https://github.com/ilhanbayer/Viral-factory/releases/download/video-1-001_en_tehlikeli_10_dag/001_en_tehlikeli_10_dag.srt)<br>[📝 Metin](https://github.com/ilhanbayer/Viral-factory/releases/tag/video-1-001_en_tehlikeli_10_dag) |
+
+<!-- PANEL:END -->
+
+---
+
 # Viral Video Fabrikası 🎬
 
 Bu sistem Türkçe, yaklaşık 60 saniyelik, 3D animasyonlu, altyazılı ve seslendirmeli dikey videoları (Shorts / Reels / TikTok, 1080×1920, 30 fps) **otomatik ve ücretsiz** olarak üretir.
@@ -7,7 +21,7 @@ Bu sistem Türkçe, yaklaşık 60 saniyelik, 3D animasyonlu, altyazılı ve sesl
 | 3D sahneler | Saf numpy 3D render motoru (`factory/render3d.py`). Prosedürel dağ, volkan, çöl, kanyon, okyanus, gezegen ve şehir sahneleri; yörüngede dönen kamera, sis, bulut, kar, kül, güneş parlaması | 0 ₺ |
 | Motion graphics | 3D çıkıntılı sıra numarası, isim efekti, sayaç, tehlike barı, 3D sahneye iğnelenen zirve işareti, ilerleme çubuğu, geçiş efektleri (zoom-blur, flaş, RGB glitch, sarsıntı), bloom, vinyet, film greni | 0 ₺ |
 | Altyazı | Kelime kelime vurgulanan karaoke stili altyazı; ayrıca `.srt` dosyası | 0 ₺ |
-| Seslendirme | Varsayılan: Microsoft edge-tts sinir ağı sesleri (Ahmet / Emel), kelime zamanlı altyazıyla. Alternatif: Google TTS (gTTS). İkisi de anahtarsız; biri çalışmazsa diğerine geçer | 0 ₺ |
+| Seslendirme | Varsayılan: Microsoft edge-tts sinir ağı sesleri (Ahmet / Emel), cümle bazlı vurgu (sıra duyurusu yüksek tonda, kanca cümlesi gizemli, final coşkulu), trailer tipi ses işleme, kelime zamanlı altyazı. Alternatif: Google TTS (gTTS). İkisi de anahtarsız; biri çalışmazsa diğerine geçer | 0 ₺ |
 | Ses tasarımı | Tamamı koddan sentezleniyor (`factory/audio.py`): rüzgâr atmosferi, sinematik drone/pulse müzik, whoosh, impact, BRAAM, riser, sayaç tıkları, glitch, dramatik sessizlik, seslendirme altında otomatik müzik kısma (ducking), −14 LUFS mastering. Lisans sorunu yok | 0 ₺ |
 | Süreklilik | GitHub Actions her gün kuyruktaki sıradaki konuyu üretir. Kuyruk boşalınca isteğe bağlı olarak Gemini'nin ücretsiz katmanıyla yeni senaryo yazar | 0 ₺ |
 | Yayın | İsteğe bağlı YouTube Shorts otomatik yükleme (YouTube Data API, ücretsiz kota) | 0 ₺ |
@@ -43,7 +57,7 @@ edge-tts her kelimenin söylendiği anı da verdiği için altyazıdaki vurgu se
 2. *Settings → Secrets and variables → Actions* bölümüne istediğin anahtarları ekle (hepsi isteğe bağlı):
    * `GEMINI_API_KEY`: aistudio.google.com adresinden ücretsiz alınır. Kuyruk boşalınca yeni konuları kendisi yazar.
    * `YT_CLIENT_ID`, `YT_CLIENT_SECRET`, `YT_REFRESH_TOKEN`: YouTube'a otomatik yükleme için (aşağıya bak).
-3. `.github/workflows/daily.yml` dosyası her gün 18:47'de (TR saati) çalışır. *Actions → Run workflow* ile elle de başlatabilirsin.
+3. `.github/workflows/daily.yml` her gün 09:17 ve 18:47'de (TR saati) çalışır; kuyruğa yeni konu dosyası eklendiğinde de hemen çalışır. Videolar bu sayfanın en üstündeki panele eklenir. *Actions → Run workflow* ile elle de başlatabilirsin.
 4. Videolar her çalıştırmanın **Artifacts** bölümünden indirilir. Anahtarlar girildiyse YouTube'a da otomatik yüklenir.
 
 ### YouTube yenileme anahtarı (bir kerelik)

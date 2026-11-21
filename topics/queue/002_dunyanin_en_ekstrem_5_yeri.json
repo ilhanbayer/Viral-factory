@@ -1,15 +1,15 @@
 {
- "id": "002_dunyanin_en_asiri_5_yeri",
+ "id": "002_dunyanin_en_ekstrem_5_yeri",
  "category": "doğa",
  "format": "countdown",
- "series_title": "DÜNYANIN EN AŞIRI 5 YERİ",
+ "series_title": "DÜNYANIN EN EKSTREM 5 YERİ",
  "intro": {
   "lines": [
    "DÜNYANIN EN",
-   "AŞIRI",
+   "EKSTREM",
    "5 YERİ"
   ],
-  "narration": "Burada termometre eksi 89 dereceyi gördü. İşte dünyanın en aşırı 5 yeri!",
+  "narration": "Burada termometre eksi 89 dereceyi gördü. İşte dünyanın en ekstrem 5 yeri!",
   "scene": {
    "type": "terrain",
    "preset": "dunes",
@@ -17,7 +17,8 @@
    "palette": "ice",
    "seed": 41,
    "particles": "snow",
-   "orbit": 1.2
+   "orbit": 1.2,
+   "height_scale": 70
   }
  },
  "items": [
@@ -74,7 +75,7 @@
     "palette": "sand",
     "seed": 63,
     "particles": "dust",
-    "height_scale": 120
+    "height_scale": 70
    }
   },
   {
@@ -102,7 +103,8 @@
     "palette": "volcano",
     "seed": 74,
     "particles": "ash",
-    "lava": true
+    "lava": true,
+    "radius": 190
    }
   },
   {
@@ -183,7 +185,7 @@
   }
  },
  "publish": {
-  "title": "Dünyanın En Aşırı 5 Yeri 🌋❄️ #shorts",
+  "title": "Dünyanın En Ekstrem 5 Yeri 🌋❄️ #shorts",
   "description": "Eksi 89 dereceden 56,7 dereceye: gezegenimizin en uç noktaları.",
   "hashtags": [
    "#shorts",
@@ -191,8 +193,10 @@
    "#tiktok",
    "#bilgi",
    "#keşfet",
+   "#ilginçbilgiler",
    "#doğa",
-   "#ilginçbilgiler"
+   "#dünya"
   ]
- }
+ },
+ "meter_label": "ZORLUK"
 }

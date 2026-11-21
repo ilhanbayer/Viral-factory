@@ -240,7 +240,9 @@ class Subtitles:
                 d.rounded_rectangle((x - 14, pad + 4, x + wd + 14, pad + asc + desc - 2), 14, fill=RED + (255,))
                 d.text((x, pad), w, font=f, fill=WHITE + (255,), stroke_width=4, stroke_fill=(120, 0, 0, 255))
             else:
-                d.text((x, pad), w, font=f, fill=WHITE + (255,), stroke_width=8, stroke_fill=(0, 0, 0, 255))
+                hot = any(c.isdigit() for c in w)
+                d.text((x, pad), w, font=f, fill=(YELLOW if hot else WHITE) + (255,), stroke_width=8,
+                       stroke_fill=(0, 0, 0, 255))
             x += wd + space
         arr = np.array(img)
         self.cache[key] = arr

@@ -1,0 +1,205 @@
+{
+ "id": "004_tarihin_en_yikici_5_yanardag_patlamasi",
+ "category": "volkan",
+ "format": "countdown",
+ "series_title": "TARİHİN EN YIKICI 5 YANARDAĞ PATLAMASI",
+ "meter_label": "YIKIM",
+ "intro": {
+  "lines": [
+   "TARİHİN EN",
+   "YIKICI",
+   "5 PATLAMASI"
+  ],
+  "narration": "Bir patlama yüzünden ertesi yıl Avrupa'ya yaz hiç gelmedi. İşte tarihin en yıkıcı 5 yanardağ patlaması!",
+  "scene": {
+   "type": "terrain",
+   "preset": "volcano",
+   "mood": "blood",
+   "palette": "volcano",
+   "seed": 101,
+   "particles": "ash",
+   "lava": true,
+   "radius": 190
+  }
+ },
+ "items": [
+  {
+   "rank": 5,
+   "name": "St. Helens",
+   "place": "ABD · Washington",
+   "stats": [
+    [
+     "◆",
+     "1980",
+     null
+    ],
+    [
+     "☠",
+     "57 ölüm",
+     null
+    ]
+   ],
+   "danger": 0.5,
+   "narration": "Beşinci, St. Helens. 1980'de dağın yamacı çöktü ve patlamada 57 kişi hayatını kaybetti.",
+   "scene": {
+    "type": "terrain",
+    "preset": "volcano",
+    "mood": "dusk",
+    "palette": "volcano",
+    "seed": 111,
+    "particles": "ash",
+    "lava": true,
+    "radius": 190
+   }
+  },
+  {
+   "rank": 4,
+   "name": "Vezüv",
+   "place": "İtalya",
+   "stats": [
+    [
+     "◆",
+     "MS 79",
+     null
+    ],
+    [
+     "⚠",
+     "Pompeii gömüldü",
+     null
+    ]
+   ],
+   "danger": 0.65,
+   "narration": "Dördüncü, Vezüv. Milattan sonra 79'da Pompeii şehrini küllerin altına gömdü.",
+   "scene": {
+    "type": "terrain",
+    "preset": "volcano",
+    "mood": "golden",
+    "palette": "volcano",
+    "seed": 121,
+    "particles": "ash",
+    "lava": true,
+    "radius": 190
+   }
+  },
+  {
+   "rank": 3,
+   "name": "Pinatubo",
+   "place": "Filipinler",
+   "stats": [
+    [
+     "◆",
+     "1991",
+     null
+    ],
+    [
+     "❄",
+     "Dünya serinledi",
+     null
+    ]
+   ],
+   "danger": 0.75,
+   "narration": "Üçüncü, Pinatubo. 1991'de gökyüzüne öyle çok kül saçtı ki bütün dünya serinledi.",
+   "scene": {
+    "type": "terrain",
+    "preset": "volcano",
+    "mood": "storm",
+    "palette": "volcano",
+    "seed": 131,
+    "particles": "ash",
+    "lava": true,
+    "radius": 190
+   }
+  },
+  {
+   "rank": 2,
+   "name": "Krakatoa",
+   "place": "Endonezya",
+   "stats": [
+    [
+     "◆",
+     "1883",
+     null
+    ],
+    [
+     "⚠",
+     "En yüksek ses",
+     null
+    ]
+   ],
+   "danger": 0.88,
+   "narration": "İkinci, Krakatoa. 1883'teki patlaması kayıtlı tarihin en yüksek sesiydi; binlerce kilometreden duyuldu.",
+   "scene": {
+    "type": "terrain",
+    "preset": "volcano",
+    "mood": "night",
+    "palette": "volcano",
+    "seed": 141,
+    "particles": "ash",
+    "lava": true,
+    "radius": 190
+   }
+  },
+  {
+   "rank": 1,
+   "name": "Tambora",
+   "place": "Endonezya",
+   "stats": [
+    [
+     "◆",
+     "1815",
+     null
+    ],
+    [
+     "☠",
+     "60.000+ ölüm",
+     null
+    ]
+   ],
+   "danger": 1.0,
+   "narration": "Ve birinci: Tambora! 1815'te tarihin en güçlü patlaması; ardından gelen kıtlıkla on binlerce kişi öldü.",
+   "scene": {
+    "type": "terrain",
+    "preset": "volcano",
+    "mood": "blood",
+    "palette": "volcano",
+    "seed": 151,
+    "particles": "ash",
+    "lava": true,
+    "radius": 190
+   }
+  }
+ ],
+ "outro": {
+  "lines": [
+   "SENCE EN",
+   "KORKUNCU",
+   "HANGİSİ?"
+  ],
+  "narration": "Sence en korkuncu hangisiydi? Yorumlara yaz, takip et!",
+  "scene": {
+   "type": "terrain",
+   "preset": "volcano",
+   "mood": "night",
+   "palette": "volcano",
+   "seed": 161,
+   "particles": "ash",
+   "lava": true,
+   "radius": 190
+  }
+ },
+ "publish": {
+  "title": "Tarihin En Yıkıcı 5 Yanardağ Patlaması 🌋 #shorts",
+  "description": "Pompeii'den yazsız yıla: tarihi değiştiren patlamalar.",
+  "hashtags": [
+   "#shorts",
+   "#reels",
+   "#tiktok",
+   "#bilgi",
+   "#keşfet",
+   "#ilginçbilgiler",
+   "#volkan",
+   "#tarih",
+   "#doğa"
+  ]
+ }
+}

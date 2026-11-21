@@ -1,0 +1,205 @@
+{
+ "id": "003_gunes_sisteminin_en_tuhaf_5_gezegeni",
+ "category": "uzay",
+ "format": "countdown",
+ "series_title": "GÜNEŞ SİSTEMİNİN EN TUHAF 5 GEZEGENİ",
+ "meter_label": "TUHAFLIK",
+ "intro": {
+  "lines": [
+   "GÜNEŞ SİSTEMİNİN",
+   "EN TUHAF",
+   "5 GEZEGENİ"
+  ],
+  "narration": "Bir gezegende bir gün, bir yıldan daha uzun sürüyor. İşte Güneş Sistemi'nin en tuhaf 5 gezegeni!",
+  "scene": {
+   "type": "space",
+   "seed": 11,
+   "planet": [
+    0.85,
+    0.72,
+    0.5
+   ],
+   "rings": true
+  }
+ },
+ "items": [
+  {
+   "rank": 5,
+   "name": "Merkür",
+   "place": "İç gezegen",
+   "stats": [
+    [
+     "☀",
+     "176 günlük gün",
+     null
+    ],
+    [
+     "◆",
+     "88 günlük yıl",
+     null
+    ]
+   ],
+   "danger": 0.5,
+   "narration": "Beşinci, Merkür. İki gün doğumu arasında 176 Dünya günü geçer; yılı ise sadece 88 gün.",
+   "scene": {
+    "type": "space",
+    "seed": 21,
+    "planet": [
+     0.55,
+     0.52,
+     0.5
+    ],
+    "rings": false
+   }
+  },
+  {
+   "rank": 4,
+   "name": "Neptün",
+   "place": "Buz devi",
+   "stats": [
+    [
+     "⚠",
+     "2.100 km/sa",
+     null
+    ],
+    [
+     "★",
+     "En hızlı rüzgâr",
+     null
+    ]
+   ],
+   "danger": 0.65,
+   "narration": "Dördüncü, Neptün. Rüzgârları saatte 2.100 kilometreye ulaşır; Güneş Sistemi'nin en hızlısı!",
+   "scene": {
+    "type": "space",
+    "seed": 31,
+    "planet": [
+     0.2,
+     0.35,
+     0.95
+    ],
+    "rings": false
+   }
+  },
+  {
+   "rank": 3,
+   "name": "Uranüs",
+   "place": "Buz devi",
+   "stats": [
+    [
+     "◆",
+     "98° eğik",
+     null
+    ],
+    [
+     "★",
+     "Yan yatmış",
+     null
+    ]
+   ],
+   "danger": 0.75,
+   "narration": "Üçüncü, Uranüs. Yaklaşık 98 derece yan yatmış; Güneş'in etrafında yuvarlanır gibi döner.",
+   "scene": {
+    "type": "space",
+    "seed": 41,
+    "planet": [
+     0.5,
+     0.85,
+     0.9
+    ],
+    "rings": true
+   }
+  },
+  {
+   "rank": 2,
+   "name": "Satürn",
+   "place": "Gaz devi",
+   "stats": [
+    [
+     "◆",
+     "0,69 g/cm³",
+     null
+    ],
+    [
+     "★",
+     "Suda yüzer",
+     null
+    ]
+   ],
+   "danger": 0.88,
+   "narration": "İkinci, Satürn. Ortalama yoğunluğu sudan düşük; dev bir küvet olsa suda yüzerdi!",
+   "scene": {
+    "type": "space",
+    "seed": 51,
+    "planet": [
+     0.85,
+     0.75,
+     0.5
+    ],
+    "rings": true
+   }
+  },
+  {
+   "rank": 1,
+   "name": "Venüs",
+   "place": "İç gezegen",
+   "stats": [
+    [
+     "☀",
+     "465°C",
+     null
+    ],
+    [
+     "◆",
+     "Gün > Yıl",
+     null
+    ]
+   ],
+   "danger": 1.0,
+   "narration": "Ve birinci: Venüs! Bir günü bir yılından uzun ve yüzeyi 465 derece; kurşunu bile eritir.",
+   "scene": {
+    "type": "space",
+    "seed": 61,
+    "planet": [
+     0.98,
+     0.9,
+     0.72
+    ],
+    "rings": false
+   }
+  }
+ ],
+ "outro": {
+  "lines": [
+   "SENCE EN",
+   "TUHAFI",
+   "HANGİSİ?"
+  ],
+  "narration": "Sence en tuhafı hangisi? Yorumlara yaz, takip et!",
+  "scene": {
+   "type": "space",
+   "seed": 71,
+   "planet": [
+    0.6,
+    0.4,
+    0.9
+   ],
+   "rings": true
+  }
+ },
+ "publish": {
+  "title": "Güneş Sistemi'nin En Tuhaf 5 Gezegeni 🪐 #shorts",
+  "description": "Bir günü yılından uzun gezegen, suda yüzebilecek dev... Güneş Sistemi'nin en tuhaf gezegenleri.",
+  "hashtags": [
+   "#shorts",
+   "#reels",
+   "#tiktok",
+   "#bilgi",
+   "#keşfet",
+   "#ilginçbilgiler",
+   "#uzay",
+   "#gezegen",
+   "#astronomi"
+  ]
+ }
+}

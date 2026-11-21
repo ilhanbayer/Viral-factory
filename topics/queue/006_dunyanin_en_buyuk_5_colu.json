@@ -1,0 +1,198 @@
+{
+ "id": "006_dunyanin_en_buyuk_5_colu",
+ "category": "çöl",
+ "format": "countdown",
+ "series_title": "DÜNYANIN EN BÜYÜK 5 ÇÖLÜ",
+ "meter_label": "BÜYÜKLÜK",
+ "intro": {
+  "lines": [
+   "DÜNYANIN EN",
+   "BÜYÜK",
+   "5 ÇÖLÜ"
+  ],
+  "narration": "Dünyanın en büyük çölü kumla değil, buzla kaplı. İşte dünyanın en büyük 5 çölü!",
+  "scene": {
+   "type": "terrain",
+   "preset": "dunes",
+   "mood": "arctic",
+   "palette": "ice",
+   "seed": 301,
+   "particles": "snow",
+   "height_scale": 70
+  }
+ },
+ "items": [
+  {
+   "rank": 5,
+   "name": "Gobi",
+   "place": "Moğolistan · Çin",
+   "stats": [
+    [
+     "◆",
+     "1,3 milyon km²",
+     null
+    ],
+    [
+     "❄",
+     "Soğuk çöl",
+     null
+    ]
+   ],
+   "danger": 0.35,
+   "narration": "Beşinci, Gobi. Moğolistan ve Çin'e yayılan, 1,3 milyon kilometrekarelik soğuk bir çöl.",
+   "scene": {
+    "type": "terrain",
+    "preset": "hills",
+    "mood": "golden",
+    "palette": "sand",
+    "seed": 311,
+    "particles": "dust",
+    "height_scale": 110
+   }
+  },
+  {
+   "rank": 4,
+   "name": "Arap Çölü",
+   "place": "Arap Yarımadası",
+   "stats": [
+    [
+     "◆",
+     "2,3 milyon km²",
+     null
+    ],
+    [
+     "☀",
+     "Kum denizi",
+     null
+    ]
+   ],
+   "danger": 0.45,
+   "narration": "Dördüncü, Arap Çölü. Yaklaşık 2,3 milyon kilometrekareyle yarımadanın büyük kısmını kaplar.",
+   "scene": {
+    "type": "terrain",
+    "preset": "dunes",
+    "mood": "golden",
+    "palette": "sand",
+    "seed": 321,
+    "particles": "dust",
+    "height_scale": 70
+   }
+  },
+  {
+   "rank": 3,
+   "name": "Sahra",
+   "place": "Kuzey Afrika",
+   "stats": [
+    [
+     "◆",
+     "9,2 milyon km²",
+     null
+    ],
+    [
+     "☀",
+     "En büyük sıcak çöl",
+     null
+    ]
+   ],
+   "danger": 0.7,
+   "narration": "Üçüncü, Sahra. Dünyanın en büyük sıcak çölü; 9 milyon kilometrekareyi aşar.",
+   "scene": {
+    "type": "terrain",
+    "preset": "dunes",
+    "mood": "desert",
+    "palette": "sand",
+    "seed": 331,
+    "particles": "dust",
+    "height_scale": 70
+   }
+  },
+  {
+   "rank": 2,
+   "name": "Arktik Çölü",
+   "place": "Kuzey Kutbu",
+   "stats": [
+    [
+     "◆",
+     "~13,9 milyon km²",
+     null
+    ],
+    [
+     "❄",
+     "Kutup çölü",
+     null
+    ]
+   ],
+   "danger": 0.92,
+   "narration": "İkinci, Arktik Çölü. Kutup buzları ve tundralarla yaklaşık 14 milyon kilometrekare.",
+   "scene": {
+    "type": "terrain",
+    "preset": "dunes",
+    "mood": "arctic",
+    "palette": "ice",
+    "seed": 341,
+    "particles": "snow",
+    "height_scale": 70
+   }
+  },
+  {
+   "rank": 1,
+   "name": "Antarktika",
+   "place": "Güney Kutbu",
+   "stats": [
+    [
+     "◆",
+     "14,2 milyon km²",
+     null
+    ],
+    [
+     "★",
+     "En büyük çöl",
+     null
+    ]
+   ],
+   "danger": 1.0,
+   "narration": "Ve birinci: Antarktika! 14 milyon kilometrekareyi aşarak dünyanın en büyük çölü.",
+   "scene": {
+    "type": "terrain",
+    "preset": "dome",
+    "mood": "arctic",
+    "palette": "ice",
+    "seed": 351,
+    "particles": "snow",
+    "snowline": 0.1
+   }
+  }
+ ],
+ "outro": {
+  "lines": [
+   "BUNU",
+   "BİLİYOR",
+   "MUYDUN?"
+  ],
+  "narration": "Bunu biliyor muydun? Yorumlara yaz, takip et!",
+  "scene": {
+   "type": "terrain",
+   "preset": "dunes",
+   "mood": "dusk",
+   "palette": "sand",
+   "seed": 361,
+   "particles": "dust",
+   "height_scale": 70
+  }
+ },
+ "publish": {
+  "title": "Dünyanın En Büyük 5 Çölü 🏜️❄️ #shorts",
+  "description": "En büyük çöl Sahra değil! Dünyanın en büyük 5 çölü.",
+  "hashtags": [
+   "#shorts",
+   "#reels",
+   "#tiktok",
+   "#bilgi",
+   "#keşfet",
+   "#ilginçbilgiler",
+   "#çöl",
+   "#sahra",
+   "#antarktika"
+  ]
+ }
+}

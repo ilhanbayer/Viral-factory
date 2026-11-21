@@ -1,0 +1,200 @@
+{
+ "id": "007_dunyanin_en_derin_5_kanyonu",
+ "category": "doğa",
+ "format": "countdown",
+ "series_title": "DÜNYANIN EN DERİN 5 KANYONU",
+ "meter_label": "DERİNLİK",
+ "intro": {
+  "lines": [
+   "DÜNYANIN EN",
+   "DERİN",
+   "5 KANYONU"
+  ],
+  "narration": "Bu kanyon, Büyük Kanyon'dan üç kat daha derin. İşte dünyanın en derin 5 kanyonu!",
+  "scene": {
+   "type": "terrain",
+   "preset": "canyon",
+   "mood": "dusk",
+   "palette": "canyon",
+   "seed": 401,
+   "particles": "dust",
+   "height_scale": 160
+  }
+ },
+ "items": [
+  {
+   "rank": 5,
+   "name": "Büyük Kanyon",
+   "place": "ABD · Arizona",
+   "stats": [
+    [
+     "▼",
+     "~1.800 m",
+     null
+    ],
+    [
+     "◆",
+     "446 km uzunluk",
+     null
+    ]
+   ],
+   "danger": 0.4,
+   "narration": "Beşinci, Büyük Kanyon. Yaklaşık 1,8 kilometre derin ve 446 kilometre uzunluğunda.",
+   "scene": {
+    "type": "terrain",
+    "preset": "canyon",
+    "mood": "golden",
+    "palette": "canyon",
+    "seed": 411,
+    "particles": "dust",
+    "height_scale": 160
+   }
+  },
+  {
+   "rank": 4,
+   "name": "Colca",
+   "place": "Peru",
+   "stats": [
+    [
+     "▼",
+     "~3.270 m",
+     null
+    ],
+    [
+     "★",
+     "Kondorların evi",
+     null
+    ]
+   ],
+   "danger": 0.6,
+   "narration": "Dördüncü, Colca. Büyük Kanyon'un iki katından derin; And kondorlarının evi.",
+   "scene": {
+    "type": "terrain",
+    "preset": "canyon",
+    "mood": "alpine",
+    "palette": "canyon",
+    "seed": 421,
+    "particles": "dust",
+    "height_scale": 160
+   }
+  },
+  {
+   "rank": 3,
+   "name": "Cotahuasi",
+   "place": "Peru",
+   "stats": [
+    [
+     "▼",
+     "~3.535 m",
+     null
+    ],
+    [
+     "◆",
+     "And Dağları",
+     null
+    ]
+   ],
+   "danger": 0.7,
+   "narration": "Üçüncü, Cotahuasi. Yaklaşık 3.500 metreyle Amerika kıtasının en derin kanyonlarından.",
+   "scene": {
+    "type": "terrain",
+    "preset": "canyon",
+    "mood": "desert",
+    "palette": "canyon",
+    "seed": 431,
+    "particles": "dust",
+    "height_scale": 160
+   }
+  },
+  {
+   "rank": 2,
+   "name": "Kali Gandaki",
+   "place": "Nepal",
+   "stats": [
+    [
+     "▼",
+     "5.000+ m",
+     null
+    ],
+    [
+     "★",
+     "İki 8 binlik arasında",
+     null
+    ]
+   ],
+   "danger": 0.88,
+   "narration": "İkinci, Kali Gandaki. Annapurna ile Dhaulagiri arasında; zirvelerden nehre 5 kilometreyi aşar.",
+   "scene": {
+    "type": "terrain",
+    "preset": "canyon",
+    "mood": "arctic",
+    "palette": "rock",
+    "seed": 441,
+    "particles": "snow",
+    "height_scale": 200,
+    "snowline": 0.6
+   }
+  },
+  {
+   "rank": 1,
+   "name": "Yarlung Tsangpo",
+   "place": "Tibet · Çin",
+   "stats": [
+    [
+     "▼",
+     "~6.000 m",
+     null
+    ],
+    [
+     "★",
+     "En derin kanyon",
+     null
+    ]
+   ],
+   "danger": 1.0,
+   "narration": "Ve birinci: Yarlung Tsangpo! Tibet'te, 6 kilometreye varan derinliğiyle dünyanın en derini.",
+   "scene": {
+    "type": "terrain",
+    "preset": "canyon",
+    "mood": "alpine",
+    "palette": "canyon",
+    "seed": 451,
+    "particles": "",
+    "height_scale": 220,
+    "snowline": 0.97
+   }
+  }
+ ],
+ "outro": {
+  "lines": [
+   "HANGİSİNİ",
+   "GÖRMEK",
+   "İSTERDİN?"
+  ],
+  "narration": "Sen hangisini görmek isterdin? Yorumlara yaz, takip et!",
+  "scene": {
+   "type": "terrain",
+   "preset": "canyon",
+   "mood": "dusk",
+   "palette": "canyon",
+   "seed": 461,
+   "particles": "dust",
+   "height_scale": 160
+  }
+ },
+ "publish": {
+  "title": "Dünyanın En Derin 5 Kanyonu 🏞️ #shorts",
+  "description": "Büyük Kanyon'dan 3 kat derin bir kanyon var! Dünyanın en derin 5 kanyonu.",
+  "hashtags": [
+   "#shorts",
+   "#reels",
+   "#tiktok",
+   "#bilgi",
+   "#keşfet",
+   "#ilginçbilgiler",
+   "#kanyon",
+   "#doğa",
+   "#coğrafya"
+  ]
+ }
+}

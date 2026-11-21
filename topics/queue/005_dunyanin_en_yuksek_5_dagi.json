@@ -1,0 +1,201 @@
+{
+ "id": "005_dunyanin_en_yuksek_5_dagi",
+ "category": "dağ",
+ "format": "countdown",
+ "series_title": "DÜNYANIN EN YÜKSEK 5 DAĞI",
+ "meter_label": "YÜKSEKLİK",
+ "intro": {
+  "lines": [
+   "DÜNYANIN EN",
+   "YÜKSEK",
+   "5 DAĞI"
+  ],
+  "narration": "Bu zirvelerde oksijen, deniz seviyesinin üçte biri kadar. İşte dünyanın en yüksek 5 dağı!",
+  "scene": {
+   "type": "terrain",
+   "preset": "everest",
+   "mood": "night",
+   "palette": "rock",
+   "seed": 201,
+   "particles": "snow",
+   "orbit": 1.3
+  }
+ },
+ "items": [
+  {
+   "rank": 5,
+   "name": "Makalu",
+   "place": "Nepal · Çin",
+   "stats": [
+    [
+     "▲",
+     "8.485 m",
+     8485
+    ],
+    [
+     "◆",
+     "Dört yüzlü piramit",
+     null
+    ]
+   ],
+   "danger": 0.6,
+   "narration": "Beşinci, Makalu. 8.485 metre; dört yüzlü piramit şekliyle tanınır.",
+   "scene": {
+    "type": "terrain",
+    "preset": "pyramid",
+    "mood": "golden",
+    "palette": "rock",
+    "seed": 211,
+    "particles": "snow",
+    "snowline": 0.45
+   }
+  },
+  {
+   "rank": 4,
+   "name": "Lhotse",
+   "place": "Nepal · Çin",
+   "stats": [
+    [
+     "▲",
+     "8.516 m",
+     8516
+    ],
+    [
+     "◆",
+     "Everest'in komşusu",
+     null
+    ]
+   ],
+   "danger": 0.7,
+   "narration": "Dördüncü, Lhotse. Everest'in hemen yanında; Güney Kol ile ona bağlanır.",
+   "scene": {
+    "type": "terrain",
+    "preset": "wall",
+    "mood": "arctic",
+    "palette": "rock",
+    "seed": 221,
+    "particles": "snow",
+    "snowline": 0.4,
+    "radius": 200
+   }
+  },
+  {
+   "rank": 3,
+   "name": "Kangchenjunga",
+   "place": "Nepal · Hindistan",
+   "stats": [
+    [
+     "▲",
+     "8.586 m",
+     8586
+    ],
+    [
+     "★",
+     "Karın 5 hazinesi",
+     null
+    ]
+   ],
+   "danger": 0.8,
+   "narration": "Üçüncü, Kangchenjunga. Adı, karın beş hazinesi anlamına gelir.",
+   "scene": {
+    "type": "terrain",
+    "preset": "massif",
+    "mood": "dusk",
+    "palette": "rock",
+    "seed": 231,
+    "particles": "snow",
+    "snowline": 0.42
+   }
+  },
+  {
+   "rank": 2,
+   "name": "K2",
+   "place": "Pakistan · Çin",
+   "stats": [
+    [
+     "▲",
+     "8.611 m",
+     8611
+    ],
+    [
+     "⚠",
+     "Vahşi Dağ",
+     null
+    ]
+   ],
+   "danger": 0.9,
+   "narration": "İkinci, K2. Everest'ten sadece 238 metre kısa ama tırmanması çok daha zor.",
+   "scene": {
+    "type": "terrain",
+    "preset": "pyramid",
+    "mood": "storm",
+    "palette": "rock",
+    "seed": 241,
+    "particles": "snow",
+    "snowline": 0.45
+   }
+  },
+  {
+   "rank": 1,
+   "name": "Everest",
+   "place": "Nepal · Çin",
+   "stats": [
+    [
+     "▲",
+     "8.849 m",
+     8849
+    ],
+    [
+     "★",
+     "Dünyanın tavanı",
+     null
+    ]
+   ],
+   "danger": 1.0,
+   "narration": "Ve birinci: Everest! Deniz seviyesinden tam 8.849 metre; dünyanın tavanı.",
+   "scene": {
+    "type": "terrain",
+    "preset": "everest",
+    "mood": "golden",
+    "palette": "rock",
+    "seed": 251,
+    "particles": "snow",
+    "snowline": 0.45,
+    "orbit": 1.2
+   }
+  }
+ ],
+ "outro": {
+  "lines": [
+   "HANGİSİNE",
+   "TIRMANMAK",
+   "İSTERDİN?"
+  ],
+  "narration": "Sen hangisine tırmanmak isterdin? Yorumlara yaz, takip et!",
+  "scene": {
+   "type": "terrain",
+   "preset": "everest",
+   "mood": "dusk",
+   "palette": "rock",
+   "seed": 261,
+   "particles": "snow",
+   "orbit": 0.5,
+   "radius": 300
+  }
+ },
+ "publish": {
+  "title": "Dünyanın En Yüksek 5 Dağı 🏔️ #shorts",
+  "description": "Everest'ten Makalu'ya: dünyanın tavanındaki 5 dev.",
+  "hashtags": [
+   "#shorts",
+   "#reels",
+   "#tiktok",
+   "#bilgi",
+   "#keşfet",
+   "#ilginçbilgiler",
+   "#dağ",
+   "#everest",
+   "#k2"
+  ]
+ }
+}

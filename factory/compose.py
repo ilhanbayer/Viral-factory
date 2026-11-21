@@ -18,7 +18,7 @@ from .graphics import (text_sprite, extruded_number, pill, blit, Subtitles, Post
                        F_DISPLAY, F_BLACK, F_BOLD, F_SYM, RED, YELLOW, WHITE, font)
 
 W, H = 1080, 1920
-RW, RH = 540, 960          # 3D render resolution (upscaled x2)
+RW, RH = 720, 1280         # 3D render resolution (upscaled x1.5)
 FPS = 30
 
 ORDINAL_FILL = {"danger": [(255, 214, 0), (255, 150, 0), (255, 42, 52)]}
@@ -33,22 +33,22 @@ def build_timeline(script, work, use_tts=True):
     tts.configure(v.get("engine"), v.get("speaker"), v.get("rate"))
     bounds = {}
 
-    def voice(text):
+    def voice(text, role):
         if use_tts:
-            wav, d, words = tts.synth(text, vcache)
+            wav, d, words = tts.synth(text, vcache, role)
             bounds[text] = words
             return wav, d
         return None, tts.estimate_duration(text)
 
     t = 0.0
     intro = script["intro"]
-    wav, vd = voice(intro["narration"])
+    wav, vd = voice(intro["narration"], "intro")
     d = 0.9 + vd + 0.35
     segs.append(dict(kind="intro", start=t, dur=d, voff=0.9, vdur=vd, wav=wav, data=intro, scene=intro["scene"]))
     t += d
     n_items = len(script["items"])
     for i, it in enumerate(script["items"]):
-        wav, vd = voice(it["narration"])
+        wav, vd = voice(it["narration"], "item")
         last = i == n_items - 1
         voff = 0.55 if last else 0.25
         d = max(3.6, voff + vd + 0.3)
@@ -56,7 +56,7 @@ def build_timeline(script, work, use_tts=True):
                          index=i, n=n_items, last=last))
         t += d
     out = script["outro"]
-    wav, vd = voice(out["narration"])
+    wav, vd = voice(out["narration"], "outro")
     d = 0.3 + vd + 1.6
     segs.append(dict(kind="outro", start=t, dur=d, voff=0.3, vdur=vd, wav=wav, data=out, scene=out["scene"]))
     t += d
@@ -87,7 +87,8 @@ class Overlay:
             self.stat1 = st[0]
             if len(st) > 1:
                 self.stat2 = pill(st[1][1], F_BLACK, 44, bg=(180, 20, 30, 225), icon=st[1][0], icon_col=WHITE)
-            self.danger_lbl = text_sprite("TEHLİKE", F_BLACK, 34, fill=WHITE, shadow=True, pad=10, tracking=4)
+            self.danger_lbl = text_sprite(tr_upper(script.get("meter_label", "TEHLİKE")), F_BLACK, 34, fill=WHITE,
+                                          shadow=True, pad=10, tracking=4)
             pin = it.get("pin_label", f"ZİRVE  {st[0][1]}" if script.get("category") == "dağ" else None)
             self.pin_lbl = pill(pin, F_BLACK, 34, bg=(255, 255, 255, 235), fg=(15, 15, 20)) if pin else None
         else:
@@ -193,7 +194,7 @@ class Overlay:
             blit(fr, self.danger_lbl, 50, 995, alpha=clamp01(p))
             lvl = seg["data"]["danger"]
             fill = clamp01((t - 1.05) / 0.8) * lvl * 10
-            bx = 230
+            bx = 50 + self.danger_lbl.shape[1] + 4
             for j in range(10):
                 x = bx + j * 52
                 a = clamp01(fill - j)
@@ -251,7 +252,7 @@ def render_segment(args):
         img = post.grade_low(img)
         fr = (img * 255).astype(np.uint8)
         fr = cv2.resize(fr, (W, H), interpolation=cv2.INTER_CUBIC)
-        scene.draw_particles(fr, info, gt, 2.0)
+        scene.draw_particles(fr, info, gt, 2.0)  # particle size in output pixels
         fr = post.finish(fr, fi)
         # darken top for legibility
         fr[:1150] = (fr[:1150].astype(np.float32) * GRAD_TOP).astype(np.uint8)
