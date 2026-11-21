@@ -26,7 +26,7 @@ SPEAKERS = {"ahmet": "tr-TR-AhmetNeural", "emel": "tr-TR-EmelNeural"}
 CONFIG = {
     "engine": os.environ.get("VOICE_ENGINE", "edge"),
     "speaker": os.environ.get("VOICE_NAME", "ahmet"),
-    "rate": os.environ.get("VOICE_RATE", "+8%"),
+    "rate": os.environ.get("VOICE_RATE", "+20%"),
 }
 
 # ses zinciri: düşük uğultu temizliği, netlik, hafif kompresyon
