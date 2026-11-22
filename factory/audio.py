@@ -298,3 +298,101 @@ def build_mix(total, voices, sfx, intensity_pts, wind_pts, events, bpm=96):
     mix = np.tanh(mix * 1.1) * 0.9
     fade = np.minimum(1, np.minimum(tt / 0.05, (total - tt) / 0.6))
     return mix * fade
+
+
+# ------------------------------------------------------------------ ÇİZGİ FİLM SESLERİ
+def boing(d=0.45):
+    t = _t(d)
+    f = 180 + 120 * np.sin(2 * np.pi * 9 * t) * np.exp(-t * 5) + 200 * np.exp(-t * 12)
+    x = np.sin(2 * np.pi * np.cumsum(f) / SR) * np.exp(-t * 6)
+    return np.stack([x, x]) * 0.8
+
+
+def slide(d=0.6, up=True):
+    t = _t(d)
+    f0, f1 = (400, 1400) if up else (1400, 350)
+    f = f0 + (f1 - f0) * (t / d) ** 1.3
+    x = (np.sin(2 * np.pi * np.cumsum(f) / SR) + 0.3 * np.sin(4 * np.pi * np.cumsum(f) / SR))
+    x *= np.minimum(1, t / 0.03) * np.minimum(1, (d - t) / 0.08)
+    return np.stack([x, x]) * 0.35
+
+
+def ding(f=1318.5):
+    t = _t(1.4)
+    x = sum(np.sin(2 * np.pi * f * k * t) * np.exp(-t * (3 + k)) / k for k in (1, 2, 3))
+    return reverb(np.stack([x, x]) * 0.4, 0.4)
+
+
+def drum_hit():
+    t = _t(0.5)
+    k = np.sin(2 * np.pi * np.cumsum(60 + 140 * np.exp(-t * 25)) / SR) * np.exp(-t * 8)
+    s = hp(rng.normal(0, 1, len(t)), 1500) * np.exp(-t * 18) * 0.6
+    x = np.tanh((k + s) * 1.5)
+    return reverb(np.stack([x, x]), 0.3) * 0.8
+
+
+def cartoon_score(total, bpm=112, seed=0):
+    """Neşeli, zıplayan çizgi film müziği: pizzicato arpej, bas, hafif davul + shaker."""
+    r = np.random.default_rng(seed)
+    n = int(total * SR)
+    out = np.zeros(n)
+    beat = 60 / bpm
+    prog = [[60, 64, 67], [65, 69, 72], [67, 71, 74], [60, 64, 67], [57, 60, 64], [65, 69, 72], [62, 65, 69], [67, 71, 74]]
+    pat = [0, 1, 2, 1, 0, 2, 1, 2]
+    pl = _t(0.35)
+    i = 0
+    tt = 0.0
+    while tt < total:
+        bar = int(tt / (beat * 4)) % len(prog)
+        ch = prog[bar]
+        step = int(round(tt / (beat / 2)))
+        m = ch[pat[step % 8]] + (12 if step % 16 >= 12 else 0)
+        f = NOTE(m)
+        x = (np.sin(2 * np.pi * f * pl) + 0.4 * np.sin(4 * np.pi * f * pl) + 0.15 * np.sin(6 * np.pi * f * pl))
+        x *= np.exp(-pl * 11) * (0.85 + 0.3 * r.random())
+        a = int(tt * SR)
+        b = min(n, a + len(x))
+        out[a:b] += x[:b - a] * 0.22
+        if step % 2 == 0:   # bas
+            fb = NOTE(ch[0] - 24 + (7 if step % 4 == 2 else 0))
+            bt = _t(beat * 0.9)
+            bx = np.sin(2 * np.pi * fb * bt) * np.exp(-bt * 4)
+            b2 = min(n, a + len(bx))
+            out[a:b2] += bx[:b2 - a] * 0.3
+        if step % 4 == 0:   # davul
+            kt = _t(0.2)
+            kx = np.sin(2 * np.pi * np.cumsum(55 + 90 * np.exp(-kt * 30)) / SR) * np.exp(-kt * 14)
+            b3 = min(n, a + len(kx))
+            out[a:b3] += kx[:b3 - a] * 0.35
+        ht = _t(0.05)
+        hx = hp(r.normal(0, 1, len(ht)), 6000) * np.exp(-ht * 60) * (0.12 if step % 2 else 0.06)
+        b4 = min(n, a + len(hx))
+        out[a:b4] += hx[:b4 - a]
+        tt += beat / 2
+        i += 1
+    out = lp(out, 7000)
+    return reverb(np.stack([out, np.roll(out, 220)]), 0.18)
+
+
+def build_cartoon_mix(total, voices, sfx, seed=0):
+    n = int(total * SR)
+    tt = np.arange(n) / SR
+    music = cartoon_score(total, seed=seed)[:, :n]
+    vbuf = np.zeros((2, n))
+    for t0, path in voices:
+        if path:
+            v = read_wav_mono(path)
+            v = v / (np.abs(v).max() + 1e-9) * 0.92
+            place(vbuf, np.stack([v, v]), t0)
+    env = lp(np.abs(vbuf[0]), 8, 1)
+    env = np.clip(env / (env.max() + 1e-9) * 2.2, 0, 1)
+    fx = np.zeros((2, n))
+    gens = {"whoosh": whoosh, "impact": impact, "pop": pop, "boing": boing, "slide_up": lambda: slide(up=True),
+            "slide_down": lambda: slide(up=False), "ding": ding, "drum": drum_hit, "tick": tick, "shimmer": shimmer,
+            "riser": riser, "glitch": glitch}
+    for t0, name, kw, gain in sfx:
+        place(fx, gens[name](**kw), t0, gain)
+    mix = music * 0.32 * (1 - 0.55 * env) + fx * 0.5 + reverb(vbuf, 0.05)
+    mix = np.tanh(mix * 1.05) * 0.9
+    fade = np.minimum(1, np.minimum(tt / 0.05, (total - tt) / 0.8))
+    return mix * fade
