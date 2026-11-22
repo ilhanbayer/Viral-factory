@@ -2,10 +2,11 @@
 
 # 🎬 Video Paneli
 
-**1 video** · yeni videolar her gün otomatik eklenir · [tüm sürümler](https://github.com/ilhanbayer/viral-factory/releases)
+**2 video** · yeni videolar her gün otomatik eklenir · [tüm sürümler](https://github.com/ilhanbayer/Viral-factory/releases)
 
 | Kapak | Video | İndir |
 |:-:|---|:-:|
+| <a href="https://github.com/ilhanbayer/Viral-factory/releases/download/video-2-002_dunyanin_en_ekstrem_5_yeri/002_dunyanin_en_ekstrem_5_yeri.mp4"><img src="https://github.com/ilhanbayer/Viral-factory/releases/download/video-2-002_dunyanin_en_ekstrem_5_yeri/002_dunyanin_en_ekstrem_5_yeri_kapak.jpg" width="120"></a> | **Dünyanın En Ekstrem 5 Yeri 🌋❄️**<br>2026-11-21 | [▶️ MP4 (44 MB)](https://github.com/ilhanbayer/Viral-factory/releases/download/video-2-002_dunyanin_en_ekstrem_5_yeri/002_dunyanin_en_ekstrem_5_yeri.mp4)<br>[💬 Altyazı](https://github.com/ilhanbayer/Viral-factory/releases/download/video-2-002_dunyanin_en_ekstrem_5_yeri/002_dunyanin_en_ekstrem_5_yeri.srt)<br>[📝 Metin](https://github.com/ilhanbayer/Viral-factory/releases/tag/video-2-002_dunyanin_en_ekstrem_5_yeri) |
 | <a href="https://github.com/ilhanbayer/Viral-factory/releases/download/video-1-001_en_tehlikeli_10_dag/001_en_tehlikeli_10_dag.mp4"><img src="https://github.com/ilhanbayer/Viral-factory/releases/download/video-1-001_en_tehlikeli_10_dag/001_en_tehlikeli_10_dag_kapak.jpg" width="120"></a> | **Dünyanın En Tehlikeli 10 Dağı 🏔️☠️**<br>2026-11-21 | [▶️ MP4 (123 MB)](https://github.com/ilhanbayer/Viral-factory/releases/download/video-1-001_en_tehlikeli_10_dag/001_en_tehlikeli_10_dag.mp4)<br>[💬 Altyazı](https://github.com/ilhanbayer/Viral-factory/releases/download/video-1-001_en_tehlikeli_10_dag/001_en_tehlikeli_10_dag.srt)<br>[📝 Metin](https://github.com/ilhanbayer/Viral-factory/releases/tag/video-1-001_en_tehlikeli_10_dag) |
 
 <!-- PANEL:END -->
