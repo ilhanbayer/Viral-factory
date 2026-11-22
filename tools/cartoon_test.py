@@ -12,3 +12,4 @@ os.makedirs("cizgitest", exist_ok=True)
 t = time.time()
 out = produce_cartoon(s, "cizgitest")
 print("ÇIKTI", out, f"{time.time() - t:.0f} sn")
+# tetik Sun Nov 22 23:47:02 +03 2026
