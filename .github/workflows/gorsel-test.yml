@@ -1,0 +1,27 @@
+name: Gorsel test
+
+on:
+  push:
+    branches: [main]
+    paths: ["tools/imagegen_test.py"]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: python tools/imagegen_test.py
+      - name: Yayınla
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh release delete gorsel-test -y --cleanup-tag || true
+          gh release create gorsel-test imgtest/*.jpg --title "Görsel testi (dahili)" --notes "imagegen testi" --prerelease
