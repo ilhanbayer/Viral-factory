@@ -28,7 +28,7 @@ SPEAKERS = {"ahmet": "tr-TR-AhmetNeural", "emel": "tr-TR-EmelNeural"}
 CONFIG = {
     "engine": os.environ.get("VOICE_ENGINE", "edge"),
     "speaker": os.environ.get("VOICE_NAME", "ahmet"),
-    "rate": os.environ.get("VOICE_RATE", "+20%"),
+    "rate": os.environ.get("VOICE_RATE", "+14%"),
     "pitch": os.environ.get("VOICE_PITCH", "-2Hz"),     # biraz daha tok, otoriter anlatıcı
 }
 
