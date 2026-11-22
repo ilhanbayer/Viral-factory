@@ -69,9 +69,14 @@ def main():
         if not path:
             print("Üretilecek konu yok. topics/queue içine JSON ekleyin ya da GEMINI_API_KEY tanımlayın.")
             return
-        final = produce(path, OUT, use_tts=not a.no_tts)
         script = json.load(open(path, encoding="utf-8"))
-        if a.upload:
+        if script.get("format") == "story":
+            from factory.story_compose import produce_story
+            finals = produce_story(script, OUT, use_tts=not a.no_tts)
+            final = finals[0]
+        else:
+            final = produce(path, OUT, use_tts=not a.no_tts)
+        if a.upload and script.get("format") != "story":
             from factory.upload_youtube import upload
             p = script.get("publish", {})
             upload(final, p.get("title", script["series_title"]),
@@ -79,7 +84,8 @@ def main():
         if not a.topic and os.path.dirname(os.path.abspath(path)) == QUEUE:
             shutil.move(path, os.path.join(DONE, os.path.basename(path)))
         if not a.keep_work:
-            shutil.rmtree(os.path.join(OUT, script["id"] + "_work"), ignore_errors=True)
+            for d in glob.glob(os.path.join(OUT, "*_work")) + [os.path.join(OUT, "_voicecache")]:
+                shutil.rmtree(d, ignore_errors=True)
         a.topic = None
 
 

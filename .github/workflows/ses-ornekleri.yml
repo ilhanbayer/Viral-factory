@@ -1,0 +1,29 @@
+name: Ses ornekleri
+
+on:
+  push:
+    branches: [main]
+    paths: ["tools/voice_samples.py"]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  samples:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: sudo apt-get update && sudo apt-get install -y ffmpeg
+      - run: pip install numpy edge-tts gTTS
+      - run: python tools/voice_samples.py samples
+      - name: Yayınla
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh release delete ses-ornekleri -y --cleanup-tag || true
+          gh release create ses-ornekleri samples/*.mp3 --title "Ses örnekleri" --notes "Aynı metin, farklı sesler" --prerelease

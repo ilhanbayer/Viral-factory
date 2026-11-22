@@ -1,0 +1,231 @@
+"""Hikâye formatı: senaryo -> (1 yatay uzun video + N dikey Shorts) üretimi."""
+import json
+import os
+import subprocess
+import time
+from multiprocessing import Pool
+
+import numpy as np
+import cv2
+from PIL import Image
+
+from . import tts
+from . import audio as A
+from . import story as ST
+from .graphics import word_timings
+
+FPS = 30
+FMT = {
+    "vertical": dict(W=1080, H=1920, u=1.0, cy=0.42, cap_y=0.75, cap_u=1.0),
+    "landscape": dict(W=1920, H=1080, u=0.66, cy=0.43, cap_y=0.87, cap_u=0.85),
+}
+
+
+# ------------------------------------------------------------------ timeline
+def build(beats, work, use_tts=True):
+    vcache = os.path.join(work, "voice")
+    segs, t = [], 0.0
+    n = len(beats)
+    for i, b in enumerate(beats):
+        say = b["say"].replace("*", "")
+        role = "intro" if i == 0 else ("outro" if i == n - 1 else "story")
+        if use_tts:
+            wav, vd, words = tts.synth(say, vcache, role)
+        else:
+            wav, vd, words = None, tts.estimate_duration(say), None
+        lead = 0.12
+        dur = max(1.3, lead + vd + (0.35 if b.get("sfx") in ("hit", "riser") else 0.14))
+        tim = tts.align_words(say, words, lead, vd) or word_timings(say, lead, vd)
+        segs.append(dict(i=i, start=t, dur=dur, voff=lead, vdur=vd, wav=wav, beat=b, words=tim,
+                         kinds=ST.caption_words(b["say"])))
+        t += dur
+    return segs, t
+
+
+# ------------------------------------------------------------------ render
+def _grain(H, W, k):
+    rng = np.random.default_rng(k)
+    return cv2.resize(rng.normal(0, 7, (H // 3, W // 3)).astype(np.float32), (W, H), interpolation=cv2.INTER_LINEAR)
+
+
+def render_chunk(args):
+    segs, fmt, brand, theme, out_path, preview = args
+    cv2.setNumThreads(1)
+    ST.set_theme(theme)
+    P = FMT[fmt]
+    W, H, u = P["W"], P["H"], P["u"]
+    cx, cy = W / 2, H * P["cy"]
+    bg = ST.background(W, H)
+    grains = [_grain(H, W, k) for k in range(6)]
+    brand_spr = ST.brand_sprite(brand, 1.0 if fmt == "vertical" else 0.8)
+    if preview is None:
+        tmp = out_path[:-4] + ".part.mp4"
+        proc = subprocess.Popen(["ffmpeg", "-y", "-loglevel", "error", "-f", "rawvideo", "-pix_fmt", "rgb24",
+                                 "-s", f"{W}x{H}", "-r", str(FPS), "-i", "-", "-c:v", "libx264", "-preset", "veryfast",
+                                 "-crf", "21", "-maxrate", "6M", "-bufsize", "12M", "-pix_fmt", "yuv420p", tmp],
+                                stdin=subprocess.PIPE)
+    shots = []
+    fi = 0
+    for s in segs:
+        D = s["dur"]
+        times = [p for p in (preview or [])] if preview is not None else None
+        frames = [int(x * FPS) for x in times] if times is not None else range(int(round(D * FPS)))
+        show = s["beat"].get("show", {"type": "title", "lines": [s["beat"]["say"][:20]]})
+        for k in frames:
+            t = k / FPS
+            fr = bg.copy()
+            layer = Image.new("RGBA", (W, H), (0, 0, 0, 0))
+            ST.draw_visual(layer, show, t, D, cx, cy, u)
+            la = np.array(layer)
+            # yavaş itme (push-in) + giriş zıplaması
+            zin = ST.eo(t / 0.18)
+            sc = 1.0 + 0.045 * (t / D) + 0.07 * (1 - zin)
+            if abs(sc - 1) > 1e-3:
+                M_ = cv2.getRotationMatrix2D((cx, cy), 0, sc)
+                la = cv2.warpAffine(la, M_, (W, H), flags=cv2.INTER_LINEAR, borderValue=(0, 0, 0, 0))
+            a = la[..., 3:4].astype(np.float32) / 255 * min(1.0, 0.25 + zin)
+            f = fr.astype(np.float32) * (1 - a) + la[..., :3].astype(np.float32) * a
+            f += grains[(fi + k) % 6][..., None]
+            if s["beat"].get("sfx") == "hit" and t < 0.25:
+                f += (1 - t / 0.25) * 90
+            fr = np.clip(f, 0, 255).astype(np.uint8)
+            ST.draw_caption(fr, s["kinds"], s["words"], t, W / 2, H * P["cap_y"], P["cap_u"])
+            bh, bw = brand_spr.shape[:2]
+            by, bx = int(40 * P["cap_u"]), int((W - bw) / 2) if fmt == "vertical" else int(50)
+            al = brand_spr[..., 3:4].astype(np.float32) / 255
+            fr[by:by + bh, bx:bx + bw] = (fr[by:by + bh, bx:bx + bw] * (1 - al) + brand_spr[..., :3] * al).astype(np.uint8)
+            if preview is not None:
+                shots.append(fr)
+            else:
+                proc.stdin.write(fr.tobytes())
+        fi += len(frames) if preview is None else 1
+    if preview is not None:
+        return shots
+    proc.stdin.close()
+    if proc.wait() != 0:
+        raise RuntimeError("ffmpeg")
+    os.replace(tmp, out_path)
+    return out_path
+
+
+# ------------------------------------------------------------------ audio
+def plan_audio(segs, total):
+    sfx, voices, events = [], [], []
+    inten, wind = [(0, 0.15)], [(0, 0.25), (total, 0.25)]
+    n = len(segs)
+    for s in segs:
+        st, b = s["start"], s["beat"]
+        show = b.get("show", {})
+        typ = show.get("type")
+        if s["wav"]:
+            voices.append((st + s["voff"], s["wav"]))
+        if s["i"] > 0:
+            sfx.append((st - 0.12, "whoosh", {"d": 0.32, "seed": s["i"]}, 0.22))
+        if typ == "dossier":
+            for j in range(int(len(show.get("name", "X")) * 1.0)):
+                sfx.append((st + 0.15 + j * 0.06, "tick", {"f": 1800 + (j % 3) * 400}, 0.18))
+            if show.get("stamp"):
+                sfx.append((st + s["dur"] * 0.55, "impact", {"pitch": 75, "d": 0.9, "seed": s["i"]}, 0.55))
+        elif typ == "tally":
+            for j in range(int(show.get("n", 5))):
+                sfx.append((st + j * min(1.6, s["dur"] * 0.6) / max(1, int(show.get("n", 5))), "tick", {"f": 900},
+                            0.25))
+        elif typ in ("number", "date", "place", "list", "people", "headline"):
+            sfx.append((st + 0.05, "pop", {"f0": 500, "f1": 900}, 0.25))
+        if b.get("sfx") == "hit":
+            events.append((st - 0.4, "stop", 0.4))
+            sfx.append((st, "impact", {"pitch": 45, "d": 2.0, "seed": s["i"]}, 0.85))
+            sfx.append((st, "braam", {"d": 2.4}, 0.5))
+        elif b.get("sfx") == "riser":
+            sfx.append((st + s["dur"] - 2.2, "riser", {"d": 2.2, "seed": s["i"]}, 0.6))
+        inten.append((st, 0.2 + 0.55 * (s["i"] / max(1, n - 1))))
+    inten.append((total, 0.3))
+    return sfx, voices, events, inten, wind
+
+
+def write_srt(segs, path):
+    def ts(x):
+        ms = int(round(x * 1000))
+        return f"{ms // 3600000:02d}:{ms // 60000 % 60:02d}:{ms // 1000 % 60:02d},{ms % 1000:03d}"
+    lines, n = [], 1
+    for s in segs:
+        for c in ST.chunk(s["kinds"]):
+            a = s["start"] + s["words"][c[0][2]][1]
+            b = s["start"] + s["words"][c[-1][2]][2]
+            lines += [str(n), f"{ts(a)} --> {ts(b)}", " ".join(w for w, _, _ in c), ""]
+            n += 1
+    open(path, "w", encoding="utf-8").write("\n".join(lines))
+
+
+# ------------------------------------------------------------------ produce one video
+def produce_one(vid, beats, fmt, brand, theme, publish, out_dir, use_tts=True, workers=None, preview=False):
+    work = os.path.join(out_dir, vid + "_work")
+    os.makedirs(work, exist_ok=True)
+    print(f"▶ {vid} [{fmt}]: seslendirme + zaman çizelgesi")
+    segs, total = build(beats, os.path.join(out_dir, "_voicecache"), use_tts)
+    print(f"  süre {total:.1f}s, {len(segs)} sahne")
+    if preview:
+        pick = [segs[0], segs[len(segs) // 3], segs[2 * len(segs) // 3], segs[-1]]
+        shots = []
+        for s in pick:
+            shots += render_chunk(([s], fmt, brand, theme, None, [min(s["dur"] - 0.05, 1.4)]))
+        return shots
+    # sahneleri ~12 sn'lik parçalara böl, paralel render
+    chunks, cur, acc = [], [], 0
+    for s in segs:
+        cur.append(s)
+        acc += s["dur"]
+        if acc > 12:
+            chunks.append(cur)
+            cur, acc = [], 0
+    if cur:
+        chunks.append(cur)
+    jobs = [(c, fmt, brand, theme, os.path.join(work, f"c_{i:03d}.mp4"), None) for i, c in enumerate(chunks)]
+    todo = [j for j in jobs if not os.path.exists(j[4])]
+    t0 = time.time()
+    with Pool(workers or os.cpu_count()) as pool:
+        list(pool.imap_unordered(render_chunk, todo))
+    print(f"  render {time.time() - t0:.0f}s")
+    sfx, voices, events, inten, wind = plan_audio(segs, total)
+    mix = A.build_mix(total, voices, sfx, inten, wind, events, bpm=72)
+    raw = os.path.join(work, "mix.wav")
+    A.write_wav(raw, mix)
+    master = os.path.join(work, "master.wav")
+    subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-i", raw, "-af", "loudnorm=I=-14:TP=-1.2:LRA=9",
+                    "-ar", "44100", master], check=True)
+    lst = os.path.join(work, "list.txt")
+    open(lst, "w").write("".join(f"file '{os.path.abspath(j[4])}'\n" for j in jobs))
+    silent = os.path.join(work, "video.mp4")
+    subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-f", "concat", "-safe", "0", "-i", lst, "-c", "copy", silent],
+                   check=True)
+    final = os.path.join(out_dir, vid + ".mp4")
+    tmp = final[:-4] + ".part.mp4"
+    subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-i", silent, "-i", master, "-map", "0:v", "-map", "1:a",
+                    "-c:v", "copy", "-c:a", "aac", "-b:a", "192k", "-shortest", "-movflags", "+faststart", tmp],
+                   check=True)
+    os.replace(tmp, final)
+    write_srt(segs, os.path.join(out_dir, vid + ".srt"))
+    meta = f"{publish.get('title', vid)}\n\n{publish.get('description', '')}\n\n{' '.join(publish.get('hashtags', []))}\n"
+    open(os.path.join(out_dir, vid + "_metadata.txt"), "w", encoding="utf-8").write(meta)
+    subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-ss", f"{min(total - 0.1, 1.2):.2f}", "-i", final,
+                    "-frames:v", "1", "-q:v", "2", os.path.join(out_dir, vid + "_kapak.jpg")], check=True)
+    print(f"✔ {final}")
+    return final
+
+
+def produce_story(script, out_dir, use_tts=True, workers=None):
+    v = script.get("voice", {})
+    tts.configure(v.get("engine"), v.get("speaker"), v.get("rate"), v.get("pitch"))
+    brand = script.get("brand", "GİZEM DOSYASI")
+    theme = script.get("theme", "dosya")
+    pub = script.get("publish", {})
+    finals = []
+    L = script["long"]
+    finals.append(produce_one(script["id"], L["beats"], "landscape", brand, theme, pub.get("long", {}), out_dir,
+                              use_tts, workers))
+    for k, sh in enumerate(script.get("shorts", [])):
+        beats = sh.get("hook", []) + L["beats"][sh["from"]:sh["to"] + 1] + sh.get("outro", [])
+        p = (pub.get("shorts") or [{}] * 3)[k] if k < len(pub.get("shorts", [])) else {}
+        finals.append(produce_one(f"{script['id']}_short{k + 1}", beats, "vertical", brand, theme, p, out_dir,
+                                  use_tts, workers))
+    return finals

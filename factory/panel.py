@@ -37,6 +37,8 @@ def build(repo, token):
         mb = next((x["size"] for x in r["assets"] if x["name"].endswith(".mp4")), 0) / 1e6
         date = r["created_at"][:10]
         title = re.sub(r"\s*#shorts", "", r["name"] or r["tag_name"]).replace("|", "-")
+        kind = "📱 SHORT" if "_short" in r["tag_name"] else ("🎬 UZUN VİDEO" if r["tag_name"].count("_S") or "S0" in r["tag_name"] else "📱 SHORT")
+        title = f"{kind} · {title}"
         thumb = f'<a href="{mp4}"><img src="{jpg}" width="120"></a>' if jpg else ""
         dl = f"[▶️ MP4 ({mb:.0f} MB)]({mp4})" + (f"<br>[💬 Altyazı]({srt})" if srt else "") + \
              f"<br>[📝 Metin]({r['html_url']})"

@@ -1,0 +1,486 @@
+{
+ "id": "S001_dyatlov_gecidi",
+ "format": "story",
+ "brand": "GİZEM DOSYASI",
+ "theme": "soguk",
+ "voice": {
+  "rate": "+6%",
+  "pitch": "-5Hz"
+ },
+ "long": {
+  "title": "Dyatlov Geçidi Olayı",
+  "beats": [
+   {
+    "say": "Şubat 1959. Dokuz deneyimli dağcı, çadırlarını *içeriden* keserek karanlığa kaçtı.",
+    "show": {
+     "type": "date",
+     "day": 1,
+     "month": "ŞUBAT",
+     "year": 1959
+    },
+    "sfx": "hit"
+   },
+   {
+    "say": "Bazıları yalnızca çoraplarıyla, bazıları *yalınayak*.",
+    "show": {
+     "type": "icon",
+     "name": "footprints"
+    }
+   },
+   {
+    "say": "Hiçbiri *geri dönmedi*.",
+    "show": {
+     "type": "people",
+     "n": 9,
+     "highlight": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+     ]
+    }
+   },
+   {
+    "say": "Bu, Sovyetler Birliği'nin en ünlü *çözülemeyen* gizemi: Dyatlov Geçidi Olayı.",
+    "show": {
+     "type": "title",
+     "lines": [
+      "DYATLOV",
+      "GEÇİDİ",
+      "OLAYI"
+     ],
+     "red": 1
+    }
+   },
+   {
+    "say": "23 Ocak 1959. Ural Politeknik Enstitüsü'nden on kişi, kayak ve dağcılık seferine çıkar.",
+    "show": {
+     "type": "date",
+     "day": 23,
+     "month": "OCAK",
+     "year": 1959
+    }
+   },
+   {
+    "say": "Grubun lideri, 23 yaşındaki mühendislik öğrencisi *İgor Dyatlov*.",
+    "show": {
+     "type": "dossier",
+     "name": "İGOR DYATLOV",
+     "no": "1959/01",
+     "fields": {
+      "YAŞ": "23",
+      "GÖREV": "GRUP LİDERİ",
+      "DURUM": "██"
+     }
+    }
+   },
+   {
+    "say": "Hedefleri, Ural Dağları'nın kuzeyinde zorlu bir rota.",
+    "show": {
+     "type": "place",
+     "name": "KUZEY URALLAR",
+     "sub": "SOVYETLER BİRLİĞİ",
+     "coords": "61°45′K  59°26′D"
+    }
+   },
+   {
+    "say": "Yolda bir öğrenci, eklem ağrısı yüzünden *geri döner*.",
+    "show": {
+     "type": "people",
+     "n": 10,
+     "highlight": [
+      9
+     ],
+     "label": "GERİ DÖNDÜ"
+    }
+   },
+   {
+    "say": "Bu karar, onun hayatını kurtaracaktı.",
+    "show": {
+     "type": "title",
+     "lines": [
+      "HAYATINI",
+      "KURTARAN",
+      "KARAR"
+     ],
+     "red": 1
+    }
+   },
+   {
+    "say": "Kalan dokuz kişi, yedi erkek ve iki kadın, yola devam eder.",
+    "show": {
+     "type": "people",
+     "n": 9,
+     "highlight": [
+      7,
+      8
+     ],
+     "label": "7 ERKEK · 2 KADIN"
+    }
+   },
+   {
+    "say": "1 Şubat akşamı, bir dağın yamacında kamp kurarlar.",
+    "show": {
+     "type": "icon",
+     "name": "mountain"
+    }
+   },
+   {
+    "say": "Yerli Mansi halkı bu dağa bir isim vermişti: *Ölü Dağ*.",
+    "show": {
+     "type": "place",
+     "name": "KHOLAT SYAKHL",
+     "sub": "ÖLÜ DAĞ"
+    }
+   },
+   {
+    "say": "Çadırı kurmak için karlı yamaçta bir *kesik* açarlar.",
+    "show": {
+     "type": "icon",
+     "name": "snow"
+    }
+   },
+   {
+    "say": "Ve o geceden sonra, onlardan bir daha *haber alınamaz*.",
+    "show": {
+     "type": "icon",
+     "name": "question"
+    },
+    "sfx": "riser"
+   },
+   {
+    "say": "Arama ekipleri çadırı ancak 26 Şubat'ta bulur.",
+    "show": {
+     "type": "date",
+     "day": 26,
+     "month": "ŞUBAT",
+     "year": 1959
+    }
+   },
+   {
+    "say": "Çadır *içeriden* kesilmiştir.",
+    "show": {
+     "type": "icon",
+     "name": "tent"
+    },
+    "sfx": "hit"
+   },
+   {
+    "say": "İçeride harita, yiyecek ve malzemeler duruyordu. Her şey aceleyle terk edilmişti.",
+    "show": {
+     "type": "list",
+     "items": [
+      "HARİTA",
+      "YİYECEK",
+      "MALZEMELER"
+     ]
+    }
+   },
+   {
+    "say": "Cesetler, çadırdan bir buçuk kilometreye kadar uzakta bulunur.",
+    "show": {
+     "type": "number",
+     "value": 1.5,
+     "suffix": " KM",
+     "label": "ÇADIRA UZAKLIK"
+    }
+   },
+   {
+    "say": "Bazıları yalnızca *iç çamaşırıyla*, dondurucu soğukta.",
+    "show": {
+     "type": "icon",
+     "name": "thermometer",
+     "label": "DONDURUCU SOĞUK"
+    }
+   },
+   {
+    "say": "Çoğu donarak öldü. Ama bazılarında *ağır yaralanmalar* vardı.",
+    "show": {
+     "type": "icon",
+     "name": "documents",
+     "label": "OTOPSİ RAPORU"
+    }
+   },
+   {
+    "say": "Bölge, üç yıl boyunca *kapatıldı*.",
+    "show": {
+     "type": "number",
+     "value": 3,
+     "suffix": " YIL",
+     "label": "BÖLGE KAPALI"
+    }
+   },
+   {
+    "say": "Ve teoriler başladı.",
+    "show": {
+     "type": "title",
+     "lines": [
+      "VE",
+      "TEORİLER",
+      "BAŞLADI"
+     ],
+     "red": 1
+    },
+    "sfx": "riser"
+   },
+   {
+    "say": "Yeti saldırısı. UFO'lar. Gizli bir *askeri test*.",
+    "show": {
+     "type": "list",
+     "items": [
+      "YETİ",
+      "UFO",
+      "GİZLİ ASKERİ TEST"
+     ]
+    }
+   },
+   {
+    "say": "Onlarca yıl boyunca kimse kesin bir cevap veremedi.",
+    "show": {
+     "type": "icon",
+     "name": "clock"
+    }
+   },
+   {
+    "say": "2019'da Rusya, dosyayı *yeniden açtı*.",
+    "show": {
+     "type": "dossier",
+     "name": "DYATLOV DOSYASI",
+     "no": "2019/██",
+     "stamp": "AÇIK",
+     "fields": {
+      "KURBAN": "9",
+      "SEBEP": "██"
+     }
+    },
+    "sfx": "hit"
+   },
+   {
+    "say": "2020'de açıklanan sonuç: bir *çığ*.",
+    "show": {
+     "type": "icon",
+     "name": "avalanche",
+     "label": "RESMİ SONUÇ"
+    }
+   },
+   {
+    "say": "Ama bir soru cevapsızdı: Grup, çadırı kurduktan *saatler sonra* kaçmıştı.",
+    "show": {
+     "type": "number",
+     "value": "9,5-13,5",
+     "suffix": " SAAT",
+     "label": "SONRA KAÇTILAR"
+    }
+   },
+   {
+    "say": "2021'de İsviçreli iki bilim insanı, Johan Gaume ve Alexander Puzrin, bir açıklama yayımladı.",
+    "show": {
+     "type": "people",
+     "n": 2,
+     "highlight": [],
+     "label": "GAUME & PUZRIN"
+    }
+   },
+   {
+    "say": "Gece boyunca esen sert rüzgârlar, kesilen yamacın üstüne kar biriktirdi.",
+    "show": {
+     "type": "icon",
+     "name": "snow"
+    }
+   },
+   {
+    "say": "Saatler sonra küçük ama ölümcül bir *kar tabakası* çadırın üstüne çöktü.",
+    "show": {
+     "type": "icon",
+     "name": "avalanche"
+    },
+    "sfx": "hit"
+   },
+   {
+    "say": "Yaralı ve panik içindeki grup, çadırı keserek dışarı kaçtı.",
+    "show": {
+     "type": "icon",
+     "name": "tent"
+    }
+   },
+   {
+    "say": "Ve karanlıkta, dondurucu soğuğa *yenik düştüler*.",
+    "show": {
+     "type": "people",
+     "n": 9,
+     "highlight": [],
+     "fade_out": true
+    }
+   },
+   {
+    "say": "Araştırmacılar bile gizemi tamamen çözdüklerini iddia etmiyor. Çünkü o geceyi anlatacak kimse hayatta kalmadı.",
+    "show": {
+     "type": "quote",
+     "text": "Gizemi çözdüğümüzü iddia etmiyoruz.",
+     "who": "Gaume & Puzrin"
+    }
+   },
+   {
+    "say": "Peki sence o gece gerçekten *ne oldu*?",
+    "show": {
+     "type": "title",
+     "lines": [
+      "SENCE",
+      "NE OLDU",
+      "?"
+     ],
+     "red": 1
+    }
+   },
+   {
+    "say": "Yorumlara yaz ve daha fazla gizem için *abone ol*.",
+    "show": {
+     "type": "title",
+     "lines": [
+      "YORUMLARA YAZ",
+      "ABONE OL",
+      ""
+     ],
+     "red": 1
+    }
+   }
+  ]
+ },
+ "shorts": [
+  {
+   "hook": [
+    {
+     "say": "Dokuz dağcı, çadırlarını *içeriden* kesip karlı geceye kaçtı. Ama neden?",
+     "show": {
+      "type": "icon",
+      "name": "tent"
+     },
+     "sfx": "hit"
+    }
+   ],
+   "from": 14,
+   "to": 20,
+   "outro": [
+    {
+     "say": "Onları çadırdan ne kaçırdı? Cevap kanaldaki *tam videoda*.",
+     "show": {
+      "type": "title",
+      "lines": [
+       "DEVAMI",
+       "TAM VİDEODA",
+       "KANALDA"
+      ],
+      "red": 1
+     }
+    }
+   ]
+  },
+  {
+   "hook": [
+    {
+     "say": "Yeti mi, UFO mu, gizli bir silah mı? Altmış yıllık bir *gizem*.",
+     "show": {
+      "type": "list",
+      "items": [
+       "YETİ?",
+       "UFO?",
+       "SİLAH?"
+      ]
+     },
+     "sfx": "hit"
+    }
+   ],
+   "from": 21,
+   "to": 26,
+   "outro": [
+    {
+     "say": "Bilim insanlarının cevabı kanaldaki *tam videoda*.",
+     "show": {
+      "type": "title",
+      "lines": [
+       "DEVAMI",
+       "TAM VİDEODA",
+       "KANALDA"
+      ],
+      "red": 1
+     }
+    }
+   ]
+  },
+  {
+   "hook": [
+    {
+     "say": "Altmış yıllık bir gizemi, bir *bilgisayar modeli* çözmüş olabilir.",
+     "show": {
+      "type": "icon",
+      "name": "avalanche"
+     },
+     "sfx": "hit"
+    }
+   ],
+   "from": 26,
+   "to": 32,
+   "outro": [
+    {
+     "say": "Sence bu açıklama yeterli mi? Yorumlara yaz, *takip et*.",
+     "show": {
+      "type": "title",
+      "lines": [
+       "SENCE",
+       "YETERLİ Mİ",
+       "?"
+      ],
+      "red": 1
+     }
+    }
+   ]
+  }
+ ],
+ "publish": {
+  "long": {
+   "title": "Dyatlov Geçidi Olayı: 9 Dağcıyı Ne Öldürdü? | Çözülemeyen Gizem",
+   "description": "1959'da Ural Dağları'nda dokuz deneyimli dağcı çadırlarını içeriden keserek karlı geceye kaçtı ve hiçbiri geri dönmedi. Teoriler, resmi soruşturma ve 2021'de yayımlanan bilimsel açıklama. Kaynaklar: National Geographic, Smithsonian, Communications Earth & Environment (Gaume & Puzrin, 2021).",
+   "hashtags": [
+    "#gizem",
+    "#belgesel",
+    "#dyatlov",
+    "#çözülemeyengizem",
+    "#tarih"
+   ]
+  },
+  "shorts": [
+   {
+    "title": "Çadırı İçeriden Kesip Kaçtılar… 🏔️ #shorts",
+    "description": "Dyatlov Geçidi Olayı, 1. bölüm.",
+    "hashtags": [
+     "#shorts",
+     "#gizem",
+     "#dyatlov"
+    ]
+   },
+   {
+    "title": "Yeti mi, UFO mu, Gizli Silah mı? 👁️ #shorts",
+    "description": "Dyatlov Geçidi teorileri.",
+    "hashtags": [
+     "#shorts",
+     "#gizem",
+     "#teori"
+    ]
+   },
+   {
+    "title": "60 Yıllık Gizem Çözüldü mü? ❄️ #shorts",
+    "description": "Dyatlov Geçidi'nin bilimsel açıklaması.",
+    "hashtags": [
+     "#shorts",
+     "#gizem",
+     "#bilim"
+    ]
+   }
+  ]
+ }
+}
