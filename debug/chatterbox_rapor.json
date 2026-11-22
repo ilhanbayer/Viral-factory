@@ -1,0 +1,37 @@
+{
+ "A_varsayilan": {
+  "cer": 0.011,
+  "gen_s": 134.4,
+  "audio_s": 14.2,
+  "rtf": 9.46,
+  "asr": " Bir gün hoca, komşasından büyük bir kazan ödünç ister.  Ertesi gün kazanın içine minicik bir tencere koyup geri getirir.  Müjde komşu, senin kazan doğurdu, bu da yavrusu.  Hocam kazan doğurur mu hiç ama madem öyle diyorsun, olsun bakalım."
+ },
+ "B_ahmet_dramatik": {
+  "cer": 0.0,
+  "gen_s": 190.3,
+  "audio_s": 19.6,
+  "rtf": 9.71,
+  "asr": " Bir gün hoca, komşusundan büyük bir kazan ödünç ister.  Ertesi gün kazanın içine minicik bir tencere koyup geri getirir.  Müjde komşu, senin kazan doğurdu. Bu da yavrusu.  Hocam, kazan doğurur mu hiç?  Ama madem öyle diyorsun, olsun bakalım."
+ },
+ "C_andrew_dramatik": {
+  "cer": 0.016,
+  "gen_s": 173.0,
+  "audio_s": 17.7,
+  "rtf": 9.79,
+  "asr": " Bir gün hoca komşusundan büyük bir kazanırınç ister, ertesi gün kazanın içine minicik bir tencere koyup geri getirir.  Müjde komşu, senin kazan doğurdu. Bu da yavrusu, hocam kazan doğurur mu hiç ama madem öyle diyorsun olsun bakalım."
+ },
+ "D_brian_sakin": {
+  "cer": 0.0,
+  "gen_s": 184.5,
+  "audio_s": 18.8,
+  "rtf": 9.81,
+  "asr": " Bir gün hoca, komşusundan büyük bir kazan ödünç ister.  Ertesi gün kazanın içine minicik bir tencere koyup geri getirir.  Müjde komşu, senin kazan doğurdu bu da yavrusu.  Hocam, kazan doğurur mu hiç?  Ama madem öyle diyorsun, olsun bakalım."
+ },
+ "E_emel_dramatik": {
+  "cer": 0.0,
+  "gen_s": 180.9,
+  "audio_s": 18.5,
+  "rtf": 9.77,
+  "asr": " Bir gün hoca, komşusundan büyük bir kazan ödünç ister.  Ertesi gün kazanın içine minicik bir tencere koyup geri getirir.  Müjde komşu, senin kazan doğurdu bu da yavrusu.  Hocam, kazan doğurur mu hiç ama madem öyle diyorsun, olsun bakalım."
+ }
+}
