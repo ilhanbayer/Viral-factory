@@ -1020,5 +1020,7 @@ def draw_scene(img, show, t, dur, W, H, u):
         f = M(int(34 * u))
         tx = up(show["label"])
         n = int(len(tx) * cl(t / 0.8))
-        d.rectangle((40 * u, 150 * u, 40 * u + f.getlength(tx) + 30 * u, 200 * u), fill=(0, 0, 0, 150))
-        d.text((55 * u, 175 * u), tx[:n], font=f, fill=C["orange"] + (255,), anchor="lm")
+        # kamera yakınlaşması (~%15) köşeleri kadrajdan taşırdığı için etiket içeride
+        x0, yc = W * 0.08, H * 0.17
+        d.rectangle((x0, yc - 25 * u, x0 + f.getlength(tx) + 30 * u, yc + 25 * u), fill=(0, 0, 0, 150))
+        d.text((x0 + 15 * u, yc), tx[:n], font=f, fill=C["orange"] + (255,), anchor="lm")

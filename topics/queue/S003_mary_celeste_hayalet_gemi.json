@@ -1,0 +1,755 @@
+{
+ "id": "S003_mary_celeste_hayalet_gemi",
+ "format": "story",
+ "brand": "GİZEM DOSYASI",
+ "theme": "dosya",
+ "voice": {
+  "engine": "edge",
+  "speaker": "ahmet",
+  "rate": "+0%",
+  "pitch": "-2Hz"
+ },
+ "long": {
+  "title": "Mary Celeste",
+  "beats": [
+   {
+    "say": "Aralık 1872. Atlantik'in ortasında bir gemi, yelkenleri açık halde sürükleniyordu. Güvertede *kimse* yoktu.",
+    "show": {
+     "type": "scene",
+     "sky": "storm",
+     "land": "sea",
+     "weather": "fog",
+     "props": [
+      {
+       "k": "ship",
+       "x": 0.5
+      }
+     ],
+     "label": "ARALIK 1872 · ATLANTİK"
+    },
+    "sfx": "hit"
+   },
+   {
+    "say": "Ne kaptan, ne mürettebat, ne de bir *iz*.",
+    "show": {
+     "type": "icon",
+     "name": "question"
+    }
+   },
+   {
+    "say": "Gemideki on kişi, ardında hiçbir açıklama bırakmadan *kaybolmuştu*.",
+    "show": {
+     "type": "people",
+     "n": 10,
+     "highlight": [],
+     "fade_out": true
+    },
+    "sfx": "hit"
+   },
+   {
+    "say": "Bu, denizcilik tarihinin en ünlü *hayalet gemisi*: Mary Celeste.",
+    "show": {
+     "type": "photo",
+     "commons": "MaryCelesteAsAmazon1861.jpg",
+     "search": "Mary Celeste brigantine painting",
+     "label": "MARY CELESTE (ESKİ ADIYLA AMAZON)",
+     "fallback_icon": "documents"
+    }
+   },
+   {
+    "say": "Bu videoda gerçek kayıtlara dayanarak geminin *son günlerini* takip edeceğiz.",
+    "show": {
+     "type": "title",
+     "lines": [
+      "MARY",
+      "CELESTE",
+      "GİZEMİ"
+     ],
+     "red": 1
+    }
+   },
+   {
+    "say": "7 Kasım 1872. Mary Celeste, New York'tan İtalya'nın Cenova şehrine doğru yola çıkar.",
+    "show": {
+     "type": "date",
+     "day": 7,
+     "month": "KASIM",
+     "year": 1872
+    }
+   },
+   {
+    "say": "Ambarında 1.701 varil *endüstriyel alkol* vardır.",
+    "show": {
+     "type": "number",
+     "value": 1701,
+     "label": "VARİL ALKOL"
+    }
+   },
+   {
+    "say": "Kaptan, deneyimli denizci *Benjamin Spooner Briggs*.",
+    "show": {
+     "type": "dossier",
+     "name": "BENJAMIN S. BRIGGS",
+     "no": "1872/11",
+     "fields": {
+      "GÖREV": "KAPTAN",
+      "GEMİ": "MARY CELESTE",
+      "DURUM": "██"
+     }
+    }
+   },
+   {
+    "say": "Yanında eşi Sarah ve iki yaşındaki kızı *Sophia* da vardır.",
+    "show": {
+     "type": "people",
+     "n": 3,
+     "highlight": [
+      1,
+      2
+     ],
+     "label": "KAPTANIN AİLESİ"
+    }
+   },
+   {
+    "say": "Yedi kişilik mürettebatla birlikte gemide toplam *on kişi* bulunur.",
+    "show": {
+     "type": "tally",
+     "n": 10,
+     "label": "GEMİDEKİLER"
+    }
+   },
+   {
+    "say": "Yolculuk sakin başlar. Gemi, Atlantik'in gri dalgalarında doğuya ilerler.",
+    "show": {
+     "type": "scene",
+     "sky": "day",
+     "land": "sea",
+     "weather": "none",
+     "props": [
+      {
+       "k": "ship",
+       "x": 0.4
+      }
+     ],
+     "label": "KASIM 1872"
+    }
+   },
+   {
+    "say": "25 Kasım sabahı, geminin kayıt tahtasına son bir not düşülür.",
+    "show": {
+     "type": "date",
+     "day": 25,
+     "month": "KASIM",
+     "year": 1872
+    }
+   },
+   {
+    "say": "Gemi o sırada Azor Adaları'ndaki *Santa Maria* adasının yakınındadır.",
+    "show": {
+     "type": "place",
+     "name": "SANTA MARİA",
+     "sub": "AZOR ADALARI"
+    }
+   },
+   {
+    "say": "Bu, gemiden kalan *son kayıttır*. Sonrası tam bir sessizlik.",
+    "show": {
+     "type": "icon",
+     "name": "documents"
+    },
+    "sfx": "riser"
+   },
+   {
+    "say": "4 Aralık 1872'de İngiliz gemisi *Dei Gratia*, ufukta tuhaf bir yelken görür.",
+    "show": {
+     "type": "date",
+     "day": 4,
+     "month": "ARALIK",
+     "year": 1872
+    }
+   },
+   {
+    "say": "Gemi, Azorların yaklaşık 400 mil doğusunda, rotasız biçimde *sürüklenmektedir*.",
+    "show": {
+     "type": "scene",
+     "sky": "day",
+     "land": "sea",
+     "weather": "none",
+     "props": [
+      {
+       "k": "ship",
+       "x": 0.28,
+       "s": 0.7
+      },
+      {
+       "k": "ship",
+       "x": 0.72
+      }
+     ],
+     "label": "AZORLARIN ≈400 MİL DOĞUSU"
+    }
+   },
+   {
+    "say": "Dei Gratia'nın kaptanı David Morehouse, bir şeylerin *yanlış* olduğunu fark eder.",
+    "show": {
+     "type": "dossier",
+     "name": "DAVID MOREHOUSE",
+     "no": "1872/12",
+     "fields": {
+      "GÖREV": "KAPTAN",
+      "GEMİ": "DEI GRATIA"
+     }
+    }
+   },
+   {
+    "say": "Dümende kimse görünmez. Gemi rüzgârda başıboş *yalpalar*.",
+    "show": {
+     "type": "icon",
+     "name": "eye"
+    }
+   },
+   {
+    "say": "Oliver Deveau önderliğindeki küçük bir ekip, gemiye *çıkar*.",
+    "show": {
+     "type": "people",
+     "n": 3,
+     "highlight": [
+      0
+     ],
+     "label": "ÇIKARMA EKİBİ"
+    }
+   },
+   {
+    "say": "Gördükleri tabloya inanamazlar. Gemi *bomboştur*.",
+    "show": {
+     "type": "scene",
+     "sky": "storm",
+     "land": "sea",
+     "weather": "fog",
+     "props": [
+      {
+       "k": "ship",
+       "x": 0.5,
+       "s": 1.2
+      }
+     ]
+    },
+    "sfx": "hit"
+   },
+   {
+    "say": "Altı aylık yiyecek ve su yerindedir. Kargonun neredeyse tamamı *sağlamdır*.",
+    "show": {
+     "type": "list",
+     "items": [
+      "YİYECEK: 6 AY",
+      "SU: 6 AY",
+      "KARGO: SAĞLAM"
+     ]
+    }
+   },
+   {
+    "say": "Ambarda yaklaşık bir metre su vardır. Ama gemi *batmak üzere değildir*.",
+    "show": {
+     "type": "number",
+     "value": "≈1 M",
+     "label": "AMBARDAKİ SU"
+    }
+   },
+   {
+    "say": "Eksik olan üç şey vardır: *filika*, geminin evrakları ve kaptanın seyir aletleri.",
+    "show": {
+     "type": "list",
+     "items": [
+      "FİLİKA",
+      "EVRAKLAR",
+      "SEYİR ALETLERİ"
+     ],
+     "strike": [
+      0,
+      1,
+      2
+     ]
+    }
+   },
+   {
+    "say": "Yani on kişi, sağlam bir gemiyi küçük bir filikayla açık denizde *terk etmişti*. Ama neden?",
+    "show": {
+     "type": "title",
+     "lines": [
+      "NEDEN",
+      "TERK",
+      "ETTİLER?"
+     ],
+     "red": 2
+    },
+    "sfx": "riser"
+   },
+   {
+    "say": "Dei Gratia, hayalet gemiyi Cebelitarık'a götürür. Bir kurtarma *davası* başlar.",
+    "show": {
+     "type": "place",
+     "name": "CEBELİTARIK",
+     "sub": "KURTARMA DAVASI · 1872"
+    }
+   },
+   {
+    "say": "Başsavcı Frederick Solly-Flood, gemide bir *suç* işlendiğinden şüphelenir.",
+    "show": {
+     "type": "dossier",
+     "name": "F. SOLLY-FLOOD",
+     "no": "1872/GIB",
+     "fields": {
+      "GÖREV": "BAŞSAVCI",
+      "ŞÜPHE": "SUÇ?"
+     },
+     "stamp": "SORUŞTURMA"
+    }
+   },
+   {
+    "say": "Ama üç aydan uzun süren incelemede, kötü niyetli bir eyleme dair *kanıt* bulunamaz.",
+    "show": {
+     "type": "icon",
+     "name": "clock",
+     "label": "3 AYI AŞKIN DURUŞMA"
+    }
+   },
+   {
+    "say": "Kurtarıcılar, gemi ve yükün sigorta değerinin yalnızca *altıda birini* alır.",
+    "show": {
+     "type": "number",
+     "value": 6,
+     "prefix": "1/",
+     "label": "KURTARMA PAYI"
+    }
+   },
+   {
+    "say": "1884'te genç bir yazar bu olaydan esinlenen bir öykü yayımlar: *Arthur Conan Doyle*.",
+    "show": {
+     "type": "headline",
+     "paper": "CORNHILL MAGAZINE",
+     "text": "J. Habakuk Jephson's Statement · 1884"
+    },
+    "sfx": "hit"
+   },
+   {
+    "say": "Kurgu öykü geminin adını bile yanlış yazar. Ama efsaneyi dünyaya *o yayar*.",
+    "show": {
+     "type": "list",
+     "items": [
+      "MARIE CELESTE?",
+      "KURGU",
+      "EFSANE"
+     ],
+     "strike": [
+      0
+     ]
+    }
+   },
+   {
+    "say": "Peki on kişiyi gemiyi terk etmeye ne zorladı? İşte *teoriler*.",
+    "show": {
+     "type": "title",
+     "lines": [
+      "PEKİ",
+      "NE",
+      "OLDU?"
+     ],
+     "red": 2
+    },
+    "sfx": "riser"
+   },
+   {
+    "say": "Akla ilk gelen korsanlık. Ama değerli eşyalar ve kargo *yerindeydi*.",
+    "show": {
+     "type": "list",
+     "items": [
+      "KORSANLAR",
+      "İSYAN",
+      "SİGORTA HİLESİ"
+     ],
+     "strike": [
+      0
+     ]
+    }
+   },
+   {
+    "say": "İsyan ya da sigorta hilesi de öne sürüldü. Ama bunları kanıtlayan *kesin bir bulgu* yok.",
+    "show": {
+     "type": "icon",
+     "name": "question"
+    }
+   },
+   {
+    "say": "Bir başka teori: gemiyi aniden sarsan dev bir *su hortumu*.",
+    "show": {
+     "type": "scene",
+     "sky": "storm",
+     "land": "sea",
+     "weather": "rain",
+     "props": [
+      {
+       "k": "ship",
+       "x": 0.45
+      }
+     ],
+     "lightning": true
+    }
+   },
+   {
+    "say": "Yük limanda boşaltılırken, dokuz varilin *boş* olduğu görülmüştü.",
+    "show": {
+     "type": "number",
+     "value": 9,
+     "label": "BOŞ VARİL"
+    }
+   },
+   {
+    "say": "Belki sızan alkolün buharı, ambarda ani bir *patlamaya* yol açtı.",
+    "show": {
+     "type": "scene",
+     "sky": "fire",
+     "land": "sea",
+     "weather": "none",
+     "props": [
+      {
+       "k": "ship",
+       "x": 0.5
+      },
+      {
+       "k": "fire",
+       "x": 0.52,
+       "s": 0.5
+      }
+     ]
+    },
+    "sfx": "hit"
+   },
+   {
+    "say": "2006'da kimyager Andrea Sella, ambarın bir modelinde bu fikri *test etti*.",
+    "show": {
+     "type": "dossier",
+     "name": "ANDREA SELLA",
+     "no": "UCL/2006",
+     "fields": {
+      "ALAN": "KİMYA",
+      "DENEY": "AMBAR MODELİ"
+     }
+    }
+   },
+   {
+    "say": "Sonuç: Yanık izi bırakmayan ama kapakları açabilecek bir *basınç dalgası*.",
+    "show": {
+     "type": "quote",
+     "text": "Geride is kalmadı, yanma ya da kavrulma yoktu.",
+     "who": "UCL deneyi, 2006"
+    }
+   },
+   {
+    "say": "Böyle bir patlama, mürettebatı korkutup filikaya *kaçırmış* olabilir.",
+    "show": {
+     "type": "scene",
+     "sky": "night",
+     "land": "sea",
+     "weather": "fog",
+     "props": [
+      {
+       "k": "ship",
+       "x": 0.65,
+       "s": 0.8
+      }
+     ],
+     "moon": true
+    }
+   },
+   {
+    "say": "Ancak gemiye çıkanlar, ana ambar kapağının kapalı olduğunu ve *alkol kokusu* almadıklarını bildirmişti.",
+    "show": {
+     "type": "icon",
+     "name": "eye"
+    }
+   },
+   {
+    "say": "Belgeselci Anne MacGregor ise eski okyanus verileriyle geminin rotasını *yeniden kurdu*.",
+    "show": {
+     "type": "dossier",
+     "name": "ANNE MACGREGOR",
+     "no": "BELGESEL",
+     "fields": {
+      "YÖNTEM": "OKYANUS KAYITLARI",
+      "SONUÇ": "ROTA HATASI?"
+     }
+    }
+   },
+   {
+    "say": "Vardığı sonuç: Kaptan Briggs, muhtemelen hatalı bir kronometre yüzünden yaklaşık 120 mil *yanılmıştı*.",
+    "show": {
+     "type": "number",
+     "value": 120,
+     "suffix": " MİL",
+     "label": "TAHMİNİ KONUM HATASI"
+    },
+    "sfx": "hit"
+   },
+   {
+    "say": "Gemi kısa süre önce kömür taşımıştı. *Kömür tozu* pompaları tıkamış olabilir.",
+    "show": {
+     "type": "icon",
+     "name": "documents",
+     "label": "POMPALARDAN BİRİ SÖKÜLMÜŞTÜ"
+    }
+   },
+   {
+    "say": "Ambardaki suyu ölçemeyen kaptan, gemiyi batıyor sanıp Santa Maria açıklarında *terk etmiş* olabilir.",
+    "show": {
+     "type": "scene",
+     "sky": "dusk",
+     "land": "sea",
+     "weather": "none",
+     "props": [
+      {
+       "k": "ship",
+       "x": 0.3
+      },
+      {
+       "k": "lighthouse",
+       "x": 0.85,
+       "s": 0.6
+      }
+     ],
+     "label": "SANTA MARİA AÇIKLARI"
+    },
+    "sfx": "riser"
+   },
+   {
+    "say": "Küçük filika ve içindekiler bir daha *hiç görülmedi*.",
+    "show": {
+     "type": "people",
+     "n": 10,
+     "highlight": [],
+     "fade_out": true
+    }
+   },
+   {
+    "say": "Mary Celeste'in sonu mu? 1885'te bir kaptan, sigorta parası için gemiyi Haiti açıklarında bir resife *bindirdi*.",
+    "show": {
+     "type": "place",
+     "name": "HAİTİ",
+     "sub": "1885 · SON YOLCULUK"
+    }
+   },
+   {
+    "say": "Peki sence o on kişiye gerçekten *ne oldu*?",
+    "show": {
+     "type": "title",
+     "lines": [
+      "SENCE",
+      "NE OLDU",
+      "?"
+     ],
+     "red": 1
+    }
+   },
+   {
+    "say": "Yorumlara yaz ve daha fazla gizem için *abone ol*.",
+    "show": {
+     "type": "title",
+     "lines": [
+      "YORUMLARA YAZ",
+      "ABONE OL",
+      ""
+     ],
+     "red": 1
+    }
+   }
+  ],
+  "thumb": {
+   "lines": [
+    "10 KİŞİ",
+    "GEMİDEN",
+    "KAYBOLDU"
+   ],
+   "red": 2,
+   "photo_commons": "MaryCelesteAsAmazon1861.jpg",
+   "photo_search": "Mary Celeste brigantine painting",
+   "focus_x": 0.55,
+   "focus_y": 0.5,
+   "tag": "GERÇEK OLAY"
+  },
+  "chapters": [
+   [
+    0,
+    "Hayalet gemi"
+   ],
+   [
+    5,
+    "Yolculuk"
+   ],
+   [
+    14,
+    "Boş gemi bulunuyor"
+   ],
+   [
+    24,
+    "Cebelitarık davası"
+   ],
+   [
+    30,
+    "Teoriler"
+   ],
+   [
+    36,
+    "Alkol buharı deneyi"
+   ],
+   [
+    40,
+    "Kronometre teorisi"
+   ],
+   [
+    45,
+    "Geminin sonu"
+   ]
+  ]
+ },
+ "shorts": [
+  {
+   "hook": [
+    {
+     "say": "Atlantik'te bulunan bu gemide altı aylık yiyecek vardı. Ama *tek bir insan* yoktu.",
+     "show": {
+      "type": "scene",
+      "sky": "storm",
+      "land": "sea",
+      "weather": "fog",
+      "props": [
+       {
+        "k": "ship",
+        "x": 0.5,
+        "s": 1.2
+       }
+      ]
+     },
+     "sfx": "hit"
+    }
+   ],
+   "from": 14,
+   "to": 23,
+   "outro": [
+    {
+     "say": "On kişiye ne oldu? Teoriler kanaldaki *tam videoda*.",
+     "show": {
+      "type": "title",
+      "lines": [
+       "TAM HİKÂYE",
+       "KANALDA",
+       "ABONE OL"
+      ],
+      "red": 1
+     }
+    }
+   ]
+  },
+  {
+   "hook": [
+    {
+     "say": "Hayalet gemi Mary Celeste'in mürettebatı neden kayboldu? Bir kimyager bunu *test etti*.",
+     "show": {
+      "type": "list",
+      "items": [
+       "KORSAN?",
+       "HORTUM?",
+       "PATLAMA?"
+      ]
+     },
+     "sfx": "hit"
+    }
+   ],
+   "from": 34,
+   "to": 40,
+   "outro": [
+    {
+     "say": "Asıl cevap belki de bambaşka. Kanaldaki *tam videoyu* izle.",
+     "show": {
+      "type": "title",
+      "lines": [
+       "TAM HİKÂYE",
+       "KANALDA",
+       "ABONE OL"
+      ],
+      "red": 1
+     }
+    }
+   ]
+  },
+  {
+   "hook": [
+    {
+     "say": "150 yıllık hayalet gemi gizeminin cevabı, küçük bir *saat hatası* olabilir.",
+     "show": {
+      "type": "icon",
+      "name": "clock"
+     },
+     "sfx": "hit"
+    }
+   ],
+   "from": 41,
+   "to": 46,
+   "outro": [
+    {
+     "say": "Sence bu açıklama yeterli mi? Yorumlara yaz, *takip et*.",
+     "show": {
+      "type": "title",
+      "lines": [
+       "SENCE",
+       "YETERLİ Mİ",
+       "?"
+      ],
+      "red": 1
+     }
+    }
+   ]
+  }
+ ],
+ "publish": {
+  "long": {
+   "title": "Mary Celeste: 10 Kişi Sağlam Bir Gemiden Nasıl Kayboldu?",
+   "description": "1872'de Atlantik'te sürüklenirken bulunan Mary Celeste'te altı aylık yiyecek, sağlam bir kargo... ama tek bir insan yoktu. Kaptan Briggs, eşi, iki yaşındaki kızı ve yedi denizciye ne oldu? Cebelitarık davası, Conan Doyle'un yarattığı efsane, alkol buharı deneyi ve kronometre teorisiyle hayalet geminin gerçek hikâyesi.\n\nKaynaklar: Smithsonian Magazine, Royal Museums Greenwich, UCL (2006), History Hit, Britannica.",
+   "hashtags": [
+    "#gizem",
+    "#belgesel",
+    "#maryceleste",
+    "#hayaletgemi",
+    "#tarih",
+    "#gerçekolay"
+   ]
+  },
+  "shorts": [
+   {
+    "title": "Gemi Sağlamdı, Yemek Yerindeydi… İnsanlar Yoktu 🚢 #shorts",
+    "description": "Mary Celeste — tam hikâye kanalda.",
+    "hashtags": [
+     "#shorts",
+     "#gizem",
+     "#maryceleste"
+    ]
+   },
+   {
+    "title": "Hayalet Gemiyi Bir Kimyager Mi Çözdü? 🧪 #shorts",
+    "description": "Mary Celeste alkol buharı teorisi — tam hikâye kanalda.",
+    "hashtags": [
+     "#shorts",
+     "#gizem",
+     "#bilim"
+    ]
+   },
+   {
+    "title": "150 Yıllık Gizem Bir Saat Hatası Mı? ⏱️ #shorts",
+    "description": "Mary Celeste'in kronometre teorisi.",
+    "hashtags": [
+     "#shorts",
+     "#gizem",
+     "#tarih"
+    ]
+   }
+  ]
+ }
+}

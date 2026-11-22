@@ -1,0 +1,627 @@
+{
+ "id": "S004_tunguska_olayi",
+ "format": "story",
+ "brand": "GİZEM DOSYASI",
+ "theme": "kan",
+ "voice": {
+  "engine": "edge",
+  "speaker": "ahmet",
+  "rate": "+0%",
+  "pitch": "-2Hz"
+ },
+ "long": {
+  "title": "Tunguska Olayı",
+  "beats": [
+   {
+    "say": "30 Haziran 1908 sabahı, Sibirya'nın üzerinde gökyüzü sanki *ikiye yarıldı*.",
+    "show": {
+     "type": "scene",
+     "sky": "fire",
+     "land": "forest",
+     "weather": "none",
+     "label": "30 HAZİRAN 1908 · SABAH"
+    },
+    "sfx": "hit"
+   },
+   {
+    "say": "Birkaç saniye içinde yaklaşık *80 milyon ağaç* yere serildi.",
+    "show": {
+     "type": "number",
+     "value": 80,
+     "suffix": " MİLYON",
+     "label": "DEVRİLEN AĞAÇ"
+    }
+   },
+   {
+    "say": "Ama ortada ne bir krater vardı, ne de düşen bir *cisim*.",
+    "show": {
+     "type": "icon",
+     "name": "question"
+    },
+    "sfx": "hit"
+   },
+   {
+    "say": "Bu, modern insanın tanık olduğu en büyük *kozmik çarpma* olayı olarak biliniyor.",
+    "show": {
+     "type": "title",
+     "lines": [
+      "TUNGUSKA",
+      "OLAYI",
+      "1908"
+     ],
+     "red": 1
+    }
+   },
+   {
+    "say": "Bu videoda arşiv kayıtlarıyla o sabahı ve bir asırlık *gizemi* inceleyeceğiz.",
+    "show": {
+     "type": "photo",
+     "commons": "Tunguska.png",
+     "search": "Tunguska event 1908 fallen trees",
+     "label": "ARŞİV · TUNGUSKA",
+     "fallback_icon": "documents"
+    }
+   },
+   {
+    "say": "Yer: Sibirya'da, Podkamennaya Tunguska Nehri yakınlarındaki ıssız *tayga* ormanı.",
+    "show": {
+     "type": "place",
+     "name": "TUNGUSKA",
+     "sub": "SİBİRYA · RUSYA"
+    }
+   },
+   {
+    "say": "Bölge neredeyse boştu. Yalnızca dağınık yerleşimler ve *ren geyiği* sürüleri vardı.",
+    "show": {
+     "type": "scene",
+     "sky": "day",
+     "land": "forest",
+     "weather": "none",
+     "props": [
+      {
+       "k": "house",
+       "x": 0.8,
+       "s": 0.6
+      }
+     ]
+    }
+   },
+   {
+    "say": "Sabah saat yediyi biraz geçe, gökyüzünde neredeyse güneş kadar parlak, *mavimsi* bir ışık belirdi.",
+    "show": {
+     "type": "date",
+     "day": 30,
+     "month": "HAZİRAN",
+     "year": 1908
+    }
+   },
+   {
+    "say": "Işık gökyüzünü boydan boya geçti. Ardından kör edici bir *patlama* geldi.",
+    "show": {
+     "type": "scene",
+     "sky": "fire",
+     "land": "forest",
+     "weather": "none",
+     "lightning": true,
+     "label": "07:17 · YEREL SAAT"
+    },
+    "sfx": "hit"
+   },
+   {
+    "say": "NASA'ya göre açığa çıkan enerji, yaklaşık *185 Hiroşima bombasına* eşdeğerdi.",
+    "show": {
+     "type": "number",
+     "value": 185,
+     "suffix": "×",
+     "label": "HİROŞİMA BOMBASI"
+    }
+   },
+   {
+    "say": "Patlama yerde değil, havada oldu. Yerden yaklaşık 5 ila 10 kilometre *yukarıda*.",
+    "show": {
+     "type": "scene",
+     "sky": "storm",
+     "land": "forest",
+     "weather": "fog",
+     "label": "HAVADA PATLAMA · 5-10 KM"
+    }
+   },
+   {
+    "say": "Yaklaşık 65 kilometre uzaktaki Vanavara ticaret noktasında bir adam *kahvaltı* ediyordu.",
+    "show": {
+     "type": "dossier",
+     "name": "VANAVARA TANIĞI",
+     "no": "1908/06",
+     "fields": {
+      "MESAFE": "≈65 KM",
+      "SAAT": "SABAH"
+     }
+    }
+   },
+   {
+    "say": "Tanık daha sonra şöyle anlatacaktı: Sanki gömleği *alev almıştı*.",
+    "show": {
+     "type": "quote",
+     "text": "Gömleğim alev almış gibi büyük bir sıcaklık dalgası hissettim.",
+     "who": "Vanavara'daki tanık"
+    }
+   },
+   {
+    "say": "Ardından gelen şok dalgası, onu sandalyesinden birkaç adım öteye *fırlattı*.",
+    "show": {
+     "type": "people",
+     "n": 1,
+     "highlight": [
+      0
+     ],
+     "label": "VANAVARA · 65 KM"
+    }
+   },
+   {
+    "say": "Yüzlerce kilometre uzakta camlar kırıldı, insanlar *yere düştü*.",
+    "show": {
+     "type": "scene",
+     "sky": "dusk",
+     "land": "city",
+     "weather": "fog",
+     "props": [
+      {
+       "k": "house",
+       "x": 0.3
+      },
+      {
+       "k": "house",
+       "x": 0.6
+      }
+     ]
+    }
+   },
+   {
+    "say": "Basınç dalgası, binlerce kilometre ötedeki *İngiltere'de* bile barometrelere kaydedildi.",
+    "show": {
+     "type": "place",
+     "name": "İNGİLTERE",
+     "sub": "BASINÇ DALGASI KAYDEDİLDİ"
+    }
+   },
+   {
+    "say": "Sonraki gecelerde Asya ve Avrupa'da gökyüzü tuhaf biçimde *parladı*.",
+    "show": {
+     "type": "scene",
+     "sky": "dusk",
+     "land": "city",
+     "weather": "none",
+     "moon": false,
+     "label": "GECE YARISI · 1908"
+    }
+   },
+   {
+    "say": "Bazı yerlerde insanlar gece yarısı dışarıda *gazete okuyabiliyordu*.",
+    "show": {
+     "type": "icon",
+     "name": "eye"
+    }
+   },
+   {
+    "say": "Yüzlerce ren geyiği telef oldu. Ama bir insanın öldüğüne dair *doğrudan kanıt* yok.",
+    "show": {
+     "type": "list",
+     "items": [
+      "REN GEYİĞİ",
+      "İNSAN: ?"
+     ]
+    }
+   },
+   {
+    "say": "Ve sonra dünya bu olayı neredeyse *20 yıl* boyunca görmezden geldi.",
+    "show": {
+     "type": "icon",
+     "name": "clock"
+    },
+    "sfx": "riser"
+   },
+   {
+    "say": "Savaş, devrim ve iç savaş, bilim insanlarının bölgeye ulaşmasını *engelledi*.",
+    "show": {
+     "type": "list",
+     "items": [
+      "DÜNYA SAVAŞI",
+      "DEVRİM",
+      "İÇ SAVAŞ"
+     ]
+    }
+   },
+   {
+    "say": "Sonunda 1927'de Sovyet göktaşı araştırmacısı *Leonid Kulik* bölgeye ulaştı.",
+    "show": {
+     "type": "dossier",
+     "name": "LEONİD KULİK",
+     "no": "1927/01",
+     "fields": {
+      "ALAN": "GÖKTAŞLARI",
+      "SEFER": "1927"
+     }
+    }
+   },
+   {
+    "say": "Gördüğü manzara inanılmazdı. Ağaçlar kilometrelerce boyunca *yere yatmıştı*.",
+    "show": {
+     "type": "photo",
+     "search": "Tunguska Kulik expedition fallen forest",
+     "label": "KULİK SEFERİ",
+     "fallback_icon": "documents"
+    }
+   },
+   {
+    "say": "Yaklaşık 2.150 kilometrekarelik orman, merkezden dışa doğru *ışınsal* biçimde devrilmişti.",
+    "show": {
+     "type": "number",
+     "value": 2150,
+     "suffix": " KM²",
+     "label": "DEVRİLEN ORMAN"
+    }
+   },
+   {
+    "say": "Kulik bir göktaşı krateri aradı. Ama *krater yoktu*.",
+    "show": {
+     "type": "icon",
+     "name": "question"
+    },
+    "sfx": "hit"
+   },
+   {
+    "say": "Daha da tuhafı: Tam merkezdeki ağaçlar *ayaktaydı*. Dalları ve kabukları soyulmuştu.",
+    "show": {
+     "type": "scene",
+     "sky": "day",
+     "land": "forest",
+     "weather": "fog",
+     "label": "SIFIR NOKTASI"
+    }
+   },
+   {
+    "say": "Bu tuhaf ayrıntı, cevabın *anahtarı* olacaktı. Sonuna kadar izleyin.",
+    "show": {
+     "type": "icon",
+     "name": "eye"
+    },
+    "sfx": "riser"
+   },
+   {
+    "say": "Peki Sibirya'nın üzerinde *ne patladı*?",
+    "show": {
+     "type": "title",
+     "lines": [
+      "NE",
+      "PATLADI",
+      "?"
+     ],
+     "red": 1
+    }
+   },
+   {
+    "say": "Bir asırdır onlarca *teori* öne sürüldü.",
+    "show": {
+     "type": "list",
+     "items": [
+      "ASTEROİT?",
+      "KUYRUKLU YILDIZ?",
+      "UZAYLILAR?"
+     ]
+    }
+   },
+   {
+    "say": "Bazıları düşen bir *uzay gemisi*, antimadde, hatta minik bir kara delik iddia etti.",
+    "show": {
+     "type": "icon",
+     "name": "ufo"
+    }
+   },
+   {
+    "say": "Ama bu iddiaları destekleyen *bilimsel bir kanıt* yok.",
+    "show": {
+     "type": "list",
+     "items": [
+      "UZAY GEMİSİ",
+      "ANTİMADDE",
+      "KARA DELİK"
+     ],
+     "strike": [
+      0,
+      1,
+      2
+     ]
+    }
+   },
+   {
+    "say": "En yaygın kabul gören açıklama: Atmosfere giren *kayalık bir asteroit*.",
+    "show": {
+     "type": "dossier",
+     "name": "TUNGUSKA CİSMİ",
+     "no": "1908/XX",
+     "fields": {
+      "TÜR": "TAŞ ASTEROİT?",
+      "BOYUT": "ONLARCA METRE"
+     },
+     "stamp": "EN GÜÇLÜ TEORİ"
+    }
+   },
+   {
+    "say": "Cisim saatte on binlerce kilometre hızla havaya girdi ve *kızgın* bir ateş topuna dönüştü.",
+    "show": {
+     "type": "scene",
+     "sky": "fire",
+     "land": "forest",
+     "weather": "none",
+     "lightning": true
+    }
+   },
+   {
+    "say": "Ve yere çarpmadan, havada *parçalandı*.",
+    "show": {
+     "type": "scene",
+     "sky": "storm",
+     "land": "forest",
+     "weather": "fog",
+     "lightning": true
+    },
+    "sfx": "hit"
+   },
+   {
+    "say": "Tam altındaki ağaçlara dalga yukarıdan çarptı. Yalnızca *dallarını* kaybettiler.",
+    "show": {
+     "type": "icon",
+     "name": "mountain",
+     "label": "MERKEZ: DİKEY DALGA"
+    }
+   },
+   {
+    "say": "Uzaktaki ağaçlar ise yandan gelen dalgayla *devrildi*. Krater olmamasının sebebi buydu.",
+    "show": {
+     "type": "list",
+     "items": [
+      "MERKEZ: AYAKTA",
+      "ÇEVRE: DEVRİK",
+      "KRATER: YOK"
+     ]
+    }
+   },
+   {
+    "say": "2013'te benzer ama çok daha küçük bir olay, Rusya'nın *Çelyabinsk* şehrinde yaşandı.",
+    "show": {
+     "type": "place",
+     "name": "ÇELYABİNSK",
+     "sub": "15 ŞUBAT 2013"
+    }
+   },
+   {
+    "say": "Yaklaşık 20 metrelik bir göktaşı, binden fazla kişinin *yaralanmasına* yol açtı.",
+    "show": {
+     "type": "number",
+     "value": 1000,
+     "suffix": "+",
+     "label": "YARALI · ÇELYABİNSK"
+    }
+   },
+   {
+    "say": "NASA'ya göre Tunguska büyüklüğünde bir cisim, ortalama *300 yılda bir* Dünya'ya girer.",
+    "show": {
+     "type": "icon",
+     "name": "clock",
+     "label": "≈300 YILDA BİR"
+    }
+   },
+   {
+    "say": "Bugün her 30 Haziran, bu tehlikeye dikkat çekmek için *Asteroit Günü* olarak anılıyor.",
+    "show": {
+     "type": "date",
+     "day": 30,
+     "month": "HAZİRAN",
+     "year": "ASTEROİT GÜNÜ"
+    }
+   },
+   {
+    "say": "Peki sence Sibirya'nın üzerinde gerçekten *ne patladı*?",
+    "show": {
+     "type": "title",
+     "lines": [
+      "SENCE",
+      "NE PATLADI",
+      "?"
+     ],
+     "red": 1
+    }
+   },
+   {
+    "say": "Yorumlara yaz ve daha fazla gizem için *abone ol*.",
+    "show": {
+     "type": "title",
+     "lines": [
+      "YORUMLARA YAZ",
+      "ABONE OL",
+      ""
+     ],
+     "red": 1
+    }
+   }
+  ],
+  "thumb": {
+   "lines": [
+    "80 MİLYON AĞAÇ",
+    "BİR ANDA",
+    "DEVRİLDİ"
+   ],
+   "red": 0,
+   "photo_commons": "Tunguska.png",
+   "photo_search": "Tunguska event 1908 fallen trees",
+   "focus_x": 0.5,
+   "focus_y": 0.55,
+   "tag": "GERÇEK OLAY"
+  },
+  "chapters": [
+   [
+    0,
+    "O sabah"
+   ],
+   [
+    5,
+    "Patlama"
+   ],
+   [
+    11,
+    "Tanıklar"
+   ],
+   [
+    19,
+    "Kulik seferi"
+   ],
+   [
+    27,
+    "Teoriler"
+   ],
+   [
+    31,
+    "Bilimsel açıklama"
+   ],
+   [
+    36,
+    "Çelyabinsk ve bugün"
+   ]
+  ]
+ },
+ "shorts": [
+  {
+   "hook": [
+    {
+     "say": "1908'de Sibirya'da 80 milyon ağacı bir anda deviren patlama. Ama *krater* yok.",
+     "show": {
+      "type": "scene",
+      "sky": "fire",
+      "land": "forest",
+      "weather": "none",
+      "lightning": true
+     },
+     "sfx": "hit"
+    }
+   ],
+   "from": 7,
+   "to": 15,
+   "outro": [
+    {
+     "say": "Ne patladı? Cevap kanaldaki *tam videoda*.",
+     "show": {
+      "type": "title",
+      "lines": [
+       "TAM HİKÂYE",
+       "KANALDA",
+       "ABONE OL"
+      ],
+      "red": 1
+     }
+    }
+   ]
+  },
+  {
+   "hook": [
+    {
+     "say": "Bilim insanları patlama yerine 19 yıl sonra ulaştı. Gördükleri *inanılmazdı*.",
+     "show": {
+      "type": "icon",
+      "name": "eye"
+     },
+     "sfx": "hit"
+    }
+   ],
+   "from": 20,
+   "to": 26,
+   "outro": [
+    {
+     "say": "Merkezdeki ağaçlar neden ayaktaydı? Cevap kanaldaki *tam videoda*.",
+     "show": {
+      "type": "title",
+      "lines": [
+       "TAM HİKÂYE",
+       "KANALDA",
+       "ABONE OL"
+      ],
+      "red": 1
+     }
+    }
+   ]
+  },
+  {
+   "hook": [
+    {
+     "say": "Sibirya'nın üzerinde ne patladı? Uzay gemisi mi, yoksa bir *asteroit* mi?",
+     "show": {
+      "type": "list",
+      "items": [
+       "UZAY GEMİSİ?",
+       "ASTEROİT?"
+      ]
+     },
+     "sfx": "hit"
+    }
+   ],
+   "from": 29,
+   "to": 36,
+   "outro": [
+    {
+     "say": "Sence bu açıklama yeterli mi? Yorumlara yaz, *takip et*.",
+     "show": {
+      "type": "title",
+      "lines": [
+       "SENCE",
+       "YETERLİ Mİ",
+       "?"
+      ],
+      "red": 1
+     }
+    }
+   ]
+  }
+ ],
+ "publish": {
+  "long": {
+   "title": "Tunguska Olayı: 80 Milyon Ağacı Deviren Gizemli Patlama",
+   "description": "30 Haziran 1908'de Sibirya'nın üzerinde dev bir patlama yaklaşık 2.150 km² ormanı yerle bir etti, ama ortada krater yoktu. Tanıkların anlattıkları, Leonid Kulik'in seferi, uzay gemisinden kara deliğe teoriler ve bilim insanlarının kabul ettiği havada patlayan asteroit açıklaması.\n\nKaynaklar: NASA (Science@NASA), Smithsonian Magazine, American Physical Society (APS News), EarthSky.",
+   "hashtags": [
+    "#gizem",
+    "#belgesel",
+    "#tunguska",
+    "#asteroit",
+    "#bilim",
+    "#gerçekolay"
+   ]
+  },
+  "shorts": [
+   {
+    "title": "80 Milyon Ağaç Devrildi, Krater Yok! 💥 #shorts",
+    "description": "Tunguska Olayı — tam hikâye kanalda.",
+    "hashtags": [
+     "#shorts",
+     "#gizem",
+     "#tunguska"
+    ]
+   },
+   {
+    "title": "Patlama Merkezindeki Ağaçlar Neden Ayaktaydı? 🌲 #shorts",
+    "description": "Kulik seferi — tam hikâye kanalda.",
+    "hashtags": [
+     "#shorts",
+     "#gizem",
+     "#bilim"
+    ]
+   },
+   {
+    "title": "Uzay Gemisi mi, Asteroit mi? ☄️ #shorts",
+    "description": "Tunguska Olayı'nın bilimsel açıklaması.",
+    "hashtags": [
+     "#shorts",
+     "#gizem",
+     "#asteroit"
+    ]
+   }
+  ]
+ }
+}
