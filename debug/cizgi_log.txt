@@ -1,0 +1,83 @@
+▶ TEST_C001_nasreddin_hoca_5_fikra_short1 [vertical] görseller
+  [görsel vertical] 1/11 OK 5s
+  [görsel] hata HTTPError HTTP Error 402: Payment Required
+  [görsel] hata HTTPError HTTP Error 402: Payment Required
+  [görsel] hata HTTPError HTTP Error 402: Payment Required
+  [görsel vertical] 2/11 OK 53s
+  [görsel] hata HTTPError HTTP Error 402: Payment Required
+  [görsel] hata HTTPError HTTP Error 402: Payment Required
+  [görsel] hata HTTPError HTTP Error 402: Payment Required
+  [görsel vertical] 3/11 OK 54s
+  [görsel] hata HTTPError HTTP Error 402: Payment Required
+  [görsel] hata HTTPError HTTP Error 402: Payment Required
+  [görsel] hata HTTPError HTTP Error 402: Payment Required
+  [görsel vertical] 4/11 OK 55s
+  [görsel] hata HTTPError HTTP Error 402: Payment Required
+  [görsel] hata HTTPError HTTP Error 402: Payment Required
+  [görsel] hata HTTPError HTTP Error 402: Payment Required
+  [görsel vertical] 5/11 OK 55s
+  [görsel] hata HTTPError HTTP Error 402: Payment Required
+  [görsel] hata HTTPError HTTP Error 402: Payment Required
+  [görsel] hata HTTPError HTTP Error 402: Payment Required
+  [görsel vertical] 6/11 OK 53s
+  [görsel] hata HTTPError HTTP Error 402: Payment Required
+  [görsel] hata HTTPError HTTP Error 402: Payment Required
+  [görsel] hata HTTPError HTTP Error 402: Payment Required
+  [görsel] hata HTTPError HTTP Error 503: Service Unavailable
+  [görsel] hata HTTPError HTTP Error 402: Payment Required
+  [görsel vertical] 7/11 YOK 125s
+  [görsel vertical] 8/11 OK 6s
+  [görsel] hata HTTPError HTTP Error 402: Payment Required
+  [görsel] hata HTTPError HTTP Error 402: Payment Required
+  [görsel] hata HTTPError HTTP Error 402: Payment Required
+  [görsel vertical] 9/11 OK 54s
+  [görsel] hata HTTPError HTTP Error 402: Payment Required
+  [görsel] hata HTTPError HTTP Error 402: Payment Required
+  [görsel] hata HTTPError HTTP Error 402: Payment Required
+  [görsel vertical] 10/11 OK 56s
+  [görsel] hata HTTPError HTTP Error 402: Payment Required
+  [görsel] hata HTTPError HTTP Error 402: Payment Required
+  [görsel] hata HTTPError HTTP Error 402: Payment Required
+  [görsel vertical] 11/11 OK 55s
+Fetching 6 files:   0%|          | 0/6 [00:00<?, ?it/s]Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Fetching 6 files:  17%|█▋        | 1/6 [00:00<00:00,  6.56it/s]Fetching 6 files:  50%|█████     | 3/6 [00:02<00:02,  1.06it/s]Fetching 6 files:  67%|██████▋   | 4/6 [00:02<00:01,  1.50it/s]Fetching 6 files:  83%|████████▎ | 5/6 [00:14<00:04,  4.25s/it]Fetching 6 files: 100%|██████████| 6/6 [00:21<00:00,  5.23s/it]Fetching 6 files: 100%|██████████| 6/6 [00:21<00:00,  3.59s/it]
+/opt/hostedtoolcache/Python/3.11.18/x64/lib/python3.11/site-packages/diffusers/models/lora.py:393: FutureWarning: `LoRACompatibleLinear` is deprecated and will be removed in version 1.0.0. Use of `LoRACompatibleLinear` is deprecated. Please switch to PEFT backend by installing PEFT: `pip install peft`.
+  deprecate("LoRACompatibleLinear", "1.0.0", deprecation_message)
+Downloading: "https://github.com/explosion/spacy-pkuseg/releases/download/v0.0.26/spacy_ontonotes.zip" to /home/runner/.pkuseg/spacy_ontonotes.zip
+  0%|          | 0/34567143 [00:00<?, ?it/s] 61%|██████    | 21004288/34567143 [00:00<00:00, 209915958.62it/s]100%|██████████| 34567143/34567143 [00:00<00:00, 195437226.06it/s]
+loaded PerthNet (Implicit) at step 250,000
+/opt/hostedtoolcache/Python/3.11.18/x64/lib/python3.11/contextlib.py:105: FutureWarning: `torch.backends.cuda.sdp_kernel()` is deprecated. In the future, this context manager will be removed. Please see `torch.nn.attention.sdpa_kernel()` for the new context manager, with updated signature.
+  self.gen = func(*args, **kwds)
+The following generation flags are not valid and may be ignored: ['output_attentions']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+WARNING:transformers.generation.configuration_utils:The following generation flags are not valid and may be ignored: ['output_attentions']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+/opt/hostedtoolcache/Python/3.11.18/x64/lib/python3.11/contextlib.py:105: FutureWarning: `torch.backends.cuda.sdp_kernel()` is deprecated. In the future, this context manager will be removed. Please see `torch.nn.attention.sdpa_kernel()` for the new context manager, with updated signature.
+  self.gen = func(*args, **kwds)
+WARNING:chatterbox.models.t3.inference.alignment_stream_analyzer:forcing EOS token, long_tail=tensor(False), alignment_repetition=tensor(False), token_repetition=True
+/opt/hostedtoolcache/Python/3.11.18/x64/lib/python3.11/contextlib.py:105: FutureWarning: `torch.backends.cuda.sdp_kernel()` is deprecated. In the future, this context manager will be removed. Please see `torch.nn.attention.sdpa_kernel()` for the new context manager, with updated signature.
+  self.gen = func(*args, **kwds)
+/opt/hostedtoolcache/Python/3.11.18/x64/lib/python3.11/contextlib.py:105: FutureWarning: `torch.backends.cuda.sdp_kernel()` is deprecated. In the future, this context manager will be removed. Please see `torch.nn.attention.sdpa_kernel()` for the new context manager, with updated signature.
+  self.gen = func(*args, **kwds)
+/opt/hostedtoolcache/Python/3.11.18/x64/lib/python3.11/contextlib.py:105: FutureWarning: `torch.backends.cuda.sdp_kernel()` is deprecated. In the future, this context manager will be removed. Please see `torch.nn.attention.sdpa_kernel()` for the new context manager, with updated signature.
+  self.gen = func(*args, **kwds)
+WARNING:chatterbox.models.t3.inference.alignment_stream_analyzer:forcing EOS token, long_tail=tensor(False), alignment_repetition=tensor(False), token_repetition=True
+/opt/hostedtoolcache/Python/3.11.18/x64/lib/python3.11/contextlib.py:105: FutureWarning: `torch.backends.cuda.sdp_kernel()` is deprecated. In the future, this context manager will be removed. Please see `torch.nn.attention.sdpa_kernel()` for the new context manager, with updated signature.
+  self.gen = func(*args, **kwds)
+/opt/hostedtoolcache/Python/3.11.18/x64/lib/python3.11/contextlib.py:105: FutureWarning: `torch.backends.cuda.sdp_kernel()` is deprecated. In the future, this context manager will be removed. Please see `torch.nn.attention.sdpa_kernel()` for the new context manager, with updated signature.
+  self.gen = func(*args, **kwds)
+/opt/hostedtoolcache/Python/3.11.18/x64/lib/python3.11/contextlib.py:105: FutureWarning: `torch.backends.cuda.sdp_kernel()` is deprecated. In the future, this context manager will be removed. Please see `torch.nn.attention.sdpa_kernel()` for the new context manager, with updated signature.
+  self.gen = func(*args, **kwds)
+WARNING:chatterbox.models.t3.inference.alignment_stream_analyzer:forcing EOS token, long_tail=tensor(False), alignment_repetition=tensor(False), token_repetition=True
+/opt/hostedtoolcache/Python/3.11.18/x64/lib/python3.11/contextlib.py:105: FutureWarning: `torch.backends.cuda.sdp_kernel()` is deprecated. In the future, this context manager will be removed. Please see `torch.nn.attention.sdpa_kernel()` for the new context manager, with updated signature.
+  self.gen = func(*args, **kwds)
+/opt/hostedtoolcache/Python/3.11.18/x64/lib/python3.11/contextlib.py:105: FutureWarning: `torch.backends.cuda.sdp_kernel()` is deprecated. In the future, this context manager will be removed. Please see `torch.nn.attention.sdpa_kernel()` for the new context manager, with updated signature.
+  self.gen = func(*args, **kwds)
+WARNING:chatterbox.models.t3.inference.alignment_stream_analyzer:forcing EOS token, long_tail=tensor(False), alignment_repetition=tensor(False), token_repetition=True
+/opt/hostedtoolcache/Python/3.11.18/x64/lib/python3.11/contextlib.py:105: FutureWarning: `torch.backends.cuda.sdp_kernel()` is deprecated. In the future, this context manager will be removed. Please see `torch.nn.attention.sdpa_kernel()` for the new context manager, with updated signature.
+  self.gen = func(*args, **kwds)
+WARNING:chatterbototal 28
+drwxr-xr-x  5 runner runner 4096 Nov 22 18:56 .
+drwxr-xr-x 14 runner runner 4096 Nov 22 18:46 ..
+drwxr-xr-x  2 runner runner 4096 Nov 22 18:46 TEST_C001_nasreddin_hoca_5_fikra_short1_work
+drwxr-xr-x  2 runner runner 4096 Nov 22 18:56 _cartoon_img
+drwxr-xr-x  2 runner runner 4096 Nov 22 19:02 _voicecache
+-rw-r--r--  1 runner runner 8192 Nov 22 19:02 log.txt
