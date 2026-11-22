@@ -1,11 +1,6 @@
 name: Gunluk viral video
 
 on:
-  push:
-    branches: [main]
-    paths:
-      - "topics/queue/**"
-      - ".github/workflows/daily.yml"
   schedule:
     - cron: "47 11 * * *"      # her gün 14:47 (Türkiye saati): 1 uzun video + 3 Shorts; yükleme 16:52
   workflow_dispatch:
