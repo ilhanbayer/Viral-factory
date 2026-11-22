@@ -19,15 +19,21 @@ concurrency:
 jobs:
   produce:
     runs-on: ubuntu-latest
-    timeout-minutes: 180
+    timeout-minutes: 300
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with:
-          python-version: "3.12"
+          python-version: "3.11"
           cache: pip
       - run: sudo apt-get update && sudo apt-get install -y ffmpeg
       - run: pip install -r requirements.txt
+      - name: Chatterbox ses modeli (MIT, ücretsiz)
+        run: pip install --extra-index-url https://download.pytorch.org/whl/cpu chatterbox-tts || true
+      - uses: actions/cache@v4
+        with:
+          path: ~/.cache/huggingface
+          key: hf-chatterbox-v1
       - name: Video üret
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}

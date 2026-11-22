@@ -25,6 +25,10 @@ SR = 44100
 GTTS_TEMPO = 1.2
 SPEAKERS = {"ahmet": "tr-TR-AhmetNeural", "emel": "tr-TR-EmelNeural"}
 
+VOICE_DIR = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "voices")
+CB = {"ref": None, "ex": 0.6, "cfg": 0.4, "shift": 0.0, "temp": 0.8}
+_CB_MODEL = None
+
 CONFIG = {
     "engine": os.environ.get("VOICE_ENGINE", "edge"),
     "speaker": os.environ.get("VOICE_NAME", "ahmet"),
@@ -38,6 +42,18 @@ CONFIG = {
 VOICE_FX = ("highpass=f=70,equalizer=f=150:t=q:w=1.0:g=3,equalizer=f=300:t=q:w=1.2:g=-3,"
             "equalizer=f=3500:t=q:w=1.0:g=3.5,equalizer=f=10000:t=q:w=1.0:g=2,deesser=i=0.35,"
             "acompressor=threshold=-21dB:ratio=4:attack=4:release=90:makeup=5,alimiter=limit=0.95")
+
+
+def configure_voice(v):
+    """Karakter sesi: {"engine": "chatterbox", "ref": "hoca", "ex": 0.7, "cfg": 0.35, "shift": 0,
+                        "speaker": "tr-TR-AhmetNeural", "rate": "+0%", "pitch": "-2Hz"}"""
+    v = v or {}
+    configure(v.get("engine", CONFIG["engine"]), v.get("speaker"), v.get("rate"), v.get("pitch"))
+    ref = v.get("ref")
+    if ref and not os.path.isabs(ref):
+        cand = os.path.join(VOICE_DIR, ref if ref.endswith(".wav") else ref + ".wav")
+        ref = cand if os.path.exists(cand) else None
+    CB.update(ref=ref, ex=v.get("ex", 0.6), cfg=v.get("cfg", 0.4), shift=v.get("shift", 0.0), temp=v.get("temp", 0.8))
 
 
 def configure(engine=None, speaker=None, rate=None, pitch=None):
@@ -156,6 +172,55 @@ def _write_mono(path, a):
         w.writeframes((a * 32767).astype(np.int16).tobytes())
 
 
+# ---------------------------------------------------------------- Chatterbox (MIT, yerel, ücretsiz)
+def _cb_model():
+    global _CB_MODEL
+    if _CB_MODEL is None:
+        import torch
+        _orig = torch.load
+
+        def _load(*a, **k):
+            k.setdefault("map_location", "cpu")
+            return _orig(*a, **k)
+        torch.load = _load
+        torch.set_num_threads(os.cpu_count() or 2)
+        from chatterbox.mtl_tts import ChatterboxMultilingualTTS
+        _CB_MODEL = ChatterboxMultilingualTTS.from_pretrained(device="cpu")
+    return _CB_MODEL
+
+
+def _chatterbox(text, base, role="story"):
+    import torchaudio as ta
+    m = _cb_model()
+    kw = dict(language_id="tr", exaggeration=CB["ex"], cfg_weight=CB["cfg"], temperature=CB["temp"])
+    if CB["ref"]:
+        kw["audio_prompt_path"] = CB["ref"]
+    import torch
+    n = max(len(text), 8)
+    wav = None
+    for attempt in range(3):
+        torch.manual_seed(1234 + attempt * 77)
+        w = m.generate(text, **kw)
+        dur = w.shape[-1] / m.sr
+        # halüsinasyon / kesilme koruması: Türkçe ~0.08 sn/karakter
+        if 0.035 * n <= dur <= 0.17 * n + 0.8:
+            wav = w
+            break
+        print(f"[chatterbox] süre şüpheli ({dur:.1f}s/{n} kr), tekrar {attempt + 1}")
+    if wav is None:
+        raise RuntimeError("chatterbox süre kontrolü geçmedi")
+    raw = base + "_raw.wav"
+    ta.save(raw, wav, m.sr)
+    af = "areverse,silenceremove=start_periods=1:start_threshold=-45dB,areverse,"
+    sh = CB.get("shift", 0) or 0
+    if sh:
+        fac = 2 ** (sh / 12)
+        af += f"asetrate={int(m.sr * fac)},aresample={m.sr},atempo={1 / fac:.4f},"
+    subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-i", raw, "-af", af + VOICE_FX, "-ar", str(SR), "-ac", "1",
+                    base + ".wav"], check=True)
+    return None
+
+
 # ---------------------------------------------------------------- gTTS
 def _gtts(text, base):
     from gtts import gTTS
@@ -169,21 +234,21 @@ def _gtts(text, base):
     return None
 
 
-ENGINES = {"edge": _edge, "gtts": _gtts}
+ENGINES = {"chatterbox": _chatterbox, "edge": _edge, "gtts": _gtts}
 
 
 def synth(text, cache_dir, role="item"):
     os.makedirs(cache_dir, exist_ok=True)
-    order = [CONFIG["engine"]] + [e for e in ENGINES if e != CONFIG["engine"]]
+    order = [CONFIG["engine"]] + [e for e in ("edge", "gtts") if e != CONFIG["engine"]]
     for eng in order:
-        key = hashlib.md5(f"{eng}|{role}|{CONFIG['speaker']}|{CONFIG['rate']}|{CONFIG['pitch']}|{GTTS_TEMPO}|v2|{text}".encode()).hexdigest()[:16]
+        key = hashlib.md5(f"{eng}|{role}|{CONFIG['speaker']}|{CONFIG['rate']}|{CONFIG['pitch']}|{GTTS_TEMPO}|{CB}|v3|{text}".encode()).hexdigest()[:16]
         base = os.path.join(cache_dir, f"{eng}_{key}")
         wav, js = base + ".wav", base + ".json"
         if os.path.exists(wav):
             words = json.load(open(js)) if os.path.exists(js) else None
             return wav, _dur(wav), words
         try:
-            words = _edge(text, base, role) if eng == "edge" else _gtts(text, base)
+            words = _edge(text, base, role) if eng == "edge" else (_chatterbox(text, base, role) if eng == "chatterbox" else _gtts(text, base))
         except Exception as e:
             print(f"  [tts] {eng} kullanılamadı ({type(e).__name__}: {str(e)[:80]})")
             continue

@@ -13,7 +13,15 @@
    ],
    "desc": "Nasreddin Hodja, a cheerful chubby elderly Turkish man with a big round fluffy white beard, rosy cheeks, bushy white eyebrows, twinkling eyes, wearing a huge round white turban and a long green kaftan with an orange sash",
    "voice": {
-    "ref": "hoca"
+    "engine": "chatterbox",
+    "rate": "+0%",
+    "temp": 0.8,
+    "ref": "hoca",
+    "ex": 0.75,
+    "cfg": 0.3,
+    "shift": -1,
+    "speaker": "tr-TR-AhmetNeural",
+    "pitch": "-8Hz"
    }
   },
   "komsu": {
@@ -25,7 +33,15 @@
    ],
    "desc": "Hodja's skinny neighbor, a middle-aged Turkish villager with a thin curly black mustache, a red fez hat and a striped brown vest",
    "voice": {
-    "ref": "komsu"
+    "engine": "chatterbox",
+    "rate": "+0%",
+    "temp": 0.8,
+    "ref": null,
+    "ex": 0.65,
+    "cfg": 0.4,
+    "shift": 0,
+    "speaker": "tr-TR-AhmetNeural",
+    "pitch": "+4Hz"
    }
   },
   "esek": {
@@ -37,7 +53,15 @@
    ],
    "desc": "Hodja's small grey DONKEY (a donkey, not a horse) with very long fluffy ears, big front teeth and a goofy grin",
    "voice": {
-    "ref": "esek"
+    "engine": "chatterbox",
+    "rate": "+0%",
+    "temp": 0.8,
+    "ref": null,
+    "ex": 0.95,
+    "cfg": 0.3,
+    "shift": -4,
+    "speaker": "tr-TR-AhmetNeural",
+    "pitch": "-20Hz"
    }
   },
   "zengin": {
@@ -49,7 +73,15 @@
    ],
    "desc": "a pompous rich Ottoman man with a huge curled mustache, a tall golden turban and a shiny purple silk kaftan",
    "voice": {
-    "ref": "zengin"
+    "engine": "chatterbox",
+    "rate": "+0%",
+    "temp": 0.8,
+    "ref": "zengin",
+    "ex": 0.7,
+    "cfg": 0.35,
+    "shift": -2,
+    "speaker": "tr-TR-AhmetNeural",
+    "pitch": "-14Hz"
    }
   },
   "cocuk": {
@@ -61,12 +93,28 @@
    ],
    "desc": "a cute little Turkish village boy with messy black hair, freckles and a small red vest",
    "voice": {
-    "ref": "cocuk"
+    "engine": "chatterbox",
+    "rate": "+0%",
+    "temp": 0.8,
+    "ref": "cocuk",
+    "ex": 0.85,
+    "cfg": 0.35,
+    "shift": 4,
+    "speaker": "tr-TR-EmelNeural",
+    "pitch": "+25Hz"
    }
   }
  },
  "narrator": {
-  "ref": "anlatici"
+  "engine": "chatterbox",
+  "rate": "+0%",
+  "temp": 0.8,
+  "ref": "anlatici",
+  "ex": 0.7,
+  "cfg": 0.35,
+  "shift": 0,
+  "speaker": "tr-TR-AhmetNeural",
+  "pitch": "-2Hz"
  },
  "episodes": [
   {

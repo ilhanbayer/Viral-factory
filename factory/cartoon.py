@@ -74,7 +74,7 @@ def build(beats, chars, narrator, work, use_tts=True):
         say = b["say"].replace("*", "")
         who = b.get("who", "anlatici")
         v = chars.get(who, {}).get("voice", narrator)
-        tts.configure("edge", v.get("speaker", "tr-TR-AhmetNeural"), v.get("rate", "+0%"), v.get("pitch", "-2Hz"))
+        tts.configure_voice(v)
         if use_tts:
             wav, vd, words = tts.synth(say, vcache, "story")
         else:

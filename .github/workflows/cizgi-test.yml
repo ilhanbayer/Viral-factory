@@ -1,0 +1,43 @@
+name: Cizgi film testi
+
+on:
+  push:
+    branches: [main]
+    paths: ["tools/cartoon_test.py"]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - run: sudo apt-get update && sudo apt-get install -y ffmpeg
+      - run: pip install -r requirements.txt
+      - run: pip install --extra-index-url https://download.pytorch.org/whl/cpu chatterbox-tts || true
+      - uses: actions/cache@v4
+        with:
+          path: ~/.cache/huggingface
+          key: hf-chatterbox-v1
+      - run: mkdir -p cizgitest && (python -u tools/cartoon_test.py 2>&1 | grep -v "Sampling:" | tee cizgitest/log.txt)
+      - name: Günlüğü depoya yaz
+        if: always()
+        run: |
+          mkdir -p debug && cp cizgitest/log.txt debug/cizgi_log.txt || true
+          ls -la cizgitest >> debug/cizgi_log.txt || true
+          git config user.name bot && git config user.email bot@users.noreply.github.com
+          git add debug && git commit -m "debug günlüğü [skip ci]" && git pull --rebase -q && git push || true
+      - name: Yayınla
+        if: always()
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          shopt -s nullglob
+          gh release delete cizgi-test -y --cleanup-tag || true
+          gh release create cizgi-test cizgitest/log.txt cizgitest/*.mp4 cizgitest/*.jpg --title "Çizgi film testi (dahili)" --notes "test" --prerelease
