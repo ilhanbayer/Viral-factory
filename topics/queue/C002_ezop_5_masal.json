@@ -1,0 +1,720 @@
+{
+ "id": "C002_ezop_5_masal",
+ "format": "cartoon",
+ "brand": "MASAL DÜNYASI",
+ "seed": 7200,
+ "narrator": {
+  "engine": "chatterbox",
+  "rate": "+0%",
+  "temp": 0.8,
+  "ref": "anlatici",
+  "ex": 0.7,
+  "cfg": 0.35,
+  "shift": 0,
+  "speaker": "tr-TR-AhmetNeural",
+  "pitch": "-2Hz"
+ },
+ "characters": {
+  "karinca": {
+   "name": "Karınca",
+   "color": [
+    255,
+    120,
+    60
+   ],
+   "desc": "a cute hardworking cartoon ant (an insect, six legs, two antennae) with big shiny brown eyes, red-brown glossy body, tiny blue work cap and a small backpack",
+   "voice": {
+    "engine": "chatterbox",
+    "rate": "+0%",
+    "temp": 0.8,
+    "ref": "cocuk",
+    "ex": 0.6,
+    "cfg": 0.4,
+    "shift": 1,
+    "speaker": "tr-TR-EmelNeural",
+    "pitch": "+10Hz"
+   }
+  },
+  "agustos": {
+   "name": "Ağustos Böceği",
+   "color": [
+    120,
+    220,
+    80
+   ],
+   "desc": "a lazy funny cartoon green grasshopper (an insect) with long legs, big goofy eyes, wearing a tiny straw hat and playing a small wooden violin",
+   "voice": {
+    "engine": "chatterbox",
+    "rate": "+0%",
+    "temp": 0.8,
+    "ref": null,
+    "ex": 0.85,
+    "cfg": 0.3,
+    "shift": 1,
+    "speaker": "tr-TR-AhmetNeural",
+    "pitch": "+6Hz"
+   }
+  },
+  "tavsan": {
+   "name": "Tavşan",
+   "color": [
+    255,
+    255,
+    255
+   ],
+   "desc": "an arrogant fast cartoon white rabbit with long ears, smug half-closed eyes, wearing red sneakers and a tiny sports headband",
+   "voice": {
+    "engine": "chatterbox",
+    "rate": "+0%",
+    "temp": 0.8,
+    "ref": "zengin",
+    "ex": 0.8,
+    "cfg": 0.3,
+    "shift": 3,
+    "speaker": "tr-TR-AhmetNeural",
+    "pitch": "+12Hz"
+   }
+  },
+  "kaplumbaga": {
+   "name": "Kaplumbağa",
+   "color": [
+    90,
+    200,
+    120
+   ],
+   "desc": "a calm wise old cartoon tortoise with a big green patterned shell, kind smile, tiny round glasses and a little blue scarf",
+   "voice": {
+    "engine": "chatterbox",
+    "rate": "+0%",
+    "temp": 0.8,
+    "ref": "anlatici",
+    "ex": 0.4,
+    "cfg": 0.5,
+    "shift": -3,
+    "speaker": "tr-TR-AhmetNeural",
+    "pitch": "-12Hz"
+   }
+  },
+  "tilki": {
+   "name": "Tilki",
+   "color": [
+    255,
+    140,
+    0
+   ],
+   "desc": "a sly skinny cartoon orange fox with a bushy white-tipped tail, sharp clever eyes and a tiny purple vest",
+   "voice": {
+    "engine": "chatterbox",
+    "rate": "+0%",
+    "temp": 0.8,
+    "ref": "zengin",
+    "ex": 0.75,
+    "cfg": 0.35,
+    "shift": 0,
+    "speaker": "tr-TR-AhmetNeural",
+    "pitch": "-2Hz"
+   }
+  },
+  "aslan": {
+   "name": "Aslan",
+   "color": [
+    255,
+    190,
+    40
+   ],
+   "desc": "a huge proud cartoon lion with a giant fluffy golden mane, big paws and a tiny golden crown",
+   "voice": {
+    "engine": "chatterbox",
+    "rate": "+0%",
+    "temp": 0.8,
+    "ref": "hoca",
+    "ex": 0.7,
+    "cfg": 0.3,
+    "shift": -4,
+    "speaker": "tr-TR-AhmetNeural",
+    "pitch": "-20Hz"
+   }
+  },
+  "fare": {
+   "name": "Fare",
+   "color": [
+    200,
+    200,
+    210
+   ],
+   "desc": "a tiny brave cartoon grey mouse with huge round pink ears, big sparkling eyes and a little red bow tie",
+   "voice": {
+    "engine": "chatterbox",
+    "rate": "+0%",
+    "temp": 0.8,
+    "ref": "cocuk",
+    "ex": 0.85,
+    "cfg": 0.35,
+    "shift": 5,
+    "speaker": "tr-TR-EmelNeural",
+    "pitch": "+30Hz"
+   }
+  },
+  "coban": {
+   "name": "Çoban Çocuk",
+   "color": [
+    80,
+    170,
+    255
+   ],
+   "desc": "a mischievous 10-year-old shepherd boy with messy brown hair, freckles, gap-toothed grin, wearing a brown vest, white shirt and holding a wooden shepherd staff",
+   "voice": {
+    "engine": "chatterbox",
+    "rate": "+0%",
+    "temp": 0.8,
+    "ref": "cocuk",
+    "ex": 0.85,
+    "cfg": 0.35,
+    "shift": 3,
+    "speaker": "tr-TR-EmelNeural",
+    "pitch": "+25Hz"
+   }
+  },
+  "koylu": {
+   "name": "Köylüler",
+   "color": [
+    255,
+    214,
+    0
+   ],
+   "desc": "a group of funny chubby village farmers, men and women with mustaches and headscarves, holding pitchforks and shovels",
+   "voice": {
+    "engine": "chatterbox",
+    "rate": "+0%",
+    "temp": 0.8,
+    "ref": null,
+    "ex": 0.65,
+    "cfg": 0.4,
+    "shift": 0,
+    "speaker": "tr-TR-AhmetNeural",
+    "pitch": "+0Hz"
+   }
+  }
+ },
+ "episodes": [
+  {
+   "title": "Karınca ile Ağustos Böceği",
+   "beats": [
+    {
+     "who": "anlatici",
+     "say": "Yaz boyu çalışan bir karınca ve *hiç* çalışmayan bir ağustos böceği… Sonu seni şaşırtacak!",
+     "img": "{karinca} carrying a huge wheat grain while {agustos} lies in a hammock playing violin, in a magical sunny meadow with giant flowers, mushrooms and a sparkling stream",
+     "fx": "sparkle",
+     "cam": "in",
+     "sfx": "boing"
+    },
+    {
+     "who": "agustos",
+     "say": "Karınca kardeş, bu sıcakta çalışılır mı? Gel biraz *müzik* yapalım!",
+     "img": "{agustos} playing the violin with eyes closed, dancing, close-up, in a magical sunny meadow with giant flowers, mushrooms and a sparkling stream",
+     "fx": "sparkle",
+     "cam": "right",
+     "sfx": "pop"
+    },
+    {
+     "who": "karinca",
+     "say": "Kış gelecek böcek kardeş. Şimdi çalışmazsam kışın *aç* kalırım.",
+     "img": "{karinca} wiping sweat from forehead, carrying grain, serious face, close-up, in a magical sunny meadow with giant flowers, mushrooms and a sparkling stream",
+     "fx": "dust",
+     "cam": "in"
+    },
+    {
+     "who": "anlatici",
+     "say": "Ağustos böceği güler geçer. Bütün yaz şarkı söyler, dans eder.",
+     "img": "{agustos} dancing wildly on top of a giant mushroom with musical notes in the air, in a magical sunny meadow with giant flowers, mushrooms and a sparkling stream",
+     "fx": "sparkle",
+     "cam": "up",
+     "sfx": "slide_up"
+    },
+    {
+     "who": "anlatici",
+     "say": "Derken… soğuk rüzgârlar eser ve *kar* yağmaya başlar.",
+     "img": "{agustos} shivering with icicles on his hat, alone in the snow, in a snowy cold winter forest with frozen trees",
+     "fx": "snow",
+     "cam": "out",
+     "sfx": "whoosh"
+    },
+    {
+     "who": "agustos",
+     "say": "Brrr! Açım, üşüyorum… Karınca kardeş, kapını açar mısın?",
+     "img": "{agustos} knocking on a tiny cozy wooden door of an anthill glowing with warm light, sad face, in a snowy cold winter forest with frozen trees",
+     "fx": "snow",
+     "cam": "in"
+    },
+    {
+     "who": "anlatici",
+     "say": "Karınca kapıyı açar. İçerisi sıcacık, sofra *yemek* dolu!",
+     "img": "{karinca} opening the door, warm cozy room full of food behind, in a snowy cold winter forest with frozen trees",
+     "fx": "sparkle",
+     "cam": "in",
+     "sfx": "ding"
+    },
+    {
+     "who": "karinca",
+     "say": "Gel içeri. Ama bu yaz bana yardım edeceksin, söz mü?",
+     "img": "{karinca} smiling and inviting {agustos} inside next to a fireplace, in a snowy cold winter forest with frozen trees",
+     "fx": "sparkle",
+     "cam": "out"
+    },
+    {
+     "who": "anlatici",
+     "say": "Ders: Bugünün emeği, yarının *sofrasıdır*. Daha fazla masal için takip et!",
+     "img": "{karinca} and {agustos} eating soup together by the fireplace laughing, cozy, in a snowy cold winter forest with frozen trees",
+     "fx": "sparkle",
+     "cam": "out",
+     "sfx": "ding"
+    }
+   ],
+   "publish": {
+    "title": "Karınca ile Ağustos Böceği 🐜🎻 Sonu Şaşırtıcı! #shorts",
+    "description": "Ezop'un ünlü masalı animasyonla: Çalışkan karınca ve tembel ağustos böceği. Kısa, komik ve öğretici bir masal.",
+    "hashtags": [
+     "#shorts",
+     "#masal",
+     "#animasyon",
+     "#çizgifilm",
+     "#ezop",
+     "#çocuk"
+    ]
+   },
+   "thumb": {
+    "lines": [
+     "KIŞ",
+     "GELİNCE…",
+     ""
+    ],
+    "red": 1,
+    "beat": 4,
+    "tag": "🐜 MASAL",
+    "focus_x": 0.5,
+    "focus_y": 0.6
+   }
+  },
+  {
+   "title": "Tavşan ile Kaplumbağa",
+   "beats": [
+    {
+     "who": "anlatici",
+     "say": "Dünyanın en hızlı tavşanı, en yavaş kaplumbağaya *yarış* teklif eder!",
+     "img": "{tavsan} pointing and laughing at {kaplumbaga} at a start line with a ribbon, in a magical sunny meadow with giant flowers, mushrooms and a sparkling stream",
+     "fx": "dust",
+     "cam": "in",
+     "sfx": "boing"
+    },
+    {
+     "who": "tavsan",
+     "say": "Ha ha! Sen mi? Ben bitişe varınca sen daha *başlamamış* olursun!",
+     "img": "{tavsan} posing arrogantly flexing tiny muscles, close-up, in a magical sunny meadow with giant flowers, mushrooms and a sparkling stream",
+     "fx": "sparkle",
+     "cam": "in",
+     "sfx": "pop"
+    },
+    {
+     "who": "kaplumbaga",
+     "say": "Görürüz tavşan kardeş. Acele eden *yolda* kalır.",
+     "img": "{kaplumbaga} smiling calmly adjusting his glasses, close-up, in a magical sunny meadow with giant flowers, mushrooms and a sparkling stream",
+     "fx": "dust",
+     "cam": "in"
+    },
+    {
+     "who": "anlatici",
+     "say": "Yarış başlar! Tavşan rüzgâr gibi fırlar, toz duman olur ortalık.",
+     "img": "{tavsan} running super fast leaving a big dust cloud, {kaplumbaga} slowly walking, in a magical sunny meadow with giant flowers, mushrooms and a sparkling stream",
+     "fx": "dust",
+     "cam": "left",
+     "sfx": "whoosh"
+    },
+    {
+     "who": "anlatici",
+     "say": "Yolun yarısında tavşan durur. Arkasına bakar, kaplumbağa *görünmüyor* bile.",
+     "img": "{tavsan} under a big shady tree looking back with binoculars, smug, in a magical sunny meadow with giant flowers, mushrooms and a sparkling stream",
+     "fx": "dust",
+     "cam": "right"
+    },
+    {
+     "who": "tavsan",
+     "say": "Biraz kestireyim bari. Nasılsa *kazandım*.",
+     "img": "{tavsan} yawning and lying down under the tree, eyes closing, in a magical sunny meadow with giant flowers, mushrooms and a sparkling stream",
+     "fx": "sparkle",
+     "cam": "out",
+     "sfx": "slide_down"
+    },
+    {
+     "who": "anlatici",
+     "say": "Kaplumbağa ise hiç durmadan, adım adım ilerler… ve tavşanın *yanından* geçer.",
+     "img": "{kaplumbaga} slowly walking past the sleeping {tavsan} who is snoring with Z letters, in a magical sunny meadow with giant flowers, mushrooms and a sparkling stream",
+     "fx": "dust",
+     "cam": "right",
+     "sfx": "drum"
+    },
+    {
+     "who": "anlatici",
+     "say": "Tavşan uyandığında çok geçtir. Kaplumbağa bitiş çizgisini geçmiştir!",
+     "img": "{tavsan} waking up in panic with eyes popping, {kaplumbaga} crossing a finish line with confetti in the distance, in a magical sunny meadow with giant flowers, mushrooms and a sparkling stream",
+     "fx": "sparkle",
+     "cam": "in",
+     "sfx": "boing"
+    },
+    {
+     "who": "anlatici",
+     "say": "Ders: Yavaş ama *istikrarlı* olan kazanır. Beğendiysen takip et!",
+     "img": "{kaplumbaga} holding a golden trophy, animals cheering, {tavsan} blushing embarrassed, in a magical sunny meadow with giant flowers, mushrooms and a sparkling stream",
+     "fx": "sparkle",
+     "cam": "out",
+     "sfx": "ding"
+    }
+   ],
+   "publish": {
+    "title": "Tavşan Yarışı Kaybetti! 🐢🐇 Neden? #shorts",
+    "description": "Tavşan ile Kaplumbağa masalı animasyonla. Kibirli tavşan, sabırlı kaplumbağa ve şaşırtan son.",
+    "hashtags": [
+     "#shorts",
+     "#masal",
+     "#animasyon",
+     "#çizgifilm",
+     "#tavşan",
+     "#kaplumbağa"
+    ]
+   },
+   "thumb": {
+    "lines": [
+     "TAVŞAN",
+     "KAYBETTİ!",
+     ""
+    ],
+    "red": 1,
+    "beat": 7,
+    "tag": "🐢 MASAL",
+    "focus_x": 0.5,
+    "focus_y": 0.55
+   }
+  },
+  {
+   "title": "Tilki ile Üzüm",
+   "beats": [
+    {
+     "who": "anlatici",
+     "say": "Aç bir tilki, ağaçta sallanan *kocaman* üzümler görür.",
+     "img": "{tilki} looking up hungrily at big juicy purple grapes hanging high on a vine, drooling, in a magical sunny meadow with giant flowers, mushrooms and a sparkling stream",
+     "fx": "sparkle",
+     "cam": "up",
+     "sfx": "pop"
+    },
+    {
+     "who": "tilki",
+     "say": "Mmm! Ne kadar tatlı görünüyorlar. Hepsi *benim* olacak!",
+     "img": "{tilki} licking lips with sparkling eyes, close-up, in a magical sunny meadow with giant flowers, mushrooms and a sparkling stream",
+     "fx": "sparkle",
+     "cam": "in"
+    },
+    {
+     "who": "anlatici",
+     "say": "Zıplar… ama yetişemez. Bir daha zıplar, yine olmaz!",
+     "img": "{tilki} jumping high with paws stretched, grapes just out of reach, funny pose, in a magical sunny meadow with giant flowers, mushrooms and a sparkling stream",
+     "fx": "dust",
+     "cam": "up",
+     "sfx": "boing"
+    },
+    {
+     "who": "anlatici",
+     "say": "Taşın üstüne çıkar, kuyruğunu sallar, takla atar… *Hiçbiri* işe yaramaz.",
+     "img": "{tilki} doing a clumsy backflip and falling on his back, dizzy stars around head, in a magical sunny meadow with giant flowers, mushrooms and a sparkling stream",
+     "fx": "dust",
+     "cam": "out",
+     "sfx": "slide_down"
+    },
+    {
+     "who": "tilki",
+     "say": "Hıh! Zaten o üzümler *ekşi*. Ben ekşi üzüm sevmem!",
+     "img": "{tilki} turning away with nose up, arms crossed, pretending not to care, close-up, in a magical sunny meadow with giant flowers, mushrooms and a sparkling stream",
+     "fx": "dust",
+     "cam": "in",
+     "sfx": "drum"
+    },
+    {
+     "who": "anlatici",
+     "say": "Tam o sırada bir kuş üzümü koparır ve *mmm* diye yer.",
+     "img": "a cute blue bird eating a grape happily on the vine, {tilki} watching jealous with one eye, in a magical sunny meadow with giant flowers, mushrooms and a sparkling stream",
+     "fx": "sparkle",
+     "cam": "right",
+     "sfx": "pop"
+    },
+    {
+     "who": "anlatici",
+     "say": "Ders: Ulaşamadığımız şeye *kötü* demek, kendimizi kandırmaktır. Takip et, yarın yeni masal!",
+     "img": "{tilki} blushing embarrassed with a tiny grape falling on his head, in a magical sunny meadow with giant flowers, mushrooms and a sparkling stream",
+     "fx": "sparkle",
+     "cam": "out",
+     "sfx": "ding"
+    }
+   ],
+   "publish": {
+    "title": "Tilki Üzüme Neden Ekşi Dedi? 🦊🍇 #shorts",
+    "description": "Tilki ile Üzüm masalı animasyonla: Ulaşamadığı üzüme ekşi diyen kurnaz tilki.",
+    "hashtags": [
+     "#shorts",
+     "#masal",
+     "#animasyon",
+     "#çizgifilm",
+     "#tilki",
+     "#komik"
+    ]
+   },
+   "thumb": {
+    "lines": [
+     "ÜZÜMLER",
+     "EKŞİ Mİ?",
+     ""
+    ],
+    "red": 1,
+    "beat": 2,
+    "tag": "🦊 MASAL",
+    "focus_x": 0.5,
+    "focus_y": 0.5
+   }
+  },
+  {
+   "title": "Aslan ile Fare",
+   "beats": [
+    {
+     "who": "anlatici",
+     "say": "Ormanın kralı aslan uyurken, minicik bir fare *burnunun* üstüne düşer!",
+     "img": "tiny {fare} accidentally landing on the nose of the sleeping {aslan}, in a lush golden savanna jungle with tall grass",
+     "fx": "dust",
+     "cam": "in",
+     "sfx": "boing"
+    },
+    {
+     "who": "aslan",
+     "say": "Kim o?! Seni bir lokmada *yutarım*!",
+     "img": "{aslan} roaring angrily holding {fare} by the tail, close-up, in a lush golden savanna jungle with tall grass",
+     "fx": "dust",
+     "cam": "in",
+     "sfx": "drum"
+    },
+    {
+     "who": "fare",
+     "say": "Bağışla beni kralım! Bir gün belki ben de sana *yardım* ederim.",
+     "img": "{fare} begging with tiny hands together and teary big eyes, close-up, in a lush golden savanna jungle with tall grass",
+     "fx": "sparkle",
+     "cam": "in"
+    },
+    {
+     "who": "anlatici",
+     "say": "Aslan kahkahalarla güler. Minicik bir fare ona ne yardım edebilir ki? Onu bırakır.",
+     "img": "{aslan} laughing loudly and letting {fare} go, in a lush golden savanna jungle with tall grass",
+     "fx": "sparkle",
+     "cam": "out",
+     "sfx": "pop"
+    },
+    {
+     "who": "anlatici",
+     "say": "Günler sonra aslan avcıların *ağına* yakalanır!",
+     "img": "{aslan} trapped in a big rope net hanging, roaring for help, in a lush golden savanna jungle with tall grass",
+     "fx": "dust",
+     "cam": "out",
+     "sfx": "whoosh"
+    },
+    {
+     "who": "anlatici",
+     "say": "Fare kükremeyi duyar ve koşa koşa gelir. Minik dişleriyle ipleri tek tek *keser*.",
+     "img": "{fare} chewing through the thick ropes of the net with determination, close-up, in a lush golden savanna jungle with tall grass",
+     "fx": "sparkle",
+     "cam": "in",
+     "sfx": "drum"
+    },
+    {
+     "who": "aslan",
+     "say": "Sen… beni kurtardın küçük dostum!",
+     "img": "{aslan} free and amazed, bowing down to tiny {fare}, in a lush golden savanna jungle with tall grass",
+     "fx": "sparkle",
+     "cam": "in",
+     "sfx": "ding"
+    },
+    {
+     "who": "anlatici",
+     "say": "Ders: Kimseyi küçük görme. En küçük dost bile *hayat* kurtarır. Takip etmeyi unutma!",
+     "img": "{fare} sitting proudly on {aslan}'s head wearing the tiny crown, both smiling, sunset, in a lush golden savanna jungle with tall grass",
+     "fx": "sparkle",
+     "cam": "out",
+     "sfx": "ding"
+    }
+   ],
+   "publish": {
+    "title": "Minik Fare Aslanı Kurtardı! 🦁🐭 #shorts",
+    "description": "Aslan ile Fare masalı animasyonla: Küçük ama kocaman yürekli bir fare.",
+    "hashtags": [
+     "#shorts",
+     "#masal",
+     "#animasyon",
+     "#çizgifilm",
+     "#aslan",
+     "#çocuk"
+    ]
+   },
+   "thumb": {
+    "lines": [
+     "FARE",
+     "ASLANI",
+     "KURTARDI!"
+    ],
+    "red": 2,
+    "beat": 5,
+    "tag": "🦁 MASAL",
+    "focus_x": 0.5,
+    "focus_y": 0.55
+   }
+  },
+  {
+   "title": "Yalancı Çoban",
+   "beats": [
+    {
+     "who": "anlatici",
+     "say": "Köyün en yaramaz çocuğu, bir gün çok *tehlikeli* bir şaka yapar.",
+     "img": "{coban} grinning mischievously among sheep, on green hills with fluffy white sheep near a small village",
+     "fx": "sparkle",
+     "cam": "in",
+     "sfx": "pop"
+    },
+    {
+     "who": "coban",
+     "say": "İmdaaat! Kurt geldi! Kurt *koyunları* yiyor!",
+     "img": "{coban} screaming with hands around mouth on top of a rock, on green hills with fluffy white sheep near a small village",
+     "fx": "dust",
+     "cam": "up",
+     "sfx": "drum"
+    },
+    {
+     "who": "anlatici",
+     "say": "Köylüler kazma kürekle koşa koşa gelir. Ama ortada kurt *yoktur*.",
+     "img": "{koylu} running up the hill with pitchforks and shovels, panting, on green hills with fluffy white sheep near a small village",
+     "fx": "dust",
+     "cam": "left",
+     "sfx": "whoosh"
+    },
+    {
+     "who": "coban",
+     "say": "Ha ha ha! Kandırdım sizi!",
+     "img": "{coban} laughing rolling on the grass, close-up, on green hills with fluffy white sheep near a small village",
+     "fx": "sparkle",
+     "cam": "in",
+     "sfx": "boing"
+    },
+    {
+     "who": "anlatici",
+     "say": "Ertesi gün aynı şakayı bir daha yapar. Köylüler yine gelir, yine *kandırılır*.",
+     "img": "{koylu} angry and tired with sweaty faces, {coban} laughing behind a sheep, on green hills with fluffy white sheep near a small village",
+     "fx": "dust",
+     "cam": "out"
+    },
+    {
+     "who": "anlatici",
+     "say": "Üçüncü gün… gerçekten *kurt* gelir!",
+     "img": "a big scary but cartoonish grey wolf with yellow eyes sneaking towards the sheep at dusk, on green hills with fluffy white sheep near a small village",
+     "fx": "dust",
+     "cam": "in",
+     "sfx": "drum"
+    },
+    {
+     "who": "coban",
+     "say": "İmdat! Bu sefer gerçek! Kurt geldi!",
+     "img": "{coban} crying and screaming for help, very scared, close-up, dusk, on green hills with fluffy white sheep near a small village",
+     "fx": "dust",
+     "cam": "in"
+    },
+    {
+     "who": "anlatici",
+     "say": "Ama köylüler ona artık *inanmaz*. Kimse gelmez.",
+     "img": "{koylu} ignoring the screams, covering their ears in the village at dusk",
+     "fx": "dust",
+     "cam": "out",
+     "sfx": "slide_down"
+    },
+    {
+     "who": "anlatici",
+     "say": "Ders: Yalancının mumu yatsıya kadar yanar. Beğendiysen takip et!",
+     "img": "{coban} sad hugging one little lamb at night under the moon, on green hills with fluffy white sheep near a small village",
+     "fx": "sparkle",
+     "cam": "out",
+     "sfx": "ding"
+    }
+   ],
+   "publish": {
+    "title": "Kurt Geldi Ama Kimse İnanmadı 😱🐺 #shorts",
+    "description": "Yalancı Çoban masalı animasyonla: Yalan söyleyen çobanın başına gelenler.",
+    "hashtags": [
+     "#shorts",
+     "#masal",
+     "#animasyon",
+     "#çizgifilm",
+     "#yalancıçoban",
+     "#çocuk"
+    ]
+   },
+   "thumb": {
+    "lines": [
+     "KURT",
+     "GELDİ!",
+     ""
+    ],
+    "red": 1,
+    "beat": 5,
+    "tag": "🐺 MASAL",
+    "focus_x": 0.5,
+    "focus_y": 0.5
+   }
+  }
+ ],
+ "long": {
+  "title": "En Güzel 5 Masal",
+  "intro": [
+   {
+    "who": "anlatici",
+    "say": "Hazır mısın? Dünyanın en ünlü *beş* masalı, şimdi animasyonla!",
+    "img": "{karinca}, {tavsan}, {kaplumbaga}, {tilki} and {fare} waving together at the viewer, in a magical sunny meadow with giant flowers, mushrooms and a sparkling stream",
+    "fx": "sparkle",
+    "cam": "in",
+    "sfx": "boing"
+   }
+  ],
+  "outro": [
+   {
+    "who": "anlatici",
+    "say": "En çok hangi masalı sevdin? Yorumlara yaz, yeni masallar için *abone* ol!",
+    "img": "{karinca}, {agustos}, {kaplumbaga}, {aslan} and {fare} having a picnic together at sunset, in a magical sunny meadow with giant flowers, mushrooms and a sparkling stream",
+    "fx": "sparkle",
+    "cam": "out",
+    "sfx": "ding"
+   }
+  ],
+  "publish": {
+   "title": "En Güzel 5 Masal 🐜🐢🦊🦁🐺 (Animasyon) | Ezop Masalları",
+   "description": "Karınca ile Ağustos Böceği, Tavşan ile Kaplumbağa, Tilki ile Üzüm, Aslan ile Fare ve Yalancı Çoban. Her yaş için eğlenceli ve öğretici masallar.",
+   "hashtags": [
+    "#masal",
+    "#ezop",
+    "#animasyon",
+    "#çizgifilm",
+    "#çocuk",
+    "#eğitici"
+   ]
+  },
+  "thumb": {
+   "lines": [
+    "EN GÜZEL",
+    "5 MASAL",
+    ""
+   ],
+   "red": 1,
+   "beat": 1,
+   "tag": "✨ ANİMASYON",
+   "focus_x": 0.5,
+   "focus_y": 0.55
+  }
+ }
+}
