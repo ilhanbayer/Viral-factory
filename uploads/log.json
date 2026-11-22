@@ -1,4 +1,11 @@
 {
- "months": {"2026-11": {"uploads": 2}},
- "uploaded": {"video-4-S001_dyatlov_gecidi": "EoL3_YSSXig"}
+ "months": {
+  "2026-11": {
+   "uploads": 3
+  }
+ },
+ "uploaded": {
+  "video-4-S001_dyatlov_gecidi": "EoL3_YSSXig"
+ },
+ "note": "uploads = Zapier araç çağrısı sayısı (her biri 2 görev); ayda en fazla 45"
 }

@@ -7,7 +7,7 @@ on:
       - "topics/queue/**"
       - ".github/workflows/daily.yml"
   schedule:
-    - cron: "47 15 * * *"      # her gün 18:47 (Türkiye saati): 1 uzun video + 3 Shorts
+    - cron: "47 11 * * *"      # her gün 14:47 (Türkiye saati): 1 uzun video + 3 Shorts; yükleme 16:52
   workflow_dispatch:
     inputs:
       count:
