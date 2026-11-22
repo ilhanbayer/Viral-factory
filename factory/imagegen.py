@@ -9,17 +9,17 @@ import hashlib
 import urllib.parse
 import urllib.request
 
-STYLE = ("Pixar style 3D animated movie still, cute stylized cartoon characters with big heads and big expressive eyes, "
-         "exaggerated funny facial expressions, octane render, subsurface scattering, soft global illumination, "
-         "golden hour rim light, vibrant saturated colors, highly detailed textures, shallow depth of field, "
-         "cinematic composition, masterpiece, no text, no letters, no watermark, no logo")
+PRE = ("Stylized 3D animated cartoon movie still, CGI family animation, cute characters with big heads, "
+       "big round expressive eyes and exaggerated funny expressions, smooth clay-like skin, NOT photorealistic: ")
+STYLE = ("soft global illumination, subsurface scattering, warm rim light, vibrant saturated colors, "
+         "shallow depth of field, cinematic composition, high quality 3D render, no text, no letters, no watermark")
 UA = {"User-Agent": "viral-factory/1.0 (https://github.com/ilhanbayer/viral-factory)"}
 
 
 def gen(prompt, w, h, seed, out, model="flux", tries=5):
     if os.path.exists(out) and os.path.getsize(out) > 20000:
         return out
-    full = f"{prompt}. {STYLE}"
+    full = f"{PRE}{prompt}. {STYLE}"
     q = urllib.parse.quote(full[:1800], safe="")
     url = (f"https://image.pollinations.ai/prompt/{q}?width={w}&height={h}&seed={seed}&model={model}"
            f"&nologo=true&private=true&enhance=false")
