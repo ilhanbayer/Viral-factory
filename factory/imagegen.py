@@ -9,10 +9,9 @@ import hashlib
 import urllib.parse
 import urllib.request
 
-PRE = ("Stylized 3D animated cartoon movie still, CGI family animation, cute characters with big heads, "
-       "big round expressive eyes and exaggerated funny expressions, smooth clay-like skin, NOT photorealistic: ")
+PRE = "3D animated cartoon film scene, full body wide shot, stylized cartoon characters with big expressive eyes: "
 STYLE = ("soft global illumination, subsurface scattering, warm rim light, vibrant saturated colors, "
-         "shallow depth of field, cinematic composition, high quality 3D render, no text, no letters, no watermark")
+         "cinematic composition, high quality stylized 3D CGI render, not photorealistic, no text, no letters, no watermark")
 UA = {"User-Agent": "viral-factory/1.0 (https://github.com/ilhanbayer/viral-factory)"}
 
 
