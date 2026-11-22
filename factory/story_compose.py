@@ -165,23 +165,48 @@ def _strip_html(s):
     return re.sub(r"<[^>]+>", "", s or "").strip()
 
 
+USED_TITLES = set()
+
+
+def _commons_search(query):
+    """Arama: sonuç yoksa sorguyu sondan kelime atarak gevşet (çok kelimeli aramalar boş dönüyordu)."""
+    import urllib.parse
+    words = query.split()
+    tried = []
+    while words:
+        qq = " ".join(words)
+        tried.append(qq)
+        q = urllib.parse.urlencode({"action": "query", "list": "search", "srnamespace": 6, "srlimit": 20,
+                                    "srsearch": qq + " filetype:bitmap", "format": "json"})
+        try:
+            res = [r["title"] for r in _get_json(COMMONS + "?" + q)["query"]["search"]]
+        except Exception as e:
+            print("  [commons] arama hatası", type(e).__name__)
+            return []
+        res = [t for t in res if not any(b in t.lower() for b in ("map", "harita", "logo", "flag of", "coat of arms", ".svg"))]
+        if len([t for t in res if t not in USED_TITLES]) >= 1:
+            if len(tried) > 1:
+                print("  [commons] gevşetilmiş arama:", qq)
+            return res
+        if len(words) <= 2:
+            break
+        words = words[:-1]
+    return []
+
+
 def commons_lookup(title=None, query=None, min_w=700):
     """Wikimedia Commons: dosya adından ya da aramadan serbest lisanslı görsel bul.
-    Döner: (thumb_url, credit_text) ya da (None, None)."""
+    Aynı videoda kullanılmış dosyayı tekrar seçmez. Döner: (thumb_url, credit_text) ya da (None, None)."""
     import urllib.parse
     titles = []
     if title:
         titles = [title if title.startswith("File:") else "File:" + title]
     elif query:
-        q = urllib.parse.urlencode({"action": "query", "list": "search", "srnamespace": 6, "srlimit": 12,
-                                    "srsearch": query + " filetype:bitmap", "format": "json"})
-        try:
-            titles = [r["title"] for r in _get_json(COMMONS + "?" + q)["query"]["search"]]
-        except Exception as e:
-            print("  [commons] arama hatası", type(e).__name__)
-            return None, None
+        titles = _commons_search(query)
     for tt in titles:
-        q = urllib.parse.urlencode({"action": "query", "titles": tt, "prop": "imageinfo",
+        if tt in USED_TITLES and not title:
+            continue
+        q = urllib.parse.urlencode({"action": "query", "titles": tt, "prop": "imageinfo", "redirects": 1,
                                     "iiprop": "url|size|extmetadata|mime", "iiurlwidth": 1600, "format": "json"})
         try:
             pages = _get_json(COMMONS + "?" + q)["query"]["pages"]
@@ -196,12 +221,17 @@ def commons_lookup(title=None, query=None, min_w=700):
             if not any(k in lic.lower() for k in OK_LIC):
                 continue
             artist = _strip_html(md.get("Artist", {}).get("value", "")) or "Bilinmiyor"
+            if artist.lower().startswith("anonymous"):
+                artist = "Anonim"
+            USED_TITLES.add(tt)
+            USED_TITLES.add(pg.get("title", tt))
             return ii.get("thumburl") or ii.get("url"), f"{artist[:80]} ({lic}) — {pg.get('title')}"
     return None, None
 
 
 def fetch_photos(beats, cache):
-    """'photo' sahneleri: url, commons (dosya adı) ya da search (arama) ile telifsiz görsel indir."""
+    """'photo' sahneleri: url, commons (dosya adı) ya da search (arama) ile telifsiz görsel indir.
+    Bulunamazsa 'fallback_scene' varsa sahne canlandırmasına, yoksa ikona düşer."""
     import hashlib
     import urllib.request
     os.makedirs(cache, exist_ok=True)
@@ -214,17 +244,25 @@ def fetch_photos(beats, cache):
             url, credit = commons_lookup(sh.get("commons"), sh.get("search"))
             if not url and sh.get("commons") and sh.get("search"):
                 url, credit = commons_lookup(None, sh.get("search"))
-        if not url:
-            print("  [foto] bulunamadı:", sh.get("commons") or sh.get("search"))
+        fn = None
+        if url:
+            fn = os.path.join(cache, hashlib.md5(url.encode()).hexdigest()[:12] + ".img")
+            if not os.path.exists(fn):
+                try:
+                    req = urllib.request.Request(url, headers=UA)
+                    open(fn, "wb").write(urllib.request.urlopen(req, timeout=60).read())
+                except Exception as e:
+                    print("  [foto] indirilemedi:", url[:80], type(e).__name__)
+                    fn = None
+        if not fn:
+            print("  [foto] bulunamadı:", sh.get("commons") or sh.get("search") or sh.get("url"))
+            fb = sh.get("fallback_show") or sh.get("fallback_scene")
+            if fb:   # fotoğraf yoksa canlandırma ya da bilgi kartı
+                b["show"] = dict(fb)
+                b["show"].setdefault("type", "scene")
+                if b["show"]["type"] == "scene":
+                    b["show"].setdefault("label", sh.get("label"))
             continue
-        fn = os.path.join(cache, hashlib.md5(url.encode()).hexdigest()[:12] + ".img")
-        if not os.path.exists(fn):
-            try:
-                req = urllib.request.Request(url, headers=UA)
-                open(fn, "wb").write(urllib.request.urlopen(req, timeout=60).read())
-            except Exception as e:
-                print("  [foto] indirilemedi:", url[:80], type(e).__name__)
-                continue
         sh["_local"] = fn
         if credit and credit not in CREDITS:
             CREDITS.append(credit)
@@ -425,7 +463,10 @@ def produce_one(vid, beats, fmt, brand, theme, publish, out_dir, use_tts=True, w
     if thumb and (thumb.get("photo_url") or thumb.get("photo_search") or thumb.get("photo_commons")):
         tb = [{"show": {"type": "photo", "url": thumb.get("photo_url"), "search": thumb.get("photo_search"),
                         "commons": thumb.get("photo_commons")}}]
+        saved = set(USED_TITLES)
+        USED_TITLES.clear()   # kapak için en iyi eşleşme (videoda kullanılmış olsa da) seçilebilir
         fetch_photos(tb, os.path.join(out_dir, "_photos"))
+        USED_TITLES.update(saved)
         thumb = dict(thumb, photo=tb[0]["show"].get("_local"))
     if thumb:
         make_thumbnail(kp, thumb, fmt, theme, brand)
@@ -438,6 +479,7 @@ def produce_one(vid, beats, fmt, brand, theme, publish, out_dir, use_tts=True, w
 
 def produce_story(script, out_dir, use_tts=True, workers=None):
     CREDITS.clear()
+    USED_TITLES.clear()
     v = script.get("voice", {})
     tts.configure(v.get("engine"), v.get("speaker"), v.get("rate"), v.get("pitch"))
     brand = script.get("brand", "GİZEM DOSYASI")

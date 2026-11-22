@@ -1,0 +1,902 @@
+{
+ "id": "S005_derinkuyu_yeralti_sehri",
+ "format": "story",
+ "brand": "BİLGİ DOSYASI",
+ "theme": "dosya",
+ "voice": {
+  "engine": "edge",
+  "speaker": "ahmet",
+  "rate": "+0%",
+  "pitch": "-2Hz"
+ },
+ "long": {
+  "title": "Derinkuyu Yeraltı Şehri",
+  "beats": [
+   {
+    "say": "1963, Nevşehir. Bir adam evini onarırken bir duvarı yıktı. Duvarın ardında *bir şehir* vardı.",
+    "show": {
+     "type": "scene",
+     "land": "underground",
+     "label": "1963 · DERİNKUYU, NEVŞEHİR",
+     "props": [
+      {
+       "k": "torch",
+       "x": 0.18
+      }
+     ],
+     "people": {
+      "n": 1,
+      "from": 0.35,
+      "to": 0.5
+     }
+    },
+    "sfx": "hit"
+   },
+   {
+    "say": "Yerin yaklaşık *85 metre* altına inen, en az 18 katlı dev bir yeraltı şehri.",
+    "show": {
+     "type": "number",
+     "value": 85,
+     "suffix": " M",
+     "label": "DERİNLİK · EN AZ 18 KAT"
+    }
+   },
+   {
+    "say": "Bu videoda *Derinkuyu Yeraltı Şehri'nin* bilinmeyen yüzünü göreceksin.",
+    "show": {
+     "type": "photo",
+     "label": "DERİNKUYU YERALTI ŞEHRİ",
+     "fallback_show": {
+      "type": "icon",
+      "name": "mountain"
+     },
+     "search": "Derinkuyu Underground City",
+     "commons": "Derinkuyu Underground City 9843 Nevit Enhancer.jpg"
+    }
+   },
+   {
+    "say": "Kim kazdı? Neden kazdılar? Ve binlerce insan yerin altında *nasıl nefes aldı*?",
+    "show": {
+     "type": "list",
+     "items": [
+      "KİM KAZDI?",
+      "NEDEN?",
+      "NASIL NEFES ALDILAR?"
+     ]
+    },
+    "sfx": "riser"
+   },
+   {
+    "say": "Hikâye, Kapadokya'nın yumuşak taşında *başlıyor*.",
+    "show": {
+     "type": "title",
+     "lines": [
+      "DERİNKUYU",
+      "YERİN 18 KAT",
+      "ALTINDA"
+     ],
+     "red": 1
+    }
+   },
+   {
+    "say": "Kapadokya'nın volkanik *tüf* kayası, el aletleriyle kolayca oyulabiliyordu.",
+    "show": {
+     "type": "scene",
+     "land": "desert",
+     "label": "KAPADOKYA · NEVŞEHİR",
+     "sky": "dusk",
+     "moon": false,
+     "weather": "none",
+     "props": [
+      {
+       "k": "chimney",
+       "x": 0.35
+      },
+      {
+       "k": "chimney",
+       "x": 0.75,
+       "s": 0.7
+      }
+     ]
+    }
+   },
+   {
+    "say": "Peribacalarını da oluşturan bu taş, hava ile temas ettikçe *sertleşiyor*.",
+    "show": {
+     "type": "photo",
+     "label": "PERİBACALARI, GÖREME",
+     "fallback_show": {
+      "type": "icon",
+      "name": "mountain",
+      "label": "TÜF KAYASI"
+     },
+     "search": "Goreme fairy chimneys Cappadocia"
+    }
+   },
+   {
+    "say": "Derinkuyu, Nevşehir'in yaklaşık 30 kilometre güneyinde küçük bir *ilçe*.",
+    "show": {
+     "type": "place",
+     "name": "DERİNKUYU",
+     "sub": "NEVŞEHİR · KAPADOKYA"
+    }
+   },
+   {
+    "say": "1963'te bir ev sahibi, bodrumundaki duvarın ardında *gizli bir geçit* buldu.",
+    "show": {
+     "type": "scene",
+     "land": "underground",
+     "label": "1963 · BODRUM KATI",
+     "props": [
+      {
+       "k": "torch",
+       "x": 0.18
+      }
+     ],
+     "people": {
+      "n": 1,
+      "from": 0.3,
+      "to": 0.45
+     }
+    },
+    "sfx": "hit"
+   },
+   {
+    "say": "Geçit, aşağıya doğru inen *dar tünellere* açılıyordu.",
+    "show": {
+     "type": "scene",
+     "land": "underground",
+     "label": "AŞAĞIYA İNEN TÜNELLER",
+     "props": [
+      {
+       "k": "torch",
+       "x": 0.8
+      }
+     ],
+     "people": {
+      "n": 1,
+      "from": 0.4,
+      "to": 0.55
+     }
+    }
+   },
+   {
+    "say": "Kazılar sürdü ve şehir *1969'da* ziyaretçilere açıldı.",
+    "show": {
+     "type": "number",
+     "value": "1969",
+     "label": "ZİYARETE AÇILDI"
+    }
+   },
+   {
+    "say": "Bugün ziyaretçiler, şehrin yalnızca *bir bölümünü* gezebiliyor.",
+    "show": {
+     "type": "photo",
+     "label": "DERİNKUYU, TÜNELLER",
+     "fallback_show": {
+      "type": "icon",
+      "name": "footprints"
+     },
+     "search": "Derinkuyu tunnel",
+     "commons": "Derinkuyu Underground City 9831 Nevit Enhancer.jpg"
+    }
+   },
+   {
+    "say": "Peki burada kaç kişi yaşayabiliyordu? Tahminler *20 bin kişiye* kadar çıkıyor.",
+    "show": {
+     "type": "people",
+     "n": 9,
+     "highlight": [],
+     "label": "≈20.000 KİŞİ"
+    }
+   },
+   {
+    "say": "Üstelik insanlar yalnız değildi. Hayvanlar ve *erzak* da aşağı taşınıyordu.",
+    "show": {
+     "type": "list",
+     "items": [
+      "İNSANLAR",
+      "HAYVANLAR",
+      "ERZAK"
+     ]
+    }
+   },
+   {
+    "say": "Ahırlar, yüzeye yakın *üst katlardaydı*.",
+    "show": {
+     "type": "scene",
+     "land": "underground",
+     "label": "ÜST KATLAR · AHIRLAR",
+     "props": [
+      {
+       "k": "torch",
+       "x": 0.18
+      }
+     ],
+     "people": {
+      "n": 2,
+      "from": 0.5,
+      "to": 0.62
+     }
+    }
+   },
+   {
+    "say": "Aşağıda mutfaklar, depolar, kuyular, okullar ve hatta *kiliseler* vardı.",
+    "show": {
+     "type": "list",
+     "items": [
+      "MUTFAK",
+      "DEPO",
+      "KUYU",
+      "OKUL",
+      "KİLİSE"
+     ]
+    }
+   },
+   {
+    "say": "Kayaya oyulmuş odalar, birbirine *dar geçitlerle* bağlanıyordu.",
+    "show": {
+     "type": "photo",
+     "label": "DERİNKUYU, ODALAR",
+     "fallback_show": {
+      "type": "icon",
+      "name": "documents"
+     },
+     "search": "Derinkuyu"
+    }
+   },
+   {
+    "say": "Ama asıl soru şu: Binlerce insan yerin altında *nasıl nefes alıyordu*?",
+    "show": {
+     "type": "icon",
+     "name": "question"
+    },
+    "sfx": "riser"
+   },
+   {
+    "say": "Cevap: Yüzeye uzanan *50'den fazla* havalandırma bacası.",
+    "show": {
+     "type": "number",
+     "value": 50,
+     "suffix": "+",
+     "label": "HAVALANDIRMA BACASI"
+    }
+   },
+   {
+    "say": "Bu bacalar temiz havayı *en alt katlara* kadar taşıyordu.",
+    "show": {
+     "type": "scene",
+     "land": "underground",
+     "label": "HAVALANDIRMA BACASI",
+     "props": [
+      {
+       "k": "searchlight",
+       "x": 0.5
+      },
+      {
+       "k": "torch",
+       "x": 0.15
+      }
+     ]
+    }
+   },
+   {
+    "say": "Bazı kuyular yer altı suyuna iniyor, şehre *su* sağlıyordu.",
+    "show": {
+     "type": "photo",
+     "label": "BACA VE KUYU",
+     "fallback_show": {
+      "type": "icon",
+      "name": "eye"
+     },
+     "search": "Derinkuyu ventilation shaft"
+    }
+   },
+   {
+    "say": "İçerideki sıcaklık, dışarıda mevsim ne olursa olsun yaklaşık *13-15 derece*.",
+    "show": {
+     "type": "number",
+     "value": "13-15",
+     "suffix": " °C",
+     "label": "YAKLAŞIK SABİT SICAKLIK"
+    }
+   },
+   {
+    "say": "Peki insanlar neden *yerin altına* saklanma ihtiyacı duydu?",
+    "show": {
+     "type": "icon",
+     "name": "question"
+    }
+   },
+   {
+    "say": "Bu tür bilinmeyen Türkiye gerçeklerini seviyorsan, şimdi *abone ol*.",
+    "show": {
+     "type": "icon",
+     "name": "eye",
+     "label": "ABONE OL · BİLDİRİMİ AÇ"
+    }
+   },
+   {
+    "say": "Anadolu, yüzyıllar boyunca *istilaların* ve savaşların geçtiği bir topraktı.",
+    "show": {
+     "type": "scene",
+     "land": "plain",
+     "label": "ANADOLU",
+     "sky": "dusk",
+     "moon": false,
+     "weather": "none",
+     "props": [
+      {
+       "k": "flag",
+       "x": 0.85
+      },
+      {
+       "k": "fire",
+       "x": 0.6,
+       "s": 0.6
+      }
+     ],
+     "people": {
+      "n": 6,
+      "from": 0.7,
+      "to": 0.2,
+      "run": true,
+      "red": true
+     }
+    },
+    "sfx": "hit"
+   },
+   {
+    "say": "Bazı uzmanlara göre ilk oymalar *Frigler* döneminde, MÖ 8. yüzyıl civarında başlamış olabilir.",
+    "show": {
+     "type": "dossier",
+     "name": "FRİGLER",
+     "no": "MÖ 8. YY?",
+     "fields": {
+      "İDDİA": "İLK OYMALAR",
+      "DURUM": "TARTIŞMALI"
+     }
+    }
+   },
+   {
+    "say": "Kültür ve Turizm Bakanlığı ise şehrin 9 ile 10. yüzyıllarda *inşa edildiğini* tahmin ediyor.",
+    "show": {
+     "type": "quote",
+     "text": "Şehrin 9.-10. yüzyıllarda inşa edildiği tahmin ediliyor.",
+     "who": "Kültür ve Turizm Bakanlığı"
+    }
+   },
+   {
+    "say": "Kesin olan şu: Şehir, Bizans döneminde akınlara karşı *genişletildi*.",
+    "show": {
+     "type": "scene",
+     "land": "hills",
+     "label": "BİZANS DÖNEMİ · AKINLAR",
+     "sky": "fire",
+     "moon": false,
+     "weather": "fog",
+     "props": [
+      {
+       "k": "house",
+       "x": 0.25,
+       "s": 0.6
+      },
+      {
+       "k": "fire",
+       "x": 0.7,
+       "s": 0.7
+      }
+     ],
+     "people": {
+      "n": 5,
+      "from": 0.8,
+      "to": 0.35,
+      "run": true
+     }
+    }
+   },
+   {
+    "say": "Tehlike yaklaşınca köylüler, hayvanlarıyla birlikte *yerin altına* iniyordu.",
+    "show": {
+     "type": "scene",
+     "land": "underground",
+     "label": "SIĞINAK",
+     "props": [
+      {
+       "k": "torch",
+       "x": 0.18
+      }
+     ],
+     "people": {
+      "n": 6,
+      "from": 0.85,
+      "to": 0.4,
+      "run": true
+     }
+    }
+   },
+   {
+    "say": "Girişler ise devasa, yuvarlak *taş kapılarla* kapatılıyordu.",
+    "show": {
+     "type": "photo",
+     "label": "YUVARLAK TAŞ KAPI",
+     "fallback_show": {
+      "type": "icon",
+      "name": "eye"
+     },
+     "search": "Derinkuyu stone door"
+    }
+   },
+   {
+    "say": "Bu kapılar yalnızca *içeriden* yuvarlanıp kapatılabiliyordu.",
+    "show": {
+     "type": "scene",
+     "land": "underground",
+     "label": "TAŞ KAPI · İÇERİDEN",
+     "props": [
+      {
+       "k": "stonedoor",
+       "x": 0.62,
+       "s": 1.0
+      },
+      {
+       "k": "torch",
+       "x": 0.15
+      }
+     ],
+     "people": {
+      "n": 2,
+      "from": 0.3,
+      "to": 0.38
+     }
+    },
+    "sfx": "hit"
+   },
+   {
+    "say": "Her biri yaklaşık 1-1,5 metre boyunda ve *200 ila 500 kilo* ağırlığındaydı.",
+    "show": {
+     "type": "number",
+     "value": "200-500",
+     "suffix": " KG",
+     "label": "TAŞ KAPI AĞIRLIĞI"
+    }
+   },
+   {
+    "say": "Dar ve alçak koridorlar, saldırganları *tek sıra* ilerlemeye zorluyordu.",
+    "show": {
+     "type": "scene",
+     "land": "underground",
+     "label": "DAR GEÇİTLER",
+     "props": [
+      {
+       "k": "torch",
+       "x": 0.85
+      }
+     ],
+     "people": {
+      "n": 3,
+      "from": 0.2,
+      "to": 0.45,
+      "red": true
+     }
+    }
+   },
+   {
+    "say": "Kapı kapandığında içeridekilerin her şeyi vardı.",
+    "show": {
+     "type": "list",
+     "items": [
+      "TAŞ KAPI: KAPALI",
+      "HAVA: VAR",
+      "SU: VAR",
+      "ERZAK: VAR"
+     ]
+    }
+   },
+   {
+    "say": "Üstelik Derinkuyu tek değildi. Yakındaki *Kaymaklı'da* bir şehir daha vardı.",
+    "show": {
+     "type": "photo",
+     "label": "KAYMAKLI YERALTI ŞEHRİ",
+     "fallback_show": {
+      "type": "place",
+      "name": "KAYMAKLI",
+      "sub": "NEVŞEHİR"
+     },
+     "search": "Kaymakli underground city"
+    },
+    "sfx": "riser"
+   },
+   {
+    "say": "İki şehrin, yaklaşık *8-9 kilometrelik* bir tünelle bağlı olduğu düşünülüyor.",
+    "show": {
+     "type": "number",
+     "value": "≈8-9",
+     "suffix": " KM",
+     "label": "BAĞLANTI TÜNELİ (TAHMİNİ)"
+    }
+   },
+   {
+    "say": "Bu tünel, iki şehir arasında yer altından *kaçış* yolu olmuş olabilir.",
+    "show": {
+     "type": "scene",
+     "land": "underground",
+     "label": "DERİNKUYU → KAYMAKLI",
+     "props": [
+      {
+       "k": "torch",
+       "x": 0.5
+      }
+     ],
+     "people": {
+      "n": 4,
+      "from": 0.15,
+      "to": 0.85,
+      "run": true
+     }
+    }
+   },
+   {
+    "say": "Kapadokya'da bugüne kadar *200'den fazla* yeraltı yerleşimi tespit edildi.",
+    "show": {
+     "type": "place",
+     "name": "KAPADOKYA",
+     "sub": "200+ YERALTI YERLEŞİMİ"
+    }
+   },
+   {
+    "say": "Bu şehirler yüzyıllar boyunca, tehlike anlarında *sığınak* olarak kullanıldı.",
+    "show": {
+     "type": "photo",
+     "label": "DERİNKUYU",
+     "fallback_show": {
+      "type": "icon",
+      "name": "clock"
+     },
+     "search": "Derinkuyu underground city interior"
+    }
+   },
+   {
+    "say": "Ve Aralık 2014'te Nevşehir'den bir *sürpriz* haber daha geldi.",
+    "show": {
+     "type": "headline",
+     "paper": "BASIN · ARALIK 2014",
+     "text": "Nevşehir'de dev yeraltı şehri bulundu"
+    }
+   },
+   {
+    "say": "Kale çevresindeki bir *kentsel dönüşüm* çalışmasında, yeni bir yeraltı şehri ortaya çıktı.",
+    "show": {
+     "type": "scene",
+     "land": "hills",
+     "sky": "dusk",
+     "moon": false,
+     "weather": "none",
+     "props": [
+      {
+       "k": "castle",
+       "x": 0.5,
+       "s": 0.8
+      },
+      {
+       "k": "house",
+       "x": 0.15,
+       "s": 0.4
+      },
+      {
+       "k": "house",
+       "x": 0.85,
+       "s": 0.45
+      }
+     ],
+     "label": "NEVŞEHİR KALESİ · 2014"
+    },
+    "sfx": "hit"
+   },
+   {
+    "say": "Araştırmacılar bu şehrin Derinkuyu'dan bile *büyük* olabileceğini düşünüyor.",
+    "show": {
+     "type": "photo",
+     "label": "NEVŞEHİR KALESİ",
+     "fallback_show": {
+      "type": "place",
+      "name": "NEVŞEHİR",
+      "sub": "KALE ALTI · 2014"
+     },
+     "search": "Nevsehir castle"
+    }
+   },
+   {
+    "say": "Tahmini alanı: yaklaşık *460 bin* metrekare.",
+    "show": {
+     "type": "number",
+     "value": 460,
+     "suffix": " BİN M²",
+     "label": "TAHMİNİ ALAN"
+    }
+   },
+   {
+    "say": "Yani Kapadokya'nın altında belki de hâlâ *keşfedilmemiş* şehirler var.",
+    "show": {
+     "type": "scene",
+     "land": "underground",
+     "label": "KEŞFEDİLMEMİŞ",
+     "props": [
+      {
+       "k": "torch",
+       "x": 0.25
+      }
+     ],
+     "people": {
+      "n": 2,
+      "from": 0.3,
+      "to": 0.5
+     }
+    }
+   },
+   {
+    "say": "Derinkuyu ve Kaymaklı, 1985'ten beri *UNESCO* Dünya Mirası olan Göreme alanının parçası.",
+    "show": {
+     "type": "dossier",
+     "name": "UNESCO",
+     "no": "1985",
+     "fields": {
+      "ALAN": "GÖREME MİLLİ PARKI",
+      "KAPSAM": "KAYMAKLI, DERİNKUYU"
+     }
+    }
+   },
+   {
+    "say": "Sence insanlar bu şehri gerçekten yalnızca *saklanmak* için mi kazdı?",
+    "show": {
+     "type": "scene",
+     "land": "underground",
+     "label": "SENCE?",
+     "props": [
+      {
+       "k": "stonedoor",
+       "x": 0.7,
+       "s": 0.9,
+       "roll": -1
+      },
+      {
+       "k": "torch",
+       "x": 0.2
+      }
+     ]
+    }
+   },
+   {
+    "say": "Yorumlara yaz ve daha fazlası için *abone ol*.",
+    "show": {
+     "type": "title",
+     "lines": [
+      "YORUMLARA YAZ",
+      "ABONE OL",
+      ""
+     ],
+     "red": 1
+    }
+   }
+  ],
+  "chapters": [
+   [
+    0,
+    "Duvarın arkası"
+   ],
+   [
+    5,
+    "Kapadokya'nın taşı"
+   ],
+   [
+    8,
+    "1963 keşfi"
+   ],
+   [
+    12,
+    "Yerin altında hayat"
+   ],
+   [
+    17,
+    "Nasıl nefes aldılar?"
+   ],
+   [
+    24,
+    "Kim, neden kazdı?"
+   ],
+   [
+    29,
+    "Taş kapılar"
+   ],
+   [
+    34,
+    "Kaymaklı ve gizli tünel"
+   ],
+   [
+    39,
+    "2014: Yeni şehir"
+   ]
+  ],
+  "thumb": {
+   "lines": [
+    "YERİN 18 KAT",
+    "ALTINDA ŞEHİR"
+   ],
+   "red": 1,
+   "photo_commons": "Derinkuyu Underground City 9843 Nevit Enhancer.jpg",
+   "photo_search": "Derinkuyu Underground City",
+   "focus_x": 0.5,
+   "focus_y": 0.55,
+   "tag": "BİLİNMEYEN"
+  }
+ },
+ "shorts": [
+  {
+   "hook": [
+    {
+     "say": "Bir adam evinin duvarını yıktı ve yerin altında *18 katlı* bir şehir buldu.",
+     "show": {
+      "type": "scene",
+      "land": "underground",
+      "label": "1963 · NEVŞEHİR",
+      "props": [
+       {
+        "k": "torch",
+        "x": 0.18
+       }
+      ],
+      "people": {
+       "n": 1,
+       "from": 0.35,
+       "to": 0.5
+      }
+     },
+     "sfx": "hit"
+    }
+   ],
+   "from": 8,
+   "to": 19,
+   "outro": [
+    {
+     "say": "Tam hikâye kanalda. Daha fazlası için *abone ol*.",
+     "show": {
+      "type": "title",
+      "lines": [
+       "TAM VİDEO",
+       "KANALDA",
+       "ABONE OL"
+      ],
+      "red": 1
+     }
+    }
+   ]
+  },
+  {
+   "hook": [
+    {
+     "say": "Bu taş kapı sadece *içeriden* kapanıyordu. Peki neden?",
+     "show": {
+      "type": "scene",
+      "land": "underground",
+      "label": "DERİNKUYU",
+      "props": [
+       {
+        "k": "stonedoor",
+        "x": 0.6
+       }
+      ]
+     },
+     "sfx": "hit"
+    }
+   ],
+   "from": 24,
+   "to": 33,
+   "outro": [
+    {
+     "say": "Tam hikâye kanalda. Daha fazlası için *abone ol*.",
+     "show": {
+      "type": "title",
+      "lines": [
+       "TAM VİDEO",
+       "KANALDA",
+       "ABONE OL"
+      ],
+      "red": 1
+     }
+    }
+   ]
+  },
+  {
+   "hook": [
+    {
+     "say": "2014'te Nevşehir'de yapılan bir kazıdan, Derinkuyu'dan da *büyük* olabilecek bir şehir çıktı.",
+     "show": {
+      "type": "scene",
+      "land": "hills",
+      "sky": "dusk",
+      "moon": false,
+      "weather": "none",
+      "props": [
+       {
+        "k": "castle",
+        "x": 0.5,
+        "s": 0.8
+       },
+       {
+        "k": "house",
+        "x": 0.15,
+        "s": 0.4
+       },
+       {
+        "k": "house",
+        "x": 0.85,
+        "s": 0.45
+       }
+      ],
+      "label": "NEVŞEHİR · 2014"
+     },
+     "sfx": "hit"
+    }
+   ],
+   "from": 34,
+   "to": 43,
+   "outro": [
+    {
+     "say": "Tam hikâye kanalda. Daha fazlası için *abone ol*.",
+     "show": {
+      "type": "title",
+      "lines": [
+       "TAM VİDEO",
+       "KANALDA",
+       "ABONE OL"
+      ],
+      "red": 1
+     }
+    }
+   ]
+  }
+ ],
+ "publish": {
+  "long": {
+   "title": "Derinkuyu Yeraltı Şehri: Duvarın Ardından 18 Katlı Şehir Çıktı",
+   "description": "1963'te Nevşehir Derinkuyu'da bir ev sahibi bodrumundaki duvarı yıktı ve yerin yaklaşık 85 metre altına inen, en az 18 katlı bir yeraltı şehrine ulaştı. 20 bine yakın insanı barındırabildiği tahmin edilen şehrin havalandırma bacaları, içeriden kapanan taş kapıları, Kaymaklı'ya uzandığı düşünülen tünel ve 2014'te Nevşehir Kalesi altında bulunan yeni yeraltı şehri. Kimin kazdığı tartışmalı: bazı uzmanlar Frig dönemine (MÖ 8. yy civarı) işaret ederken Kültür ve Turizm Bakanlığı şehrin 9-10. yüzyıllarda inşa edildiğini tahmin ediyor.\n\nKaynaklar: T.C. Kültür ve Turizm Bakanlığı, History.com, National Geographic (2015), Hürriyet Daily News (2014), UNESCO Dünya Mirası Merkezi.",
+   "hashtags": [
+    "#derinkuyu",
+    "#kapadokya",
+    "#nevşehir",
+    "#yeraltışehri",
+    "#tarih",
+    "#belgesel"
+   ]
+  },
+  "shorts": [
+   {
+    "title": "Duvarı Yıktı, Altından 18 Katlı Şehir Çıktı 😳 #shorts",
+    "description": "Derinkuyu Yeraltı Şehri — tam video kanalda.",
+    "hashtags": [
+     "#shorts",
+     "#derinkuyu",
+     "#kapadokya"
+    ]
+   },
+   {
+    "title": "Bu Taş Kapı Sadece İçeriden Kapanıyordu 🪨 #shorts",
+    "description": "Derinkuyu'nun taş kapıları — tam video kanalda.",
+    "hashtags": [
+     "#shorts",
+     "#derinkuyu",
+     "#tarih"
+    ]
+   },
+   {
+    "title": "Nevşehir'in Altından Dev Bir Şehir Daha Çıktı 🏰 #shorts",
+    "description": "Nevşehir Kalesi yeraltı şehri — tam video kanalda.",
+    "hashtags": [
+     "#shorts",
+     "#nevşehir",
+     "#kapadokya"
+    ]
+   }
+  ]
+ }
+}

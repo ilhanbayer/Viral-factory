@@ -786,10 +786,58 @@ def walker(d, x, y, h, col, t, speed=1.0):
         d.line((sh[0], sh[1], x - s * sw * h * 0.2, y - h * 0.5), fill=col, width=max(2, int(lw * 0.8)))
 
 
+_cave_tex = {}
+
+
+def _draw_cave(img, t, W, H, u, vert):
+    """Yeraltı şehri içi: oyma tüf duvarlar, derinliğe giden kemerli tünel, titreşen meşale ışığı."""
+    key = (W, H)
+    if key not in _cave_tex:
+        r = np.random.default_rng(11)
+        n = r.normal(0, 1, (H // 8 + 1, W // 8 + 1)).astype(np.float32)
+        tex = Image.fromarray(((n - n.min()) / (n.max() - n.min()) * 255).astype(np.uint8)).resize((W, H), Image.BICUBIC)
+        tex = tex.filter(ImageFilter.GaussianBlur(3))
+        a = np.asarray(tex, np.float32)[..., None] / 255.0
+        base = np.array([92, 70, 52], np.float32) * (0.55 + 0.6 * a)
+        _cave_tex[key] = Image.fromarray(base.clip(0, 255).astype(np.uint8)).convert("RGBA")
+    img.alpha_composite(_cave_tex[key])
+    d = ImageDraw.Draw(img)
+    cx, cy = W * 0.5 + math.sin(t * 0.3) * 20 * u, H * (0.5 if vert else 0.48)
+    # derinliğe giden kemerler (her biri bir öncekinden küçük ve koyu)
+    for i in range(7):
+        q = ((i + (t * 0.25) % 1) / 7)
+        sc = (1 - q) ** 1.6
+        w2, h2 = W * 0.46 * sc + 30 * u, H * 0.62 * sc + 30 * u
+        dark = int(30 + 140 * q)
+        col = (max(0, 70 - dark // 2), max(0, 52 - dark // 2), max(0, 40 - dark // 2), 255)
+        box = (cx - w2 / 2, cy - h2 / 2, cx + w2 / 2, cy + h2 / 2)
+        d.rectangle((box[0], cy, box[2], box[3]), fill=col)
+        d.pieslice((box[0], box[1], box[2], cy + (box[3] - box[1]) * 0.0 + h2 / 2), 180, 360, fill=col)
+    d.ellipse((cx - 30 * u, cy - 10 * u, cx + 30 * u, cy + 40 * u), fill=(5, 4, 3, 255))
+    # yan nişler
+    for sx in (0.1, 0.84):
+        x0 = W * sx
+        d.rectangle((x0, H * 0.42, x0 + W * 0.07, H * 0.62), fill=(30, 22, 17, 255))
+        d.pieslice((x0, H * 0.37, x0 + W * 0.07, H * 0.47), 180, 360, fill=(30, 22, 17, 255))
+    gtop = H * (0.8 if vert else 0.7)
+    g2 = np.linspace(0, 1, int(H - gtop))[:, None]
+    fl = (np.array([120, 92, 68]) * (0.6 + g2 * 0.4)).astype(np.uint8)
+    img.alpha_composite(Image.fromarray(np.broadcast_to(fl[:, None, :], (len(g2), W, 3)).copy()).convert("RGBA"),
+                        (0, int(gtop)))
+    flick = 0.8 + 0.2 * math.sin(t * 9) * math.sin(t * 5.3)
+    glow = Image.new("RGBA", (W, H), (0, 0, 0, 0))
+    ImageDraw.Draw(glow).ellipse((-W * 0.2, H * 0.1, W * 0.55, H * 1.1), fill=(255, 150, 60, int(55 * flick)))
+    img.alpha_composite(glow.filter(ImageFilter.GaussianBlur(60 * u)))
+    vig = Image.new("RGBA", (W, H), (0, 0, 0, 0))
+    ImageDraw.Draw(vig).rectangle((0, 0, W, H), outline=(0, 0, 0, 170), width=int(120 * u))
+    img.alpha_composite(vig.filter(ImageFilter.GaussianBlur(80 * u)))
+    return gtop
+
+
 def draw_scene(img, show, t, dur, W, H, u):
     """Olay canlandırması: gökyüzü, katmanlı arazi, hava durumu, nesneler, hareketli insanlar.
-    show = {"type":"scene","sky":"night","land":"mountains|hills|city|sea|desert|forest|plain","weather":"snow|rain|fog|blizzard|none",
-            "props":[{"k":"tent","x":0.45,"cut":true},{"k":"house"},{"k":"ship"},{"k":"tower"},{"k":"fire"},{"k":"flag"},
+    show = {"type":"scene","sky":"night","land":"mountains|hills|city|sea|desert|forest|plain|underground","weather":"snow|rain|fog|blizzard|none",
+            "props":[{"k":"tent","x":0.45,"cut":true},{"k":"stonedoor"},{"k":"torch"},{"k":"fallentrees"},{"k":"fireball"},{"k":"boat"},{"k":"sailship","torn":true},{"k":"chimney"},{"k":"castle"},{"k":"house"},{"k":"ship"},{"k":"tower"},{"k":"fire"},{"k":"flag"},
                      {"k":"lighthouse"},{"k":"plane"},{"k":"car"},{"k":"searchlight"}],
             "people":{"n":3,"from":0.45,"to":0.95,"run":true,"red":false}, "moon":true, "lightning":false,
             "avalanche":false, "label":"1 ŞUBAT 1959 · GECE"}"""
@@ -823,6 +871,7 @@ def draw_scene(img, show, t, dur, W, H, u):
     hor = H * 0.6
     vert = H > W
     layers = [(0.35, 0.09, 0.05), (0.6, 0.13, 0.18), (1.0, 0.19, 0.32)]
+    snowy = show.get("weather") in ("snow", "blizzard") or show.get("sky") == "ice" or land in ("mountains", "ice")
     for li, (par, amp, dark) in enumerate(layers):
         amp = amp * (0.62 if vert else 1.0)
         sb = np.array(sky[1], np.float32)
@@ -856,8 +905,9 @@ def draw_scene(img, show, t, dur, W, H, u):
                 tx_ = x + off + r6.uniform(-10, 10) * u
                 d.polygon([(tx_ - th_ * 0.28, y + 6 * u), (tx_, y - th_), (tx_ + th_ * 0.28, y + 6 * u)],
                           fill=tuple(int(v * 0.8) for v in c[:3]) + (255,))
-                d.polygon([(tx_ - th_ * 0.12, y - th_ * 0.62), (tx_, y - th_), (tx_ + th_ * 0.12, y - th_ * 0.62)],
-                          fill=(225, 230, 238, 220))
+                if snowy:
+                    d.polygon([(tx_ - th_ * 0.12, y - th_ * 0.62), (tx_, y - th_), (tx_ + th_ * 0.12, y - th_ * 0.62)],
+                              fill=(225, 230, 238, 220))
         if land in ("mountains", "ice") and li < 2:   # karlı tepeler
             for x, y in zip(xs[::6], ys[::6]):
                 d.polygon([(x + off - 18 * u, y + 26 * u), (x + off, y), (x + off + 18 * u, y + 26 * u)],
@@ -871,7 +921,19 @@ def draw_scene(img, show, t, dur, W, H, u):
                     if r3.random() < 0.6:
                         d.rectangle((wx, wy, wx + 6 * u, wy + 9 * u), fill=(255, 210, 120, 220))
     gtop = H * (0.8 if vert else 0.66)
-    d.rectangle((0, gtop, W, H), fill=tuple(int(v * 0.25) for v in sky[0]) + (255,))
+    gc = {"forest": (52, 62, 38), "plain": (88, 92, 52), "hills": (70, 82, 46), "desert": (176, 142, 96),
+          "city": (48, 48, 54)}.get(land)
+    if gc:   # zemin rengi: arazi rengi × gökyüzü aydınlığı
+        lum = {"day": 1.0, "dusk": 0.55, "fire": 0.45, "storm": 0.35, "night": 0.22, "ice": 0.6}.get(show.get("sky", "night"), 0.4)
+        tint = np.array(sky[1], np.float32) / 255.0
+        gcol = tuple(int(min(255, c * lum * (0.75 + 0.35 * tc))) for c, tc in zip(gc, tint)) + (255,)
+        g3 = np.linspace(0, 1, int(H - gtop))[:, None]
+        gg = (np.array(gcol[:3], np.float32) * (1 - g3 * 0.45)).astype(np.uint8)
+        img.alpha_composite(Image.fromarray(np.broadcast_to(gg[:, None, :], (len(g3), W, 3)).copy()).convert("RGBA"),
+                            (0, int(gtop)))
+        d = ImageDraw.Draw(img)
+    else:
+        d.rectangle((0, gtop, W, H), fill=tuple(int(v * 0.25) for v in sky[0]) + (255,))
     if show.get("weather") in ("snow", "blizzard") or land in ("mountains", "ice"):
         g2 = np.linspace(0, 1, int(H - gtop))[:, None]
         sn = (np.array([205, 212, 224]) * (1 - g2 * 0.35)).astype(np.uint8)
@@ -886,6 +948,9 @@ def draw_scene(img, show, t, dur, W, H, u):
             for xx in range(-1, int(W / (120 * u)) + 2):
                 x = xx * 120 * u + xo
                 d.arc((x, yy, x + 120 * u, yy + 24 * u), 200, 340, fill=(90, 120, 150, 160), width=max(1, int(2 * u)))
+    if land == "underground":
+        gtop = _draw_cave(img, t, W, H, u, vert)
+        d = ImageDraw.Draw(img)
     ground = gtop + (H - gtop) * (0.45 if vert else 0.22)
     pscale = 1.0 if vert else 1.3
     # nesneler
@@ -948,6 +1013,116 @@ def draw_scene(img, show, t, dur, W, H, u):
             pts = [(x, ground - s * 0.9 + yy * s * 0.25) for yy in (0, 1)]
             wv = [(x + i * s * 0.08, ground - s * 0.9 + math.sin(t * 5 + i) * 6 * u) for i in range(6)]
             d.polygon(wv + [(wv[-1][0], wv[-1][1] + s * 0.25)] + [(x, ground - s * 0.65)], fill=C["red"] + (255,))
+        elif k == "stonedoor":   # yeraltı şehrinin yuvarlanan taş kapısı
+            roll = p.get("roll", 1) * eo(cl(t / max(dur * 0.7, 0.5)))
+            r = s * 0.42
+            dx = x - s * 0.5 + roll * s * 0.5
+            d.rectangle((x - s * 0.3, ground - s * 0.75, x + s * 0.3, ground), fill=(8, 6, 5, 255))
+            d.ellipse((dx - r, ground - 2 * r, dx + r, ground), fill=(120, 100, 82, 255), outline=(70, 56, 45, 255),
+                      width=int(6 * u))
+            d.ellipse((dx - r * 0.18, ground - r - r * 0.18, dx + r * 0.18, ground - r + r * 0.18), fill=(40, 32, 26, 255))
+            ang = roll * 3.0
+            d.line((dx, ground - r, dx + math.cos(ang) * r * 0.85, ground - r + math.sin(ang) * r * 0.85),
+                   fill=(80, 64, 52, 255), width=int(5 * u))
+        elif k == "torch":
+            d.line((x, ground, x, ground - s * 0.5), fill=(60, 40, 25, 255), width=int(8 * u))
+            fl = 0.75 + 0.25 * math.sin(t * 11 + x)
+            d.polygon([(x - s * 0.05, ground - s * 0.5), (x, ground - s * (0.62 + 0.06 * fl)), (x + s * 0.05, ground - s * 0.5)],
+                      fill=(255, 170, 50, 240))
+            glow = Image.new("RGBA", (W, H), (0, 0, 0, 0))
+            ImageDraw.Draw(glow).ellipse((x - s * 0.8, ground - s * 1.3, x + s * 0.8, ground + s * 0.1),
+                                         fill=(255, 150, 60, int(60 * fl)))
+            img.alpha_composite(glow.filter(ImageFilter.GaussianBlur(30 * u)))
+            d = ImageDraw.Draw(img)
+        elif k == "fallentrees":   # merkezden dışa doğru devrilmiş ağaçlar (patlama dalgası)
+            kk = eo(cl(t / 1.2))
+            r7 = np.random.default_rng(7)
+            for i in range(46):
+                bx = W * r7.uniform(-0.05, 1.05) - drift * 0.6
+                by = ground + r7.uniform(-0.05, 0.35) * (H - ground)
+                ln = r7.uniform(0.25, 0.5) * s
+                side = 1 if bx > x else -1
+                ang = (-math.pi / 2) * (1 - kk) + (0 if side > 0 else -math.pi) * kk * 0.98
+                ex, ey = bx + math.cos(ang) * ln, by + math.sin(ang) * ln * (1 - kk * 0.85)
+                d.line((bx, by, ex, ey), fill=(150, 118, 88, 255), width=max(3, int(r7.uniform(6, 12) * u)))
+                d.line((bx, by, ex, ey), fill=(90, 66, 48, 255), width=max(1, int(r7.uniform(2, 4) * u)))
+        elif k == "fireball":   # gökyüzünde ilerleyen ateş topu
+            kk = cl(t / max(dur, 0.5))
+            fx, fy = W * (p.get("x", 0.1) + kk * 0.6), H * (p.get("y", 0.12) + kk * 0.3)
+            trail = Image.new("RGBA", (W, H), (0, 0, 0, 0))
+            td = ImageDraw.Draw(trail)
+            for j in range(14):
+                q = j / 14
+                tx_, ty_ = fx - q * W * 0.35, fy - q * H * 0.17
+                rr = s * 0.18 * (1 - q)
+                td.ellipse((tx_ - rr, ty_ - rr, tx_ + rr, ty_ + rr), fill=(255, 200 - int(120 * q), 80, int(200 * (1 - q))))
+            img.alpha_composite(trail.filter(ImageFilter.GaussianBlur(12 * u)))
+            d = ImageDraw.Draw(img)
+            d.ellipse((fx - s * 0.08, fy - s * 0.08, fx + s * 0.08, fy + s * 0.08), fill=(255, 250, 220, 255))
+        elif k == "sailship":   # iki direkli yelkenli (brigantin): şişkin yelkenler, direkler, halatlar
+            by = gtop + 10 * u + math.sin(t * 1.3) * 8 * u
+            x2 = x + t * 10 * u * p.get("drift", 0.5)
+            roll = math.sin(t * 1.1) * 0.04
+            hull = (28, 22, 18, 255)
+            d.polygon([(x2 - s * 0.6, by - s * 0.12), (x2 + s * 0.62, by - s * 0.15), (x2 + s * 0.46, by + s * 0.05),
+                       (x2 - s * 0.5, by + s * 0.05)], fill=hull)
+            d.line((x2 + s * 0.6, by - s * 0.15, x2 + s * 0.95, by - s * 0.3), fill=hull, width=int(4 * u))   # cıvadra
+            torn = p.get("torn", False)
+            masts = []
+            for mi, (mx, mh) in enumerate(((-0.22, 1.0), (0.22, 0.92))):
+                bx_ = x2 + mx * s
+                top = by - s * 0.12 - s * mh
+                masts.append((bx_, top))
+                for j in range(3):
+                    y0 = top + s * 0.1 + j * s * 0.25
+                    wdt = s * (0.13 + j * 0.035)
+                    bl = s * (0.03 + 0.012 * math.sin(t * 2 + j + mi))
+                    hgt = s * 0.19
+                    if torn and j == mi:
+                        pts = [(bx_ - wdt, y0), (bx_ + wdt * 0.2, y0), (bx_ - wdt * 0.4, y0 + hgt * 0.8)]
+                    else:
+                        pts = [(bx_ - wdt, y0)] + [(bx_ + wdt * (2 * q - 1), y0 + math.sin(q * math.pi) * bl * 0.4)
+                                                   for q in (0.25, 0.5, 0.75)] + [(bx_ + wdt, y0), (bx_ + wdt * 0.92 + bl, y0 + hgt),
+                                                   (bx_, y0 + hgt + bl * 0.6), (bx_ - wdt * 0.92 + bl, y0 + hgt)]
+                    d.polygon(pts, fill=(214, 206, 188, 235), outline=(150, 140, 120, 255))
+                d.line((bx_, by - s * 0.12, bx_ + roll * s, top), fill=hull, width=int(6 * u))
+            # flok yelkeni ve halatlar
+            d.polygon([(masts[1][0] + s * 0.2, masts[1][1] + s * 0.35), (x2 + s * 0.92, by - s * 0.29),
+                       (masts[1][0] + s * 0.24, by - s * 0.2)], fill=(205, 198, 180, 220))
+            for (mx_, mt) in masts:
+                d.line((mx_, mt, x2 - s * 0.58, by - s * 0.12), fill=(40, 34, 28, 200), width=max(1, int(2 * u)))
+                d.line((mx_, mt, x2 + s * 0.6, by - s * 0.15), fill=(40, 34, 28, 200), width=max(1, int(2 * u)))
+        elif k == "boat":   # küçük filika
+            by = gtop + 30 * u + math.sin(t * 2 + x) * 10 * u
+            bx = x + t * 18 * u * p.get("drift", 1)
+            d.polygon([(bx - s * 0.3, by - s * 0.05), (bx + s * 0.3, by - s * 0.05), (bx + s * 0.22, by + s * 0.06),
+                       (bx - s * 0.22, by + s * 0.06)], fill=(60, 40, 28, 255))
+        elif k == "castle":   # tepe üstünde kale: surlar, mazgallar, burçlar
+            col = (52, 42, 38, 255)
+            hy = ground - s * 0.15
+            d.polygon([(x - s * 1.1, ground), (x - s * 0.6, hy), (x + s * 0.6, hy), (x + s * 1.1, ground)], fill=(60, 48, 40, 255))
+            d.rectangle((x - s * 0.55, hy - s * 0.35, x + s * 0.55, hy), fill=col)
+            for i in range(12):
+                mx_ = x - s * 0.55 + i * s * 0.1
+                d.rectangle((mx_, hy - s * 0.42, mx_ + s * 0.05, hy - s * 0.35), fill=col)
+            for tx_ in (-0.55, 0.0, 0.55):
+                d.rectangle((x + tx_ * s - s * 0.1, hy - s * 0.6, x + tx_ * s + s * 0.1, hy), fill=col)
+                for j in range(3):
+                    d.rectangle((x + tx_ * s - s * 0.1 + j * s * 0.075, hy - s * 0.67, x + tx_ * s - s * 0.06 + j * s * 0.075,
+                                 hy - s * 0.6), fill=col)
+            if int(t * 2) % 4 != 0:
+                d.rectangle((x - s * 0.02, hy - s * 0.45, x + s * 0.02, hy - s * 0.38), fill=(255, 200, 110, 255))
+        elif k == "chimney":   # Kapadokya peribacası
+            for j, (ox, hh) in enumerate(((-0.35, 0.9), (0, 1.25), (0.32, 0.75))):
+                cx_ = x + ox * s
+                hgt = s * hh
+                d.polygon([(cx_ - s * 0.14, ground), (cx_ - s * 0.07, ground - hgt), (cx_ + s * 0.07, ground - hgt),
+                           (cx_ + s * 0.14, ground)], fill=(196, 160, 120, 255))
+                d.ellipse((cx_ - s * 0.11, ground - hgt - s * 0.12, cx_ + s * 0.11, ground - hgt + s * 0.04),
+                          fill=(120, 95, 75, 255))
+                if j == 1:
+                    d.rectangle((cx_ - s * 0.025, ground - hgt * 0.5, cx_ + s * 0.025, ground - hgt * 0.42),
+                                fill=(40, 28, 20, 255))
         elif k == "searchlight":
             a0 = 250 + 25 * math.sin(t * 0.8 + x)
             beam = Image.new("RGBA", (W, H), (0, 0, 0, 0))

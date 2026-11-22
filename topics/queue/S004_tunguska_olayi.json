@@ -19,7 +19,15 @@
      "sky": "fire",
      "land": "forest",
      "weather": "none",
-     "label": "30 HAZİRAN 1908 · SABAH"
+     "label": "30 HAZİRAN 1908 · SABAH",
+     "props": [
+      {
+       "k": "fireball",
+       "x": 0.22,
+       "y": 0.1,
+       "s": 1.2
+      }
+     ]
     },
     "sfx": "hit"
    },
@@ -35,8 +43,18 @@
    {
     "say": "Ama ortada ne bir krater vardı, ne de düşen bir *cisim*.",
     "show": {
-     "type": "icon",
-     "name": "question"
+     "sky": "fire",
+     "land": "forest",
+     "weather": "fog",
+     "moon": false,
+     "props": [
+      {
+       "k": "fallentrees",
+       "x": 0.5
+      }
+     ],
+     "label": "KRATER YOK · CİSİM YOK",
+     "type": "scene"
     },
     "sfx": "hit"
    },
@@ -57,7 +75,7 @@
     "show": {
      "type": "photo",
      "commons": "Tunguska.png",
-     "search": "Tunguska event 1908 fallen trees",
+     "search": "Tunguska Kulik",
      "label": "ARŞİV · TUNGUSKA",
      "fallback_icon": "documents"
     }
@@ -65,9 +83,14 @@
    {
     "say": "Yer: Sibirya'da, Podkamennaya Tunguska Nehri yakınlarındaki ıssız *tayga* ormanı.",
     "show": {
-     "type": "place",
-     "name": "TUNGUSKA",
-     "sub": "SİBİRYA · RUSYA"
+     "type": "photo",
+     "search": "Podkamennaya Tunguska river",
+     "label": "PODKAMENNAYA TUNGUSKA NEHRİ",
+     "fallback_show": {
+      "type": "place",
+      "name": "TUNGUSKA",
+      "sub": "SİBİRYA · RUSYA"
+     }
     }
    },
    {
@@ -83,7 +106,8 @@
        "x": 0.8,
        "s": 0.6
       }
-     ]
+     ],
+     "moon": false
     }
    },
    {
@@ -103,7 +127,20 @@
      "land": "forest",
      "weather": "none",
      "lightning": true,
-     "label": "07:17 · YEREL SAAT"
+     "label": "07:17 · YEREL SAAT",
+     "props": [
+      {
+       "k": "fireball",
+       "x": 0.15,
+       "y": 0.05,
+       "s": 1.5
+      },
+      {
+       "k": "house",
+       "x": 0.85,
+       "s": 0.5
+      }
+     ]
     },
     "sfx": "hit"
    },
@@ -123,19 +160,36 @@
      "sky": "storm",
      "land": "forest",
      "weather": "fog",
-     "label": "HAVADA PATLAMA · 5-10 KM"
+     "label": "HAVADA PATLAMA · 5-10 KM",
+     "props": [
+      {
+       "k": "fallentrees",
+       "x": 0.5
+      }
+     ]
     }
    },
    {
     "say": "Yaklaşık 65 kilometre uzaktaki Vanavara ticaret noktasında bir adam *kahvaltı* ediyordu.",
     "show": {
-     "type": "dossier",
-     "name": "VANAVARA TANIĞI",
-     "no": "1908/06",
-     "fields": {
-      "MESAFE": "≈65 KM",
-      "SAAT": "SABAH"
-     }
+     "sky": "day",
+     "land": "plain",
+     "weather": "none",
+     "moon": false,
+     "props": [
+      {
+       "k": "house",
+       "x": 0.6,
+       "s": 0.7
+      }
+     ],
+     "people": {
+      "n": 1,
+      "from": 0.45,
+      "to": 0.5
+     },
+     "label": "VANAVARA · ≈65 KM",
+     "type": "scene"
     }
    },
    {
@@ -149,12 +203,26 @@
    {
     "say": "Ardından gelen şok dalgası, onu sandalyesinden birkaç adım öteye *fırlattı*.",
     "show": {
-     "type": "people",
-     "n": 1,
-     "highlight": [
-      0
+     "sky": "fire",
+     "land": "plain",
+     "weather": "fog",
+     "moon": false,
+     "props": [
+      {
+       "k": "house",
+       "x": 0.6,
+       "s": 0.7
+      }
      ],
-     "label": "VANAVARA · 65 KM"
+     "people": {
+      "n": 1,
+      "from": 0.5,
+      "to": 0.25,
+      "run": true,
+      "red": true
+     },
+     "label": "ŞOK DALGASI",
+     "type": "scene"
     }
    },
    {
@@ -179,9 +247,14 @@
    {
     "say": "Basınç dalgası, binlerce kilometre ötedeki *İngiltere'de* bile barometrelere kaydedildi.",
     "show": {
-     "type": "place",
-     "name": "İNGİLTERE",
-     "sub": "BASINÇ DALGASI KAYDEDİLDİ"
+     "type": "photo",
+     "search": "barograph",
+     "label": "BAROGRAF (TEMSİLİ)",
+     "fallback_show": {
+      "type": "place",
+      "name": "İNGİLTERE",
+      "sub": "BASINÇ DALGASI KAYDEDİLDİ"
+     }
     }
    },
    {
@@ -198,18 +271,28 @@
    {
     "say": "Bazı yerlerde insanlar gece yarısı dışarıda *gazete okuyabiliyordu*.",
     "show": {
-     "type": "icon",
-     "name": "eye"
+     "type": "photo",
+     "search": "noctilucent clouds",
+     "label": "PARLAYAN GECE GÖKYÜZÜ (TEMSİLİ)",
+     "fallback_show": {
+      "type": "icon",
+      "name": "eye"
+     }
     }
    },
    {
     "say": "Yüzlerce ren geyiği telef oldu. Ama bir insanın öldüğüne dair *doğrudan kanıt* yok.",
     "show": {
-     "type": "list",
-     "items": [
-      "REN GEYİĞİ",
-      "İNSAN: ?"
-     ]
+     "type": "photo",
+     "search": "reindeer herd Siberia",
+     "label": "SİBİRYA REN GEYİKLERİ",
+     "fallback_show": {
+      "type": "list",
+      "items": [
+       "REN GEYİĞİ",
+       "İNSAN: ?"
+      ]
+     }
     }
    },
    {
@@ -234,22 +317,44 @@
    {
     "say": "Sonunda 1927'de Sovyet göktaşı araştırmacısı *Leonid Kulik* bölgeye ulaştı.",
     "show": {
-     "type": "dossier",
-     "name": "LEONİD KULİK",
-     "no": "1927/01",
-     "fields": {
-      "ALAN": "GÖKTAŞLARI",
-      "SEFER": "1927"
-     }
+     "type": "photo",
+     "search": "Leonid Kulik",
+     "label": "LEONİD KULİK",
+     "fallback_show": {
+      "type": "dossier",
+      "name": "LEONİD KULİK",
+      "no": "1927/01",
+      "fields": {
+       "ALAN": "GÖKTAŞLARI",
+       "SEFER": "1927"
+      }
+     },
+     "portrait": true
     }
    },
    {
     "say": "Gördüğü manzara inanılmazdı. Ağaçlar kilometrelerce boyunca *yere yatmıştı*.",
     "show": {
      "type": "photo",
-     "search": "Tunguska Kulik expedition fallen forest",
-     "label": "KULİK SEFERİ",
-     "fallback_icon": "documents"
+     "search": "Tunguska event 1908",
+     "label": "KULİK SEFERİ, 1927",
+     "fallback_show": {
+      "type": "scene",
+      "sky": "day",
+      "land": "forest",
+      "props": [
+       {
+        "k": "fallentrees",
+        "x": 0.5
+       }
+      ],
+      "people": {
+       "n": 3,
+       "from": 0.2,
+       "to": 0.4
+      },
+      "label": "KULİK SEFERİ · 1927"
+     }
     }
    },
    {
@@ -264,8 +369,23 @@
    {
     "say": "Kulik bir göktaşı krateri aradı. Ama *krater yoktu*.",
     "show": {
-     "type": "icon",
-     "name": "question"
+     "sky": "day",
+     "land": "forest",
+     "weather": "none",
+     "moon": false,
+     "props": [
+      {
+       "k": "fallentrees",
+       "x": 0.5
+      }
+     ],
+     "people": {
+      "n": 3,
+      "from": 0.15,
+      "to": 0.4
+     },
+     "label": "1927 · KRATER ARANIYOR",
+     "type": "scene"
     },
     "sfx": "hit"
    },
@@ -276,11 +396,12 @@
      "sky": "day",
      "land": "forest",
      "weather": "fog",
-     "label": "SIFIR NOKTASI"
+     "label": "SIFIR NOKTASI",
+     "moon": false
     }
    },
    {
-    "say": "Bu tuhaf ayrıntı, cevabın *anahtarı* olacaktı. Sonuna kadar izleyin.",
+    "say": "Bu tuhaf ayrıntı cevabın *anahtarı*. Bu tür gerçek gizemler için abone olmayı unutma.",
     "show": {
      "type": "icon",
      "name": "eye"
@@ -353,7 +474,15 @@
      "sky": "fire",
      "land": "forest",
      "weather": "none",
-     "lightning": true
+     "lightning": true,
+     "props": [
+      {
+       "k": "fireball",
+       "x": 0.2,
+       "y": 0.1,
+       "s": 1.6
+      }
+     ]
     }
    },
    {
@@ -363,7 +492,13 @@
      "sky": "storm",
      "land": "forest",
      "weather": "fog",
-     "lightning": true
+     "lightning": true,
+     "props": [
+      {
+       "k": "fallentrees",
+       "x": 0.5
+      }
+     ]
     },
     "sfx": "hit"
    },
@@ -389,9 +524,14 @@
    {
     "say": "2013'te benzer ama çok daha küçük bir olay, Rusya'nın *Çelyabinsk* şehrinde yaşandı.",
     "show": {
-     "type": "place",
-     "name": "ÇELYABİNSK",
-     "sub": "15 ŞUBAT 2013"
+     "type": "photo",
+     "search": "Chelyabinsk meteor trail",
+     "label": "ÇELYABİNSK, 15 ŞUBAT 2013",
+     "fallback_show": {
+      "type": "place",
+      "name": "ÇELYABİNSK",
+      "sub": "15 ŞUBAT 2013"
+     }
     }
    },
    {
@@ -423,13 +563,18 @@
    {
     "say": "Peki sence Sibirya'nın üzerinde gerçekten *ne patladı*?",
     "show": {
-     "type": "title",
-     "lines": [
-      "SENCE",
-      "NE PATLADI",
-      "?"
+     "sky": "night",
+     "land": "forest",
+     "weather": "fog",
+     "props": [
+      {
+       "k": "fireball",
+       "x": 0.1,
+       "y": 0.05
+      }
      ],
-     "red": 1
+     "label": "SENCE NE PATLADI?",
+     "type": "scene"
     }
    },
    {
