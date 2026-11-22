@@ -21,6 +21,13 @@ jobs:
       - run: sudo apt-get update && sudo apt-get install -y ffmpeg
       - run: pip install --extra-index-url https://download.pytorch.org/whl/cpu chatterbox-tts edge-tts faster-whisper
       - run: mkdir -p voicetest && (python -u tools/chatterbox_test.py 2>&1 | tee voicetest/log.txt); pip list 2>/dev/null | grep -i -E 'torch|chatterbox|transformers|diffusers' >> voicetest/log.txt
+      - name: Günlüğü depoya yaz
+        if: always()
+        run: |
+          mkdir -p debug && cp voicetest/log.txt debug/chatterbox_log.txt || true
+          cp voicetest/rapor.json debug/chatterbox_rapor.json 2>/dev/null || true
+          git config user.name bot && git config user.email bot@users.noreply.github.com
+          git add debug && git commit -m "debug günlüğü [skip ci]" && git pull --rebase -q && git push || true
       - name: Yayınla
         if: always()
         env:
