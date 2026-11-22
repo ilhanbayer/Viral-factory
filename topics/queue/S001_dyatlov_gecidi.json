@@ -4,8 +4,10 @@
  "brand": "GİZEM DOSYASI",
  "theme": "soguk",
  "voice": {
+  "engine": "edge",
+  "speaker": "ahmet",
   "rate": "+6%",
-  "pitch": "-5Hz"
+  "pitch": "-2Hz"
  },
  "long": {
   "title": "Dyatlov Geçidi Olayı",
