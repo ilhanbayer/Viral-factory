@@ -78,3 +78,4 @@ for name, ref, ex, cfg in configs:
     print(name, report[name], flush=True)
 json.dump(report, open(f"{OUT}/rapor.json", "w"), ensure_ascii=False, indent=1)
 
+# r2
