@@ -20,11 +20,11 @@ jobs:
           python-version: "3.11"
       - run: sudo apt-get update && sudo apt-get install -y ffmpeg
       - run: pip install --extra-index-url https://download.pytorch.org/whl/cpu chatterbox-tts edge-tts faster-whisper
-      - run: python tools/chatterbox_test.py
+      - run: mkdir -p voicetest && (python -u tools/chatterbox_test.py 2>&1 | tee voicetest/log.txt); pip list 2>/dev/null | grep -i -E 'torch|chatterbox|transformers|diffusers' >> voicetest/log.txt
       - name: Yayınla
         if: always()
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
           gh release delete ses-test-2 -y --cleanup-tag || true
-          gh release create ses-test-2 voicetest/*.mp3 voicetest/rapor.json --title "Chatterbox ses testi (dahili)" --notes "test" --prerelease
+          gh release create ses-test-2 voicetest/log.txt $(ls voicetest/*.mp3 voicetest/rapor.json 2>/dev/null) --title "Chatterbox ses testi (dahili)" --notes "test" --prerelease

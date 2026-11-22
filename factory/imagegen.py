@@ -9,9 +9,10 @@ import hashlib
 import urllib.parse
 import urllib.request
 
-STYLE = ("3D animated feature film still, Pixar and Disney style, adorable expressive cartoon characters with big "
-         "eyes, soft cinematic lighting, warm vibrant saturated colors, highly detailed, depth of field, "
-         "storybook atmosphere, no text, no letters, no watermark")
+STYLE = ("Pixar style 3D animated movie still, cute stylized cartoon characters with big heads and big expressive eyes, "
+         "exaggerated funny facial expressions, octane render, subsurface scattering, soft global illumination, "
+         "golden hour rim light, vibrant saturated colors, highly detailed textures, shallow depth of field, "
+         "cinematic composition, masterpiece, no text, no letters, no watermark, no logo")
 UA = {"User-Agent": "viral-factory/1.0 (https://github.com/ilhanbayer/viral-factory)"}
 
 
@@ -28,6 +29,7 @@ def gen(prompt, w, h, seed, out, model="flux", tries=5):
             data = urllib.request.urlopen(req, timeout=180).read()
             if len(data) > 20000 and data[:3] in (b"\xff\xd8\xff", b"\x89PN"):
                 open(out, "wb").write(data)
+                _clean(out)
                 return out
             print("  [görsel] geçersiz yanıt", len(data))
         except Exception as e:
@@ -38,3 +40,18 @@ def gen(prompt, w, h, seed, out, model="flux", tries=5):
 
 def seed_for(text):
     return int(hashlib.md5(text.encode()).hexdigest()[:6], 16)
+
+
+def _clean(path):
+    """Filigranlı alt şeridi kırp, büyüt ve hafif keskinleştir."""
+    import cv2
+    im = cv2.imread(path)
+    if im is None:
+        return
+    h, w = im.shape[:2]
+    im = im[: int(h * 0.92), : int(w * 0.97)]
+    scale = 2 if max(h, w) < 1400 else 1
+    im = cv2.resize(im, None, fx=scale, fy=scale, interpolation=cv2.INTER_LANCZOS4)
+    blur = cv2.GaussianBlur(im, (0, 0), 1.2)
+    im = cv2.addWeighted(im, 1.35, blur, -0.35, 0)
+    cv2.imwrite(path, im, [cv2.IMWRITE_JPEG_QUALITY, 93])

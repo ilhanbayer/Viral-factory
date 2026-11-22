@@ -70,13 +70,17 @@ def main():
             print("Üretilecek konu yok. topics/queue içine JSON ekleyin ya da GEMINI_API_KEY tanımlayın.")
             return
         script = json.load(open(path, encoding="utf-8"))
-        if script.get("format") == "story":
+        if script.get("format") == "cartoon":
+            from factory.cartoon import produce_cartoon
+            finals = produce_cartoon(script, OUT, use_tts=not a.no_tts)
+            final = finals[0]
+        elif script.get("format") == "story":
             from factory.story_compose import produce_story
             finals = produce_story(script, OUT, use_tts=not a.no_tts)
             final = finals[0]
         else:
             final = produce(path, OUT, use_tts=not a.no_tts)
-        if a.upload and script.get("format") != "story":
+        if a.upload and script.get("format") not in ("story", "cartoon"):
             from factory.upload_youtube import upload
             p = script.get("publish", {})
             upload(final, p.get("title", script["series_title"]),

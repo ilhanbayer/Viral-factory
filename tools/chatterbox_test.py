@@ -3,7 +3,10 @@ anlaşılırlık (faster-whisper ile karakter hata oranı)."""
 import os, sys, time, asyncio, subprocess, json
 import torch
 _orig = torch.load
-torch.load = lambda *a, **k: _orig(*a, **dict(k, map_location=k.get("map_location", "cpu")))
+def _load(*a, **k):
+    k.setdefault("map_location", "cpu")
+    return _orig(*a, **k)
+torch.load = _load
 import torchaudio as ta
 import edge_tts
 
@@ -74,3 +77,4 @@ for name, ref, ex, cfg in configs:
                     "rtf": round(gen_t / max(audio_t, 0.1), 2), "asr": hyp}
     print(name, report[name], flush=True)
 json.dump(report, open(f"{OUT}/rapor.json", "w"), ensure_ascii=False, indent=1)
+

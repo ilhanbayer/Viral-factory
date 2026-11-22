@@ -1,0 +1,625 @@
+{
+ "id": "C001_nasreddin_hoca_5_fikra",
+ "format": "cartoon",
+ "brand": "HOCA'NIN FIKRALARI",
+ "seed": 7000,
+ "characters": {
+  "hoca": {
+   "name": "Nasreddin Hoca",
+   "color": [
+    255,
+    214,
+    0
+   ],
+   "desc": "Nasreddin Hodja, a cheerful chubby elderly Turkish man with a big round fluffy white beard, rosy cheeks, bushy white eyebrows, twinkling eyes, wearing a huge round white turban and a long green kaftan with an orange sash",
+   "voice": {
+    "ref": "hoca"
+   }
+  },
+  "komsu": {
+   "name": "Komşu",
+   "color": [
+    120,
+    220,
+    255
+   ],
+   "desc": "Hodja's skinny neighbor, a middle-aged Turkish villager with a thin curly black mustache, a red fez hat and a striped brown vest",
+   "voice": {
+    "ref": "komsu"
+   }
+  },
+  "esek": {
+   "name": "Eşek",
+   "color": [
+    200,
+    200,
+    200
+   ],
+   "desc": "Hodja's small grey DONKEY (a donkey, not a horse) with very long fluffy ears, big front teeth and a goofy grin",
+   "voice": {
+    "ref": "esek"
+   }
+  },
+  "zengin": {
+   "name": "Ev Sahibi",
+   "color": [
+    255,
+    150,
+    90
+   ],
+   "desc": "a pompous rich Ottoman man with a huge curled mustache, a tall golden turban and a shiny purple silk kaftan",
+   "voice": {
+    "ref": "zengin"
+   }
+  },
+  "cocuk": {
+   "name": "Çocuk",
+   "color": [
+    150,
+    255,
+    150
+   ],
+   "desc": "a cute little Turkish village boy with messy black hair, freckles and a small red vest",
+   "voice": {
+    "ref": "cocuk"
+   }
+  }
+ },
+ "narrator": {
+  "ref": "anlatici"
+ },
+ "episodes": [
+  {
+   "title": "Kazan Doğurdu",
+   "beats": [
+    {
+     "who": "anlatici",
+     "say": "Bir gün Nasreddin Hoca, komşusundan *kocaman* bir kazan ödünç alır.",
+     "img": "{hoca} smiling and borrowing a huge shiny copper cauldron from {komsu} at his wooden door, in a sunny colorful Anatolian village with whitewashed houses, cobblestone street and grape vines",
+     "fx": "dust",
+     "cam": "in",
+     "sfx": "pop"
+    },
+    {
+     "who": "anlatici",
+     "say": "Ertesi gün kazanı geri getirir. Ama kazanın içinde *minicik* bir tencere vardır!",
+     "img": "{hoca} holding the big copper cauldron with a tiny cute copper pot sitting inside it, {komsu} staring surprised, in a sunny colorful Anatolian village with whitewashed houses, cobblestone street and grape vines",
+     "fx": "sparkle",
+     "cam": "right",
+     "sfx": "boing"
+    },
+    {
+     "who": "komsu",
+     "say": "Hocam, bu küçük tencere de ne?",
+     "img": "{komsu} pointing at a tiny copper pot with a very confused face, close-up, in a sunny colorful Anatolian village with whitewashed houses, cobblestone street and grape vines",
+     "fx": "dust",
+     "cam": "in"
+    },
+    {
+     "who": "hoca",
+     "say": "Müjde komşu! Senin kazan *doğurdu*, bu da yavrusu!",
+     "img": "{hoca} grinning proudly and presenting the tiny pot like a baby, close-up, in a sunny colorful Anatolian village with whitewashed houses, cobblestone street and grape vines",
+     "fx": "sparkle",
+     "cam": "in",
+     "sfx": "slide_up"
+    },
+    {
+     "who": "anlatici",
+     "say": "Komşu sevinçten havalara uçar. Kazanı da tencereyi de alıp içeri koşar.",
+     "img": "{komsu} jumping with joy hugging the cauldron and the tiny pot, in a sunny colorful Anatolian village with whitewashed houses, cobblestone street and grape vines",
+     "fx": "sparkle",
+     "cam": "up",
+     "sfx": "boing"
+    },
+    {
+     "who": "anlatici",
+     "say": "Aradan günler geçer. Hoca yine kapıyı çalar ve kazanı yeniden ister.",
+     "img": "{hoca} knocking on {komsu}'s door again, sly smile, afternoon light, in a sunny colorful Anatolian village with whitewashed houses, cobblestone street and grape vines",
+     "fx": "dust",
+     "cam": "left"
+    },
+    {
+     "who": "anlatici",
+     "say": "Ama bu sefer günler, haftalar geçer… Kazan bir türlü *geri gelmez*.",
+     "img": "{komsu} waiting at his window impatiently tapping fingers, calendar pages flying, in a sunny colorful Anatolian village with whitewashed houses, cobblestone street and grape vines",
+     "fx": "dust",
+     "cam": "out"
+    },
+    {
+     "who": "komsu",
+     "say": "Hocam, benim kazan nerede kaldı?",
+     "img": "{komsu} at {hoca}'s door with hands on hips, frowning, in a sunny colorful Anatolian village with whitewashed houses, cobblestone street and grape vines",
+     "fx": "dust",
+     "cam": "in"
+    },
+    {
+     "who": "hoca",
+     "say": "Başın sağ olsun komşu… Senin kazan *öldü*!",
+     "img": "{hoca} with a fake sad face holding his hand on his heart, dramatic, in a sunny colorful Anatolian village with whitewashed houses, cobblestone street and grape vines",
+     "fx": "dust",
+     "cam": "in",
+     "sfx": "drum"
+    },
+    {
+     "who": "komsu",
+     "say": "Kazan ölür mü hiç Hocam?",
+     "img": "{komsu} shocked with eyes popping out and mouth wide open, close-up, in a sunny colorful Anatolian village with whitewashed houses, cobblestone street and grape vines",
+     "fx": "dust",
+     "cam": "in",
+     "sfx": "boing"
+    },
+    {
+     "who": "hoca",
+     "say": "Doğurduğuna inandın da, öldüğüne neden *inanmıyorsun*?",
+     "img": "{hoca} winking and raising one finger wisely, sunset light, in a sunny colorful Anatolian village with whitewashed houses, cobblestone street and grape vines",
+     "fx": "sparkle",
+     "cam": "out",
+     "sfx": "ding"
+    }
+   ],
+   "publish": {
+    "title": "Kazan Doğurdu! 😂 Nasreddin Hoca #shorts",
+    "description": "Nasreddin Hoca'nın en sevilen fıkralarından: Kazan doğurdu! Animasyonlu fıkra.",
+    "hashtags": [
+     "#shorts",
+     "#nasreddinhoca",
+     "#fıkra",
+     "#animasyon",
+     "#komik",
+     "#masal"
+    ]
+   },
+   "thumb": {
+    "lines": [
+     "KAZAN",
+     "DOĞURDU!",
+     ""
+    ],
+    "red": 1,
+    "beat": 3,
+    "tag": "😂 FIKRA",
+    "focus_x": 0.5,
+    "focus_y": 0.62
+   }
+  },
+  {
+   "title": "Ye Kürküm Ye",
+   "beats": [
+    {
+     "who": "anlatici",
+     "say": "Nasreddin Hoca bir gün zengin bir adamın *düğününe* davet edilir.",
+     "img": "{hoca} in a plain old patched brown robe walking toward a grand lantern-lit Ottoman mansion wedding party at night",
+     "fx": "sparkle",
+     "cam": "right"
+    },
+    {
+     "who": "anlatici",
+     "say": "Hoca eski ve yamalı giysileriyle içeri girer. Ama kimse ona *yüzüne bile* bakmaz.",
+     "img": "{hoca} in old patched clothes standing alone, rich guests turning their backs, lavish banquet hall with lanterns",
+     "fx": "dust",
+     "cam": "out"
+    },
+    {
+     "who": "anlatici",
+     "say": "Sofrada yer bile vermezler. Hoca sessizce evine döner.",
+     "img": "{hoca} walking home sadly under a starry night sky, cobblestone street",
+     "fx": "dust",
+     "cam": "left"
+    },
+    {
+     "who": "anlatici",
+     "say": "Evde en güzel *kürkünü* giyer ve düğüne geri döner.",
+     "img": "{hoca} proudly wearing a magnificent fluffy fur coat and a big clean turban, admiring himself in a mirror",
+     "fx": "sparkle",
+     "cam": "up",
+     "sfx": "slide_up"
+    },
+    {
+     "who": "zengin",
+     "say": "Buyurun Hocam, buyurun! Başköşeye geçin lütfen!",
+     "img": "{zengin} bowing deeply and welcoming {hoca} in a fur coat, lavish banquet hall, guests smiling",
+     "fx": "dust",
+     "cam": "in",
+     "sfx": "pop"
+    },
+    {
+     "who": "anlatici",
+     "say": "En güzel yemekler önüne gelir. Hoca kürkünün yenini *çorbaya* daldırır.",
+     "img": "{hoca} dipping the sleeve of his fur coat into a big bowl of soup at a lavish banquet table, guests shocked",
+     "fx": "sparkle",
+     "cam": "in",
+     "sfx": "boing"
+    },
+    {
+     "who": "hoca",
+     "say": "Ye kürküm ye! Ye kürküm ye!",
+     "img": "{hoca} feeding pilaf to his fur coat sleeve with a spoon, funny face, guests with mouths wide open",
+     "fx": "dust",
+     "cam": "in",
+     "sfx": "slide_down"
+    },
+    {
+     "who": "zengin",
+     "say": "Hocam, ne yapıyorsunuz? Kürk yemek yer mi?",
+     "img": "{zengin} confused and embarrassed, mustache drooping, banquet hall",
+     "fx": "dust",
+     "cam": "in"
+    },
+    {
+     "who": "hoca",
+     "say": "Bu ikram bana değil, *kürküme*! O hâlde yemeği de o yesin!",
+     "img": "{hoca} smiling wisely pointing at his fur coat, warm lantern light",
+     "fx": "sparkle",
+     "cam": "out",
+     "sfx": "ding"
+    },
+    {
+     "who": "anlatici",
+     "say": "O gün herkes anlamıştı: İnsana kıyafetine göre değil, *kalbine* göre değer verilir.",
+     "img": "{hoca} sharing food with poor village children at the banquet table, everyone smiling, warm golden light",
+     "fx": "sparkle",
+     "cam": "out"
+    }
+   ],
+   "publish": {
+    "title": "Ye Kürküm Ye! 🧥 Nasreddin Hoca #shorts",
+    "description": "İnsana kıyafetine göre değer verilir mi? Nasreddin Hoca'dan unutulmaz bir ders.",
+    "hashtags": [
+     "#shorts",
+     "#nasreddinhoca",
+     "#yekürkümye",
+     "#animasyon",
+     "#fıkra"
+    ]
+   },
+   "thumb": {
+    "lines": [
+     "YE KÜRKÜM",
+     "YE!",
+     ""
+    ],
+    "red": 1,
+    "beat": 5,
+    "tag": "😂 FIKRA",
+    "focus_x": 0.5,
+    "focus_y": 0.6
+   }
+  },
+  {
+   "title": "Ya Tutarsa!",
+   "beats": [
+    {
+     "who": "anlatici",
+     "say": "Bir gün köylüler, Hoca'yı göl kenarında *tuhaf* bir işle meşgul görür.",
+     "img": "{hoca} kneeling at the edge of a big beautiful lake holding a small bowl of yogurt, villagers watching curiously from behind",
+     "fx": "dust",
+     "cam": "right"
+    },
+    {
+     "who": "anlatici",
+     "say": "Hoca elindeki bir kaşık yoğurdu göle döküyor, suyu karıştırıyordur.",
+     "img": "{hoca} pouring a spoonful of white yogurt into the lake and stirring the water with a long wooden stick, ripples",
+     "fx": "sparkle",
+     "cam": "in",
+     "sfx": "pop"
+    },
+    {
+     "who": "cocuk",
+     "say": "Hocam, ne yapıyorsun öyle?",
+     "img": "{cocuk} running up curiously with big eyes, lakeside",
+     "fx": "dust",
+     "cam": "in"
+    },
+    {
+     "who": "hoca",
+     "say": "Göle *maya* çalıyorum evladım! Bütün göl yoğurt olacak!",
+     "img": "{hoca} grinning enthusiastically stirring the lake, splashes, sunny lake",
+     "fx": "sparkle",
+     "cam": "in",
+     "sfx": "slide_up"
+    },
+    {
+     "who": "anlatici",
+     "say": "Köylüler gülmekten yerlere yatar.",
+     "img": "villagers laughing hysterically and rolling on the grass by the lake, {hoca} in background",
+     "fx": "dust",
+     "cam": "out",
+     "sfx": "boing"
+    },
+    {
+     "who": "komsu",
+     "say": "Hocam, hiç göl maya tutar mı?",
+     "img": "{komsu} laughing and wiping tears from his eyes, lakeside",
+     "fx": "dust",
+     "cam": "in"
+    },
+    {
+     "who": "anlatici",
+     "say": "Hoca karıştırmayı bırakır, döner ve gülümser.",
+     "img": "{hoca} turning around slowly with a calm wise smile, golden sunset on the lake",
+     "fx": "dust",
+     "cam": "in",
+     "sfx": "drum"
+    },
+    {
+     "who": "hoca",
+     "say": "Ya *tutarsa*?",
+     "img": "{hoca} winking with one finger up, close-up, sunset sparkles on the water",
+     "fx": "sparkle",
+     "cam": "in",
+     "sfx": "ding"
+    },
+    {
+     "who": "anlatici",
+     "say": "Hoca'nın sözü dilden dile yayılır: Denemeden asla *bilemezsin*.",
+     "img": "the whole village watching the shimmering lake at sunset, {hoca} and {cocuk} smiling together",
+     "fx": "sparkle",
+     "cam": "out"
+    }
+   ],
+   "publish": {
+    "title": "Göle Maya Çalan Hoca: Ya Tutarsa? 🥛 #shorts",
+    "description": "Nasreddin Hoca neden göle yoğurt döktü? Ya tutarsa!",
+    "hashtags": [
+     "#shorts",
+     "#nasreddinhoca",
+     "#yatutarsa",
+     "#animasyon",
+     "#motivasyon"
+    ]
+   },
+   "thumb": {
+    "lines": [
+     "GÖLE MAYA",
+     "ÇALDI!",
+     ""
+    ],
+    "red": 1,
+    "beat": 3,
+    "tag": "😂 FIKRA",
+    "focus_x": 0.5,
+    "focus_y": 0.62
+   }
+  },
+  {
+   "title": "Parayı Veren Düdüğü Çalar",
+   "beats": [
+    {
+     "who": "anlatici",
+     "say": "Hoca pazara gideceği gün, köyün bütün çocukları etrafını sarar.",
+     "img": "{hoca} riding {esek} out of the village, many excited village children running around him, in a sunny colorful Anatolian village with whitewashed houses, cobblestone street and grape vines",
+     "fx": "dust",
+     "cam": "right",
+     "sfx": "boing"
+    },
+    {
+     "who": "cocuk",
+     "say": "Hocam, bana bir *düdük* getir!",
+     "img": "{cocuk} jumping up and down asking excitedly, close-up, in a sunny colorful Anatolian village with whitewashed houses, cobblestone street and grape vines",
+     "fx": "dust",
+     "cam": "in"
+    },
+    {
+     "who": "anlatici",
+     "say": "Her çocuk bir düdük ister. Ama sadece *bir* çocuk, Hoca'nın avucuna bir bozuk para bırakır.",
+     "img": "{cocuk} placing a single shiny coin into {hoca}'s palm, other children only shouting, in a sunny colorful Anatolian village with whitewashed houses, cobblestone street and grape vines",
+     "fx": "sparkle",
+     "cam": "in",
+     "sfx": "pop"
+    },
+    {
+     "who": "anlatici",
+     "say": "Akşam olur. Hoca pazardan döner. Bütün çocuklar koşarak gelir.",
+     "img": "{hoca} returning on {esek} at sunset, crowd of children running towards him, in a sunny colorful Anatolian village with whitewashed houses, cobblestone street and grape vines",
+     "fx": "dust",
+     "cam": "left"
+    },
+    {
+     "who": "anlatici",
+     "say": "Hoca cebinden *tek bir* düdük çıkarır ve parayı veren çocuğa uzatır.",
+     "img": "{hoca} handing one wooden whistle to {cocuk}, other children looking surprised and disappointed",
+     "fx": "sparkle",
+     "cam": "in",
+     "sfx": "ding"
+    },
+    {
+     "who": "cocuk",
+     "say": "Düt düt dütttt!",
+     "img": "{cocuk} happily blowing a wooden whistle with puffed cheeks, sparkles, in a sunny colorful Anatolian village with whitewashed houses, cobblestone street and grape vines",
+     "fx": "sparkle",
+     "cam": "in",
+     "sfx": "slide_up"
+    },
+    {
+     "who": "komsu",
+     "say": "Hocam, öteki çocuklara neden getirmedin?",
+     "img": "{komsu} asking with raised eyebrows, children pouting behind him",
+     "fx": "dust",
+     "cam": "in"
+    },
+    {
+     "who": "hoca",
+     "say": "*Parayı veren*, düdüğü çalar!",
+     "img": "{hoca} laughing and pointing at the happy boy blowing the whistle, golden sunset",
+     "fx": "sparkle",
+     "cam": "out",
+     "sfx": "drum"
+    }
+   ],
+   "publish": {
+    "title": "Parayı Veren Düdüğü Çalar! 🎶 Nasreddin Hoca #shorts",
+    "description": "Bu sözün nereden geldiğini biliyor musun? Nasreddin Hoca anlatıyor.",
+    "hashtags": [
+     "#shorts",
+     "#nasreddinhoca",
+     "#atasözü",
+     "#animasyon",
+     "#fıkra"
+    ]
+   },
+   "thumb": {
+    "lines": [
+     "PARAYI VEREN",
+     "DÜDÜĞÜ ÇALAR",
+     ""
+    ],
+    "red": 1,
+    "beat": 5,
+    "tag": "😂 FIKRA",
+    "focus_x": 0.5,
+    "focus_y": 0.6
+   }
+  },
+  {
+   "title": "Eşeğe Ters Binen Hoca",
+   "beats": [
+    {
+     "who": "anlatici",
+     "say": "Bir gün Hoca, öğrencileriyle birlikte camiye gidecektir.",
+     "img": "{hoca} walking with a group of young students in small turbans, in a sunny colorful Anatolian village with whitewashed houses, cobblestone street and grape vines",
+     "fx": "dust",
+     "cam": "right"
+    },
+    {
+     "who": "anlatici",
+     "say": "Hoca eşeğine biner. Ama *ters* oturur! Yüzü eşeğin kuyruğuna dönüktür.",
+     "img": "{hoca} sitting BACKWARDS on {esek}, facing the donkey's tail, smiling, students giggling, in a sunny colorful Anatolian village with whitewashed houses, cobblestone street and grape vines",
+     "fx": "sparkle",
+     "cam": "in",
+     "sfx": "boing"
+    },
+    {
+     "who": "esek",
+     "say": "Iiiii-aaaa!",
+     "img": "close-up of {esek} braying loudly with funny big teeth, in a sunny colorful Anatolian village with whitewashed houses, cobblestone street and grape vines",
+     "fx": "dust",
+     "cam": "in",
+     "sfx": "slide_down"
+    },
+    {
+     "who": "anlatici",
+     "say": "Yoldaki herkes durur, kıs kıs güler.",
+     "img": "villagers laughing and pointing at {hoca} riding backwards on {esek}, in a sunny colorful Anatolian village with whitewashed houses, cobblestone street and grape vines",
+     "fx": "dust",
+     "cam": "out"
+    },
+    {
+     "who": "cocuk",
+     "say": "Hocam, eşeğe *ters* bindin!",
+     "img": "{cocuk} laughing and pointing, in a sunny colorful Anatolian village with whitewashed houses, cobblestone street and grape vines",
+     "fx": "dust",
+     "cam": "in"
+    },
+    {
+     "who": "hoca",
+     "say": "Ters binmedim evladım. Önden gitsem size *sırtımı* dönecektim.",
+     "img": "{hoca} turned backwards on {esek} talking kindly to students walking behind him, in a sunny colorful Anatolian village with whitewashed houses, cobblestone street and grape vines",
+     "fx": "dust",
+     "cam": "in",
+     "sfx": "drum"
+    },
+    {
+     "who": "hoca",
+     "say": "Arkanızdan gitsem siz bana sırtınızı döneceksiniz. Böylece hepimiz *yüz yüzeyiz*!",
+     "img": "{hoca} and his students all smiling face to face while walking, golden light, in a sunny colorful Anatolian village with whitewashed houses, cobblestone street and grape vines",
+     "fx": "sparkle",
+     "cam": "out",
+     "sfx": "ding"
+    },
+    {
+     "who": "anlatici",
+     "say": "Hoca'nın bu tatlı inceliği, bugün bile anlatılıyor.",
+     "img": "{hoca} riding backwards on {esek} into a beautiful sunset, silhouettes, sparkles",
+     "fx": "sparkle",
+     "cam": "out"
+    }
+   ],
+   "publish": {
+    "title": "Hoca Eşeğe Neden Ters Bindi? 🫏 #shorts",
+    "description": "Nasreddin Hoca'nın eşeğe ters binmesinin ardındaki incelik.",
+    "hashtags": [
+     "#shorts",
+     "#nasreddinhoca",
+     "#eşek",
+     "#animasyon",
+     "#fıkra"
+    ]
+   },
+   "thumb": {
+    "lines": [
+     "EŞEĞE",
+     "TERS BİNDİ!",
+     ""
+    ],
+    "red": 1,
+    "beat": 1,
+    "tag": "😂 FIKRA",
+    "focus_x": 0.5,
+    "focus_y": 0.6
+   }
+  }
+ ],
+ "long": {
+  "title": "Nasreddin Hoca'nın En Komik 5 Fıkrası",
+  "intro": [
+   {
+    "who": "anlatici",
+    "say": "Akşehir'de yaşamış, hem bilge hem de *çok şakacı* bir adam düşünün.",
+    "img": "{hoca} waving happily at the viewer in front of a colorful Anatolian village at sunrise, in a sunny colorful Anatolian village with whitewashed houses, cobblestone street and grape vines",
+    "fx": "sparkle",
+    "cam": "in",
+    "sfx": "boing"
+   },
+   {
+    "who": "anlatici",
+    "say": "Bugün Nasreddin Hoca'nın en komik *beş* fıkrasını izleyeceğiz. Hazırsan başlıyoruz!",
+    "img": "{hoca} riding {esek} towards the camera with a big smile, children running behind, in a sunny colorful Anatolian village with whitewashed houses, cobblestone street and grape vines",
+    "fx": "sparkle",
+    "cam": "out",
+    "sfx": "slide_up"
+   }
+  ],
+  "outro": [
+   {
+    "who": "anlatici",
+    "say": "En çok hangi fıkrayı sevdin? Yorumlara yaz!",
+    "img": "{hoca} laughing with {komsu}, {cocuk} and {esek} together at sunset, in a sunny colorful Anatolian village with whitewashed houses, cobblestone street and grape vines",
+    "fx": "sparkle",
+    "cam": "out",
+    "sfx": "ding"
+   },
+   {
+    "who": "anlatici",
+    "say": "Yeni fıkralar için *abone olmayı* unutma!",
+    "img": "{hoca} waving goodbye riding backwards on {esek} into the sunset",
+    "fx": "sparkle",
+    "cam": "out",
+    "sfx": "boing"
+   }
+  ],
+  "publish": {
+   "title": "Nasreddin Hoca'nın En Komik 5 Fıkrası 😂 (Animasyon)",
+   "description": "Kazan Doğurdu, Ye Kürküm Ye, Ya Tutarsa, Parayı Veren Düdüğü Çalar ve Eşeğe Ters Binen Hoca! Nasreddin Hoca'nın en sevilen fıkraları animasyonla anlatılıyor. Her yaştan izleyici için eğlenceli ve öğretici.",
+   "hashtags": [
+    "#nasreddinhoca",
+    "#fıkra",
+    "#animasyon",
+    "#komik",
+    "#masal",
+    "#çizgifilm"
+   ]
+  },
+  "thumb": {
+   "lines": [
+    "HOCA'NIN",
+    "EN KOMİK",
+    "5 FIKRASI"
+   ],
+   "red": 1,
+   "beat": 5,
+   "tag": "😂 ANİMASYON",
+   "focus_x": 0.62,
+   "focus_y": 0.55
+  }
+ }
+}
