@@ -68,7 +68,7 @@ def ensure_images(beats, chars, fmt, cache, base_seed):
 
 # ------------------------------------------------------------------ timeline
 def build(beats, chars, narrator, work, use_tts=True):
-    vcache = os.path.join(work, "_voicecache")
+    vcache = os.path.join(os.path.dirname(os.path.abspath(work)), "_voicecache")  # Shorts ve uzun video ortak
     segs, t = [], 0.0
     for i, b in enumerate(beats):
         say = b["say"].replace("*", "")
