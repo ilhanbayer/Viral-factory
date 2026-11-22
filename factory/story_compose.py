@@ -148,24 +148,86 @@ def render_chunk(args):
     return out_path
 
 
+COMMONS = "https://commons.wikimedia.org/w/api.php"
+UA = {"User-Agent": "viral-factory/1.0 (https://github.com/ilhanbayer/viral-factory)"}
+OK_LIC = ("public domain", "pd", "cc0", "cc by", "cc-by", "cc by-sa", "cc-by-sa")
+CREDITS = []
+
+
+def _get_json(url):
+    import urllib.request
+    req = urllib.request.Request(url, headers=UA)
+    return json.loads(urllib.request.urlopen(req, timeout=40).read())
+
+
+def _strip_html(s):
+    import re
+    return re.sub(r"<[^>]+>", "", s or "").strip()
+
+
+def commons_lookup(title=None, query=None, min_w=700):
+    """Wikimedia Commons: dosya adından ya da aramadan serbest lisanslı görsel bul.
+    Döner: (thumb_url, credit_text) ya da (None, None)."""
+    import urllib.parse
+    titles = []
+    if title:
+        titles = [title if title.startswith("File:") else "File:" + title]
+    elif query:
+        q = urllib.parse.urlencode({"action": "query", "list": "search", "srnamespace": 6, "srlimit": 12,
+                                    "srsearch": query + " filetype:bitmap", "format": "json"})
+        try:
+            titles = [r["title"] for r in _get_json(COMMONS + "?" + q)["query"]["search"]]
+        except Exception as e:
+            print("  [commons] arama hatası", type(e).__name__)
+            return None, None
+    for tt in titles:
+        q = urllib.parse.urlencode({"action": "query", "titles": tt, "prop": "imageinfo",
+                                    "iiprop": "url|size|extmetadata|mime", "iiurlwidth": 1600, "format": "json"})
+        try:
+            pages = _get_json(COMMONS + "?" + q)["query"]["pages"]
+        except Exception:
+            continue
+        for pg in pages.values():
+            ii = (pg.get("imageinfo") or [{}])[0]
+            if not ii or ii.get("width", 0) < min_w or "image" not in ii.get("mime", "image"):
+                continue
+            md = ii.get("extmetadata", {})
+            lic = _strip_html(md.get("LicenseShortName", {}).get("value", ""))
+            if not any(k in lic.lower() for k in OK_LIC):
+                continue
+            artist = _strip_html(md.get("Artist", {}).get("value", "")) or "Bilinmiyor"
+            return ii.get("thumburl") or ii.get("url"), f"{artist[:80]} ({lic}) — {pg.get('title')}"
+    return None, None
+
+
 def fetch_photos(beats, cache):
-    """'photo' sahnelerinin görsellerini (Wikimedia Commons vb. telifsiz kaynak URL'si) indir."""
+    """'photo' sahneleri: url, commons (dosya adı) ya da search (arama) ile telifsiz görsel indir."""
     import hashlib
     import urllib.request
     os.makedirs(cache, exist_ok=True)
     for b in beats:
         sh = b.get("show", {})
-        if sh.get("type") != "photo" or not sh.get("url"):
+        if sh.get("type") != "photo" or sh.get("_local"):
             continue
-        fn = os.path.join(cache, hashlib.md5(sh["url"].encode()).hexdigest()[:12] + ".img")
+        url, credit = sh.get("url"), sh.get("credit")
+        if not url and (sh.get("commons") or sh.get("search")):
+            url, credit = commons_lookup(sh.get("commons"), sh.get("search"))
+            if not url and sh.get("commons") and sh.get("search"):
+                url, credit = commons_lookup(None, sh.get("search"))
+        if not url:
+            print("  [foto] bulunamadı:", sh.get("commons") or sh.get("search"))
+            continue
+        fn = os.path.join(cache, hashlib.md5(url.encode()).hexdigest()[:12] + ".img")
         if not os.path.exists(fn):
             try:
-                req = urllib.request.Request(sh["url"], headers={"User-Agent": "viral-factory/1.0 (github.com/ilhanbayer)"})
+                req = urllib.request.Request(url, headers=UA)
                 open(fn, "wb").write(urllib.request.urlopen(req, timeout=60).read())
             except Exception as e:
-                print("  [foto] indirilemedi:", sh["url"][:80], type(e).__name__)
+                print("  [foto] indirilemedi:", url[:80], type(e).__name__)
                 continue
         sh["_local"] = fn
+        if credit and credit not in CREDITS:
+            CREDITS.append(credit)
 
 
 # ------------------------------------------------------------------ audio
@@ -355,11 +417,14 @@ def produce_one(vid, beats, fmt, brand, theme, publish, out_dir, use_tts=True, w
     write_srt(segs, os.path.join(out_dir, vid + ".srt"))
     ch = chapters_text(segs, chapters) if fmt == "landscape" else ""
     desc = publish.get("description", "") + (("\n\n" + ch) if ch else "")
+    if CREDITS:
+        desc += "\n\nGörseller: Wikimedia Commons — " + "; ".join(CREDITS[:12])
     meta = f"{publish.get('title', vid)}\n\n{desc}\n\n{' '.join(publish.get('hashtags', []))}\n"
     open(os.path.join(out_dir, vid + "_metadata.txt"), "w", encoding="utf-8").write(meta)
     kp = os.path.join(out_dir, vid + "_kapak.jpg")
-    if thumb and thumb.get("photo_url"):
-        tb = [{"show": {"type": "photo", "url": thumb["photo_url"]}}]
+    if thumb and (thumb.get("photo_url") or thumb.get("photo_search") or thumb.get("photo_commons")):
+        tb = [{"show": {"type": "photo", "url": thumb.get("photo_url"), "search": thumb.get("photo_search"),
+                        "commons": thumb.get("photo_commons")}}]
         fetch_photos(tb, os.path.join(out_dir, "_photos"))
         thumb = dict(thumb, photo=tb[0]["show"].get("_local"))
     if thumb:
@@ -372,6 +437,7 @@ def produce_one(vid, beats, fmt, brand, theme, publish, out_dir, use_tts=True, w
 
 
 def produce_story(script, out_dir, use_tts=True, workers=None):
+    CREDITS.clear()
     v = script.get("voice", {})
     tts.configure(v.get("engine"), v.get("speaker"), v.get("rate"), v.get("pitch"))
     brand = script.get("brand", "GİZEM DOSYASI")

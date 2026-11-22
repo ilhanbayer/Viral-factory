@@ -1,0 +1,863 @@
+{
+ "id": "S002_dyatlov_gecidi_tam_hikaye",
+ "format": "story",
+ "brand": "GİZEM DOSYASI",
+ "theme": "soguk",
+ "voice": {
+  "engine": "edge",
+  "speaker": "ahmet",
+  "rate": "+0%",
+  "pitch": "-2Hz"
+ },
+ "long": {
+  "title": "Dyatlov Geçidi",
+  "beats": [
+   {
+    "say": "Şubat 1959. Dokuz deneyimli dağcı, gece yarısı çadırlarını *içeriden* kesip karanlığa kaçtı.",
+    "show": {
+     "type": "scene",
+     "sky": "night",
+     "land": "mountains",
+     "weather": "blizzard",
+     "props": [
+      {
+       "k": "tent",
+       "x": 0.3,
+       "cut": true
+      }
+     ],
+     "people": {
+      "n": 5,
+      "from": 0.4,
+      "to": 0.8,
+      "run": true
+     },
+     "label": "1 ŞUBAT 1959 · GECE"
+    },
+    "sfx": "hit"
+   },
+   {
+    "say": "Kimi çoraplarıyla, kimi *yalınayak*. Eksi derecelerde, karın üstünde.",
+    "show": {
+     "type": "icon",
+     "name": "footprints"
+    }
+   },
+   {
+    "say": "Hiçbiri *geri dönmedi*.",
+    "show": {
+     "type": "people",
+     "n": 9,
+     "highlight": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+     ]
+    },
+    "sfx": "hit"
+   },
+   {
+    "say": "Bu videoda gerçek arşiv fotoğraflarıyla o geceyi adım adım *canlandıracağız*.",
+    "show": {
+     "type": "photo",
+     "search": "Dyatlov Pass incident 1959",
+     "label": "ARŞİV, 1959",
+     "fallback_icon": "camera"
+    }
+   },
+   {
+    "say": "Ve altmış yıl sonra bilim insanlarının bulduğu *cevabı* göreceğiz.",
+    "show": {
+     "type": "title",
+     "lines": [
+      "DYATLOV",
+      "GEÇİDİ",
+      "OLAYI"
+     ],
+     "red": 1
+    }
+   },
+   {
+    "say": "23 Ocak 1959. Ural Politeknik Enstitüsü'nden on kişi zorlu bir kayak seferine çıkar.",
+    "show": {
+     "type": "date",
+     "day": 23,
+     "month": "OCAK",
+     "year": 1959
+    }
+   },
+   {
+    "say": "Grubun lideri, 23 yaşındaki mühendislik öğrencisi *İgor Dyatlov*.",
+    "show": {
+     "type": "dossier",
+     "name": "İGOR DYATLOV",
+     "no": "1959/01",
+     "fields": {
+      "YAŞ": "23",
+      "GÖREV": "GRUP LİDERİ",
+      "DURUM": "██"
+     }
+    }
+   },
+   {
+    "say": "Ekip deneyimliydi. Bu rota onlara en üst dağcılık derecesini kazandıracaktı.",
+    "show": {
+     "type": "photo",
+     "search": "Dyatlov group hikers 1959",
+     "label": "DYATLOV EKİBİ, 1959",
+     "fallback_icon": "people"
+    }
+   },
+   {
+    "say": "Rotaları, Sovyetler Birliği'nin en ıssız köşelerinden biri: *Kuzey Urallar*.",
+    "show": {
+     "type": "place",
+     "name": "KUZEY URALLAR",
+     "sub": "SOVYETLER BİRLİĞİ",
+     "coords": "61°45′K  59°26′D"
+    }
+   },
+   {
+    "say": "Yolda bir öğrenci, Yuri Yudin, hastalandığı için *geri döner*.",
+    "show": {
+     "type": "people",
+     "n": 10,
+     "highlight": [
+      9
+     ],
+     "label": "GERİ DÖNDÜ"
+    }
+   },
+   {
+    "say": "Bu ayrılık, onun hayatını kurtaracaktı.",
+    "show": {
+     "type": "scene",
+     "sky": "day",
+     "land": "forest",
+     "weather": "snow",
+     "people": {
+      "n": 1,
+      "from": 0.6,
+      "to": 0.2
+     }
+    }
+   },
+   {
+    "say": "Kalan dokuz kişi, yedi erkek ve iki kadın, karlı ormanda ilerlemeye devam eder.",
+    "show": {
+     "type": "scene",
+     "sky": "day",
+     "land": "hills",
+     "weather": "snow",
+     "people": {
+      "n": 9,
+      "from": 0.15,
+      "to": 0.6
+     }
+    }
+   },
+   {
+    "say": "Fotoğraf makineleri yanlarındaydı. Bu kareler, onların *son günlerine* ait.",
+    "show": {
+     "type": "photo",
+     "search": "Dyatlov Pass hikers skiing",
+     "label": "SON GÜNLER, 1959",
+     "fallback_icon": "camera"
+    }
+   },
+   {
+    "say": "1 Şubat öğleden sonra, bir dağın açık yamacında kamp kurmaya karar verirler.",
+    "show": {
+     "type": "scene",
+     "sky": "dusk",
+     "land": "mountains",
+     "weather": "snow",
+     "props": [
+      {
+       "k": "tent",
+       "x": 0.5
+      }
+     ],
+     "moon": false,
+     "label": "1 ŞUBAT · AKŞAM"
+    }
+   },
+   {
+    "say": "Yerli Mansi halkı bu dağa bir isim vermişti: *Ölü Dağ*.",
+    "show": {
+     "type": "place",
+     "name": "KHOLAT SYAKHL",
+     "sub": "ÖLÜ DAĞ"
+    }
+   },
+   {
+    "say": "Çadırı kurmak için karlı yamaçta bir *kesik* açarlar.",
+    "show": {
+     "type": "photo",
+     "search": "Dyatlov Pass tent setup slope",
+     "label": "ÇADIR KURULUYOR, 1959",
+     "fallback_icon": "tent"
+    }
+   },
+   {
+    "say": "Bu küçük ayrıntı, hikâyenin en önemli ipucu olacaktı. Sonuna kadar izleyin.",
+    "show": {
+     "type": "icon",
+     "name": "eye"
+    },
+    "sfx": "riser"
+   },
+   {
+    "say": "O gece hava eksi derecelere düşer. Rüzgâr, dağdan aşağı *uğuldar*.",
+    "show": {
+     "type": "scene",
+     "sky": "night",
+     "land": "mountains",
+     "weather": "blizzard",
+     "props": [
+      {
+       "k": "tent",
+       "x": 0.5
+      }
+     ],
+     "label": "1 ŞUBAT · 23:00"
+    }
+   },
+   {
+    "say": "Ve bir şey olur. Dokuz kişi, aynı anda çadırı *keserek* dışarı fırlar.",
+    "show": {
+     "type": "scene",
+     "sky": "night",
+     "land": "mountains",
+     "weather": "blizzard",
+     "props": [
+      {
+       "k": "tent",
+       "x": 0.35,
+       "cut": true
+      }
+     ],
+     "people": {
+      "n": 4,
+      "from": 0.45,
+      "to": 0.6,
+      "run": true
+     }
+    },
+    "sfx": "hit"
+   },
+   {
+    "say": "Botlarını almadan, kalın giysilerini giymeden. Karanlığa, *aşağıya* doğru koşarlar.",
+    "show": {
+     "type": "scene",
+     "sky": "night",
+     "land": "mountains",
+     "weather": "snow",
+     "props": [
+      {
+       "k": "tent",
+       "x": 0.15,
+       "cut": true
+      }
+     ],
+     "people": {
+      "n": 7,
+      "from": 0.4,
+      "to": 0.95,
+      "run": true
+     }
+    }
+   },
+   {
+    "say": "Günler geçer. Gruptan *haber gelmez*.",
+    "show": {
+     "type": "icon",
+     "name": "clock"
+    }
+   },
+   {
+    "say": "Aileler alarm verir. Büyük bir arama başlar.",
+    "show": {
+     "type": "scene",
+     "sky": "night",
+     "land": "mountains",
+     "weather": "fog",
+     "props": [
+      {
+       "k": "searchlight",
+       "x": 0.3
+      },
+      {
+       "k": "searchlight",
+       "x": 0.75
+      }
+     ],
+     "people": {
+      "n": 3,
+      "from": 0.2,
+      "to": 0.35
+     }
+    }
+   },
+   {
+    "say": "26 Şubat'ta öğrenci Mikhail Sharavin, karın altından çıkan bir çadır köşesi görür.",
+    "show": {
+     "type": "date",
+     "day": 26,
+     "month": "ŞUBAT",
+     "year": 1959
+    }
+   },
+   {
+    "say": "Çadır yarı yarıya karla kaplıdır ve *içeriden* kesilmiştir.",
+    "show": {
+     "type": "photo",
+     "search": "Dyatlov Pass incident tent found February 1959",
+     "label": "BULUNAN ÇADIR, 26 ŞUBAT 1959",
+     "fallback_icon": "tent"
+    },
+    "sfx": "hit"
+   },
+   {
+    "say": "İçeride harita, yiyecek ve malzemeler duruyordu. Her şey aceleyle terk edilmişti.",
+    "show": {
+     "type": "list",
+     "items": [
+      "HARİTA",
+      "YİYECEK",
+      "BOTLAR",
+      "MALZEMELER"
+     ]
+    }
+   },
+   {
+    "say": "Kardaki ayak izleri, yamaçtan aşağı ormana doğru iner.",
+    "show": {
+     "type": "icon",
+     "name": "footprints"
+    }
+   },
+   {
+    "say": "Yaklaşık bir buçuk kilometre ötede, bir sedir ağacının dibinde *küçük bir ateş* izi bulunur.",
+    "show": {
+     "type": "scene",
+     "sky": "night",
+     "land": "forest",
+     "weather": "snow",
+     "props": [
+      {
+       "k": "fire",
+       "x": 0.5
+      }
+     ],
+     "moon": true
+    }
+   },
+   {
+    "say": "İlk cesetler orada bulunur. Bazıları yalnızca *iç çamaşırıyla*.",
+    "show": {
+     "type": "number",
+     "value": 1.5,
+     "suffix": " KM",
+     "label": "ÇADIRA UZAKLIK"
+    }
+   },
+   {
+    "say": "Üç kişi ise ateş ile çadır arasında bulunur. Sanki *geri dönmeye* çalışıyorlardı.",
+    "show": {
+     "type": "scene",
+     "sky": "night",
+     "land": "mountains",
+     "weather": "snow",
+     "props": [
+      {
+       "k": "tent",
+       "x": 0.85
+      }
+     ],
+     "people": {
+      "n": 3,
+      "from": 0.3,
+      "to": 0.6,
+      "red": true
+     }
+    }
+   },
+   {
+    "say": "Kalan dört kişiye ancak mayısta, kar eridiğinde ulaşılır.",
+    "show": {
+     "type": "date",
+     "day": 4,
+     "month": "MAYIS",
+     "year": 1959
+    }
+   },
+   {
+    "say": "Çoğu donarak ölmüştü. Ama bazılarında açıklanamayan *ağır yaralanmalar* vardı.",
+    "show": {
+     "type": "icon",
+     "name": "documents",
+     "label": "OTOPSİ RAPORU"
+    }
+   },
+   {
+    "say": "Resmi soruşturma, ölümleri *karşı konulamaz bir doğal güce* bağlar ve dosyayı kapatır.",
+    "show": {
+     "type": "dossier",
+     "name": "DOSYA KAPANDI",
+     "no": "1959/██",
+     "stamp": "GİZLİ",
+     "fields": {
+      "SEBEP": "██",
+      "KURBAN": "9"
+     }
+    },
+    "sfx": "hit"
+   },
+   {
+    "say": "Bölge, üç yıl boyunca halka *kapatılır*.",
+    "show": {
+     "type": "number",
+     "value": 3,
+     "suffix": " YIL",
+     "label": "BÖLGE KAPALI"
+    }
+   },
+   {
+    "say": "Ve teoriler başlar.",
+    "show": {
+     "type": "title",
+     "lines": [
+      "VE",
+      "TEORİLER",
+      "BAŞLADI"
+     ],
+     "red": 1
+    },
+    "sfx": "riser"
+   },
+   {
+    "say": "Yeti saldırısı. Gökyüzünde görülen *ışıklar*. Gizli bir askeri test.",
+    "show": {
+     "type": "list",
+     "items": [
+      "YETİ",
+      "UFO / IŞIKLAR",
+      "GİZLİ ASKERİ TEST"
+     ]
+    }
+   },
+   {
+    "say": "Bölgedekiler o şubat gecelerinde gökyüzünde *tuhaf ışıklar* gördüklerini anlatmıştı.",
+    "show": {
+     "type": "scene",
+     "sky": "night",
+     "land": "mountains",
+     "weather": "none",
+     "props": [
+      {
+       "k": "searchlight",
+       "x": 0.7
+      }
+     ],
+     "moon": false
+    }
+   },
+   {
+    "say": "Altmış yıl boyunca kimse kesin bir cevap veremedi.",
+    "show": {
+     "type": "icon",
+     "name": "clock"
+    }
+   },
+   {
+    "say": "Bu arada geçide, ekibin liderinin adı verildi: *Dyatlov Geçidi*.",
+    "show": {
+     "type": "photo",
+     "search": "Dyatlov Pass memorial Kholat Syakhl",
+     "label": "DYATLOV GEÇİDİ",
+     "fallback_icon": "mountain"
+    }
+   },
+   {
+    "say": "Eğer bu gizem sana da ilginç geliyorsa, *abone ol*. Her gün yeni bir dosya açıyoruz.",
+    "show": {
+     "type": "title",
+     "lines": [
+      "ABONE OL",
+      "YENİ DOSYA",
+      "HER GÜN"
+     ],
+     "red": 0
+    }
+   },
+   {
+    "say": "2019'da Rusya, dosyayı *yeniden açar*.",
+    "show": {
+     "type": "dossier",
+     "name": "DYATLOV DOSYASI",
+     "no": "2019/██",
+     "stamp": "AÇIK",
+     "fields": {
+      "KURBAN": "9",
+      "SEBEP": "İNCELENİYOR"
+     }
+    },
+    "sfx": "hit"
+   },
+   {
+    "say": "2020'de açıklanan sonuç: bir *çığ* ve kötü görüş koşulları.",
+    "show": {
+     "type": "scene",
+     "sky": "storm",
+     "land": "mountains",
+     "weather": "snow",
+     "props": [
+      {
+       "k": "tent",
+       "x": 0.4
+      }
+     ],
+     "avalanche": true
+    }
+   },
+   {
+    "say": "Ama bir soru cevapsızdı: Grup, çadırı kurduktan *saatler sonra* kaçmıştı.",
+    "show": {
+     "type": "number",
+     "value": "9,5-13,5",
+     "suffix": " SAAT",
+     "label": "SONRA KAÇTILAR"
+    }
+   },
+   {
+    "say": "2021'de İsviçreli iki bilim insanı, Johan Gaume ve Alexander Puzrin, bir bilgisayar modeli yayımlar.",
+    "show": {
+     "type": "people",
+     "n": 2,
+     "highlight": [],
+     "label": "GAUME & PUZRIN"
+    }
+   },
+   {
+    "say": "Model şunu gösteriyordu: Çadır için açılan *kesik*, yamacı zayıflatmıştı.",
+    "show": {
+     "type": "photo",
+     "search": "snow slab avalanche crown fracture",
+     "label": "KAR TABAKASI KIRILMASI",
+     "fallback_icon": "snow"
+    }
+   },
+   {
+    "say": "Gece boyunca dağdan inen *sert rüzgârlar*, kesiğin üstüne kar taşıdı.",
+    "show": {
+     "type": "scene",
+     "sky": "night",
+     "land": "mountains",
+     "weather": "blizzard",
+     "props": [
+      {
+       "k": "tent",
+       "x": 0.5
+      }
+     ]
+    }
+   },
+   {
+    "say": "Saatler sonra, küçük ama ölümcül bir *kar tabakası* çadırın üstüne çöktü.",
+    "show": {
+     "type": "scene",
+     "sky": "storm",
+     "land": "mountains",
+     "weather": "snow",
+     "props": [
+      {
+       "k": "tent",
+       "x": 0.45
+      }
+     ],
+     "avalanche": true
+    },
+    "sfx": "hit"
+   },
+   {
+    "say": "Yaralı ve panik içindeki grup, çadırı keserek dışarı kaçtı. Daha fazla kar geleceğinden korkuyorlardı.",
+    "show": {
+     "type": "scene",
+     "sky": "night",
+     "land": "mountains",
+     "weather": "blizzard",
+     "props": [
+      {
+       "k": "tent",
+       "x": 0.2,
+       "cut": true
+      }
+     ],
+     "people": {
+      "n": 6,
+      "from": 0.3,
+      "to": 0.8,
+      "run": true
+     }
+    }
+   },
+   {
+    "say": "Ve karanlıkta, dondurucu soğuğa *yenik düştüler*.",
+    "show": {
+     "type": "people",
+     "n": 9,
+     "highlight": [],
+     "fade_out": true
+    }
+   },
+   {
+    "say": "Araştırmacılar bile gizemi tamamen çözdüklerini iddia etmiyor. Çünkü o geceyi anlatacak kimse hayatta kalmadı.",
+    "show": {
+     "type": "quote",
+     "text": "Gizemi çözdüğümüzü iddia etmiyoruz.",
+     "who": "Gaume & Puzrin"
+    }
+   },
+   {
+    "say": "Bugün Yekaterinburg'da dokuz dağcının anısına bir anıt duruyor.",
+    "show": {
+     "type": "photo",
+     "search": "Dyatlov group grave Mikhajlovskoe cemetery Yekaterinburg",
+     "label": "ANIT, YEKATERİNBURG",
+     "fallback_icon": "documents"
+    }
+   },
+   {
+    "say": "Peki sence o gece gerçekten *ne oldu*?",
+    "show": {
+     "type": "title",
+     "lines": [
+      "SENCE",
+      "NE OLDU",
+      "?"
+     ],
+     "red": 1
+    }
+   },
+   {
+    "say": "Yorumlara yaz ve daha fazla gizem için *abone ol*.",
+    "show": {
+     "type": "title",
+     "lines": [
+      "YORUMLARA YAZ",
+      "ABONE OL",
+      ""
+     ],
+     "red": 1
+    }
+   }
+  ],
+  "thumb": {
+   "lines": [
+    "9 DAĞCI",
+    "ÇADIRI İÇERİDEN",
+    "KESTİ"
+   ],
+   "red": 1,
+   "photo_search": "Dyatlov Pass incident tent found February 1959",
+   "photo_commons": "Dyatlov Pass incident 02.jpg",
+   "focus_x": 0.72,
+   "focus_y": 0.55,
+   "tag": "GERÇEK OLAY"
+  },
+  "chapters": [
+   [
+    0,
+    "O gece"
+   ],
+   [
+    5,
+    "Sefer başlıyor"
+   ],
+   [
+    13,
+    "Ölü Dağ'da kamp"
+   ],
+   [
+    20,
+    "Arama ve korkunç keşif"
+   ],
+   [
+    33,
+    "Teoriler"
+   ],
+   [
+    39,
+    "Dosya yeniden açılıyor"
+   ],
+   [
+    42,
+    "Bilimsel açıklama"
+   ]
+  ]
+ },
+ "shorts": [
+  {
+   "hook": [
+    {
+     "say": "Dokuz dağcı gece yarısı çadırlarını *içeriden* kesip karlı geceye kaçtı. Neden?",
+     "show": {
+      "type": "scene",
+      "sky": "night",
+      "land": "mountains",
+      "weather": "blizzard",
+      "props": [
+       {
+        "k": "tent",
+        "x": 0.3,
+        "cut": true
+       }
+      ],
+      "people": {
+       "n": 4,
+       "from": 0.4,
+       "to": 0.8,
+       "run": true
+      }
+     },
+     "sfx": "hit"
+    }
+   ],
+   "from": 17,
+   "to": 27,
+   "outro": [
+    {
+     "say": "Onları çadırdan ne kaçırdı? Cevap kanaldaki *tam videoda*.",
+     "show": {
+      "type": "title",
+      "lines": [
+       "TAM HİKÂYE",
+       "KANALDA",
+       "ABONE OL"
+      ],
+      "red": 1
+     }
+    }
+   ]
+  },
+  {
+   "hook": [
+    {
+     "say": "Yeti mi, gökyüzündeki ışıklar mı, gizli bir silah mı? Altmış yıllık bir *gizem*.",
+     "show": {
+      "type": "list",
+      "items": [
+       "YETİ?",
+       "IŞIKLAR?",
+       "SİLAH?"
+      ]
+     },
+     "sfx": "hit"
+    }
+   ],
+   "from": 29,
+   "to": 36,
+   "outro": [
+    {
+     "say": "Bilim insanlarının cevabı kanaldaki *tam videoda*.",
+     "show": {
+      "type": "title",
+      "lines": [
+       "TAM HİKÂYE",
+       "KANALDA",
+       "ABONE OL"
+      ],
+      "red": 1
+     }
+    }
+   ]
+  },
+  {
+   "hook": [
+    {
+     "say": "Altmış yıllık gizemi bir *bilgisayar modeli* çözmüş olabilir.",
+     "show": {
+      "type": "scene",
+      "sky": "storm",
+      "land": "mountains",
+      "weather": "snow",
+      "props": [
+       {
+        "k": "tent",
+        "x": 0.45
+       }
+      ],
+      "avalanche": true
+     },
+     "sfx": "hit"
+    }
+   ],
+   "from": 41,
+   "to": 48,
+   "outro": [
+    {
+     "say": "Sence bu açıklama yeterli mi? Yorumlara yaz, *takip et*.",
+     "show": {
+      "type": "title",
+      "lines": [
+       "SENCE",
+       "YETERLİ Mİ",
+       "?"
+      ],
+      "red": 1
+     }
+    }
+   ]
+  }
+ ],
+ "publish": {
+  "long": {
+   "title": "Dyatlov Geçidi: 9 Dağcı O Gece Neden Çadırdan Kaçtı? (Tam Hikâye)",
+   "description": "1959'da Ural Dağları'nda dokuz deneyimli dağcı, gece yarısı çadırlarını içeriden keserek karlı karanlığa kaçtı ve hiçbiri geri dönmedi. Gerçek arşiv fotoğrafları ve olay canlandırmalarıyla o geceyi adım adım anlatıyoruz: sefer, korkunç keşif, teoriler, 2019'da yeniden açılan dosya ve 2021'de yayımlanan bilimsel açıklama.\\n\\nKaynaklar: National Geographic, Smithsonian Magazine, History.com, BBC, Gaume & Puzrin (2021) Communications Earth & Environment.",
+   "hashtags": [
+    "#gizem",
+    "#belgesel",
+    "#dyatlov",
+    "#çözülemeyengizem",
+    "#tarih",
+    "#gerçekolay"
+   ]
+  },
+  "shorts": [
+   {
+    "title": "Çadırı İçeriden Kesip Kaçtılar… Neden? 🏔️ #shorts",
+    "description": "Dyatlov Geçidi Olayı — tam hikâye kanalda.",
+    "hashtags": [
+     "#shorts",
+     "#gizem",
+     "#dyatlov"
+    ]
+   },
+   {
+    "title": "Yeti mi, Işıklar mı, Gizli Silah mı? 👁️ #shorts",
+    "description": "Dyatlov Geçidi teorileri — tam hikâye kanalda.",
+    "hashtags": [
+     "#shorts",
+     "#gizem",
+     "#teori"
+    ]
+   },
+   {
+    "title": "60 Yıllık Gizemi Bir Bilgisayar Modeli Çözdü mü? ❄️ #shorts",
+    "description": "Dyatlov Geçidi'nin bilimsel açıklaması.",
+    "hashtags": [
+     "#shorts",
+     "#gizem",
+     "#bilim"
+    ]
+   }
+  ]
+ }
+}

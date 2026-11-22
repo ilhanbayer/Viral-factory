@@ -849,6 +849,15 @@ def draw_scene(img, show, t, dur, W, H, u):
             ys = hor + li * 50 * u + np.sin(xs / (90 * u) + t * (1 + li)) * 6 * u * (li + 1) * (land == "sea")
         pts = [(x + off, y) for x, y in zip(xs, ys)] + [(W * 1.3 + off, H), (off, H)]
         d.polygon(pts, fill=c)
+        if land == "forest" and li >= 1:
+            r6 = np.random.default_rng(60 + li)
+            for x, y in zip(xs[::2], ys[::2]):
+                th_ = r6.uniform(60, 140) * u * (0.6 + 0.4 * li)
+                tx_ = x + off + r6.uniform(-10, 10) * u
+                d.polygon([(tx_ - th_ * 0.28, y + 6 * u), (tx_, y - th_), (tx_ + th_ * 0.28, y + 6 * u)],
+                          fill=tuple(int(v * 0.8) for v in c[:3]) + (255,))
+                d.polygon([(tx_ - th_ * 0.12, y - th_ * 0.62), (tx_, y - th_), (tx_ + th_ * 0.12, y - th_ * 0.62)],
+                          fill=(225, 230, 238, 220))
         if land in ("mountains", "ice") and li < 2:   # karlı tepeler
             for x, y in zip(xs[::6], ys[::6]):
                 d.polygon([(x + off - 18 * u, y + 26 * u), (x + off, y), (x + off + 18 * u, y + 26 * u)],
@@ -877,12 +886,13 @@ def draw_scene(img, show, t, dur, W, H, u):
             for xx in range(-1, int(W / (120 * u)) + 2):
                 x = xx * 120 * u + xo
                 d.arc((x, yy, x + 120 * u, yy + 24 * u), 200, 340, fill=(90, 120, 150, 160), width=max(1, int(2 * u)))
-    ground = gtop + (H - gtop) * 0.45
+    ground = gtop + (H - gtop) * (0.45 if vert else 0.22)
+    pscale = 1.0 if vert else 1.3
     # nesneler
     for p in show.get("props", []):
         k = p.get("k")
         x = W * p.get("x", 0.5) - drift * 0.9
-        s = p.get("s", 1.0) * 300 * u
+        s = p.get("s", 1.0) * 300 * u * pscale
         if k == "tent":
             col = (210, 205, 190, 255)
             d.polygon([(x - s * 0.5, ground), (x, ground - s * 0.6), (x + s * 0.5, ground)], fill=col)
@@ -954,7 +964,7 @@ def draw_scene(img, show, t, dur, W, H, u):
             prog = cl(t / max(dur, 0.5))
             fx = pp.get("from", 0.3) + (pp.get("to", 0.8) - pp.get("from", 0.3)) * prog
             x = W * (fx - i * (0.06 if vert else 0.035))
-            h = (150 + (i % 3) * 12) * u
+            h = (150 + (i % 3) * 12) * u * pscale
             col = (C["red"] if pp.get("red") else (12, 12, 16)) + (255,)
             walker(d, x, ground + 2 * u, h, col, t + i * 0.3, 1.6 if run else 0.8)
     if show.get("avalanche"):
