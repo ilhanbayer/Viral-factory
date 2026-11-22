@@ -27,8 +27,16 @@ async def mk(voice, pitch, path):
     await edge_tts.Communicate(REF_TEXT, voice, pitch=pitch, rate="-5%").save(path + ".mp3")
     subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-i", path + ".mp3", "-ar", "24000", "-ac", "1", path], check=True)
 
+HAVE = set()
 for k, (v, p) in REFS.items():
-    asyncio.run(mk(v, p, f"{OUT}/ref_{k}.wav"))
+    for attempt in range(3):
+        try:
+            asyncio.run(mk(v, p, f"{OUT}/ref_{k}.wav"))
+            HAVE.add(k)
+            break
+        except Exception as e:
+            print("ref hata", k, type(e).__name__, flush=True)
+            time.sleep(5)
 
 from chatterbox.mtl_tts import ChatterboxMultilingualTTS
 t0 = time.time()
@@ -54,6 +62,9 @@ def cer(a, b):
 
 report = {}
 for name, ref, ex, cfg in configs:
+    if ref and not os.path.exists(ref):
+        print("atlandı", name)
+        continue
     parts, gen_t, audio_t = [], 0, 0
     for who, text in LINES:
         t0 = time.time()
@@ -78,4 +89,4 @@ for name, ref, ex, cfg in configs:
     print(name, report[name], flush=True)
 json.dump(report, open(f"{OUT}/rapor.json", "w"), ensure_ascii=False, indent=1)
 
-# r2
+# r3
