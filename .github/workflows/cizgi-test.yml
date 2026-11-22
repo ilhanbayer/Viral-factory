@@ -25,7 +25,9 @@ jobs:
         with:
           path: ~/.cache/huggingface
           key: hf-chatterbox-v1
-      - run: mkdir -p cizgitest && (python -u tools/cartoon_test.py 2>&1 | grep -v "Sampling:" | tee cizgitest/log.txt)
+      - env:
+          CB_BUDGET_MIN: "45"
+        run: mkdir -p cizgitest && (python -u tools/cartoon_test.py 2>&1 | grep --line-buffered -v "Sampling:" | tee cizgitest/log.txt)
       - name: Günlüğü depoya yaz
         if: always()
         run: |

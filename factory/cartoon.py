@@ -23,7 +23,7 @@ import os
 import re
 import subprocess
 import time
-from multiprocessing import Pool
+import multiprocessing as mp
 
 import numpy as np
 import cv2
@@ -75,8 +75,10 @@ def build(beats, chars, narrator, work, use_tts=True):
         who = b.get("who", "anlatici")
         v = chars.get(who, {}).get("voice", narrator)
         tts.configure_voice(v)
+        _t = time.time()
         if use_tts:
             wav, vd, words = tts.synth(say, vcache, "story")
+            print(f"  [ses] {i + 1}/{len(beats)} {who} {vd:.1f}s ({time.time() - _t:.0f}s)", flush=True)
         else:
             wav, vd, words = None, tts.estimate_duration(say), None
         lead = 0.15
@@ -278,7 +280,8 @@ def produce_one(vid, beats, fmt, script, publish, out_dir, use_tts=True, thumb=N
         chunks.append(cur)
     jobs = [(c, fmt, script.get("brand", ""), chars, os.path.join(work, f"c_{i:03d}.mp4"), None, total)
             for i, c in enumerate(chunks)]
-    with Pool(os.cpu_count()) as pool:
+    # 'spawn': torch (Chatterbox) yüklüyken fork kilitlenmesini önler
+    with mp.get_context("spawn").Pool(os.cpu_count()) as pool:
         list(pool.imap_unordered(render_chunk, [j for j in jobs if not os.path.exists(j[4])]))
     sfx, voices = plan_audio(segs)
     mix = A.build_cartoon_mix(total, voices, sfx, seed=len(vid))

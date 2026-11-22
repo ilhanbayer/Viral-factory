@@ -12,7 +12,7 @@ Seçilen motor çalışmazsa diğerine, o da çalışmazsa süre tahminine düş
 synth() -> (wav_path | None, süre_sn, kelime_zamanları | None)
 kelime_zamanları: [(kelime, başlangıç_sn, bitiş_sn), ...]  (wav'ın başına göre)
 """
-import os
+import os, time
 import json
 import asyncio
 import subprocess
@@ -137,7 +137,7 @@ def _edge(text, base, role="item"):
     for i, s in enumerate(sents):
         rate, pitch, vol, pause = prosody(role, i, len(sents), s)
         mp3 = f"{base}_{i}.mp3"
-        wb = asyncio.run(_edge_stream(s, voice, rate, pitch, vol, mp3))
+        wb = asyncio.run(asyncio.wait_for(_edge_stream(s, voice, rate, pitch, vol, mp3), 45))   # takılmaya karşı
         if not os.path.exists(mp3) or os.path.getsize(mp3) < 500:
             raise RuntimeError("edge-tts boş ses döndürdü")
         a = _decode(mp3)
@@ -186,7 +186,12 @@ def _cb_model():
         torch.set_num_threads(os.cpu_count() or 2)
         from chatterbox.mtl_tts import ChatterboxMultilingualTTS
         _CB_MODEL = ChatterboxMultilingualTTS.from_pretrained(device="cpu")
+        _CB_T0[0] = time.time()
     return _CB_MODEL
+
+
+CB_BUDGET = float(os.environ.get("CB_BUDGET_MIN", "150")) * 60   # toplam süre sınırı; aşılırsa edge'e geçer
+_CB_T0 = [time.time()]
 
 
 def _chatterbox(text, base, role="story"):
@@ -195,12 +200,22 @@ def _chatterbox(text, base, role="story"):
     kw = dict(language_id="tr", exaggeration=CB["ex"], cfg_weight=CB["cfg"], temperature=CB["temp"])
     if CB["ref"]:
         kw["audio_prompt_path"] = CB["ref"]
-    import torch
+    import torch, signal
+    if time.time() - _CB_T0[0] > CB_BUDGET:
+        raise RuntimeError("chatterbox zaman bütçesi doldu")
     n = max(len(text), 8)
+
+    def _alarm(*_):
+        raise TimeoutError("chatterbox zaman aşımı")
+    signal.signal(signal.SIGALRM, _alarm)
     wav = None
     for attempt in range(3):
         torch.manual_seed(1234 + attempt * 77)
-        w = m.generate(text, **kw)
+        signal.alarm(int(40 + n * 0.9))
+        try:
+            w = m.generate(text, **kw)
+        finally:
+            signal.alarm(0)
         dur = w.shape[-1] / m.sr
         # halüsinasyon / kesilme koruması: Türkçe ~0.08 sn/karakter
         if 0.035 * n <= dur <= 0.17 * n + 0.8:
