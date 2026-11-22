@@ -192,9 +192,9 @@ def icon(d, name, cx, cy, s, t, col, red):
         d.rounded_rectangle((cx - s * 0.07, cy - s * 0.5, cx + s * 0.07, cy + s * 0.25), radius=int(s * 0.07),
                             outline=col, width=max(4, int(s * 0.03)))
         d.ellipse((cx - s * 0.15, cy + s * 0.18, cx + s * 0.15, cy + s * 0.48), fill=(90, 170, 255))
-        lv = 0.6 - 0.5 * eo(t / 1.2)
-        d.rectangle((cx - s * 0.035, cy - s * 0.45 + (1 - lv) * s * 0.65, cx + s * 0.035, cy + s * 0.25),
-                    fill=(90, 170, 255))
+        lv = 0.85 - 0.6 * eo(t / 1.2)
+        top_ = cy + s * 0.22 - lv * s * 0.66
+        d.rectangle((cx - s * 0.035, top_, cx + s * 0.035, cy + s * 0.25), fill=(90, 170, 255))
     elif name == "documents":
         for i in range(3):
             o = (2 - i) * s * 0.06
@@ -231,6 +231,9 @@ def draw_visual(img, show, t, dur, cx, cy, u):
 
     if typ == "photo":
         draw_photo(img, show, t, dur, cx, cy, u)
+        return typ
+    if typ == "scene":
+        draw_scene(img, show, t, dur, img.width, img.height, u if img.width < img.height else u * 1.25)
         return typ
     if typ == "tally":
         n = int(show.get("n", 5))
@@ -746,3 +749,266 @@ def draw_photo(img, show, t, dur, cx, cy, u):
     sh = sh.filter(ImageFilter.GaussianBlur(18 * u))
     img.alpha_composite(sh, (int(cx - frame.width / 2 + 16 * u), int(cy - frame.height / 2 + 24 * u)))
     img.alpha_composite(frame, (int(cx - frame.width / 2), int(cy - frame.height / 2)))
+
+
+# ============================================================ SAHNE CANLANDIRMA (diorama)
+def _ridge(seed, n, W, base, amp, rough=0.5):
+    rng = np.random.default_rng(seed)
+    xs = np.linspace(0, W * 1.3, n)
+    ys = np.zeros(n)
+    for octv in range(5):
+        k = 2 ** octv
+        ph = rng.uniform(0, 6.28)
+        ys += np.sin(xs / W * 3.1 * k + ph) * amp * (rough ** octv)
+    ys += rng.normal(0, amp * 0.04, n)
+    return xs, base - np.abs(ys)
+
+
+SKIES = {
+    "night": ((6, 9, 20), (22, 32, 58)), "dusk": ((28, 14, 40), (190, 80, 50)), "day": ((70, 120, 190), (190, 215, 235)),
+    "storm": ((14, 16, 22), (60, 66, 76)), "fire": ((20, 6, 6), (150, 50, 20)), "ice": ((20, 40, 70), (150, 190, 220)),
+}
+
+
+def walker(d, x, y, h, col, t, speed=1.0):
+    """Yürüyen/koşan siluet (bacak ve kol salınımı)."""
+    hr = h * 0.105
+    sw = math.sin(t * 9 * speed)
+    d.ellipse((x - hr, y - h, x + hr, y - h + 2 * hr), fill=col)
+    bw = h * 0.15
+    d.rounded_rectangle((x - bw, y - h + 2.2 * hr, x + bw, y - h * 0.45), radius=int(bw * 0.8), fill=col)
+    lw = max(2, int(h * 0.07))
+    hip = (x, y - h * 0.47)
+    for s in (1, -1):
+        fx = x + s * sw * h * 0.22
+        d.line((hip[0], hip[1], fx, y), fill=col, width=lw)
+        sh = (x, y - h * 0.72)
+        d.line((sh[0], sh[1], x - s * sw * h * 0.2, y - h * 0.5), fill=col, width=max(2, int(lw * 0.8)))
+
+
+def draw_scene(img, show, t, dur, W, H, u):
+    """Olay canlandırması: gökyüzü, katmanlı arazi, hava durumu, nesneler, hareketli insanlar.
+    show = {"type":"scene","sky":"night","land":"mountains|hills|city|sea|desert|forest|plain","weather":"snow|rain|fog|blizzard|none",
+            "props":[{"k":"tent","x":0.45,"cut":true},{"k":"house"},{"k":"ship"},{"k":"tower"},{"k":"fire"},{"k":"flag"},
+                     {"k":"lighthouse"},{"k":"plane"},{"k":"car"},{"k":"searchlight"}],
+            "people":{"n":3,"from":0.45,"to":0.95,"run":true,"red":false}, "moon":true, "lightning":false,
+            "avalanche":false, "label":"1 ŞUBAT 1959 · GECE"}"""
+    d = ImageDraw.Draw(img)
+    sky = SKIES.get(show.get("sky", "night"), SKIES["night"])
+    land = show.get("land", "mountains")
+    drift = t * 12 * u
+    # gökyüzü
+    top, bot = np.array(sky[0], np.float32), np.array(sky[1], np.float32)
+    g = np.linspace(0, 1, H)[:, None] ** 1.3
+    sk = (top * (1 - g) + bot * g)
+    arr = np.broadcast_to(sk[:, None, :], (H, W, 3)).astype(np.uint8)
+    base = Image.fromarray(arr).convert("RGBA")
+    img.alpha_composite(base)
+    d = ImageDraw.Draw(img)
+    rng = np.random.default_rng(3)
+    if show.get("sky", "night") in ("night", "ice", "storm"):
+        for i in range(140):
+            x, y = rng.uniform(0, W), rng.uniform(0, H * 0.55)
+            a = int(120 + 120 * abs(math.sin(t * rng.uniform(0.5, 2) + i)))
+            r = rng.uniform(0.6, 1.8) * u
+            d.ellipse((x - r, y - r, x + r, y + r), fill=(255, 255, 255, a if show.get("sky") != "storm" else a // 4))
+    if show.get("moon", show.get("sky", "night") == "night"):
+        mx, my, mr = W * 0.78, H * 0.16, 60 * u
+        glow = Image.new("RGBA", (W, H), (0, 0, 0, 0))
+        ImageDraw.Draw(glow).ellipse((mx - mr * 3, my - mr * 3, mx + mr * 3, my + mr * 3), fill=(200, 210, 255, 40))
+        img.alpha_composite(glow.filter(ImageFilter.GaussianBlur(40 * u)))
+        d = ImageDraw.Draw(img)
+        d.ellipse((mx - mr, my - mr, mx + mr, my + mr), fill=(235, 236, 228, 255))
+    # arazi katmanları (paralaks)
+    hor = H * 0.6
+    vert = H > W
+    layers = [(0.35, 0.09, 0.05), (0.6, 0.13, 0.18), (1.0, 0.19, 0.32)]
+    for li, (par, amp, dark) in enumerate(layers):
+        amp = amp * (0.62 if vert else 1.0)
+        sb = np.array(sky[1], np.float32)
+        if land in ("mountains", "ice"):
+            c = sb * 0.5 + np.array([95, 105, 125]) * (0.9 - li * 0.32)
+        else:
+            c = sb * (0.6 - li * 0.18) + 10
+        c = tuple(int(max(0, min(255, v))) for v in c) + (255,)
+        off = -drift * par
+        if land in ("mountains", "ice"):
+            xs, ys = _ridge(10 + li, 90, W, hor + li * 70 * u, H * amp, 0.55)
+        elif land == "hills" or land == "forest":
+            xs, ys = _ridge(20 + li, 60, W, hor + li * 60 * u, H * amp * 0.4, 0.3)
+        elif land == "desert":
+            xs, ys = _ridge(30 + li, 50, W, hor + li * 60 * u, H * amp * 0.25, 0.2)
+        elif land == "city":
+            xs = np.arange(0, W * 1.3, 40 * u)
+            r2 = np.random.default_rng(40 + li)
+            ys = hor + li * 70 * u - r2.uniform(0.05, 0.3 + 0.2 * li, len(xs)) * H * 0.35
+            xs = np.repeat(xs, 2)[1:]
+            ys = np.repeat(ys, 2)[:-1]
+        else:   # sea / plain
+            xs = np.linspace(0, W * 1.3, 60)
+            ys = hor + li * 50 * u + np.sin(xs / (90 * u) + t * (1 + li)) * 6 * u * (li + 1) * (land == "sea")
+        pts = [(x + off, y) for x, y in zip(xs, ys)] + [(W * 1.3 + off, H), (off, H)]
+        d.polygon(pts, fill=c)
+        if land in ("mountains", "ice") and li < 2:   # karlı tepeler
+            for x, y in zip(xs[::6], ys[::6]):
+                d.polygon([(x + off - 18 * u, y + 26 * u), (x + off, y), (x + off + 18 * u, y + 26 * u)],
+                          fill=(225, 230, 238, 200))
+        if land == "city" and li == 2:
+            r3 = np.random.default_rng(5)
+            for x, y in zip(xs[::2], ys[::2]):
+                for _ in range(4):
+                    wx = x + off + r3.uniform(4, 30) * u
+                    wy = y + r3.uniform(10, 200) * u
+                    if r3.random() < 0.6:
+                        d.rectangle((wx, wy, wx + 6 * u, wy + 9 * u), fill=(255, 210, 120, 220))
+    gtop = H * (0.8 if vert else 0.66)
+    d.rectangle((0, gtop, W, H), fill=tuple(int(v * 0.25) for v in sky[0]) + (255,))
+    if show.get("weather") in ("snow", "blizzard") or land in ("mountains", "ice"):
+        g2 = np.linspace(0, 1, int(H - gtop))[:, None]
+        sn = (np.array([205, 212, 224]) * (1 - g2 * 0.35)).astype(np.uint8)
+        img.alpha_composite(Image.fromarray(np.broadcast_to(sn[:, None, :], (len(g2), W, 3)).copy()).convert("RGBA"),
+                            (0, int(gtop)))
+        d = ImageDraw.Draw(img)
+    elif land == "sea":
+        d.rectangle((0, gtop, W, H), fill=(38, 58, 82, 255))
+        for i in range(14):
+            yy = gtop + (H - gtop) * i / 14
+            xo = (t * 40 + i * 37) % (120 * u)
+            for xx in range(-1, int(W / (120 * u)) + 2):
+                x = xx * 120 * u + xo
+                d.arc((x, yy, x + 120 * u, yy + 24 * u), 200, 340, fill=(90, 120, 150, 160), width=max(1, int(2 * u)))
+    ground = gtop + (H - gtop) * 0.45
+    # nesneler
+    for p in show.get("props", []):
+        k = p.get("k")
+        x = W * p.get("x", 0.5) - drift * 0.9
+        s = p.get("s", 1.0) * 300 * u
+        if k == "tent":
+            col = (210, 205, 190, 255)
+            d.polygon([(x - s * 0.5, ground), (x, ground - s * 0.6), (x + s * 0.5, ground)], fill=col)
+            gl = 0.6 + 0.4 * math.sin(t * 7)
+            d.polygon([(x - s * 0.1, ground), (x, ground - s * 0.25), (x + s * 0.1, ground)], fill=(255, 190, 90, int(220 * gl)))
+            if p.get("cut"):
+                kk = eo(t / 0.8)
+                d.line((x + s * 0.15, ground - s * 0.4, x + s * 0.15 + s * 0.15 * kk, ground - s * 0.4 + s * 0.35 * kk),
+                       fill=C["red"] + (255,), width=int(6 * u))
+        elif k == "house":
+            d.rectangle((x - s * 0.4, ground - s * 0.5, x + s * 0.4, ground), fill=(30, 28, 32, 255))
+            d.polygon([(x - s * 0.5, ground - s * 0.5), (x, ground - s * 0.85), (x + s * 0.5, ground - s * 0.5)], fill=(22, 20, 24, 255))
+            if int(t * 2) % 5 != 0:
+                d.rectangle((x - s * 0.1, ground - s * 0.35, x + s * 0.08, ground - s * 0.2), fill=(255, 200, 110, 255))
+        elif k == "ship":
+            by = gtop + 10 * u + math.sin(t * 1.5) * 8 * u
+            d.polygon([(x - s * 0.7, by - s * 0.15), (x + s * 0.7, by - s * 0.15), (x + s * 0.5, by + s * 0.05), (x - s * 0.55, by + s * 0.05)], fill=(25, 25, 30, 255))
+            d.rectangle((x - s * 0.3, by - s * 0.32, x + s * 0.2, by - s * 0.15), fill=(35, 35, 40, 255))
+            for i in range(2):
+                d.rectangle((x - s * 0.15 + i * s * 0.18, by - s * 0.55, x - s * 0.07 + i * s * 0.18, by - s * 0.32), fill=(30, 30, 34, 255))
+        elif k in ("tower", "lighthouse"):
+            d.polygon([(x - s * 0.12, ground), (x - s * 0.06, ground - s * 1.1), (x + s * 0.06, ground - s * 1.1), (x + s * 0.12, ground)], fill=(30, 30, 36, 255))
+            if k == "lighthouse":
+                a0 = (t * 60) % 360
+                beam = Image.new("RGBA", (W, H), (0, 0, 0, 0))
+                ImageDraw.Draw(beam).pieslice((x - 900 * u, ground - s * 1.1 - 900 * u, x + 900 * u, ground - s * 1.1 + 900 * u),
+                                              a0, a0 + 14, fill=(255, 240, 180, 60))
+                img.alpha_composite(beam.filter(ImageFilter.GaussianBlur(8)))
+                d = ImageDraw.Draw(img)
+        elif k == "fire":
+            for i in range(6):
+                fh = s * (0.3 + 0.25 * abs(math.sin(t * 8 + i)))
+                fx = x + (i - 2.5) * s * 0.05
+                d.polygon([(fx - s * 0.05, ground), (fx, ground - fh), (fx + s * 0.05, ground)], fill=(255, 120 + i * 20, 30, 220))
+            glow = Image.new("RGBA", (W, H), (0, 0, 0, 0))
+            ImageDraw.Draw(glow).ellipse((x - s, ground - s, x + s, ground + s * 0.3), fill=(255, 120, 40, 70))
+            img.alpha_composite(glow.filter(ImageFilter.GaussianBlur(30 * u)))
+            d = ImageDraw.Draw(img)
+        elif k == "plane":
+            px = W * ((p.get("x", 0.1) + t * 0.08) % 1.2) - W * 0.1
+            py = H * p.get("y", 0.25)
+            d.polygon([(px - s * 0.4, py), (px + s * 0.4, py - s * 0.04), (px + s * 0.4, py + s * 0.04)], fill=(220, 220, 225, 255))
+            d.polygon([(px, py), (px - s * 0.08, py - s * 0.22), (px + s * 0.06, py)], fill=(200, 200, 205, 255))
+        elif k == "car":
+            cx2 = W * ((p.get("x", 0.0) + t * 0.12) % 1.2) - W * 0.1
+            d.rounded_rectangle((cx2 - s * 0.35, ground - s * 0.22, cx2 + s * 0.35, ground - s * 0.06), radius=int(s * 0.05), fill=(30, 30, 34, 255))
+            d.rounded_rectangle((cx2 - s * 0.18, ground - s * 0.34, cx2 + s * 0.15, ground - s * 0.2), radius=int(s * 0.05), fill=(30, 30, 34, 255))
+            for wx in (-0.22, 0.22):
+                d.ellipse((cx2 + wx * s - s * 0.07, ground - s * 0.13, cx2 + wx * s + s * 0.07, ground + s * 0.01), fill=(10, 10, 12, 255))
+            d.ellipse((cx2 + s * 0.32, ground - s * 0.18, cx2 + s * 0.38, ground - s * 0.12), fill=(255, 230, 150, 255))
+        elif k == "flag":
+            d.line((x, ground, x, ground - s * 0.9), fill=(200, 200, 200, 255), width=int(5 * u))
+            pts = [(x, ground - s * 0.9 + yy * s * 0.25) for yy in (0, 1)]
+            wv = [(x + i * s * 0.08, ground - s * 0.9 + math.sin(t * 5 + i) * 6 * u) for i in range(6)]
+            d.polygon(wv + [(wv[-1][0], wv[-1][1] + s * 0.25)] + [(x, ground - s * 0.65)], fill=C["red"] + (255,))
+        elif k == "searchlight":
+            a0 = 250 + 25 * math.sin(t * 0.8 + x)
+            beam = Image.new("RGBA", (W, H), (0, 0, 0, 0))
+            ImageDraw.Draw(beam).pieslice((x - 1400 * u, ground - 1400 * u, x + 1400 * u, ground + 1400 * u), a0 - 4, a0 + 4,
+                                          fill=(255, 250, 220, 55))
+            img.alpha_composite(beam.filter(ImageFilter.GaussianBlur(10)))
+            d = ImageDraw.Draw(img)
+    # insanlar
+    pp = show.get("people")
+    if pp:
+        n = int(pp.get("n", 1))
+        run = pp.get("run", False)
+        for i in range(n):
+            prog = cl(t / max(dur, 0.5))
+            fx = pp.get("from", 0.3) + (pp.get("to", 0.8) - pp.get("from", 0.3)) * prog
+            x = W * (fx - i * (0.06 if vert else 0.035))
+            h = (150 + (i % 3) * 12) * u
+            col = (C["red"] if pp.get("red") else (12, 12, 16)) + (255,)
+            walker(d, x, ground + 2 * u, h, col, t + i * 0.3, 1.6 if run else 0.8)
+    if show.get("avalanche"):
+        kk = cl(t / max(dur * 0.8, 0.5))
+        spray = Image.new("RGBA", (W, H), (0, 0, 0, 0))
+        sd = ImageDraw.Draw(spray)
+        for i in range(90):
+            r4 = np.random.default_rng(i)
+            lag = r4.uniform(0, 0.35)
+            kq = cl((kk - lag) / (1 - lag))
+            if kq <= 0:
+                continue
+            bx = W * (1.1 - kq * r4.uniform(0.6, 1.15))
+            by = H * 0.45 + (ground - H * 0.45) * kq * r4.uniform(0.6, 1.0) + r4.uniform(-40, 40) * u
+            bs = r4.uniform(10, 34) * u
+            d.polygon([(bx - bs, by), (bx, by - bs * 0.7), (bx + bs, by - bs * 0.1), (bx + bs * 0.4, by + bs * 0.6)],
+                      fill=(238, 242, 248, 245))
+            sd.ellipse((bx - bs * 3, by - bs * 2.5, bx + bs * 3, by + bs), fill=(240, 244, 250, 60))
+        img.alpha_composite(spray.filter(ImageFilter.GaussianBlur(14 * u)))
+        d = ImageDraw.Draw(img)
+    # hava
+    w = show.get("weather", "none")
+    if w in ("snow", "blizzard"):
+        nn = 260 if w == "blizzard" else 140
+        wind = 1.6 if w == "blizzard" else 0.4
+        for i in range(nn):
+            r5 = np.random.default_rng(i + 100)
+            x0, y0, sp = r5.uniform(0, 1), r5.uniform(0, 1), r5.uniform(0.5, 1.5)
+            x = ((x0 - t * 0.05 * wind * sp) % 1) * W
+            y = ((y0 + t * 0.08 * sp) % 1) * H
+            r = (1.5 + sp * 2.5) * u
+            d.ellipse((x - r, y - r, x + r, y + r), fill=(250, 250, 255, 210))
+    elif w == "rain":
+        for i in range(200):
+            r5 = np.random.default_rng(i + 200)
+            x = ((r5.uniform(0, 1) + t * 0.05) % 1) * W
+            y = ((r5.uniform(0, 1) + t * 1.2 * r5.uniform(0.7, 1.3)) % 1) * H
+            d.line((x, y, x - 8 * u, y + 34 * u), fill=(190, 200, 220, 130), width=max(1, int(2 * u)))
+    elif w == "fog":
+        fog = Image.new("RGBA", (W, H), (0, 0, 0, 0))
+        fd = ImageDraw.Draw(fog)
+        for i in range(5):
+            yy = H * (0.55 + i * 0.07)
+            xo = (t * 20 * (i + 1)) % W
+            fd.ellipse((xo - W, yy - 60 * u, xo + W * 0.6, yy + 60 * u), fill=(200, 205, 215, 40))
+        img.alpha_composite(fog.filter(ImageFilter.GaussianBlur(30 * u)))
+        d = ImageDraw.Draw(img)
+    if show.get("lightning") and (int(t * 3) % 7 == 3):
+        flash = Image.new("RGBA", (W, H), (230, 235, 255, 90))
+        img.alpha_composite(flash)
+        d = ImageDraw.Draw(img)
+    if show.get("label"):
+        f = M(int(34 * u))
+        tx = up(show["label"])
+        n = int(len(tx) * cl(t / 0.8))
+        d.rectangle((40 * u, 150 * u, 40 * u + f.getlength(tx) + 30 * u, 200 * u), fill=(0, 0, 0, 150))
+        d.text((55 * u, 175 * u), tx[:n], font=f, fill=C["orange"] + (255,), anchor="lm")

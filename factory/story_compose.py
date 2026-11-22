@@ -35,7 +35,7 @@ def build(beats, work, use_tts=True):
         else:
             wav, vd, words = None, tts.estimate_duration(say), None
         lead = 0.12
-        dur = max(1.3, lead + vd + (0.35 if b.get("sfx") in ("hit", "riser") else 0.14))
+        dur = max(1.5, lead + vd + (0.5 if b.get("sfx") in ("hit", "riser") else 0.3))
         tim = tts.align_words(say, words, lead, vd) or word_timings(say, lead, vd)
         segs.append(dict(i=i, start=t, dur=dur, voff=lead, vdur=vd, wav=wav, beat=b, words=tim,
                          kinds=ST.caption_words(b["say"])))
@@ -111,7 +111,7 @@ def render_chunk(args):
             # sürekli kamera hareketi + vurgulu kelimede darbe
             punch = sum(max(0.0, 1 - (t - h) / 0.28) for h in hot if t >= h)
             zin = ST.eo(t / 0.18)
-            sc = 1.0 + 0.08 * (t / D) + 0.07 * (1 - zin) + 0.05 * min(1, punch)
+            sc = 1.0 + 0.08 * (t / D) + 0.07 * (1 - zin) + 0.05 * min(1, punch) + (0.04 if show.get("type") == "scene" else 0)
             ang = 0.8 * math.sin(gt * 0.35) + (1.2 * math.sin(t * 40) * max(0, 1 - t / 0.3) if hit else 0)
             dx = 14 * u * math.sin(gt * 0.5) + 6 * u * math.sin(t * 50) * min(1, punch)
             dy = 10 * u * math.cos(gt * 0.4)
@@ -243,35 +243,65 @@ def chapters_text(segs, chapters):
 
 
 def make_thumbnail(path, thumb, fmt, theme, brand):
-    """Tıklanma odaklı kapak: büyük, kısa, kontrastlı başlık + ikon (1280x720 / 1080x1920)."""
+    """Tıklatan kapak: gerçek fotoğraf ya da canlandırma sahnesi arka planı, dev kontrastlı yazı,
+    kırmızı daire + ok, 'GERÇEK OLAY' etiketi. thumb = {"lines":[..], "red":1, "icon":..., "photo":"<yerel yol>",
+    "scene":{...}, "tag":"GERÇEK OLAY"}"""
+    from PIL import ImageDraw, ImageFilter, ImageEnhance
     ST.set_theme(theme)
-    P = FMT[fmt]
-    W, H = P["W"], P["H"]
-    fr = ST.background(W, H)
-    layer = Image.new("RGBA", (W, H), (0, 0, 0, 0))
-    from PIL import ImageDraw
-    d = ImageDraw.Draw(layer)
+    W, H = (1280, 720) if fmt == "landscape" else (1080, 1920)
+    u = W / 1280 if fmt == "landscape" else 1.0
+    bg = None
+    if thumb.get("photo"):
+        bg = ST.load_photo(thumb["photo"])
+    if bg is not None:
+        iw, ih = bg.size
+        sc = max(W / iw, H / ih)
+        bg = bg.resize((int(iw * sc) + 1, int(ih * sc) + 1), Image.LANCZOS)
+        bg = bg.crop(((bg.width - W) // 2, (bg.height - H) // 2, (bg.width - W) // 2 + W, (bg.height - H) // 2 + H))
+        bg = ImageEnhance.Contrast(ImageEnhance.Color(bg).enhance(0.6)).enhance(1.35).convert("RGBA")
+    elif thumb.get("scene"):
+        bg = Image.new("RGBA", (W, H), (0, 0, 0, 255))
+        ST.draw_scene(bg, thumb["scene"], 1.2, 3.0, W, H, 0.9 * u)
+    else:
+        bg = Image.fromarray(ST.background(W, H)).convert("RGBA")
+    # sol tarafı karart (yazı okunurluğu) + kırmızı kenar tonu
+    sh = np.zeros((H, W, 4), np.uint8)
+    gx = np.linspace(1, 0, W)[None, :] ** 1.2
+    sh[..., 3] = (gx * 190).astype(np.uint8)
+    bg.alpha_composite(Image.fromarray(sh))
+    d = ImageDraw.Draw(bg)
+    if not thumb.get("photo") and not thumb.get("scene"):
+        ST.icon(d, thumb.get("icon", "question"), W * 0.76, H * 0.55, 470 * u, 2.0, (235, 232, 224), ST.C["red"])
+    # kırmızı daire + ok (dikkat noktası)
+    tx, ty = W * thumb.get("focus_x", 0.74), H * thumb.get("focus_y", 0.5)
+    r = 150 * u
+    d.ellipse((tx - r, ty - r, tx + r, ty + r), outline=(235, 30, 30, 255), width=int(12 * u))
+    ex, ey = tx - r * 0.78, ty - r * 0.62          # dairenin sol üst kenarı
+    ax, ay = ex - r * 1.1, ey - r * 0.9
+    d.line((ax, ay, ex, ey), fill=(235, 30, 30, 255), width=int(16 * u))
+    d.polygon([(ex + 8 * u, ey + 8 * u), (ex - r * 0.42, ey - r * 0.08), (ex - r * 0.08, ey - r * 0.42)], fill=(235, 30, 30, 255))
+    # yazılar (kalın kontur)
     lines = thumb.get("lines", ["GİZEM"])
-    u = 1.0 if fmt == "landscape" else 1.25
-    x0 = W * (0.06 if fmt == "landscape" else 0.5)
-    y = H * (0.16 if fmt == "landscape" else 0.2)
+    x0 = 46 * u
+    y = H * 0.2 if fmt == "landscape" else H * 0.15
     for i, ln in enumerate(lines[:3]):
         red = i == thumb.get("red", 1)
-        f = ST.F((175 if red else 120) * u, 900)
-        anchor = "lm" if fmt == "landscape" else "mm"
-        d.text((x0 + 8, y + 10), ST.up(ln), font=f, fill=(0, 0, 0, 200), anchor=anchor)
-        d.text((x0, y), ST.up(ln), font=f, fill=(ST.C["red"] if red else (250, 248, 240)) + (255,), anchor=anchor)
-        y += (200 if red else 150) * u
-    ic = thumb.get("icon", "question")
-    cx, cy = (W * 0.78, H * 0.55) if fmt == "landscape" else (W * 0.5, H * 0.72)
-    ST.icon(d, ic, cx, cy, (520 if fmt == "landscape" else 640), 2.0, (235, 232, 224), ST.C["red"])
-    a = np.array(layer)
-    al = a[..., 3:4].astype(np.float32) / 255
-    out = (fr * (1 - al) + a[..., :3] * al).astype(np.uint8)
-    img = Image.fromarray(out)
-    if fmt == "landscape":
-        img = img.resize((1280, 720), Image.LANCZOS)
-    img.save(path, quality=90)
+        size = (150 if red else 104) * u
+        f = ST.F(size, 900)
+        while f.getlength(ST.up(ln)) > W * 0.62 and size > 50:
+            size -= 6
+            f = ST.F(size, 900)
+        col = (255, 214, 0) if red else (255, 255, 255)
+        d.text((x0, y), ST.up(ln), font=f, fill=col + (255,), anchor="lm", stroke_width=int(10 * u),
+               stroke_fill=(0, 0, 0, 255))
+        y += size * 1.12
+    tag = thumb.get("tag", "GERÇEK OLAY")
+    if tag:
+        f = ST.F(40 * u, 800)
+        tw = f.getlength(tag)
+        d.rounded_rectangle((x0, H - 110 * u, x0 + tw + 40 * u, H - 50 * u), radius=int(10 * u), fill=(220, 25, 25, 255))
+        d.text((x0 + 20 * u, H - 80 * u), tag, font=f, fill=(255, 255, 255, 255), anchor="lm")
+    bg.convert("RGB").save(path, quality=90)
 
 
 def produce_one(vid, beats, fmt, brand, theme, publish, out_dir, use_tts=True, workers=None, preview=False,
@@ -328,6 +358,10 @@ def produce_one(vid, beats, fmt, brand, theme, publish, out_dir, use_tts=True, w
     meta = f"{publish.get('title', vid)}\n\n{desc}\n\n{' '.join(publish.get('hashtags', []))}\n"
     open(os.path.join(out_dir, vid + "_metadata.txt"), "w", encoding="utf-8").write(meta)
     kp = os.path.join(out_dir, vid + "_kapak.jpg")
+    if thumb and thumb.get("photo_url"):
+        tb = [{"show": {"type": "photo", "url": thumb["photo_url"]}}]
+        fetch_photos(tb, os.path.join(out_dir, "_photos"))
+        thumb = dict(thumb, photo=tb[0]["show"].get("_local"))
     if thumb:
         make_thumbnail(kp, thumb, fmt, theme, brand)
     else:

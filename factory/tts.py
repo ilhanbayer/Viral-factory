@@ -28,7 +28,7 @@ SPEAKERS = {"ahmet": "tr-TR-AhmetNeural", "emel": "tr-TR-EmelNeural"}
 CONFIG = {
     "engine": os.environ.get("VOICE_ENGINE", "edge"),
     "speaker": os.environ.get("VOICE_NAME", "ahmet"),
-    "rate": os.environ.get("VOICE_RATE", "+6%"),
+    "rate": os.environ.get("VOICE_RATE", "+0%"),
     "pitch": os.environ.get("VOICE_PITCH", "-2Hz"),     # biraz daha tok, otoriter anlatıcı
 }
 
@@ -89,9 +89,9 @@ def _pct(s):
 
 def prosody(role, i, n, sent):
     """Sunucu/belgesel anlatıcısı gibi vurgu: cümlenin videodaki görevine göre hız, ton, güç ve ardından gelen es."""
-    r, p, v, pause = _pct(CONFIG["rate"]), _pct(CONFIG["pitch"].replace("Hz", "")), 0, 0.17
+    r, p, v, pause = _pct(CONFIG["rate"]), _pct(CONFIG["pitch"].replace("Hz", "")), 0, 0.3
     if role == "item" and i == 0:            # "Yedinci, Matterhorn."  -> tok, yüksek, kısa es
-        r, p, v, pause = r - 6, p + 7, v + 12, 0.12
+        r, p, v, pause = r - 6, p + 7, v + 12, 0.2
     elif role == "intro" and i == 0:          # kanca: biraz daha ağır ve gizemli
         r, p, pause = r - 4, p - 2, 0.22
     elif role == "intro" and i == n - 1:      # "İşte ...!" -> coşkulu
