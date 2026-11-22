@@ -229,6 +229,9 @@ def draw_visual(img, show, t, dur, cx, cy, u):
     typ = show.get("type", "title")
     red, org, txt = C["red"], C["orange"], C["text"]
 
+    if typ == "photo":
+        draw_photo(img, show, t, dur, cx, cy, u)
+        return typ
     if typ == "tally":
         n = int(show.get("n", 5))
         k = n * eo(t / max(0.5, min(1.6, dur * 0.6)))
@@ -348,7 +351,8 @@ def draw_visual(img, show, t, dur, cx, cy, u):
             a = cl((t - i * 0.08) / 0.25)
             gone = show.get("fade_out") and t > dur * 0.55 and i not in hl
             col = red if i in hl else txt
-            person(d, x, y, h * (0.85 + 0.15 * a), A(col, 255 * a * (0.25 if gone else 1)))
+            br = 1 + 0.015 * math.sin(t * 3 + i)
+            person(d, x, y, h * (0.85 + 0.15 * a) * br, A(col, 255 * a * (0.25 if gone else 1)))
         if show.get("label"):
             d.text((cx, cy + h + rows * 120 * u), up(show["label"]), font=F(60 * u), fill=red, anchor="mm")
 
@@ -430,7 +434,9 @@ def draw_visual(img, show, t, dur, cx, cy, u):
                     d.line((x + 20 * u, y, x + 20 * u + (w - 40 * u) * sk, y), fill=red, width=int(9 * u))
 
     elif typ == "icon":
-        icon(d, show.get("name", "question"), cx, cy, 560 * u * (0.92 + 0.08 * eo(t / 0.4)), t, txt, red)
+        bob = math.sin(t * 2.2) * 10 * u
+        icon(d, show.get("name", "question"), cx, cy + bob, 560 * u * (0.92 + 0.08 * eo(t / 0.4)) * (1 + 0.02 * math.sin(t * 3)),
+             t, txt, red)
         if show.get("label"):
             d.text((cx, cy + 420 * u), up(show["label"]), font=F(70 * u, 800), fill=org, anchor="mm")
 
@@ -510,6 +516,8 @@ def draw_caption(fr, words_kind, timings, t, cx, cy, u):
     vis = [(w, k) for (w, k, i) in cur if timings[i][1] - 0.04 <= t]
     if not vis:
         return
+    last_start = max(timings[i][1] for (w, k, i) in cur if timings[i][1] - 0.04 <= t)
+    pop = 1 + 0.14 * (1 - eo((t - last_start) / 0.16))
     f = F(84 * u, 700)
     cols = {"red": C["red"], "org": C["orange"], "txt": (245, 242, 236)}
     words = [up(w.strip(",.;:")) for w, _ in vis]
@@ -528,6 +536,9 @@ def draw_caption(fr, words_kind, timings, t, cx, cy, u):
         ld.text((x + 3 * u, bh / 2 + 4 * u), w, font=f, fill=(0, 0, 0, 200), anchor="lm")
         ld.text((x, bh / 2), w, font=f, fill=cols[k] + (255,), anchor="lm")
         x += f.getlength(w) + space
+    if pop > 1.005:
+        layer = layer.resize((int(bw * pop), int(bh * pop)), Image.BILINEAR)
+        bw, bh = layer.size
     arr = np.array(layer)
     x0, y0 = int(cx - bw / 2), int(cy - bh / 2)
     x1, y1 = min(W, x0 + bw), min(H, y0 + bh)
@@ -557,3 +568,181 @@ def brand_sprite(text, u):
     d.rectangle((0, 14 * u, 7 * u, 62 * u), fill=C["red"] + (255,))
     spaced(d, (26 * u, 38 * u), up(text), f, (235, 230, 222, 235), 7 * u, anchor="l")
     return np.array(im)
+
+
+# ============================================================ DİNAMİK KATMANLAR (sürekli hareket)
+class Atmosphere:
+    """Arka planda sürekli hareket: sis akışı, toz parçacıkları, ışık süzmesi."""
+
+    def __init__(self, W, H, seed=0):
+        self.W, self.H = W, H
+        rng = np.random.default_rng(seed)
+        n = 256
+        k = np.fft.fftfreq(n)
+        kk = np.sqrt(k[:, None] ** 2 + k[None, :] ** 2)
+        kk[0, 0] = 1
+        f = kk ** -1.6 * np.exp(1j * rng.uniform(0, 6.28, (n, n)))
+        f[0, 0] = 0
+        fog = np.real(np.fft.ifft2(f))
+        fog = (fog - fog.min()) / (fog.max() - fog.min())
+        fog = np.clip((fog - 0.45) * 2.2, 0, 1).astype(np.float32)
+        self.fog = cv2.resize(np.tile(fog, (1, 2)), (W * 2, H), interpolation=cv2.INTER_CUBIC)
+        self.p = rng.uniform(0, 1, (90, 4)).astype(np.float32)   # x, y, size, speed
+        yy, xx = np.mgrid[0:H, 0:W].astype(np.float32)
+        self.diag = (xx / W + yy / H * 0.6)
+
+    def apply(self, fr, t, glow):
+        W, H = self.W, self.H
+        off = int((t * 18) % W)
+        fog = self.fog[:, off:off + W]
+        f = fr.astype(np.float32)
+        f += fog[..., None] * (np.array(glow, np.float32) * 0.55 + 14)
+        # ışık süzmesi
+        ph = (t * 0.07) % 1.6 - 0.3
+        band = np.exp(-((self.diag - ph * 1.8) ** 2) / 0.012) * 26
+        f += band[..., None]
+        out = np.clip(f, 0, 255).astype(np.uint8)
+        # toz
+        for x, y, s, v in self.p:
+            px = int(((x + t * 0.01 * (0.3 + v)) % 1) * W)
+            py = int(((y - t * 0.02 * (0.3 + v)) % 1) * H)
+            r = max(1, int(1 + s * 3.5 * W / 1080))
+            a = 0.25 + 0.5 * abs(math.sin(t * (1 + v) + x * 10))
+            c = int(170 * a)
+            cv2.circle(out, (px, py), r, (c, c, c), -1, cv2.LINE_AA)
+        return out
+
+
+def ghost_word(fr, word, t, dur, W, H, u):
+    """Arka planda dev, yarı saydam anahtar kelime (kinetik tipografi)."""
+    if not word:
+        return
+    f = F(330 * u, 900)
+    tw = f.getlength(word)
+    img = Image.new("L", (int(tw + 40), int(f.size * 1.3)), 0)
+    ImageDraw.Draw(img).text((20, f.size * 0.65), word, font=f, fill=255, anchor="lm")
+    a = np.array(img).astype(np.float32) / 255 * 0.07 * min(1, t / 0.4)
+    x0 = int(W / 2 - img.width / 2 + (0.5 - t / max(dur, 0.1)) * 120 * u)
+    y0 = int(H * 0.2 - img.height / 2)
+    x1, y1 = max(0, x0), max(0, y0)
+    x2, y2 = min(W, x0 + img.width), min(H, y0 + img.height)
+    if x2 <= x1 or y2 <= y1:
+        return
+    sub = a[y1 - y0:y2 - y0, x1 - x0:x2 - x0, None]
+    col = np.array(C["red"], np.float32)
+    fr[y1:y2, x1:x2] = np.clip(fr[y1:y2, x1:x2] * (1 - sub) + col * sub, 0, 255).astype(np.uint8)
+
+
+def hud(fr, gt, total, W, H, u, file_no="001"):
+    """Vizör köşeleri, yanıp sönen KAYIT, zaman kodu, alt ilerleme çubuğu."""
+    col = (220, 216, 206)
+    m, L_ = int(34 * u), int(60 * u)
+    th = max(2, int(3 * u))
+    for (x, y, dx, dy) in [(m, m + int(60 * u), 1, 1), (W - m, m + int(60 * u), -1, 1), (m, H - m, 1, -1),
+                           (W - m, H - m, -1, -1)]:
+        cv2.line(fr, (x, y), (x + dx * L_, y), col, th, cv2.LINE_AA)
+        cv2.line(fr, (x, y), (x, y + dy * L_), col, th, cv2.LINE_AA)
+    if int(gt * 1.6) % 2 == 0:
+        cv2.circle(fr, (W - m - int(150 * u), m + int(96 * u)), int(9 * u), C["red"], -1, cv2.LINE_AA)
+    mm, ss = divmod(int(gt), 60)
+    fr_ = int((gt % 1) * 30)
+    txt = f"KAYIT  {mm:02d}:{ss:02d}:{fr_:02d}"
+    cv2.putText(fr, txt, (W - m - int(130 * u), m + int(104 * u)), cv2.FONT_HERSHEY_SIMPLEX, 0.62 * u, col,
+                max(1, int(1.6 * u)), cv2.LINE_AA)
+    cv2.putText(fr, f"DOSYA #{file_no}", (m + int(20 * u), H - m - int(22 * u)), cv2.FONT_HERSHEY_SIMPLEX,
+                0.6 * u, col, max(1, int(1.5 * u)), cv2.LINE_AA)
+    p = min(1.0, gt / max(total, 1))
+    y = H - int(8 * u)
+    cv2.rectangle(fr, (0, y), (W, H), (40, 40, 44), -1)
+    cv2.rectangle(fr, (0, y), (int(W * p), H), C["red"], -1)
+
+
+def transition(fr, kind, t, seed):
+    """Sahne girişi efektleri (ilk ~0.22 sn)."""
+    k = 1 - eo(t / 0.22)
+    if k <= 0.01:
+        return fr
+    H, W = fr.shape[:2]
+    if kind == "whip":
+        dx = int(W * 0.35 * k) * (1 if seed % 2 else -1)
+        M_ = np.float32([[1, 0, dx], [0, 1, 0]])
+        fr = cv2.warpAffine(fr, M_, (W, H), borderMode=cv2.BORDER_REFLECT)
+        kz = int(90 * k) | 1
+        return cv2.blur(fr, (kz, 1))
+    if kind == "glitch":
+        out = fr.copy()
+        a = int(30 * k)
+        if a > 0:
+            out[:, a:, 0] = fr[:, :-a, 0]
+            out[:, :-a, 2] = fr[:, a:, 2]
+        rng = np.random.default_rng(int(t * 1000) + seed)
+        for _ in range(int(8 * k)):
+            y = rng.integers(0, H - 40)
+            h = rng.integers(8, 60)
+            out[y:y + h] = np.roll(out[y:y + h], rng.integers(-120, 120), axis=1)
+        return out
+    if kind == "flash":
+        return cv2.addWeighted(fr, 1 - 0.85 * k, np.full_like(fr, 255), 0.85 * k, 0)
+    # zoom
+    s = 1 + 0.25 * k
+    M_ = cv2.getRotationMatrix2D((W / 2, H / 2), 0, s)
+    fr = cv2.warpAffine(fr, M_, (W, H), borderMode=cv2.BORDER_REFLECT)
+    return cv2.blur(fr, (int(25 * k) | 1, int(25 * k) | 1))
+
+
+_photo_cache = {}
+
+
+def load_photo(path):
+    if path in _photo_cache:
+        return _photo_cache[path]
+    im = None
+    if path and os.path.exists(path):
+        try:
+            im = Image.open(path).convert("RGB")
+        except Exception:
+            im = None
+    _photo_cache[path] = im
+    return im
+
+
+def draw_photo(img, show, t, dur, cx, cy, u):
+    """Arşiv fotoğrafı: Ken Burns + eskitilmiş ton + kâğıt çerçeve + bant + etiket."""
+    ph = load_photo(show.get("_local"))
+    if ph is None:
+        icon(ImageDraw.Draw(img), show.get("fallback_icon", "camera"), cx, cy, 520 * u, t, C["text"], C["red"])
+        return
+    fw, fh = int(860 * u), int(640 * u)
+    if show.get("portrait"):
+        fw, fh = int(640 * u), int(820 * u)
+    s = 1.06 + 0.12 * (t / max(dur, 0.1))
+    iw, ih = ph.size
+    sc = max(fw / iw, fh / ih) * s
+    pw, phh = int(iw * sc), int(ih * sc)
+    dx = (pw - fw) * (0.5 + 0.35 * math.sin(t * 0.25 + 1))
+    dy = (phh - fh) * (0.5 + 0.3 * math.cos(t * 0.2))
+    crop = ph.resize((pw, phh), Image.BICUBIC).crop((int(dx), int(dy), int(dx) + fw, int(dy) + fh))
+    a = np.array(crop).astype(np.float32)
+    g = a.mean(-1, keepdims=True)
+    tone = np.array(C["paper"], np.float32) / 255
+    a = np.clip((g * 0.85 + a * 0.15) * tone * 1.05, 0, 255)
+    rng = np.random.default_rng(int(t * 24))
+    a += rng.normal(0, 9, a.shape[:2])[..., None]
+    crop = Image.fromarray(np.clip(a, 0, 255).astype(np.uint8))
+    bw = int(22 * u)
+    frame = Image.new("RGBA", (fw + 2 * bw, fh + 2 * bw + int(70 * u)), (238, 233, 220, 255))
+    frame.paste(crop, (bw, bw))
+    fd = ImageDraw.Draw(frame)
+    if show.get("label"):
+        fd.text((bw, fh + bw + int(36 * u)), up(show["label"]), font=M(int(30 * u)), fill=(40, 36, 30), anchor="lm")
+    for (tx, ty, ang) in [(0.12, 0, -20), (0.88, 0, 22)]:
+        tape = Image.new("RGBA", (int(170 * u), int(46 * u)), (220, 205, 150, 170))
+        tape = tape.rotate(ang, expand=True)
+        frame.alpha_composite(tape, (int(frame.width * tx - tape.width / 2), int(-tape.height * 0.35) + 10))
+    rot = show.get("rot", -2.5) + 1.5 * math.sin(t * 0.6)
+    frame = frame.rotate(rot, expand=True, resample=Image.BICUBIC)
+    sh = Image.new("RGBA", frame.size, (0, 0, 0, 0))
+    sh.paste((0, 0, 0, 160), (0, 0), frame.split()[3])
+    sh = sh.filter(ImageFilter.GaussianBlur(18 * u))
+    img.alpha_composite(sh, (int(cx - frame.width / 2 + 16 * u), int(cy - frame.height / 2 + 24 * u)))
+    img.alpha_composite(frame, (int(cx - frame.width / 2), int(cy - frame.height / 2)))

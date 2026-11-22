@@ -1,5 +1,6 @@
 """Hikâye formatı: senaryo -> (1 yatay uzun video + N dikey Shorts) üretimi."""
 import json
+import math
 import os
 import subprocess
 import time
@@ -48,47 +49,86 @@ def _grain(H, W, k):
     return cv2.resize(rng.normal(0, 7, (H // 3, W // 3)).astype(np.float32), (W, H), interpolation=cv2.INTER_LINEAR)
 
 
+TRANS = ["whip", "zoom", "glitch", "whip", "flash", "zoom"]
+
+
+def _keyword(beat):
+    for w in beat["say"].split():
+        if "*" in w:
+            return ST.up(w.replace("*", "").strip(".,!?;:"))
+    return ""
+
+
+def _hot_times(s):
+    """Vurgulu (*) kelimelerin söylenme anları -> kamera darbesi + ses."""
+    out = []
+    for i, (w, k) in enumerate(s["kinds"]):
+        if k == "red" and i < len(s["words"]):
+            out.append(s["words"][i][1])
+    return out
+
+
 def render_chunk(args):
-    segs, fmt, brand, theme, out_path, preview = args
+    segs, fmt, brand, theme, out_path, preview, total = (list(args) + [None])[:7]
     cv2.setNumThreads(1)
     ST.set_theme(theme)
     P = FMT[fmt]
     W, H, u = P["W"], P["H"], P["u"]
+    hu = 1.0 if fmt == "vertical" else 0.85
     cx, cy = W / 2, H * P["cy"]
+    total = total or (segs[-1]["start"] + segs[-1]["dur"])
     bg = ST.background(W, H)
+    atm = ST.Atmosphere(W, H, seed=int(segs[0]["start"]))
     grains = [_grain(H, W, k) for k in range(6)]
     brand_spr = ST.brand_sprite(brand, 1.0 if fmt == "vertical" else 0.8)
+    yy, xx = np.mgrid[0:H, 0:W].astype(np.float32)
+    vig_r = np.sqrt(((xx - W / 2) / (W / 2)) ** 2 + ((yy - H / 2) / (H / 2)) ** 2)
+    red_vig = np.clip(vig_r - 0.55, 0, 1)[..., None] ** 1.5
     if preview is None:
         tmp = out_path[:-4] + ".part.mp4"
         proc = subprocess.Popen(["ffmpeg", "-y", "-loglevel", "error", "-f", "rawvideo", "-pix_fmt", "rgb24",
                                  "-s", f"{W}x{H}", "-r", str(FPS), "-i", "-", "-c:v", "libx264", "-preset", "veryfast",
-                                 "-crf", "21", "-maxrate", "6M", "-bufsize", "12M", "-pix_fmt", "yuv420p", tmp],
+                                 "-crf", "21", "-maxrate", "8M", "-bufsize", "16M", "-pix_fmt", "yuv420p", tmp],
                                 stdin=subprocess.PIPE)
     shots = []
     fi = 0
     for s in segs:
         D = s["dur"]
-        times = [p for p in (preview or [])] if preview is not None else None
-        frames = [int(x * FPS) for x in times] if times is not None else range(int(round(D * FPS)))
+        frames = [int(x * FPS) for x in preview] if preview is not None else range(int(round(D * FPS)))
         show = s["beat"].get("show", {"type": "title", "lines": [s["beat"]["say"][:20]]})
+        kw = _keyword(s["beat"])
+        hot = _hot_times(s)
+        trans = TRANS[s["i"] % len(TRANS)] if s["i"] > 0 else "zoom"
+        hit = s["beat"].get("sfx") == "hit"
         for k in frames:
             t = k / FPS
-            fr = bg.copy()
+            gt = s["start"] + t
+            fr = atm.apply(bg, gt, ST.C["glow"])
+            ST.ghost_word(fr, kw, t, D, W, H, u)
             layer = Image.new("RGBA", (W, H), (0, 0, 0, 0))
             ST.draw_visual(layer, show, t, D, cx, cy, u)
             la = np.array(layer)
-            # yavaş itme (push-in) + giriş zıplaması
+            # sürekli kamera hareketi + vurgulu kelimede darbe
+            punch = sum(max(0.0, 1 - (t - h) / 0.28) for h in hot if t >= h)
             zin = ST.eo(t / 0.18)
-            sc = 1.0 + 0.045 * (t / D) + 0.07 * (1 - zin)
-            if abs(sc - 1) > 1e-3:
-                M_ = cv2.getRotationMatrix2D((cx, cy), 0, sc)
-                la = cv2.warpAffine(la, M_, (W, H), flags=cv2.INTER_LINEAR, borderValue=(0, 0, 0, 0))
+            sc = 1.0 + 0.08 * (t / D) + 0.07 * (1 - zin) + 0.05 * min(1, punch)
+            ang = 0.8 * math.sin(gt * 0.35) + (1.2 * math.sin(t * 40) * max(0, 1 - t / 0.3) if hit else 0)
+            dx = 14 * u * math.sin(gt * 0.5) + 6 * u * math.sin(t * 50) * min(1, punch)
+            dy = 10 * u * math.cos(gt * 0.4)
+            M_ = cv2.getRotationMatrix2D((cx, cy), ang, sc)
+            M_[0, 2] += dx
+            M_[1, 2] += dy
+            la = cv2.warpAffine(la, M_, (W, H), flags=cv2.INTER_LINEAR, borderValue=(0, 0, 0, 0))
             a = la[..., 3:4].astype(np.float32) / 255 * min(1.0, 0.25 + zin)
             f = fr.astype(np.float32) * (1 - a) + la[..., :3].astype(np.float32) * a
             f += grains[(fi + k) % 6][..., None]
-            if s["beat"].get("sfx") == "hit" and t < 0.25:
-                f += (1 - t / 0.25) * 90
+            # kırmızı nabız (gerilim anı)
+            pulse = (max(0, 1 - t / 0.6) if hit else 0) + 0.35 * min(1, punch)
+            if pulse > 0.01:
+                f += red_vig * np.array(ST.C["red"], np.float32) * 0.55 * pulse
             fr = np.clip(f, 0, 255).astype(np.uint8)
+            fr = ST.transition(fr, trans, t, s["i"]) if s["i"] > 0 else fr
+            ST.hud(fr, gt, total, W, H, hu)
             ST.draw_caption(fr, s["kinds"], s["words"], t, W / 2, H * P["cap_y"], P["cap_u"])
             bh, bw = brand_spr.shape[:2]
             by, bx = int(40 * P["cap_u"]), int((W - bw) / 2) if fmt == "vertical" else int(50)
@@ -108,6 +148,26 @@ def render_chunk(args):
     return out_path
 
 
+def fetch_photos(beats, cache):
+    """'photo' sahnelerinin görsellerini (Wikimedia Commons vb. telifsiz kaynak URL'si) indir."""
+    import hashlib
+    import urllib.request
+    os.makedirs(cache, exist_ok=True)
+    for b in beats:
+        sh = b.get("show", {})
+        if sh.get("type") != "photo" or not sh.get("url"):
+            continue
+        fn = os.path.join(cache, hashlib.md5(sh["url"].encode()).hexdigest()[:12] + ".img")
+        if not os.path.exists(fn):
+            try:
+                req = urllib.request.Request(sh["url"], headers={"User-Agent": "viral-factory/1.0 (github.com/ilhanbayer)"})
+                open(fn, "wb").write(urllib.request.urlopen(req, timeout=60).read())
+            except Exception as e:
+                print("  [foto] indirilemedi:", sh["url"][:80], type(e).__name__)
+                continue
+        sh["_local"] = fn
+
+
 # ------------------------------------------------------------------ audio
 def plan_audio(segs, total):
     sfx, voices, events = [], [], []
@@ -120,7 +180,14 @@ def plan_audio(segs, total):
         if s["wav"]:
             voices.append((st + s["voff"], s["wav"]))
         if s["i"] > 0:
-            sfx.append((st - 0.12, "whoosh", {"d": 0.32, "seed": s["i"]}, 0.22))
+            sfx.append((st - 0.15, "whoosh", {"d": 0.4, "seed": s["i"]}, 0.45))
+            if s["i"] % 6 == 2:
+                sfx.append((st, "glitch", {"seed": s["i"]}, 0.35))
+        for h in _hot_times(s):
+            sfx.append((st + h, "impact", {"pitch": 70, "d": 0.6, "seed": s["i"] + 7}, 0.22))
+        if typ == "photo":
+            sfx.append((st + 0.02, "tick", {"f": 5200}, 0.5))
+            sfx.append((st + 0.06, "glitch", {"seed": 99}, 0.25))
         if typ == "dossier":
             for j in range(int(len(show.get("name", "X")) * 1.0)):
                 sfx.append((st + 0.15 + j * 0.06, "tick", {"f": 1800 + (j % 3) * 400}, 0.18))
@@ -138,7 +205,7 @@ def plan_audio(segs, total):
             sfx.append((st, "braam", {"d": 2.4}, 0.5))
         elif b.get("sfx") == "riser":
             sfx.append((st + s["dur"] - 2.2, "riser", {"d": 2.2, "seed": s["i"]}, 0.6))
-        inten.append((st, 0.2 + 0.55 * (s["i"] / max(1, n - 1))))
+        inten.append((st, 0.45 + 0.5 * (s["i"] / max(1, n - 1))))
     inten.append((total, 0.3))
     return sfx, voices, events, inten, wind
 
@@ -212,13 +279,14 @@ def produce_one(vid, beats, fmt, brand, theme, publish, out_dir, use_tts=True, w
     work = os.path.join(out_dir, vid + "_work")
     os.makedirs(work, exist_ok=True)
     print(f"▶ {vid} [{fmt}]: seslendirme + zaman çizelgesi")
+    fetch_photos(beats, os.path.join(out_dir, "_photos"))
     segs, total = build(beats, os.path.join(out_dir, "_voicecache"), use_tts)
     print(f"  süre {total:.1f}s, {len(segs)} sahne")
     if preview:
         pick = [segs[0], segs[len(segs) // 3], segs[2 * len(segs) // 3], segs[-1]]
         shots = []
         for s in pick:
-            shots += render_chunk(([s], fmt, brand, theme, None, [min(s["dur"] - 0.05, 1.4)]))
+            shots += render_chunk(([s], fmt, brand, theme, None, [min(s["dur"] - 0.05, 1.4)], total))
         return shots
     # sahneleri ~12 sn'lik parçalara böl, paralel render
     chunks, cur, acc = [], [], 0
@@ -230,7 +298,7 @@ def produce_one(vid, beats, fmt, brand, theme, publish, out_dir, use_tts=True, w
             cur, acc = [], 0
     if cur:
         chunks.append(cur)
-    jobs = [(c, fmt, brand, theme, os.path.join(work, f"c_{i:03d}.mp4"), None) for i, c in enumerate(chunks)]
+    jobs = [(c, fmt, brand, theme, os.path.join(work, f"c_{i:03d}.mp4"), None, total) for i, c in enumerate(chunks)]
     todo = [j for j in jobs if not os.path.exists(j[4])]
     t0 = time.time()
     with Pool(workers or os.cpu_count()) as pool:
