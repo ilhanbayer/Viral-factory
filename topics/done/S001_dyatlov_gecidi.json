@@ -351,6 +351,36 @@
      "red": 1
     }
    }
+  ],
+  "thumb": {
+   "lines": [
+    "DOKUZ DAĞCIYI",
+    "NE ÖLDÜRDÜ?"
+   ],
+   "red": 1,
+   "icon": "tent"
+  },
+  "chapters": [
+   [
+    0,
+    "Giriş"
+   ],
+   [
+    4,
+    "Sefer başlıyor"
+   ],
+   [
+    14,
+    "Çadır bulunuyor"
+   ],
+   [
+    21,
+    "Teoriler"
+   ],
+   [
+    27,
+    "Bilimsel açıklama"
+   ]
   ]
  },
  "shorts": [

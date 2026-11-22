@@ -158,7 +158,57 @@ def write_srt(segs, path):
 
 
 # ------------------------------------------------------------------ produce one video
-def produce_one(vid, beats, fmt, brand, theme, publish, out_dir, use_tts=True, workers=None, preview=False):
+def chapters_text(segs, chapters):
+    """YouTube bölümleri: [[beat_index, "Başlık"], ...] -> '00:00 Başlık' satırları (ilk 00:00, en az 3, >=10 sn)."""
+    if not chapters or len(chapters) < 3:
+        return ""
+    out, last = [], -99
+    for bi, name in sorted(chapters):
+        if bi >= len(segs):
+            continue
+        ts = 0 if not out else segs[bi]["start"]
+        if ts - last < 10:
+            continue
+        m, s = divmod(int(ts), 60)
+        out.append(f"{m:02d}:{s:02d} {name}")
+        last = ts
+    return "Bölümler:\n" + "\n".join(out) if len(out) >= 3 else ""
+
+
+def make_thumbnail(path, thumb, fmt, theme, brand):
+    """Tıklanma odaklı kapak: büyük, kısa, kontrastlı başlık + ikon (1280x720 / 1080x1920)."""
+    ST.set_theme(theme)
+    P = FMT[fmt]
+    W, H = P["W"], P["H"]
+    fr = ST.background(W, H)
+    layer = Image.new("RGBA", (W, H), (0, 0, 0, 0))
+    from PIL import ImageDraw
+    d = ImageDraw.Draw(layer)
+    lines = thumb.get("lines", ["GİZEM"])
+    u = 1.0 if fmt == "landscape" else 1.25
+    x0 = W * (0.06 if fmt == "landscape" else 0.5)
+    y = H * (0.16 if fmt == "landscape" else 0.2)
+    for i, ln in enumerate(lines[:3]):
+        red = i == thumb.get("red", 1)
+        f = ST.F((175 if red else 120) * u, 900)
+        anchor = "lm" if fmt == "landscape" else "mm"
+        d.text((x0 + 8, y + 10), ST.up(ln), font=f, fill=(0, 0, 0, 200), anchor=anchor)
+        d.text((x0, y), ST.up(ln), font=f, fill=(ST.C["red"] if red else (250, 248, 240)) + (255,), anchor=anchor)
+        y += (200 if red else 150) * u
+    ic = thumb.get("icon", "question")
+    cx, cy = (W * 0.78, H * 0.55) if fmt == "landscape" else (W * 0.5, H * 0.72)
+    ST.icon(d, ic, cx, cy, (520 if fmt == "landscape" else 640), 2.0, (235, 232, 224), ST.C["red"])
+    a = np.array(layer)
+    al = a[..., 3:4].astype(np.float32) / 255
+    out = (fr * (1 - al) + a[..., :3] * al).astype(np.uint8)
+    img = Image.fromarray(out)
+    if fmt == "landscape":
+        img = img.resize((1280, 720), Image.LANCZOS)
+    img.save(path, quality=90)
+
+
+def produce_one(vid, beats, fmt, brand, theme, publish, out_dir, use_tts=True, workers=None, preview=False,
+                thumb=None, chapters=None):
     work = os.path.join(out_dir, vid + "_work")
     os.makedirs(work, exist_ok=True)
     print(f"▶ {vid} [{fmt}]: seslendirme + zaman çizelgesi")
@@ -205,10 +255,16 @@ def produce_one(vid, beats, fmt, brand, theme, publish, out_dir, use_tts=True, w
                    check=True)
     os.replace(tmp, final)
     write_srt(segs, os.path.join(out_dir, vid + ".srt"))
-    meta = f"{publish.get('title', vid)}\n\n{publish.get('description', '')}\n\n{' '.join(publish.get('hashtags', []))}\n"
+    ch = chapters_text(segs, chapters) if fmt == "landscape" else ""
+    desc = publish.get("description", "") + (("\n\n" + ch) if ch else "")
+    meta = f"{publish.get('title', vid)}\n\n{desc}\n\n{' '.join(publish.get('hashtags', []))}\n"
     open(os.path.join(out_dir, vid + "_metadata.txt"), "w", encoding="utf-8").write(meta)
-    subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-ss", f"{min(total - 0.1, 1.2):.2f}", "-i", final,
-                    "-frames:v", "1", "-q:v", "2", os.path.join(out_dir, vid + "_kapak.jpg")], check=True)
+    kp = os.path.join(out_dir, vid + "_kapak.jpg")
+    if thumb:
+        make_thumbnail(kp, thumb, fmt, theme, brand)
+    else:
+        subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-ss", f"{min(total - 0.1, 1.2):.2f}", "-i", final,
+                        "-frames:v", "1", "-q:v", "2", kp], check=True)
     print(f"✔ {final}")
     return final
 
@@ -222,7 +278,7 @@ def produce_story(script, out_dir, use_tts=True, workers=None):
     finals = []
     L = script["long"]
     finals.append(produce_one(script["id"], L["beats"], "landscape", brand, theme, pub.get("long", {}), out_dir,
-                              use_tts, workers))
+                              use_tts, workers, thumb=L.get("thumb"), chapters=L.get("chapters")))
     for k, sh in enumerate(script.get("shorts", [])):
         beats = sh.get("hook", []) + L["beats"][sh["from"]:sh["to"] + 1] + sh.get("outro", [])
         p = (pub.get("shorts") or [{}] * 3)[k] if k < len(pub.get("shorts", [])) else {}
