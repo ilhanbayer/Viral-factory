@@ -1,7 +1,7 @@
 {
  "months": {
   "2026-11": {
-   "uploads": 8
+   "uploads": 11
   }
  },
  "uploaded": {
@@ -10,7 +10,9 @@
   "video-6-S002_dyatlov_gecidi_tam_hikaye_short1": "PrVN7KiSEMU",
   "video-6-S002_dyatlov_gecidi_tam_hikaye_short2": "7UYDSmZ_pd0",
   "video-6-S002_dyatlov_gecidi_tam_hikaye_short3": "u-gozx3i2Cs",
-  "video-7-S003_mary_celeste_hayalet_gemi": "zi4z0skeamU"
+  "video-7-S003_mary_celeste_hayalet_gemi": "zi4z0skeamU",
+  "video-7-S003_mary_celeste_hayalet_gemi_short1": "DvocNYZKhBI",
+  "video-7-S003_mary_celeste_hayalet_gemi_short2": "ipBS03qNU7o"
  },
  "note": "uploads = Zapier araç çağrısı sayısı (her biri 2 görev); ayda en fazla 45"
 }
