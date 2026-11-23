@@ -12,7 +12,8 @@
   "video-6-S002_dyatlov_gecidi_tam_hikaye_short3": "u-gozx3i2Cs",
   "video-7-S003_mary_celeste_hayalet_gemi": "zi4z0skeamU",
   "video-7-S003_mary_celeste_hayalet_gemi_short1": "DvocNYZKhBI",
-  "video-7-S003_mary_celeste_hayalet_gemi_short2": "ipBS03qNU7o"
+  "video-7-S003_mary_celeste_hayalet_gemi_short2": "ipBS03qNU7o",
+  "video-8-S004_tunguska_olayi_short1": "NOSKeqsMUgo"
  },
  "note": "uploaded = Zapier ile YouTube (ayda en fazla 45 çağrı); metricool = Metricool zamanlanmış gönderi (YouTube Shorts + Instagram Reels + TikTok)",
  "metricool": {
@@ -23,7 +24,10 @@
     "youtube",
     "instagram",
     "tiktok"
-   ]
+   ],
+   "youtube": "NOSKeqsMUgo",
+   "instagram": "https://www.instagram.com/reel/DgGPnEEhzvU/",
+   "tiktok": "7711466584740482310"
   },
   "video-8-S004_tunguska_olayi_short2": {
    "post_id": 439384544,
