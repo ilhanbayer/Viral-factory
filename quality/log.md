@@ -39,3 +39,23 @@ Düzeltmeler (kalıcı):
 - Zemin rengi araziye göre (orman/ova/çöl) ve kar sadece karlı sahnelerde; yaz sahnelerindeki karlı ağaç hatası giderildi.
 - Kuyruktaki S003 (Mary Celeste) ve S004 (Tunguska) zorunlu orana getirildi: S003 16 sahne/8 foto/3 başlık + orta abone çağrısı; S004 14 sahne/8 foto/3 başlık. Buharlı gemi yerine yelkenli.
 - Not: yerel ortamda Wikimedia erişimi yok; fotoğraflar GitHub Actions'ta çözülüyor. Yarın S003'te gerçek foto sayısı kontrol edilecek.
+
+## 2026-11-23 (16:52 görevi) — S003 Mary Celeste (uzun: zi4z0skeamU, short1: DvocNYZKhBI, short2: ipBS03qNU7o)
+Actions 7. çalışma başarılı (0 hata); 8 fotoğraftan 7'si Commons'tan bulundu (yalnızca "Benjamin Spooner Briggs" boş döndü → dosya kartına düştü).
+
+| Ölçüt | Uzun | Short3 | Not |
+|---|---|---|---|
+| Kanca | 8 | 6 | Uzun: "güvertede kimse yok" + gemi sahnesi güçlü. Short3: saat ikonu zayıf açılış |
+| Görsel çeşitlilik | 7 | 5 | Short3'te aynı Haiti fotoğrafı ~9 sn, "120 MİL" ve dosya kartı 2'şer örnekte tekrar |
+| Gerçek görsel | 7 | 6 | 7/8 foto bulundu (dün 1/8'di) ✔ |
+| Sahne canlandırma | 7 | 5 | Filika (boat) koyu ve çok küçük; günbatımı karesi boş görünüyordu |
+| Altyazı | 7 | 7 | Taşma yok |
+| Ses | 9 | 9 | −13,9 LUFS, siyah kare yok |
+| Kapak | 8 | 7 | Gerçek tablo + dev yazı + daire |
+| **Ortalama** | **7,6** | **6,4** | Uzun + short1 + short2 yüklendi; **short3 yüklenmeyecek (eşik altı)** |
+
+Düzeltmeler:
+- `boat` (filika) çizimi: en küçük boyut sınırı, açık renk kontur, kürekler ve 3 insan silüeti → karanlık sahnede artık görünüyor.
+- README paneli: YouTube'a yüklenenler ✅ bağlantıyla işaretleniyor, sıradaki konular ve Zapier çağrı sayısı gösteriliyor.
+- Kuyruğa S006 Antikythera Mekanizması eklendi (dünya gizemi; Tunguska=doğa olayı, Derinkuyu=Türkiye ile dönüşümlü). 49 beat ≈ 4,3 dk, 8 foto, 6 sahne.
+- Bugün 2 Shorts + 1 uzun yüklendi → günlük Shorts kotası doldu, bu çalışmada ek yükleme yok (ay toplamı 11/45).

@@ -1,0 +1,755 @@
+{
+ "id": "S006_antikythera_mekanizmasi",
+ "format": "story",
+ "brand": "GİZEM DOSYASI",
+ "theme": "dosya",
+ "voice": {
+  "engine": "edge",
+  "speaker": "ahmet",
+  "rate": "+0%",
+  "pitch": "-2Hz"
+ },
+ "long": {
+  "title": "Antikythera Mekanizması",
+  "beats": [
+   {
+    "say": "Anlatılana göre 1900'de bir sünger dalgıcı sudan çıktı ve bağırdı: Aşağıda *cesetler* var!",
+    "show": {
+     "type": "scene",
+     "sky": "day",
+     "land": "sea",
+     "weather": "none",
+     "moon": false,
+     "label": "1900 · ANTİKİTERA ADASI",
+     "props": [
+      {
+       "k": "boat",
+       "x": 0.45,
+       "drift": 0.5
+      }
+     ]
+    },
+    "sfx": "hit"
+   },
+   {
+    "say": "Ama dipte yatanlar ceset değil, bronz ve mermer *heykellerdi*.",
+    "show": {
+     "type": "photo",
+     "search": "Antikythera Youth bronze",
+     "label": "ANTİKİTERA GENCİ · BRONZ",
+     "fallback_show": {
+      "type": "icon",
+      "name": "eye",
+      "label": "BRONZ HEYKELLER"
+     }
+    }
+   },
+   {
+    "say": "Ve o batıktan tarihin en akıl almaz nesnesi çıktı: *2000 yıllık bir bilgisayar*.",
+    "show": {
+     "type": "photo",
+     "search": "Antikythera mechanism",
+     "label": "ANTİKİTERA MEKANİZMASI",
+     "fallback_show": {
+      "type": "icon",
+      "name": "clock"
+     },
+     "commons": "NAMA Machine d'Anticythère 1.jpg"
+    },
+    "sfx": "riser"
+   },
+   {
+    "say": "Kim yaptı? Nasıl yaptı? Ve bu bilgi neden *bin yıldan uzun* süre kayboldu?",
+    "show": {
+     "type": "list",
+     "items": [
+      "KİM YAPTI?",
+      "NASIL?",
+      "NEDEN KAYBOLDU?"
+     ]
+    }
+   },
+   {
+    "say": "Bu dosyada *Antikitera Mekanizması'nı* açıyoruz.",
+    "show": {
+     "type": "title",
+     "lines": [
+      "ANTİKYTHERA",
+      "2000 YILLIK",
+      "BİLGİSAYAR"
+     ],
+     "red": 2
+    }
+   },
+   {
+    "say": "1900 baharı. Kaptan Dimitrios Kontos ve süngercileri *fırtınadan* kaçıyordu.",
+    "show": {
+     "type": "scene",
+     "sky": "storm",
+     "land": "sea",
+     "weather": "rain",
+     "label": "1900 · EGE DENİZİ",
+     "props": [
+      {
+       "k": "boat",
+       "x": 0.4,
+       "drift": 1
+      }
+     ]
+    },
+    "sfx": "hit"
+   },
+   {
+    "say": "Girit ile Kitira arasındaki küçük *Antikitera adasına* sığındılar.",
+    "show": {
+     "type": "place",
+     "name": "ANTİKİTERA",
+     "sub": "GİRİT İLE KİTİRA ARASI"
+    }
+   },
+   {
+    "say": "Fırtına dinince dalgıçlar, adanın açıklarında *dibe* indi.",
+    "show": {
+     "type": "scene",
+     "sky": "day",
+     "land": "sea",
+     "weather": "none",
+     "moon": false,
+     "label": "ADANIN AÇIKLARI",
+     "props": [
+      {
+       "k": "boat",
+       "x": 0.55,
+       "drift": 0.3
+      }
+     ]
+    }
+   },
+   {
+    "say": "Yaklaşık *45 metre* derinlikte antik bir geminin enkazı yatıyordu.",
+    "show": {
+     "type": "number",
+     "value": 45,
+     "suffix": " M",
+     "label": "BATIK DERİNLİĞİ"
+    }
+   },
+   {
+    "say": "Gemi, milattan önce yaklaşık 70 ile 60 yılları arasında, *fırtınada* batmıştı.",
+    "show": {
+     "type": "scene",
+     "sky": "storm",
+     "land": "sea",
+     "weather": "rain",
+     "label": "MÖ 1. YÜZYIL · BATIŞ",
+     "props": [
+      {
+       "k": "sailship",
+       "x": 0.5,
+       "torn": true
+      }
+     ]
+    }
+   },
+   {
+    "say": "İçi hazineyle doluydu: heykeller, *sikkeler*, amforalar, cam eşyalar.",
+    "show": {
+     "type": "list",
+     "items": [
+      "HEYKELLER",
+      "SİKKELER",
+      "AMFORALAR",
+      "CAM EŞYALAR"
+     ]
+    }
+   },
+   {
+    "say": "Bu, tarihteki ilk büyük *sualtı arkeolojisi* kazılarından biri oldu.",
+    "show": {
+     "type": "icon",
+     "name": "documents",
+     "label": "İLK BÜYÜK SUALTI KAZISI"
+    }
+   },
+   {
+    "say": "Ama bedeli ağırdı: Bir dalgıç *hayatını kaybetti*, iki dalgıç da felç oldu.",
+    "show": {
+     "type": "people",
+     "n": 3,
+     "highlight": [
+      0,
+      1,
+      2
+     ],
+     "label": "1 ÖLÜ · 2 FELÇ"
+    },
+    "sfx": "hit"
+   },
+   {
+    "say": "Parçalar Atina'daki *Ulusal Arkeoloji Müzesi'ne* taşındı.",
+    "show": {
+     "type": "photo",
+     "search": "National Archaeological Museum Athens",
+     "label": "ULUSAL ARKEOLOJİ MÜZESİ, ATİNA",
+     "fallback_show": {
+      "type": "place",
+      "name": "ATİNA",
+      "sub": "ULUSAL ARKEOLOJİ MÜZESİ"
+     }
+    }
+   },
+   {
+    "say": "Herkes heykellere bakarken, paslı taş parçaları *kimsenin ilgisini çekmedi*.",
+    "show": {
+     "type": "photo",
+     "search": "Antikythera mechanism fragment",
+     "label": "PASLI PARÇALAR",
+     "fallback_show": {
+      "type": "icon",
+      "name": "documents",
+      "label": "PASLI PARÇALAR"
+     }
+    }
+   },
+   {
+    "say": "17 Mayıs 1902. Arkeolog Valerios Stais, bir parçada *dişli çark* fark etti.",
+    "show": {
+     "type": "date",
+     "day": 17,
+     "month": "MAYIS",
+     "year": 1902
+    },
+    "sfx": "hit"
+   },
+   {
+    "say": "Taşın içine gömülü, ustaca kesilmiş *bronz dişliler*.",
+    "show": {
+     "type": "photo",
+     "search": "Antikythera mechanism gears",
+     "label": "BRONZ DİŞLİLER",
+     "fallback_show": {
+      "type": "icon",
+      "name": "clock",
+      "label": "BRONZ DİŞLİLER"
+     }
+    }
+   },
+   {
+    "say": "Bu imkânsız görünüyordu. Antik dünyada böyle dişliler *bilinmiyordu*.",
+    "show": {
+     "type": "title",
+     "lines": [
+      "BU",
+      "İMKÂNSIZDI"
+     ],
+     "red": 1
+    }
+   },
+   {
+    "say": "Bazı uzmanlar bunun, oraya sonradan düşmüş *bir saat* olduğunu düşündü.",
+    "show": {
+     "type": "icon",
+     "name": "clock",
+     "label": "SONRADAN DÜŞMÜŞ BİR SAAT?"
+    }
+   },
+   {
+    "say": "Gizem yarım asır boyunca *çözülemedi*.",
+    "show": {
+     "type": "icon",
+     "name": "question"
+    }
+   },
+   {
+    "say": "Bu tür akıl almaz gerçek hikâyeleri seviyorsan, şimdi *abone ol*.",
+    "show": {
+     "type": "icon",
+     "name": "eye",
+     "label": "ABONE OL · BİLDİRİMİ AÇ"
+    }
+   },
+   {
+    "say": "1950'lerde tarihçi Derek de Solla Price, parçaları *incelemeye* başladı.",
+    "show": {
+     "type": "dossier",
+     "name": "DEREK DE SOLLA PRICE",
+     "no": "1951",
+     "fields": {
+      "ALAN": "BİLİM TARİHİ",
+      "YÖNTEM": "RÖNTGEN"
+     }
+    }
+   },
+   {
+    "say": "Röntgen ve gama ışınlarıyla taşın içini görüntüledi ve *dişlileri saydı*.",
+    "show": {
+     "type": "icon",
+     "name": "camera",
+     "label": "RÖNTGEN · GAMA IŞINI"
+    }
+   },
+   {
+    "say": "1974'te vardığı sonuç şaşırtıcıydı: Bu bir *astronomi hesap makinesiydi*.",
+    "show": {
+     "type": "quote",
+     "text": "Yunanlardan dişliler.",
+     "who": "Price'ın 1974 tarihli çalışması"
+    }
+   },
+   {
+    "say": "Asıl şok ise 2005'te *bilgisayarlı tomografiyle* geldi.",
+    "show": {
+     "type": "number",
+     "value": "2005",
+     "label": "BİLGİSAYARLI TOMOGRAFİ"
+    },
+    "sfx": "riser"
+   },
+   {
+    "say": "Uluslararası bir ekip, *8 tonluk* bir röntgen cihazını Atina'ya taşıdı.",
+    "show": {
+     "type": "number",
+     "value": 8,
+     "suffix": " TON",
+     "label": "RÖNTGEN CİHAZI ATİNA'DA"
+    }
+   },
+   {
+    "say": "Taşların içinde *binlerce harf* saklıydı. Makinenin kullanım kılavuzu!",
+    "show": {
+     "type": "icon",
+     "name": "documents",
+     "label": "GİZLİ YAZITLAR = KULLANIM KILAVUZU"
+    }
+   },
+   {
+    "say": "Peki bu makine ne yapıyordu? Liste *inanılmaz*.",
+    "show": {
+     "type": "title",
+     "lines": [
+      "NE",
+      "YAPIYORDU?"
+     ],
+     "red": 1
+    }
+   },
+   {
+    "say": "Bir kolu çevirdiğinde, Güneş'in ve Ay'ın gökyüzündeki *konumunu* gösteriyordu.",
+    "show": {
+     "type": "scene",
+     "sky": "night",
+     "land": "hills",
+     "weather": "none",
+     "moon": true,
+     "label": "GÜNEŞ VE AY"
+    }
+   },
+   {
+    "say": "Ay'ın evrelerini, yarısı açık yarısı koyu dönen *küçük bir küreyle* gösteriyordu.",
+    "show": {
+     "type": "list",
+     "items": [
+      "YENİ AY",
+      "YARIM AY",
+      "DOLUNAY"
+     ]
+    }
+   },
+   {
+    "say": "Güneş ve Ay *tutulmalarını*, 223 aylık bir döngüyle önceden hesaplıyordu.",
+    "show": {
+     "type": "number",
+     "value": 223,
+     "suffix": " AY",
+     "label": "TUTULMA DÖNGÜSÜ (SAROS)"
+    },
+    "sfx": "hit"
+   },
+   {
+    "say": "Hatta Ay'ın gökyüzünde bazen hızlanıp bazen *yavaşladığını* bile hesaba katıyordu.",
+    "show": {
+     "type": "scene",
+     "sky": "night",
+     "land": "sea",
+     "weather": "fog",
+     "moon": true,
+     "label": "AY'IN DEĞİŞKEN HIZI"
+    }
+   },
+   {
+    "say": "Bir kadranı ise *Olimpiyat Oyunları'nın* zamanını gösteriyordu.",
+    "show": {
+     "type": "photo",
+     "search": "Olympia stadium",
+     "label": "OLYMPİA",
+     "fallback_show": {
+      "type": "place",
+      "name": "OLYMPİA",
+      "sub": "OLİMPİYAT DÖNGÜSÜ"
+     }
+    }
+   },
+   {
+    "say": "2021'de UCL'deki araştırmacılar, ön yüzde *beş gezegenin* de gösterildiğini öne sürdü.",
+    "show": {
+     "type": "list",
+     "items": [
+      "MERKÜR",
+      "VENÜS",
+      "MARS",
+      "JÜPİTER",
+      "SATÜRN"
+     ]
+    }
+   },
+   {
+    "say": "Hepsi, ayakkabı kutusu büyüklüğünde *ahşap bir kasaya* sığıyordu.",
+    "show": {
+     "type": "photo",
+     "search": "Antikythera mechanism reconstruction",
+     "label": "MODERN REKONSTRÜKSİYON",
+     "fallback_show": {
+      "type": "icon",
+      "name": "clock",
+      "label": "AYAKKABI KUTUSU BOYUTU"
+     }
+    }
+   },
+   {
+    "say": "Bugüne *30 bronz dişli* ulaştı. Bazı dişler sadece bir-iki milimetre.",
+    "show": {
+     "type": "number",
+     "value": 30,
+     "label": "KORUNMUŞ BRONZ DİŞLİ"
+    }
+   },
+   {
+    "say": "Bu karmaşıklıkta bir alet, ancak 14. yüzyıl Avrupa'sının *astronomik saatlerinde* yeniden görüldü.",
+    "show": {
+     "type": "number",
+     "value": "1000+",
+     "suffix": " YIL",
+     "label": "BENZERİ GÖRÜLMEDİ"
+    }
+   },
+   {
+    "say": "Peki bu dâhiyane makineyi *kim yaptı*?",
+    "show": {
+     "type": "icon",
+     "name": "question"
+    },
+    "sfx": "riser"
+   },
+   {
+    "say": "Bir teoriye göre, büyük mucit *Arşimet'in* geleneğinden geliyor olabilir.",
+    "show": {
+     "type": "photo",
+     "search": "Archimedes Fetti",
+     "label": "ARŞİMET",
+     "fallback_show": {
+      "type": "dossier",
+      "name": "ARŞİMET",
+      "no": "SİRAKÜZA",
+      "fields": {
+       "ALAN": "MATEMATİK",
+       "DURUM": "ŞÜPHELİ"
+      }
+     },
+     "commons": "Domenico-Fetti Archimedes 1620.jpg"
+    }
+   },
+   {
+    "say": "Romalı yazar Çiçero, Arşimet'in gökleri gösteren *bir küre* yaptığını aktarır.",
+    "show": {
+     "type": "quote",
+     "text": "Arşimet, gök cisimlerinin hareketini gösteren bir küre yaptı.",
+     "who": "Çiçero'nun aktarımı (özetle)"
+    }
+   },
+   {
+    "say": "Ama Arşimet, milattan önce 212'de, yani gemi batmadan *yüz yılı aşkın* süre önce öldü.",
+    "show": {
+     "type": "number",
+     "value": "MÖ 212",
+     "label": "ARŞİMET'İN ÖLÜMÜ"
+    }
+   },
+   {
+    "say": "Başka bir teori, ünlü astronom *Hipparkos'u* ve Rodos adasını işaret ediyor.",
+    "show": {
+     "type": "dossier",
+     "name": "HİPPARKOS",
+     "no": "RODOS?",
+     "fields": {
+      "ALAN": "ASTRONOMİ",
+      "DURUM": "TEORİ"
+     }
+    }
+   },
+   {
+    "say": "Yazıtlardaki ay isimleri ise *Korint* kökenli bir takvime işaret ediyor.",
+    "show": {
+     "type": "place",
+     "name": "KORİNT",
+     "sub": "TAKVİMDEKİ İPUCU"
+    }
+   },
+   {
+    "say": "Gerçek şu ki, yapımcının adını hâlâ *bilmiyoruz*.",
+    "show": {
+     "type": "dossier",
+     "name": "YAPIMCI",
+     "no": "??",
+     "fields": {
+      "KİMLİK": "██",
+      "DURUM": "BİLİNMİYOR"
+     }
+    }
+   },
+   {
+    "say": "Ve en büyük soru: Bu bilgi nasıl oldu da *tamamen kayboldu*?",
+    "show": {
+     "type": "title",
+     "lines": [
+      "BU BİLGİ",
+      "NEREYE",
+      "KAYBOLDU?"
+     ],
+     "red": 2
+    },
+    "sfx": "hit"
+   },
+   {
+    "say": "Batık hâlâ sır veriyor. 2016'da enkazda bir insan *iskeleti* bulundu.",
+    "show": {
+     "type": "number",
+     "value": "2016",
+     "label": "BATIKTA İSKELET BULUNDU"
+    }
+   },
+   {
+    "say": "Bazı araştırmacılar, kayıp parçaların hâlâ *deniz dibinde* olabileceğini düşünüyor.",
+    "show": {
+     "type": "scene",
+     "sky": "dusk",
+     "land": "sea",
+     "weather": "fog",
+     "moon": false,
+     "label": "KAYIP PARÇALAR?",
+     "props": [
+      {
+       "k": "sailship",
+       "x": 0.5,
+       "torn": true
+      }
+     ]
+    }
+   },
+   {
+    "say": "Sence 2000 yıl önce bu makineyi kim yapmış olabilir? *Yorumlara yaz*.",
+    "show": {
+     "type": "title",
+     "lines": [
+      "SENCE",
+      "KİM YAPTI",
+      "?"
+     ],
+     "red": 1
+    }
+   },
+   {
+    "say": "Yeni gizem dosyalarını kaçırmamak için *takip et*.",
+    "show": {
+     "type": "icon",
+     "name": "eye",
+     "label": "ABONE OL"
+    }
+   }
+  ],
+  "chapters": [
+   [
+    0,
+    "Dalgıcın çığlığı"
+   ],
+   [
+    5,
+    "1900: Fırtına ve batık"
+   ],
+   [
+    13,
+    "Paslı taştaki dişli"
+   ],
+   [
+    21,
+    "Röntgendeki sır"
+   ],
+   [
+    27,
+    "Ne yapıyordu?"
+   ],
+   [
+    37,
+    "Kim yaptı?"
+   ],
+   [
+    44,
+    "Kaybolan bilgi"
+   ]
+  ],
+  "thumb": {
+   "lines": [
+    "2000 YILLIK",
+    "BİLGİSAYAR"
+   ],
+   "red": 1,
+   "photo_commons": "NAMA Machine d'Anticythère 1.jpg",
+   "photo_search": "Antikythera mechanism",
+   "focus_x": 0.5,
+   "focus_y": 0.5,
+   "tag": "GERÇEK OLAY"
+  }
+ },
+ "shorts": [
+  {
+   "hook": [
+    {
+     "say": "Bu paslı taşın içinde *2000 yıllık bir bilgisayar* saklıydı.",
+     "show": {
+      "type": "photo",
+      "search": "Antikythera mechanism",
+      "label": "ANTİKİTERA, MÖ 1. YY",
+      "fallback_show": {
+       "type": "icon",
+       "name": "clock"
+      },
+      "commons": "NAMA Machine d'Anticythère 1.jpg"
+     },
+     "sfx": "hit"
+    }
+   ],
+   "from": 15,
+   "to": 23,
+   "outro": [
+    {
+     "say": "Bu makine neler yapabiliyordu? Cevap kanaldaki *tam videoda*.",
+     "show": {
+      "type": "title",
+      "lines": [
+       "TAM HİKÂYE",
+       "KANALDA",
+       "ABONE OL"
+      ],
+      "red": 1
+     }
+    }
+   ]
+  },
+  {
+   "hook": [
+    {
+     "say": "2000 yıl önce yapılan bir makine, *tutulmaları* önceden biliyordu.",
+     "show": {
+      "type": "scene",
+      "sky": "night",
+      "land": "sea",
+      "weather": "none",
+      "moon": true,
+      "label": "MÖ 1. YÜZYIL"
+     },
+     "sfx": "hit"
+    }
+   ],
+   "from": 28,
+   "to": 36,
+   "outro": [
+    {
+     "say": "Peki onu kim yaptı? Cevap kanaldaki *tam videoda*.",
+     "show": {
+      "type": "title",
+      "lines": [
+       "TAM HİKÂYE",
+       "KANALDA",
+       "ABONE OL"
+      ],
+      "red": 1
+     }
+    }
+   ]
+  },
+  {
+   "hook": [
+    {
+     "say": "2000 yıllık bilgisayarı kim yaptı? *Üç şüpheli* var.",
+     "show": {
+      "type": "list",
+      "items": [
+       "ARŞİMET?",
+       "HİPPARKOS?",
+       "KORİNTLİ USTA?"
+      ]
+     },
+     "sfx": "hit"
+    }
+   ],
+   "from": 38,
+   "to": 44,
+   "outro": [
+    {
+     "say": "Sence hangisi? Yorumlara yaz ve *takip et*.",
+     "show": {
+      "type": "title",
+      "lines": [
+       "SENCE",
+       "HANGİSİ",
+       "?"
+      ],
+      "red": 1
+     }
+    }
+   ]
+  }
+ ],
+ "publish": {
+  "long": {
+   "title": "Antikythera Mekanizması: Batıktan Çıkan 2000 Yıllık Bilgisayar",
+   "description": "1900'de fırtınadan kaçan süngerciler, Antikitera adası açıklarında yaklaşık 45 metre derinlikte MÖ 1. yüzyıldan kalma bir batık buldu. Heykellerin arasından çıkan paslı parçalarda 1902'de bronz dişliler fark edildi. Derek de Solla Price'ın röntgen çalışmaları ve 2005'teki bilgisayarlı tomografi, bu düzeneğin Güneş ve Ay'ın konumunu, Ay evrelerini, tutulmaları (223 aylık Saros döngüsü) ve Olimpiyat döngüsünü gösteren bir astronomi hesaplayıcısı olduğunu ortaya koydu. Kimin yaptığı hâlâ tartışmalı: Arşimet geleneği, Hipparkos/Rodos ve Korint kökenli takvim ipuçları.\n\nKaynaklar: Freeth ve ark., Nature (2006); Freeth ve ark., Scientific Reports (2021); Price, Gears from the Greeks (1974); Atina Ulusal Arkeoloji Müzesi.",
+   "hashtags": [
+    "#antikythera",
+    "#gizem",
+    "#tarih",
+    "#arkeoloji",
+    "#belgesel",
+    "#ilginçbilgiler"
+   ]
+  },
+  "shorts": [
+   {
+    "title": "Bu Taşın İçinde 2000 Yıllık Bilgisayar Var 🤯 #shorts",
+    "description": "Antikythera Mekanizması — tam video kanalda.",
+    "hashtags": [
+     "#shorts",
+     "#antikythera",
+     "#gizem"
+    ]
+   },
+   {
+    "title": "2000 Yıl Önce Tutulmayı Bilen Makine 🌑 #shorts",
+    "description": "Antikythera Mekanizması ne yapıyordu? Tam video kanalda.",
+    "hashtags": [
+     "#shorts",
+     "#antikythera",
+     "#bilim"
+    ]
+   },
+   {
+    "title": "2000 Yıllık Bilgisayarı Kim Yaptı? 🕵️ #shorts",
+    "description": "Arşimet mi, Hipparkos mu? Tam video kanalda.",
+    "hashtags": [
+     "#shorts",
+     "#antikythera",
+     "#tarih"
+    ]
+   }
+  ]
+ }
+}

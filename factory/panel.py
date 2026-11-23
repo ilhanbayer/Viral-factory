@@ -20,12 +20,32 @@ def releases(repo, token):
         page += 1
 
 
+def _qtitle(fn):
+    try:
+        d = json.load(open(os.path.join("topics/queue", fn), encoding="utf-8"))
+        return (d.get("long") or {}).get("title") or d.get("title") or fn[:-5]
+    except Exception:
+        return fn[:-5]
+
+
 def build(repo, token):
     rel = [r for r in releases(repo, token) if r["tag_name"].startswith("video-")]
     rel.sort(key=lambda r: r["created_at"], reverse=True)
+    try:
+        up_log = json.load(open("uploads/log.json", encoding="utf-8"))
+    except Exception:
+        up_log = {}
+    uploaded = up_log.get("uploaded", {})
+    try:
+        queue = sorted(f for f in os.listdir("topics/queue") if f.endswith(".json"))
+    except Exception:
+        queue = []
+    month_calls = sum(m.get("uploads", 0) for m in up_log.get("months", {}).values()) if up_log else 0
     lines = [START, "", "# 🎬 Video Paneli", "",
-             f"**{len(rel)} video** · yeni videolar her gün otomatik eklenir · "
+             f"**{len(rel)} video** · **{len(uploaded)} tanesi YouTube'da** · yeni videolar her gün otomatik eklenir · "
              f"[tüm sürümler](https://github.com/{repo}/releases)", "",
+             "**Sıradaki konular:** " + (" → ".join(_qtitle(q) for q in queue) or "kuyruk boş"),
+             "", f"Zapier yükleme çağrısı (toplam): {month_calls} · aylık sınır 45", "",
              "| Kapak | Video | İndir |", "|:-:|---|:-:|"]
     for r in rel:
         a = {x["name"]: x["browser_download_url"] for x in r["assets"]}
@@ -39,6 +59,9 @@ def build(repo, token):
         title = re.sub(r"\s*#shorts", "", r["name"] or r["tag_name"]).replace("|", "-")
         kind = "📱 SHORT" if "_short" in r["tag_name"] else ("🎬 UZUN VİDEO" if r["tag_name"].count("_S") or "S0" in r["tag_name"] else "📱 SHORT")
         title = f"{kind} · {title}"
+        yt = uploaded.get(r["tag_name"])
+        if yt:
+            title += f" · [✅ YouTube](https://youtu.be/{yt})"
         thumb = f'<a href="{mp4}"><img src="{jpg}" width="120"></a>' if jpg else ""
         dl = f"[▶️ MP4 ({mb:.0f} MB)]({mp4})" + (f"<br>[💬 Altyazı]({srt})" if srt else "") + \
              f"<br>[📝 Metin]({r['html_url']})"

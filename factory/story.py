@@ -1095,8 +1095,19 @@ def draw_scene(img, show, t, dur, W, H, u):
         elif k == "boat":   # küçük filika
             by = gtop + 30 * u + math.sin(t * 2 + x) * 10 * u
             bx = x + t * 18 * u * p.get("drift", 1)
-            d.polygon([(bx - s * 0.3, by - s * 0.05), (bx + s * 0.3, by - s * 0.05), (bx + s * 0.22, by + s * 0.06),
-                       (bx - s * 0.22, by + s * 0.06)], fill=(60, 40, 28, 255))
+            s = max(s, 330 * u)   # küçük filika karanlıkta kayboluyordu: alt sınır + kontur + kürek + siluetler
+            hull = [(bx - s * 0.3, by - s * 0.05), (bx + s * 0.3, by - s * 0.05), (bx + s * 0.22, by + s * 0.06),
+                    (bx - s * 0.22, by + s * 0.06)]
+            for i in range(-1, 2):   # silüet başları
+                hx = bx + i * s * 0.12
+                d.rectangle((hx - s * 0.025, by - s * 0.15, hx + s * 0.025, by - s * 0.05), fill=(20, 18, 20, 255))
+                d.ellipse((hx - s * 0.03, by - s * 0.21, hx + s * 0.03, by - s * 0.15), fill=(20, 18, 20, 255))
+            ang = math.sin(t * 2.2) * 0.4
+            for sgn in (-1, 1):
+                d.line((bx + sgn * s * 0.18, by - s * 0.03, bx + sgn * s * (0.18 + 0.2 * math.cos(ang)), by + s * 0.12),
+                       fill=(150, 120, 85, 255), width=max(2, int(4 * u)))
+            d.polygon(hull, fill=(95, 64, 40, 255), outline=(230, 190, 130, 255))
+            d.line((hull[0], hull[1]), fill=(240, 200, 140, 255), width=max(2, int(3 * u)))
         elif k == "castle":   # tepe üstünde kale: surlar, mazgallar, burçlar
             col = (52, 42, 38, 255)
             hy = ground - s * 0.15
