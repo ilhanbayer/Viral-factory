@@ -100,5 +100,17 @@
     "tiktok"
    ]
   }
+ },
+ "en_channel": {
+  "name": "Hidden Türkiye",
+  "channel_id": "UCfM5Y0XIpJiT-TAT3n3TmiA",
+  "handle": "@hidden.turkiye",
+  "zapier_connection_id": "029d7485-680c-8e6b-8b2b-8d3a15bcfd14",
+  "uploaded": {}
+ },
+ "tr_channel": {
+  "channel_id": "UCj4AqO637OZjnjqpXxdlmNQ",
+  "zapier_connection_id": "0296607e-a729-8263-8c48-19533b30619d",
+  "metricool_blog_id": 8277623
  }
 }
