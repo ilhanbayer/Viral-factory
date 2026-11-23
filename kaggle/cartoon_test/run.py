@@ -65,30 +65,54 @@ for tag, mid, steps, cfg in (("pg", "playgroundai/playground-v2.5-1024px-aesthet
     except Exception:
         log(tag, "HATA", traceback.format_exc()[-2500:])
 
-# ---------------------------------------------------------------- 2) LTX-Video resimden videoya
-try:
-    if imgs:
-        from diffusers import LTXImageToVideoPipeline
-        from diffusers.utils import export_to_video, load_image
+# ---------------------------------------------------------------- 2) LTX-Video 0.9.5 (koşullu) -> yedek: eski LTX, sakin hareket
+def ltx_clips():
+    from diffusers.utils import export_to_video, load_image
+    try:
+        from diffusers import LTXConditionPipeline
+        from diffusers.pipelines.ltx.pipeline_ltx_condition import LTXVideoCondition
+        mid = "Lightricks/LTX-Video-0.9.5"
         t0 = time.time()
+        pipe = LTXConditionPipeline.from_pretrained(mid, torch_dtype=torch.float16)
+        pipe.enable_model_cpu_offload()
+        pipe.vae.enable_tiling()
+        log("ltx095 yüklendi", round(time.time() - t0), "s")
+        tag = "ltx095"
+        def one(img, prompt, w, h):
+            cond = LTXVideoCondition(image=img, frame_index=0)
+            return pipe(conditions=[cond], prompt=prompt, negative_prompt=NEGV, width=w, height=h, num_frames=73,
+                        num_inference_steps=40, guidance_scale=3.0, decode_timestep=0.05, decode_noise_scale=0.025,
+                        image_cond_noise_scale=0.0, generator=torch.Generator("cpu").manual_seed(7)).frames[0]
+    except Exception:
+        log("ltx095 HATA", traceback.format_exc()[-2000:])
+        from diffusers import LTXImageToVideoPipeline
         pipe = LTXImageToVideoPipeline.from_pretrained("Lightricks/LTX-Video", torch_dtype=torch.float16)
         pipe.enable_model_cpu_offload()
         pipe.vae.enable_tiling()
-        log("ltx yüklendi", round(time.time() - t0), "s")
-        for k in range(len(SCENES)):
-            if k >= len(imgs):
-                continue
+        tag = "ltxold"
+        def one(img, prompt, w, h):
+            return pipe(image=img, prompt=prompt, negative_prompt=NEGV, width=w, height=h, num_frames=49,
+                        num_inference_steps=40, guidance_scale=2.5, decode_timestep=0.03, decode_noise_scale=0.025,
+                        generator=torch.Generator("cpu").manual_seed(7)).frames[0]
+    for k in range(len(imgs)):
+        try:
             t0 = time.time()
             img = load_image(imgs[k])
             w, h = (768, 448) if img.width > img.height else (448, 768)
-            frames = pipe(image=img.resize((w, h)), prompt=SCENES[k][3] + ", smooth natural motion, consistent character, 3D animated movie",
-                          negative_prompt="worst quality, inconsistent motion, blurry, jittery, distorted, morphing, scene change, new characters",
-                          width=w, height=h, num_frames=73, num_inference_steps=40, decode_timestep=0.03, decode_noise_scale=0.025,
-                          generator=torch.Generator("cpu").manual_seed(7)).frames[0]
-            export_to_video(frames, os.path.join(OUT, f"ltx_{k}.mp4"), fps=24)
-            log("ltx klip", k, round(time.time() - t0), "s")
-        del pipe
-        torch.cuda.empty_cache()
+            img = img.resize((w, h))
+            prompt = SCENES[k][3] + ", the same hedgehog character stays in frame, subtle smooth motion, 3D animated movie"
+            frames = one(img, prompt, w, h)
+            export_to_video(frames, os.path.join(OUT, f"{tag}_{k}.mp4"), fps=24)
+            log(tag, "klip", k, round(time.time() - t0), "s")
+        except Exception:
+            log(tag, "klip HATA", k, traceback.format_exc()[-1500:])
+
+
+NEGV = ("worst quality, inconsistent motion, blurry, jittery, distorted, morphing, character disappears, "
+        "scene change, cut, new characters, deformed")
+try:
+    if imgs:
+        ltx_clips()
 except Exception:
     log("LTX HATA", traceback.format_exc()[-2500:])
 
