@@ -1,0 +1,831 @@
+{
+ "id": "S009_gobeklitepe_dizi",
+ "format": "story",
+ "title": "Dizi: Göbeklitepe",
+ "brand": "İLGİNÇ BİLGİLER",
+ "theme": "dosya",
+ "voice": {
+  "engine": "edge",
+  "speaker": "ahmet",
+  "rate": "+0%",
+  "pitch": "-2Hz"
+ },
+ "broll": [
+  "Gobekli Tepe",
+  "Sanliurfa"
+ ],
+ "parts": [
+  {
+   "beats": [
+    {
+     "say": "Şanlıurfa'daki bu taşlar, Mısır piramitlerinden yaklaşık *7 bin yıl* daha eski.",
+     "show": {
+      "type": "photo",
+      "search": "Gobekli Tepe",
+      "label": "GÖBEKLİTEPE · ŞANLIURFA",
+      "extra": 2,
+      "fallback_show": {
+       "type": "icon",
+       "name": "camera",
+       "label": "GÖBEKLİTEPE · ŞANLIURFA"
+      }
+     },
+     "sfx": "hit"
+    },
+    {
+     "say": "Stonehenge'den bile yaklaşık *6 bin yıl* önce dikildiler.",
+     "show": {
+      "type": "photo",
+      "search": "Stonehenge",
+      "label": "STONEHENGE · DAHA GENÇ",
+      "extra": 2,
+      "fallback_show": {
+       "type": "icon",
+       "name": "camera",
+       "label": "STONEHENGE · DAHA GENÇ"
+      }
+     }
+    },
+    {
+     "say": "Yaşları yaklaşık *11 bin 600 yıl*.",
+     "show": {
+      "type": "number",
+      "value": "11.600",
+      "label": "YIL ÖNCE"
+     }
+    },
+    {
+     "say": "Yer: Şanlıurfa'nın yaklaşık *15 kilometre* kuzeydoğusunda bir tepe.",
+     "show": {
+      "type": "place",
+      "name": "GÖBEKLİTEPE",
+      "sub": "ŞANLIURFA · ÖRENCİK YAKINI"
+     }
+    },
+    {
+     "say": "Onları dikenler ne yazı biliyordu, ne tekerlek, ne de *tarım*.",
+     "show": {
+      "type": "list",
+      "items": [
+       "YAZI YOK",
+       "TEKERLEK YOK",
+       "TARIM YOK"
+      ]
+     },
+     "sfx": "riser"
+    },
+    {
+     "say": "Peki avcı-toplayıcılar tonlarca taşı *nasıl* dikti?",
+     "show": {
+      "type": "scene",
+      "sky": "dusk",
+      "land": "hills",
+      "weather": "none",
+      "moon": false,
+      "label": "MÖ 9600 · YUKARI MEZOPOTAMYA",
+      "props": [
+       {
+        "k": "tpillar",
+        "x": 0.3
+       },
+       {
+        "k": "tpillar",
+        "x": 0.58,
+        "s": 0.8
+       },
+       {
+        "k": "tpillar",
+        "x": 0.82,
+        "s": 1.1
+       }
+      ],
+      "people": {
+       "n": 5,
+       "from": 0.05,
+       "to": 0.25
+      }
+     }
+    },
+    {
+     "say": "En büyük dikilitaşlar *5 metreyi* aşıyor.",
+     "show": {
+      "type": "photo",
+      "search": "Gobekli Tepe pillar",
+      "label": "T BİÇİMLİ DİKİLİTAŞ",
+      "extra": 2,
+      "fallback_show": {
+       "type": "icon",
+       "name": "camera",
+       "label": "T BİÇİMLİ DİKİLİTAŞ"
+      }
+     }
+    },
+    {
+     "say": "Taşlar dev daireler halinde dizilmiş, ortada iki taş *karşılıklı* duruyor.",
+     "show": {
+      "type": "photo",
+      "search": "Gobekli Tepe enclosure",
+      "label": "DAİRESEL YAPI",
+      "extra": 2,
+      "fallback_show": {
+       "type": "icon",
+       "name": "camera",
+       "label": "DAİRESEL YAPI"
+      }
+     }
+    },
+    {
+     "say": "Bilim insanları için bu *imkânsız* sayılıyordu.",
+     "show": {
+      "type": "title",
+      "lines": [
+       "BU",
+       "İMKÂNSIZ",
+       "SAYILIYORDU"
+      ],
+      "red": 1
+     }
+    },
+    {
+     "say": "Bölüm 2'de: Bu tepe neden *30 yıl* boyunca fark edilmedi?",
+     "show": {
+      "type": "title",
+      "lines": [
+       "BÖLÜM 2",
+       "30 YIL",
+       "FARK EDİLMEDİ"
+      ],
+      "red": 1
+     }
+    },
+    {
+     "say": "Kaçırmamak için *takip et*.",
+     "show": {
+      "type": "icon",
+      "name": "eye",
+      "label": "TAKİP ET · BİLDİRİMİ AÇ"
+     }
+    }
+   ],
+   "thumb": {
+    "lines": [
+     "PİRAMİTLERDEN",
+     "ESKİ"
+    ],
+    "red": 1,
+    "photo_search": "Gobekli Tepe"
+   },
+   "broll": [
+    "Gobekli Tepe",
+    "Gobekli Tepe pillar",
+    "Sanliurfa"
+   ],
+   "publish": {
+    "title": "Piramitlerden 7 Bin Yıl Eski, Türkiye'de 🇹🇷 Bölüm 1 #shorts",
+    "description": "Göbeklitepe: yaklaşık 11.600 yıllık, tarım ve yazıdan önce dikilmiş dev taşlar.\n\nDizi: Göbeklitepe — Bölüm 1/5. Tüm bölümler kanalda.",
+    "hashtags": [
+     "#göbeklitepe",
+     "#şanlıurfa",
+     "#tarih",
+     "#ilginçbilgiler",
+     "#shorts"
+    ]
+   }
+  },
+  {
+   "beats": [
+    {
+     "say": "Dünyanın en eski anıtını bulan araştırmacılar, onu sıradan bir *mezarlık* sandı.",
+     "show": {
+      "type": "photo",
+      "search": "Gobekli Tepe hill",
+      "label": "GÖBEKLİTEPE TEPESİ",
+      "extra": 2,
+      "fallback_show": {
+       "type": "icon",
+       "name": "camera",
+       "label": "GÖBEKLİTEPE TEPESİ"
+      }
+     },
+     "sfx": "hit"
+    },
+    {
+     "say": "1963'te bir yüzey araştırması tepeyi inceledi.",
+     "show": {
+      "type": "photo",
+      "search": "Gobekli Tepe excavation",
+      "label": "1963 · YÜZEY ARAŞTIRMASI",
+      "extra": 2,
+      "fallback_show": {
+       "type": "icon",
+       "name": "camera",
+       "label": "1963 · YÜZEY ARAŞTIRMASI"
+      }
+     }
+    },
+    {
+     "say": "Üstteki kırık taşlar, bir *Orta Çağ mezarlığına* ait sanıldı.",
+     "show": {
+      "type": "icon",
+      "name": "documents",
+      "label": "\"ORTA ÇAĞ MEZARLIĞI\""
+     }
+    },
+    {
+     "say": "Böylece Göbeklitepe *30 yıl* daha fark edilmeden bekledi.",
+     "show": {
+      "type": "number",
+      "value": "30",
+      "label": "YIL FARK EDİLMEDİ",
+      "suffix": " YIL"
+     }
+    },
+    {
+     "say": "1994'te Alman arkeolog Klaus Schmidt tepeye çıktı ve *bir şeylerin yanlış* olduğunu anladı.",
+     "show": {
+      "type": "dossier",
+      "name": "KLAUS SCHMIDT",
+      "no": "1994",
+      "fields": {
+       "KURUM": "ALMAN ARKEOLOJİ ENST.",
+       "GÖREV": "KAZI BAŞKANI"
+      }
+     },
+     "sfx": "riser"
+    },
+    {
+     "say": "1995'te Şanlıurfa Müzesi ile birlikte *kazılar* başladı.",
+     "show": {
+      "type": "photo",
+      "search": "Sanliurfa Museum",
+      "label": "ŞANLIURFA MÜZESİ",
+      "extra": 2,
+      "fallback_show": {
+       "type": "icon",
+       "name": "camera",
+       "label": "ŞANLIURFA MÜZESİ"
+      }
+     }
+    },
+    {
+     "say": "Ve toprağın altından dev *T biçimli* dikilitaşlar çıktı.",
+     "show": {
+      "type": "photo",
+      "search": "Gobekli Tepe pillar",
+      "label": "T BİÇİMLİ DİKİLİTAŞ",
+      "extra": 2,
+      "fallback_show": {
+       "type": "icon",
+       "name": "camera",
+       "label": "T BİÇİMLİ DİKİLİTAŞ"
+      }
+     }
+    },
+    {
+     "say": "Schmidt bunu tek cümleyle özetledi:",
+     "show": {
+      "type": "photo",
+      "search": "Gobekli Tepe",
+      "label": "GÖBEKLİTEPE",
+      "extra": 2,
+      "fallback_show": {
+       "type": "icon",
+       "name": "camera",
+       "label": "GÖBEKLİTEPE"
+      }
+     }
+    },
+    {
+     "say": "Önce tapınak geldi, *sonra şehir*.",
+     "show": {
+      "type": "quote",
+      "text": "Önce tapınak geldi, sonra şehir.",
+      "who": "Klaus Schmidt (aktarım)"
+     }
+    },
+    {
+     "say": "Bölüm 3'te: Taşların üstündeki *gizemli hayvanlar*.",
+     "show": {
+      "type": "title",
+      "lines": [
+       "BÖLÜM 3",
+       "TAŞLARDAKİ",
+       "SIRLAR"
+      ],
+      "red": 1
+     }
+    },
+    {
+     "say": "*Takip et* ki kaçırma.",
+     "show": {
+      "type": "icon",
+      "name": "eye",
+      "label": "TAKİP ET · BİLDİRİMİ AÇ"
+     }
+    }
+   ],
+   "thumb": {
+    "lines": [
+     "MEZARLIK",
+     "SANDILAR"
+    ],
+    "red": 1,
+    "photo_search": "Gobekli Tepe hill"
+   },
+   "broll": [
+    "Gobekli Tepe excavation",
+    "Gobekli Tepe hill",
+    "Sanliurfa Museum"
+   ],
+   "publish": {
+    "title": "Mezarlık Sandılar, Tarihi Değiştirdi 😳 Bölüm 2 #shorts",
+    "description": "1963'te fark edilmeyen Göbeklitepe, 1994'te Klaus Schmidt ile dünya gündemine girdi.\n\nDizi: Göbeklitepe — Bölüm 2/5. Tüm bölümler kanalda.",
+    "hashtags": [
+     "#göbeklitepe",
+     "#şanlıurfa",
+     "#tarih",
+     "#ilginçbilgiler",
+     "#shorts"
+    ]
+   }
+  },
+  {
+   "beats": [
+    {
+     "say": "11 bin yıllık bir taşın üstünde *akbabalar* ve bir sır var.",
+     "show": {
+      "type": "photo",
+      "search": "Gobekli Tepe vulture stone",
+      "label": "AKBABA TAŞI",
+      "extra": 2,
+      "fallback_show": {
+       "type": "icon",
+       "name": "camera",
+       "label": "AKBABA TAŞI"
+      }
+     },
+     "sfx": "hit"
+    },
+    {
+     "say": "Göbeklitepe'nin taşları *hayvan kabartmalarıyla* dolu.",
+     "show": {
+      "type": "photo",
+      "search": "Gobekli Tepe relief",
+      "label": "KABARTMALAR",
+      "extra": 2,
+      "fallback_show": {
+       "type": "icon",
+       "name": "camera",
+       "label": "KABARTMALAR"
+      }
+     }
+    },
+    {
+     "say": "Tilkiler, yaban domuzları, yılanlar, akrepler ve *akbabalar*.",
+     "show": {
+      "type": "list",
+      "items": [
+       "TİLKİ",
+       "YABAN DOMUZU",
+       "YILAN",
+       "AKREP",
+       "AKBABA"
+      ]
+     }
+    },
+    {
+     "say": "Bazı dikilitaşlarda kollar, eller ve kemerler var. Yani taşlar *insanı* temsil ediyor olabilir.",
+     "show": {
+      "type": "photo",
+      "search": "Gobekli Tepe fox",
+      "label": "TAŞ İNSANLAR?",
+      "extra": 2,
+      "fallback_show": {
+       "type": "icon",
+       "name": "camera",
+       "label": "TAŞ İNSANLAR?"
+      }
+     }
+    },
+    {
+     "say": "Uzmanların *Akbaba Taşı* dediği 43 numaralı dikilitaş ise özel.",
+     "show": {
+      "type": "number",
+      "value": "43",
+      "label": "AKBABA TAŞI"
+     }
+    },
+    {
+     "say": "Bazı araştırmacılara göre bu taş, eski bir *kuyruklu yıldız* çarpmasını anlatıyor.",
+     "show": {
+      "type": "scene",
+      "sky": "night",
+      "land": "hills",
+      "weather": "none",
+      "moon": true,
+      "label": "İDDİA: KUYRUKLU YILDIZ",
+      "props": [
+       {
+        "k": "fireball",
+        "x": 0.7
+       },
+       {
+        "k": "tpillar",
+        "x": 0.3,
+        "s": 0.9
+       }
+      ]
+     },
+     "sfx": "riser"
+    },
+    {
+     "say": "Ama bu yorum *tartışmalı*; birçok arkeolog buna karşı çıkıyor.",
+     "show": {
+      "type": "dossier",
+      "name": "KUYRUKLU YILDIZ TEORİSİ",
+      "no": "2017",
+      "fields": {
+       "DESTEK": "AZ",
+       "DURUM": "TARTIŞMALI"
+      }
+     }
+    },
+    {
+     "say": "Kesin olan şu: Bu semboller, insanlığın bilinen *en eski* anlatılarından.",
+     "show": {
+      "type": "photo",
+      "search": "Gobekli Tepe",
+      "label": "EN ESKİ SEMBOLLER",
+      "extra": 2,
+      "fallback_show": {
+       "type": "icon",
+       "name": "camera",
+       "label": "EN ESKİ SEMBOLLER"
+      }
+     }
+    },
+    {
+     "say": "Sence bu taşlar ne anlatıyor? *Yorumlara yaz*.",
+     "show": {
+      "type": "title",
+      "lines": [
+       "SENCE",
+       "NE ANLATIYOR?"
+      ],
+      "red": 1
+     }
+    },
+    {
+     "say": "Bölüm 4'te: Tapınak mı, köy mü? *Yeni kazılar* her şeyi değiştirdi.",
+     "show": {
+      "type": "title",
+      "lines": [
+       "BÖLÜM 4",
+       "TAPINAK MI",
+       "KÖY MÜ?"
+      ],
+      "red": 1
+     }
+    },
+    {
+     "say": "*Takip et* ki kaçırma.",
+     "show": {
+      "type": "icon",
+      "name": "eye",
+      "label": "TAKİP ET · BİLDİRİMİ AÇ"
+     }
+    }
+   ],
+   "thumb": {
+    "lines": [
+     "AKBABA",
+     "TAŞI"
+    ],
+    "red": 1,
+    "photo_search": "Gobekli Tepe vulture stone"
+   },
+   "broll": [
+    "Gobekli Tepe relief",
+    "Gobekli Tepe fox",
+    "Gobekli Tepe vulture stone"
+   ],
+   "publish": {
+    "title": "11 Bin Yıllık Taşta Kuyruklu Yıldız? ☄️ Bölüm 3 #shorts",
+    "description": "Göbeklitepe kabartmaları, Akbaba Taşı ve tartışmalı kuyruklu yıldız teorisi.\n\nDizi: Göbeklitepe — Bölüm 3/5. Tüm bölümler kanalda.",
+    "hashtags": [
+     "#göbeklitepe",
+     "#şanlıurfa",
+     "#tarih",
+     "#ilginçbilgiler",
+     "#shorts"
+    ]
+   }
+  },
+  {
+   "beats": [
+    {
+     "say": "Bugün yediğin ekmeğin hikâyesi *Şanlıurfa'da* başlamış olabilir.",
+     "show": {
+      "type": "photo",
+      "search": "Einkorn wheat",
+      "label": "SİYEZ BUĞDAYI",
+      "extra": 2,
+      "fallback_show": {
+       "type": "icon",
+       "name": "camera",
+       "label": "SİYEZ BUĞDAYI"
+      }
+     },
+     "sfx": "hit"
+    },
+    {
+     "say": "Göbeklitepe uzun süre sadece bir *tapınak* sanıldı.",
+     "show": {
+      "type": "photo",
+      "search": "Gobekli Tepe",
+      "label": "TAPINAK MI?",
+      "extra": 2,
+      "fallback_show": {
+       "type": "icon",
+       "name": "camera",
+       "label": "TAPINAK MI?"
+      }
+     }
+    },
+    {
+     "say": "Ama yeni kazılar burada *evler*, su sarnıçları ve günlük yaşam izleri buldu.",
+     "show": {
+      "type": "list",
+      "items": [
+       "EVLER",
+       "SU SARNIÇLARI",
+       "GÜNLÜK YAŞAM"
+      ]
+     }
+    },
+    {
+     "say": "Yani burası belki de insanlığın *ilk yerleşimlerinden* biriydi.",
+     "show": {
+      "type": "scene",
+      "sky": "dusk",
+      "land": "hills",
+      "weather": "none",
+      "moon": false,
+      "label": "İLK YERLEŞİM?",
+      "props": [
+       {
+        "k": "house",
+        "x": 0.2,
+        "s": 0.5
+       },
+       {
+        "k": "tpillar",
+        "x": 0.5
+       },
+       {
+        "k": "house",
+        "x": 0.8,
+        "s": 0.45
+       }
+      ],
+      "people": {
+       "n": 3,
+       "from": 0.6,
+       "to": 0.7
+      }
+     }
+    },
+    {
+     "say": "Hemen yakındaki *Karacadağ*, buğdayın ilk evcilleştirildiği yerlerden biri.",
+     "show": {
+      "type": "photo",
+      "search": "Karacadag",
+      "label": "KARACADAĞ",
+      "extra": 2,
+      "fallback_show": {
+       "type": "icon",
+       "name": "camera",
+       "label": "KARACADAĞ"
+      }
+     }
+    },
+    {
+     "say": "1997'de yapılan genetik bir araştırma, siyez buğdayının kökenini *buraya* bağladı.",
+     "show": {
+      "type": "dossier",
+      "name": "GENETİK ARAŞTIRMA",
+      "no": "1997",
+      "fields": {
+       "BUĞDAY": "SİYEZ",
+       "KÖKEN": "KARACADAĞ"
+      }
+     },
+     "sfx": "riser"
+    },
+    {
+     "say": "Yani tarım, belki de bu taşların etrafında toplanan insanlarla *başladı*.",
+     "show": {
+      "type": "scene",
+      "sky": "day",
+      "land": "plain",
+      "weather": "none",
+      "moon": false,
+      "label": "TARIMIN BAŞLANGICI?",
+      "props": [
+       {
+        "k": "tpillar",
+        "x": 0.75,
+        "s": 0.8
+       }
+      ],
+      "people": {
+       "n": 4,
+       "from": 0.15,
+       "to": 0.4
+      }
+     }
+    },
+    {
+     "say": "Göbeklitepe 2018'de *UNESCO Dünya Mirası* listesine girdi.",
+     "show": {
+      "type": "number",
+      "value": "2018",
+      "label": "UNESCO DÜNYA MİRASI"
+     }
+    },
+    {
+     "say": "Bölüm 5'te: Toprağın altında daha *kaç tane* var?",
+     "show": {
+      "type": "title",
+      "lines": [
+       "BÖLÜM 5",
+       "DAHA",
+       "KAÇ TANE VAR?"
+      ],
+      "red": 1
+     }
+    },
+    {
+     "say": "*Takip et* ki kaçırma.",
+     "show": {
+      "type": "icon",
+      "name": "eye",
+      "label": "TAKİP ET · BİLDİRİMİ AÇ"
+     }
+    }
+   ],
+   "thumb": {
+    "lines": [
+     "İLK",
+     "BUĞDAY"
+    ],
+    "red": 1,
+    "photo_search": "Einkorn wheat"
+   },
+   "broll": [
+    "Einkorn wheat",
+    "Karacadag",
+    "Gobekli Tepe"
+   ],
+   "publish": {
+    "title": "Buğday İlk Kez Burada Ekilmiş Olabilir 🌾 Bölüm 4 #shorts",
+    "description": "Göbeklitepe'de evler ve sarnıçlar, Karacadağ ve tarımın başlangıcı.\n\nDizi: Göbeklitepe — Bölüm 4/5. Tüm bölümler kanalda.",
+    "hashtags": [
+     "#göbeklitepe",
+     "#şanlıurfa",
+     "#tarih",
+     "#ilginçbilgiler",
+     "#shorts"
+    ]
+   }
+  },
+  {
+   "beats": [
+    {
+     "say": "Dünyanın en eski anıtının tahminen *sadece onda biri* kazıldı.",
+     "show": {
+      "type": "number",
+      "value": "%10",
+      "label": "TAHMİNEN KAZILAN KISIM"
+     },
+     "sfx": "hit"
+    },
+    {
+     "say": "Taramalar, toprağın altında en az *20 dairesel yapı* daha olduğunu gösteriyor.",
+     "show": {
+      "type": "number",
+      "value": "20+",
+      "label": "KAZILMAYI BEKLEYEN YAPI"
+     }
+    },
+    {
+     "say": "Ve hikâye burada bitmiyor. Bölgede *Taş Tepeler* adı verilen bir düzine alan daha var.",
+     "show": {
+      "type": "photo",
+      "search": "Karahan Tepe",
+      "label": "TAŞ TEPELER",
+      "extra": 2,
+      "fallback_show": {
+       "type": "icon",
+       "name": "camera",
+       "label": "TAŞ TEPELER"
+      }
+     }
+    },
+    {
+     "say": "Bunlardan *Karahantepe'de*, kayaya oyulmuş bir insan başı heykeli bulundu.",
+     "show": {
+      "type": "photo",
+      "search": "Karahan Tepe head",
+      "label": "KARAHANTEPE",
+      "extra": 2,
+      "fallback_show": {
+       "type": "icon",
+       "name": "camera",
+       "label": "KARAHANTEPE"
+      }
+     }
+    },
+    {
+     "say": "Karahantepe, Göbeklitepe'ye yakın ve *aynı döneme* ait.",
+     "show": {
+      "type": "place",
+      "name": "KARAHANTEPE",
+      "sub": "ŞANLIURFA"
+     }
+    },
+    {
+     "say": "Bazı uzmanlara göre Şanlıurfa, insanlığın *yerleşik hayata* geçtiği ilk yerlerden biri.",
+     "show": {
+      "type": "title",
+      "lines": [
+       "ŞANLIURFA",
+       "UYGARLIĞIN",
+       "BAŞLADIĞI YER?"
+      ],
+      "red": 2
+     },
+     "sfx": "riser"
+    },
+    {
+     "say": "Yani tarih kitaplarının ilk sayfası belki de *Türkiye'de* yazılacak.",
+     "show": {
+      "type": "photo",
+      "search": "Sanliurfa Balikligol",
+      "label": "ŞANLIURFA",
+      "extra": 2,
+      "fallback_show": {
+       "type": "icon",
+       "name": "camera",
+       "label": "ŞANLIURFA"
+      }
+     }
+    },
+    {
+     "say": "Dizinin sonu! Sence 11 bin yıl önce bu taşları *neden* diktiler? Yorumlara yaz.",
+     "show": {
+      "type": "title",
+      "lines": [
+       "SENCE",
+       "NEDEN",
+       "DİKTİLER?"
+      ],
+      "red": 1
+     }
+    },
+    {
+     "say": "Yeni dizi için *takip et*.",
+     "show": {
+      "type": "icon",
+      "name": "eye",
+      "label": "TAKİP ET · BİLDİRİMİ AÇ"
+     }
+    }
+   ],
+   "thumb": {
+    "lines": [
+     "SADECE",
+     "%10'U"
+    ],
+    "red": 1,
+    "photo_search": "Karahan Tepe"
+   },
+   "broll": [
+    "Karahan Tepe",
+    "Gobekli Tepe",
+    "Sanliurfa Balikligol"
+   ],
+   "publish": {
+    "title": "En Eski Anıtın Sadece %10'u Kazıldı 😱 Bölüm 5 #shorts",
+    "description": "Göbeklitepe'nin kazılmayı bekleyen yapıları, Karahantepe ve Taş Tepeler.\n\nDizi: Göbeklitepe — Bölüm 5/5. Tüm bölümler kanalda.",
+    "hashtags": [
+     "#göbeklitepe",
+     "#şanlıurfa",
+     "#tarih",
+     "#ilginçbilgiler",
+     "#shorts"
+    ]
+   }
+  }
+ ]
+}

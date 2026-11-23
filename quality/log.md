@@ -85,3 +85,12 @@ Düzeltmeler:
 
 Yükleme: Short1 ve Short2 Zapier ile denendi → "This action has been throttled without retry" (Zapier kısıtlaması). Yüklenmedi; Zapier görev kotası/oran sınırı kontrol edilmeli.
 Sonraki iyileştirme: sisli/gece dikey sahnelerde ön plan öğesini büyüt, ateş topunu kanca karesinin ilk 0,5 sn'sine al.
+
+## 2026-11-24 (gece, kullanıcı isteği) — Kurgu yenilendi: ekran hiç sabit kalmıyor, gerçek fotoğraflar canlı, CTA animasyonları
+Araştırma (OpusClip 13,5M klip analizi, Hooked): ilk 3 sn kanca, birkaç saniyede bir kesme, kelime kelime altyazı, b-roll + Ken Burns, ses efektleri, sonda net "takip et" çağrısı.
+Uygulananlar (`factory/broll.py`):
+- Her sahne ~2,2 sn'lik çekimlere bölünüyor; her çekimde konuyla ilgili başka bir gerçek fotoğraf tam ekran (hızlı yakınlaşma/uzaklaşma, kayma, 2.5D perspektif eğim, ışık süpürmesi). Çekim geçişlerinde kısa flaş + whoosh.
+- Fotoğraf havuzu: her fotoğraf aramasından 2 ek görsel + dizi/bölüm "broll" aramaları (bölüm başına ~10-20 gerçek fotoğraf).
+- CTA: videonun %42'sinde "BEĞEN + YORUM YAZ" (başparmak kırmızıya döner, kalpler uçar, pop sesi); son 3,4 sn'de "İB · İLGİNÇ BİLGİLER · TAKİP ET" butonuna imleç tıklıyor → "TAKİP EDİLDİ", zil sallanıyor.
+- Yeni senaryolarda takvim (tarih) animasyonu yok, canlandırma sahnesi az; ağırlık gerçek fotoğrafta.
+Kuyruk (kullanıcının seçtiği konular): S008 Tarsus'un Gizemli Kazısı (5 bölüm) → S009 Göbeklitepe (5) → S010 Derinkuyu ve Ürgüp (5) → S011 Dünyaya Türkiye'den Yayılan 6 Şey.

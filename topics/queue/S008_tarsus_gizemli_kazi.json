@@ -1,0 +1,866 @@
+{
+ "id": "S008_tarsus_gizemli_kazi",
+ "format": "story",
+ "title": "Dizi: Tarsus'un Gizemli Kazısı",
+ "brand": "İLGİNÇ BİLGİLER",
+ "theme": "dosya",
+ "voice": {
+  "engine": "edge",
+  "speaker": "ahmet",
+  "rate": "+0%",
+  "pitch": "-2Hz"
+ },
+ "broll": [
+  "Tarsus",
+  "Cleopatra Gate",
+  "Tarsus waterfall",
+  "St. Paul's Well"
+ ],
+ "parts": [
+  {
+   "beats": [
+    {
+     "say": "Mersin Tarsus'ta bir evin içinde, polis koruması altında *tam 1 yıl* süren gizli bir kazı yapıldı.",
+     "show": {
+      "type": "photo",
+      "search": "Tarsus Mersin",
+      "label": "TARSUS · MERSİN",
+      "extra": 2,
+      "fallback_show": {
+       "type": "icon",
+       "name": "camera",
+       "label": "TARSUS · MERSİN"
+      }
+     },
+     "sfx": "hit"
+    },
+    {
+     "say": "Yer: Tarsus'un *82 Evler Mahallesi*. Sıradan, tek katlı bir ev.",
+     "show": {
+      "type": "place",
+      "name": "82 EVLER MAH.",
+      "sub": "TARSUS · MERSİN"
+     }
+    },
+    {
+     "say": "Kazı Kasım 2016'da başladı. Evin çevresi *brandalarla* kapatıldı.",
+     "show": {
+      "type": "photo",
+      "search": "Tarsus houses",
+      "label": "KASIM 2016",
+      "extra": 2,
+      "fallback_show": {
+       "type": "icon",
+       "name": "camera",
+       "label": "KASIM 2016"
+      }
+     }
+    },
+    {
+     "say": "Sokak girişlerini *özel harekât polisleri* tuttu, barikatlar kuruldu.",
+     "show": {
+      "type": "list",
+      "items": [
+       "BRANDALAR",
+       "BARİKATLAR",
+       "ÖZEL HAREKÂT"
+      ]
+     },
+     "sfx": "riser"
+    },
+    {
+     "say": "Kazıyı Ankara'dan gelen yaklaşık *20 kişilik* özel bir ekip yürütüyordu.",
+     "show": {
+      "type": "number",
+      "value": "20",
+      "label": "KİŞİLİK ÖZEL EKİP"
+     }
+    },
+    {
+     "say": "Mahalleli tedirgindi; bölgede üst üste *göçükler* yaşandığı anlatıldı.",
+     "show": {
+      "type": "photo",
+      "search": "Tarsus street",
+      "label": "MAHALLE TEDİRGİN",
+      "extra": 2,
+      "fallback_show": {
+       "type": "icon",
+       "name": "camera",
+       "label": "MAHALLE TEDİRGİN"
+      }
+     }
+    },
+    {
+     "say": "Bir milletvekili alana tam *5 kez* gitti, ama içeri alınmadı.",
+     "show": {
+      "type": "number",
+      "value": "5",
+      "label": "KEZ KAPIDAN DÖNDÜ"
+     }
+    },
+    {
+     "say": "Konu Meclis'e taşındı. Herkes aynı şeyi soruyordu: *Burada ne aranıyor?*",
+     "show": {
+      "type": "title",
+      "lines": [
+       "BURADA",
+       "NE ARANIYOR?"
+      ],
+      "red": 1
+     }
+    },
+    {
+     "say": "Kazı neredeyse *bir yıl* sürdü ve sessizce sona erdi.",
+     "show": {
+      "type": "photo",
+      "search": "Archaeological excavation Turkey",
+      "label": "SESSİZ SON",
+      "extra": 2,
+      "fallback_show": {
+       "type": "icon",
+       "name": "camera",
+       "label": "SESSİZ SON"
+      }
+     }
+    },
+    {
+     "say": "Bölüm 2'de: Ortaya atılan iddialar ve *resmi açıklama*.",
+     "show": {
+      "type": "title",
+      "lines": [
+       "BÖLÜM 2",
+       "İDDİALAR VE",
+       "GERÇEKLER"
+      ],
+      "red": 1
+     }
+    },
+    {
+     "say": "Kaçırmamak için *takip et*.",
+     "show": {
+      "type": "icon",
+      "name": "eye",
+      "label": "TAKİP ET · BİLDİRİMİ AÇ"
+     }
+    }
+   ],
+   "thumb": {
+    "lines": [
+     "GİZLİ",
+     "KAZI"
+    ],
+    "red": 1,
+    "photo_search": "Tarsus Mersin"
+   },
+   "broll": [
+    "Tarsus Mersin",
+    "Tarsus old town",
+    "Archaeological excavation Turkey"
+   ],
+   "publish": {
+    "title": "Tarsus'ta 1 Yıl Süren Gizli Kazı 🚨 Bölüm 1 #shorts",
+    "description": "2016-2017'de Tarsus 82 Evler Mahallesi'nde polis koruması altında yapılan gizemli kazı.\n\nDizi: Tarsus'un Gizemli Kazısı — Bölüm 1/5. Tüm bölümler kanalda.",
+    "hashtags": [
+     "#tarsus",
+     "#mersin",
+     "#tarih",
+     "#ilginçbilgiler",
+     "#shorts"
+    ]
+   }
+  },
+  {
+   "beats": [
+    {
+     "say": "Tarsus'taki gizli kazıda ne arandı? İşte *resmi kayıtlar* ve iddialar.",
+     "show": {
+      "type": "photo",
+      "search": "Tarsus Museum",
+      "label": "TARSUS",
+      "extra": 2,
+      "fallback_show": {
+       "type": "icon",
+       "name": "camera",
+       "label": "TARSUS"
+      }
+     },
+     "sfx": "hit"
+    },
+    {
+     "say": "Resmi açıklamaya göre kazı, *Tarsus Müzesi'nin* izniyle başladı.",
+     "show": {
+      "type": "dossier",
+      "name": "RESMİ KAYIT",
+      "no": "2016",
+      "fields": {
+       "İZİN": "TARSUS MÜZESİ",
+       "ALAN": "3. DERECE SİT"
+      }
+     }
+    },
+    {
+     "say": "Alan, 2015'te *3. derece arkeolojik sit* ilan edilmişti.",
+     "show": {
+      "type": "photo",
+      "search": "Tarsus ancient",
+      "label": "ARKEOLOJİK SİT",
+      "extra": 2,
+      "fallback_show": {
+       "type": "icon",
+       "name": "camera",
+       "label": "ARKEOLOJİK SİT"
+      }
+     }
+    },
+    {
+     "say": "Müze raporunda: 2,30 metre derinlikte bir çukur ve iki yöne uzanan *galeriler*.",
+     "show": {
+      "type": "number",
+      "value": "2,30",
+      "label": "METRE DERİNLİKTE ÇUKUR",
+      "suffix": " M"
+     }
+    },
+    {
+     "say": "Ama raporda, mimari bir yapı kalıntısına *rastlanmadığı* yazıyordu.",
+     "show": {
+      "type": "list",
+      "items": [
+       "İKİ GALERİ",
+       "MİMARİ KALINTI YOK"
+      ]
+     }
+    },
+    {
+     "say": "Peki ne bulundu? Bu soru, resmi olarak hâlâ *net yanıt* bulmadı.",
+     "show": {
+      "type": "icon",
+      "name": "question"
+     }
+    },
+    {
+     "say": "Eski bir bakan, burada *Aziz Pavlus'un mezarının* arandığını iddia etti.",
+     "show": {
+      "type": "photo",
+      "search": "Saint Paul icon",
+      "label": "İDDİA: AZİZ PAVLUS",
+      "extra": 2,
+      "fallback_show": {
+       "type": "icon",
+       "name": "camera",
+       "label": "İDDİA: AZİZ PAVLUS"
+      }
+     },
+     "sfx": "riser"
+    },
+    {
+     "say": "Çünkü Hristiyanlığın en önemli isimlerinden Pavlus, *Tarsus'ta doğdu*.",
+     "show": {
+      "type": "photo",
+      "search": "St. Paul's Well Tarsus",
+      "label": "AZİZ PAVLUS KUYUSU, TARSUS",
+      "extra": 2,
+      "fallback_show": {
+       "type": "icon",
+       "name": "camera",
+       "label": "AZİZ PAVLUS KUYUSU, TARSUS"
+      }
+     }
+    },
+    {
+     "say": "Bazıları ise *define* aranıyor dedi. Ama bu iddiaların hiçbiri kanıtlanmadı.",
+     "show": {
+      "type": "list",
+      "items": [
+       "MEZAR MI?",
+       "DEFİNE Mİ?",
+       "KANITLANMADI"
+      ]
+     }
+    },
+    {
+     "say": "Sence o evin altında ne aranıyordu? *Yorumlara yaz*.",
+     "show": {
+      "type": "title",
+      "lines": [
+       "SENCE",
+       "NE ARANIYORDU?"
+      ],
+      "red": 1
+     }
+    },
+    {
+     "say": "Bölüm 3'te: Kleopatra'nın *altın gemisi* Tarsus'a geliyor.",
+     "show": {
+      "type": "title",
+      "lines": [
+       "BÖLÜM 3",
+       "KLEOPATRA",
+       "TARSUS'TA"
+      ],
+      "red": 1
+     }
+    },
+    {
+     "say": "*Takip et* ki kaçırma.",
+     "show": {
+      "type": "icon",
+      "name": "eye",
+      "label": "TAKİP ET · BİLDİRİMİ AÇ"
+     }
+    }
+   ],
+   "thumb": {
+    "lines": [
+     "NE",
+     "ARANDI?"
+    ],
+    "red": 1,
+    "photo_search": "Tarsus St. Paul's Well"
+   },
+   "broll": [
+    "Saint Paul Church Tarsus",
+    "St. Paul's Well Tarsus",
+    "Tarsus Museum"
+   ],
+   "publish": {
+    "title": "Tarsus'taki Gizli Kazıda Ne Arandı? 🔍 Bölüm 2 #shorts",
+    "description": "Gizemli Tarsus kazısı: resmi açıklamalar, müze raporu ve ortaya atılan iddialar.\n\nDizi: Tarsus'un Gizemli Kazısı — Bölüm 2/5. Tüm bölümler kanalda.",
+    "hashtags": [
+     "#tarsus",
+     "#mersin",
+     "#tarih",
+     "#ilginçbilgiler",
+     "#shorts"
+    ]
+   }
+  },
+  {
+   "beats": [
+    {
+     "say": "Dünyanın en ünlü aşklarından biri *Tarsus'ta* başladı.",
+     "show": {
+      "type": "photo",
+      "search": "Cleopatra Gate Tarsus",
+      "label": "KLEOPATRA KAPISI, TARSUS",
+      "extra": 2,
+      "fallback_show": {
+       "type": "icon",
+       "name": "camera",
+       "label": "KLEOPATRA KAPISI, TARSUS"
+      }
+     },
+     "sfx": "hit"
+    },
+    {
+     "say": "Milattan önce 41 yılı. Roma'nın güçlü komutanı *Marcus Antonius* Tarsus'taydı.",
+     "show": {
+      "type": "photo",
+      "search": "Mark Antony bust",
+      "label": "MARCUS ANTONİUS",
+      "extra": 2,
+      "fallback_show": {
+       "type": "icon",
+       "name": "camera",
+       "label": "MARCUS ANTONİUS"
+      }
+     }
+    },
+    {
+     "say": "Mısır kraliçesi *Kleopatra'yı* yanına çağırdı.",
+     "show": {
+      "type": "photo",
+      "search": "Cleopatra bust",
+      "label": "KLEOPATRA",
+      "extra": 2,
+      "fallback_show": {
+       "type": "icon",
+       "name": "camera",
+       "label": "KLEOPATRA"
+      }
+     }
+    },
+    {
+     "say": "Kleopatra, Kydnos nehrinden yani bugünkü *Berdan Çayı'ndan* gemisiyle geldi.",
+     "show": {
+      "type": "photo",
+      "search": "Berdan River Tarsus",
+      "label": "KYDNOS · BUGÜNKÜ BERDAN",
+      "extra": 2,
+      "fallback_show": {
+       "type": "icon",
+       "name": "camera",
+       "label": "KYDNOS · BUGÜNKÜ BERDAN"
+      }
+     }
+    },
+    {
+     "say": "Tarihçi Plutarkhos'a göre geminin kıçı *altın kaplıydı*, yelkenleri mordu.",
+     "show": {
+      "type": "quote",
+      "text": "Kıçı altın kaplı, yelkenleri mor, kürekleri gümüştü.",
+      "who": "Plutarkhos (özetle)"
+     }
+    },
+    {
+     "say": "Kürekler gümüştü ve gemide *flüt sesleri* eşliğinde kürek çekiliyordu.",
+     "show": {
+      "type": "list",
+      "items": [
+       "ALTIN",
+       "MOR YELKEN",
+       "GÜMÜŞ KÜREK"
+      ]
+     },
+     "sfx": "riser"
+    },
+    {
+     "say": "Antonius bu görkeme hayran kaldı. İkisinin hikâyesi *tarihe* geçti.",
+     "show": {
+      "type": "scene",
+      "sky": "dusk",
+      "land": "sea",
+      "weather": "none",
+      "moon": false,
+      "label": "MÖ 41 · KYDNOS NEHRİ",
+      "props": [
+       {
+        "k": "sailship",
+        "x": 0.5,
+        "s": 1.2
+       }
+      ]
+     }
+    },
+    {
+     "say": "Bugün Tarsus'taki tarihi kapının adı bu yüzden *Kleopatra Kapısı*.",
+     "show": {
+      "type": "photo",
+      "search": "Cleopatra Gate",
+      "label": "KLEOPATRA KAPISI",
+      "extra": 2,
+      "fallback_show": {
+       "type": "icon",
+       "name": "camera",
+       "label": "KLEOPATRA KAPISI"
+      }
+     }
+    },
+    {
+     "say": "Kapı aslında şehrin *liman kapısıydı*; adı bu efsaneden geliyor.",
+     "show": {
+      "type": "place",
+      "name": "KLEOPATRA KAPISI",
+      "sub": "ESKİ LİMAN KAPISI"
+     }
+    },
+    {
+     "say": "Ve 2026'da tam karşısında, Roma dönemine ait *mozaikler* sergilenmeye başladı.",
+     "show": {
+      "type": "photo",
+      "search": "Tarsus mosaic",
+      "label": "TARSUS MOZAİKLERİ",
+      "extra": 2,
+      "fallback_show": {
+       "type": "icon",
+       "name": "camera",
+       "label": "TARSUS MOZAİKLERİ"
+      }
+     }
+    },
+    {
+     "say": "Bölüm 4'te: Büyük İskender'i *hasta eden* nehir.",
+     "show": {
+      "type": "title",
+      "lines": [
+       "BÖLÜM 4",
+       "İSKENDER'İ",
+       "YIKAN NEHİR"
+      ],
+      "red": 1
+     }
+    },
+    {
+     "say": "*Takip et* ki kaçırma.",
+     "show": {
+      "type": "icon",
+      "name": "eye",
+      "label": "TAKİP ET · BİLDİRİMİ AÇ"
+     }
+    }
+   ],
+   "thumb": {
+    "lines": [
+     "KLEOPATRA",
+     "TARSUS'TA"
+    ],
+    "red": 1,
+    "photo_search": "Cleopatra Gate Tarsus"
+   },
+   "broll": [
+    "Cleopatra bust",
+    "Mark Antony bust",
+    "Berdan River Tarsus",
+    "Cleopatra Gate"
+   ],
+   "publish": {
+    "title": "Kleopatra Aşkını Tarsus'ta Buldu 👑 Bölüm 3 #shorts",
+    "description": "MÖ 41: Kleopatra, Kydnos (Berdan) nehrinden Tarsus'a geldi ve Marcus Antonius ile buluştu.\n\nDizi: Tarsus'un Gizemli Kazısı — Bölüm 3/5. Tüm bölümler kanalda.",
+    "hashtags": [
+     "#tarsus",
+     "#mersin",
+     "#tarih",
+     "#ilginçbilgiler",
+     "#shorts"
+    ]
+   }
+  },
+  {
+   "beats": [
+    {
+     "say": "Büyük İskender'i neredeyse *öldüren* nehir, Tarsus'tan geçiyor.",
+     "show": {
+      "type": "photo",
+      "search": "Alexander the Great mosaic",
+      "label": "BÜYÜK İSKENDER",
+      "extra": 2,
+      "fallback_show": {
+       "type": "icon",
+       "name": "camera",
+       "label": "BÜYÜK İSKENDER"
+      }
+     },
+     "sfx": "hit"
+    },
+    {
+     "say": "Milattan önce 333'te İskender ordusuyla *Tarsus'a* girdi.",
+     "show": {
+      "type": "number",
+      "value": "MÖ 333",
+      "label": "İSKENDER TARSUS'TA"
+     }
+    },
+    {
+     "say": "Yorgun ve terli halde, buz gibi *Kydnos nehrine* girdi.",
+     "show": {
+      "type": "photo",
+      "search": "Berdan River",
+      "label": "KYDNOS NEHRİ",
+      "extra": 2,
+      "fallback_show": {
+       "type": "icon",
+       "name": "camera",
+       "label": "KYDNOS NEHRİ"
+      }
+     }
+    },
+    {
+     "say": "Anlatılana göre ardından *ağır hastalandı*; ordusu onu kaybedeceğinden korktu.",
+     "show": {
+      "type": "scene",
+      "sky": "night",
+      "land": "forest",
+      "weather": "none",
+      "moon": true,
+      "label": "MÖ 333 · KYDNOS",
+      "props": [
+       {
+        "k": "tent",
+        "x": 0.6,
+        "s": 0.9
+       },
+       {
+        "k": "fire",
+        "x": 0.35,
+        "s": 0.5
+       }
+      ],
+      "people": {
+       "n": 3,
+       "from": 0.15,
+       "to": 0.25
+      }
+     }
+    },
+    {
+     "say": "Ama iyileşti ve birkaç ay sonra *İssos Savaşı'nı* kazandı.",
+     "show": {
+      "type": "list",
+      "items": [
+       "HASTALIK",
+       "İYİLEŞME",
+       "İSSOS ZAFERİ"
+      ]
+     },
+     "sfx": "riser"
+    },
+    {
+     "say": "Aynı nehir bugün Tarsus'ta ünlü *şelaleyi* oluşturuyor.",
+     "show": {
+      "type": "photo",
+      "search": "Tarsus waterfall",
+      "label": "TARSUS ŞELALESİ",
+      "extra": 2,
+      "fallback_show": {
+       "type": "icon",
+       "name": "camera",
+       "label": "TARSUS ŞELALESİ"
+      }
+     }
+    },
+    {
+     "say": "Tarsus'un bir ünlüsü daha var: *Aziz Pavlus*.",
+     "show": {
+      "type": "photo",
+      "search": "Saint Paul icon",
+      "label": "AZİZ PAVLUS",
+      "extra": 2,
+      "fallback_show": {
+       "type": "icon",
+       "name": "camera",
+       "label": "AZİZ PAVLUS"
+      }
+     }
+    },
+    {
+     "say": "Hristiyanlığı yayan en önemli isimlerden Pavlus, *Tarsus'ta doğdu*.",
+     "show": {
+      "type": "dossier",
+      "name": "AZİZ PAVLUS",
+      "no": "MS 1. YY",
+      "fields": {
+       "DOĞUM": "TARSUS",
+       "ÜNÜ": "HAVARİ"
+      }
+     }
+    },
+    {
+     "say": "Bugün her yıl dünyanın dört yanından insanlar *Pavlus Kuyusu'nu* ziyaret ediyor.",
+     "show": {
+      "type": "photo",
+      "search": "St. Paul's Well Tarsus",
+      "label": "AZİZ PAVLUS KUYUSU",
+      "extra": 2,
+      "fallback_show": {
+       "type": "icon",
+       "name": "camera",
+       "label": "AZİZ PAVLUS KUYUSU"
+      }
+     }
+    },
+    {
+     "say": "Bölüm 5'te: Tarsus'un altında *başka bir şehir* var.",
+     "show": {
+      "type": "title",
+      "lines": [
+       "BÖLÜM 5",
+       "TOPRAĞIN",
+       "ALTINDAKİ ŞEHİR"
+      ],
+      "red": 1
+     }
+    },
+    {
+     "say": "*Takip et* ki kaçırma.",
+     "show": {
+      "type": "icon",
+      "name": "eye",
+      "label": "TAKİP ET · BİLDİRİMİ AÇ"
+     }
+    }
+   ],
+   "thumb": {
+    "lines": [
+     "İSKENDER",
+     "BURADA YIKANDI"
+    ],
+    "red": 1,
+    "photo_search": "Tarsus waterfall"
+   },
+   "broll": [
+    "Tarsus waterfall",
+    "Alexander the Great mosaic",
+    "Berdan River",
+    "Tarsus"
+   ],
+   "publish": {
+    "title": "Büyük İskender'i Hasta Eden Nehir 🌊 Bölüm 4 #shorts",
+    "description": "Büyük İskender ve Kydnos nehri, Aziz Pavlus'un doğduğu şehir Tarsus.\n\nDizi: Tarsus'un Gizemli Kazısı — Bölüm 4/5. Tüm bölümler kanalda.",
+    "hashtags": [
+     "#tarsus",
+     "#mersin",
+     "#tarih",
+     "#ilginçbilgiler",
+     "#shorts"
+    ]
+   }
+  },
+  {
+   "beats": [
+    {
+     "say": "Tarsus'ta yürürken ayağının altında *binlerce yıllık* bir şehir var.",
+     "show": {
+      "type": "photo",
+      "search": "Ancient road Tarsus",
+      "label": "ANTİK YOL, TARSUS",
+      "extra": 2,
+      "fallback_show": {
+       "type": "icon",
+       "name": "camera",
+       "label": "ANTİK YOL, TARSUS"
+      }
+     },
+     "sfx": "hit"
+    },
+    {
+     "say": "Tarsus, dünyada *kesintisiz yaşanan* en eski şehirlerden biri sayılıyor.",
+     "show": {
+      "type": "title",
+      "lines": [
+       "DÜNYANIN",
+       "EN ESKİ",
+       "ŞEHİRLERİNDEN"
+      ],
+      "red": 1
+     }
+    },
+    {
+     "say": "1993'te bir inşaat çukurunda, tesadüfen *antik bir yol* bulundu.",
+     "show": {
+      "type": "photo",
+      "search": "Ancient road in Tarsus",
+      "label": "1993 · TESADÜFEN BULUNDU",
+      "extra": 2,
+      "fallback_show": {
+       "type": "icon",
+       "name": "camera",
+       "label": "1993 · TESADÜFEN BULUNDU"
+      }
+     }
+    },
+    {
+     "say": "Bazalt taşlarla döşenmiş yol yaklaşık *6,5 metre* genişliğinde.",
+     "show": {
+      "type": "number",
+      "value": "6,5",
+      "label": "YOL GENİŞLİĞİ",
+      "suffix": " M"
+     }
+    },
+    {
+     "say": "Altında ise kanalizasyon var. O dönem için *şaşırtıcı* bir mühendislik.",
+     "show": {
+      "type": "list",
+      "items": [
+       "BAZALT YOL",
+       "ALTINDA KANALİZASYON"
+      ]
+     },
+     "sfx": "riser"
+    },
+    {
+     "say": "İnşaat iptal edildi ve yol bugün *koruma altında*.",
+     "show": {
+      "type": "photo",
+      "search": "Tarsus Roman road",
+      "label": "KORUMA ALTINDA",
+      "extra": 2,
+      "fallback_show": {
+       "type": "icon",
+       "name": "camera",
+       "label": "KORUMA ALTINDA"
+      }
+     }
+    },
+    {
+     "say": "Şehirde bir de *Donuktaş* var: Dev bir Roma tapınağının kalıntıları.",
+     "show": {
+      "type": "photo",
+      "search": "Donuktaş Tarsus",
+      "label": "DONUKTAŞ",
+      "extra": 2,
+      "fallback_show": {
+       "type": "icon",
+       "name": "camera",
+       "label": "DONUKTAŞ"
+      }
+     }
+    },
+    {
+     "say": "Ve 2026'da Kleopatra Kapısı karşısında *gladyatör mozaiği* sergilenmeye başladı.",
+     "show": {
+      "type": "photo",
+      "search": "Tarsus mosaic",
+      "label": "GLADYATÖR MOZAİĞİ",
+      "extra": 2,
+      "fallback_show": {
+       "type": "icon",
+       "name": "camera",
+       "label": "GLADYATÖR MOZAİĞİ"
+      }
+     }
+    },
+    {
+     "say": "Mozaikte *Nikephoros* yani zafer getiren yazıyor.",
+     "show": {
+      "type": "quote",
+      "text": "NİKEPHOROS",
+      "who": "Zafer getiren"
+     }
+    },
+    {
+     "say": "Eski Tarsus'un büyük kısmı, modern şehrin altında hâlâ *kazılmayı bekliyor*.",
+     "show": {
+      "type": "icon",
+      "name": "question"
+     }
+    },
+    {
+     "say": "Dizinin sonu! Sence Tarsus'un en büyük sırrı ne? *Yorumlara yaz*.",
+     "show": {
+      "type": "title",
+      "lines": [
+       "SENCE",
+       "EN BÜYÜK SIR",
+       "HANGİSİ?"
+      ],
+      "red": 1
+     }
+    },
+    {
+     "say": "Yeni dizi için *takip et*.",
+     "show": {
+      "type": "icon",
+      "name": "eye",
+      "label": "TAKİP ET · BİLDİRİMİ AÇ"
+     }
+    }
+   ],
+   "thumb": {
+    "lines": [
+     "ALTINDA",
+     "BİR ŞEHİR"
+    ],
+    "red": 1,
+    "photo_search": "Ancient road Tarsus"
+   },
+   "broll": [
+    "Ancient road Tarsus",
+    "Donuktaş",
+    "Tarsus mosaic",
+    "Tarsus old houses"
+   ],
+   "publish": {
+    "title": "Tarsus'un Altında Başka Bir Şehir Var 🏛️ Bölüm 5 #shorts",
+    "description": "1993'te tesadüfen bulunan antik yol, Donuktaş ve 2026'da sergilenen mozaikler.\n\nDizi: Tarsus'un Gizemli Kazısı — Bölüm 5/5. Tüm bölümler kanalda.",
+    "hashtags": [
+     "#tarsus",
+     "#mersin",
+     "#tarih",
+     "#ilginçbilgiler",
+     "#shorts"
+    ]
+   }
+  }
+ ]
+}

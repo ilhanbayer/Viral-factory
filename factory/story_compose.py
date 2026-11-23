@@ -13,6 +13,7 @@ from PIL import Image, ImageFilter
 from . import tts
 from . import audio as A
 from . import story as ST
+from . import broll as BR
 from .graphics import word_timings
 
 FPS = 30
@@ -156,7 +157,18 @@ def render_chunk(args):
             t = k / FPS
             gt = s["start"] + t
             fr = atm.apply(bg, gt, ST.C["glow"])
-            bdp = s.get("bd")
+            cs = BR.current_shot(s, t)
+            bdp = None if cs else s.get("bd")
+            if cs:
+                si, (t0s, sp, seed) = cs
+                bdi = BR.load_bd(sp, W, H)
+                if bdi is not None:
+                    nxt = s["shots"][si + 1][0] if si + 1 < len(s["shots"]) else D
+                    sf = BR.shot_frame(bdi, W, H, t - t0s, nxt - t0s, seed).astype(np.float32)
+                    fr = np.clip(sf + fr.astype(np.float32) * 0.25, 0, 255)
+                    if si > 0 and t - t0s < 0.12:   # çekim içi kesme: kısa flaş
+                        fr = fr + 90 * (1 - (t - t0s) / 0.12)
+                    fr = np.clip(fr, 0, 255).astype(np.uint8)
             if bdp:
                 bd = _backdrop(bdp, W, H)
                 if bd is not None:
@@ -187,6 +199,13 @@ def render_chunk(args):
             fr = ST.transition(fr, trans, t, s["i"]) if s["i"] > 0 else fr
             ST.hud(fr, gt, total, W, H, hu)
             ST.draw_caption(fr, s["kinds"], s["words"], t, W / 2, H * P["cap_y"], P["cap_u"])
+            for (ct0, kind) in BR.cta_times(total):
+                if 0 <= gt - ct0 <= 3.3:
+                    cl_ = BR.cta_layer(W, H, kind, gt - ct0, P["cap_u"])
+                    if cl_ is not None:
+                        ca = np.array(cl_)
+                        al_ = ca[..., 3:4].astype(np.float32) / 255
+                        fr = (fr * (1 - al_) + ca[..., :3] * al_).astype(np.uint8)
             bh, bw = brand_spr.shape[:2]
             by, bx = int(40 * P["cap_u"]), int((W - bw) / 2) if fmt == "vertical" else int(50)
             al = brand_spr[..., 3:4].astype(np.float32) / 255
@@ -286,6 +305,54 @@ def commons_lookup(title=None, query=None, min_w=700):
     return None, None
 
 
+def _download(url, cache):
+    import hashlib
+    import urllib.request
+    fn = os.path.join(cache, hashlib.md5(url.encode()).hexdigest()[:12] + ".img")
+    if not os.path.exists(fn):
+        try:
+            req = urllib.request.Request(url, headers=UA)
+            open(fn, "wb").write(urllib.request.urlopen(req, timeout=60).read())
+        except Exception as e:
+            print("  [foto] indirilemedi:", url[:80], type(e).__name__)
+            return None
+    return fn
+
+
+def fetch_extra(query, cache, n=2):
+    """Aynı aramadan n tane daha (farklı) fotoğraf: b-roll havuzu için."""
+    os.makedirs(cache, exist_ok=True)
+    out = []
+    if n <= 0:
+        return out
+    try:
+        titles = _commons_search(query)
+    except Exception:
+        return out
+    for tt in titles:
+        if len(out) >= n:
+            break
+        if tt in USED_TITLES:
+            continue
+        url, credit = commons_lookup(title=tt)
+        if not url:
+            USED_TITLES.add(tt)
+            continue
+        fn = _download(url, cache)
+        if fn:
+            out.append(fn)
+            if credit and credit not in CREDITS:
+                CREDITS.append(credit)
+    return out
+
+
+def fetch_broll(terms, cache, n=3):
+    paths = []
+    for q in terms or []:
+        paths += fetch_extra(q, cache, n)
+    return paths
+
+
 def fetch_photos(beats, cache):
     """'photo' sahneleri: url, commons (dosya adı) ya da search (arama) ile telifsiz görsel indir.
     Bulunamazsa 'fallback_scene' varsa sahne canlandırmasına, yoksa ikona düşer."""
@@ -323,6 +390,9 @@ def fetch_photos(beats, cache):
         sh["_local"] = fn
         if credit and credit not in CREDITS:
             CREDITS.append(credit)
+        if sh.get("search") and not sh.get("_extra_done"):
+            sh["_extra_done"] = True
+            sh["_extra"] = fetch_extra(sh["search"], cache, n=int(sh.get("extra", 2)))
 
 
 # ------------------------------------------------------------------ audio
@@ -363,6 +433,18 @@ def plan_audio(segs, total):
         elif b.get("sfx") == "riser":
             sfx.append((st + s["dur"] - 2.2, "riser", {"d": 2.2, "seed": s["i"]}, 0.6))
         inten.append((st, 0.45 + 0.5 * (s["i"] / max(1, n - 1))))
+    for s in segs:
+        for j, (t0s, _, _) in enumerate(s.get("shots", [])):
+            if j > 0:
+                sfx.append((s["start"] + t0s - 0.08, "whoosh", {"d": 0.25, "seed": s["i"] * 5 + j}, 0.22))
+    for (ct0, kind) in BR.cta_times(total):
+        if kind == "like":
+            sfx.append((ct0 + 0.05, "pop", {"f0": 600, "f1": 1200}, 0.45))
+            sfx.append((ct0 + 0.6, "pop", {"f0": 900, "f1": 1700}, 0.4))
+        else:
+            sfx.append((ct0 + 0.05, "pop", {"f0": 600, "f1": 1200}, 0.4))
+            sfx.append((ct0 + 1.2, "tick", {"f": 2400}, 0.6))
+            sfx.append((ct0 + 1.25, "shimmer", {"d": 1.2}, 0.35))
     inten.append((total, 0.3))
     return sfx, voices, events, inten, wind
 
@@ -462,13 +544,19 @@ def make_thumbnail(path, thumb, fmt, theme, brand):
 
 
 def produce_one(vid, beats, fmt, brand, theme, publish, out_dir, use_tts=True, workers=None, preview=False,
-                thumb=None, chapters=None):
+                thumb=None, chapters=None, broll_terms=None):
     work = os.path.join(out_dir, vid + "_work")
     os.makedirs(work, exist_ok=True)
     print(f"▶ {vid} [{fmt}]: seslendirme + zaman çizelgesi")
     fetch_photos(beats, os.path.join(out_dir, "_photos"))
+    broll_paths = fetch_broll(broll_terms, os.path.join(out_dir, "_photos"))
     segs, total = build(beats, os.path.join(out_dir, "_voicecache"), use_tts)
     assign_backdrops(segs, BACKDROP_FALLBACK[0])
+    pool = BR.build_pool(beats) + [p for p in (broll_paths or []) if p]
+    if not pool and BACKDROP_FALLBACK[0]:
+        pool = [BACKDROP_FALLBACK[0]]
+    BR.assign_shots(segs, pool)
+    print(f"  b-roll havuzu: {len(pool)} fotoğraf")
     print(f"  süre {total:.1f}s, {len(segs)} sahne")
     if preview:
         pick = [segs[0], segs[len(segs) // 3], segs[2 * len(segs) // 3], segs[-1]]
@@ -551,9 +639,11 @@ def produce_story(script, out_dir, use_tts=True, workers=None):
             th = dict(part.get("thumb") or {})
             if th and not th.get("tag"):
                 th["tag"] = f"BÖLÜM {k + 1}"
+            USED_TITLES.clear()
             finals.append(produce_one(f"{script['id']}_part{k + 1}", part["beats"], "vertical",
                                       f"{brand} · BÖLÜM {k + 1}/{n}", theme, part.get("publish", {}), out_dir,
-                                      use_tts, workers, thumb=th or None))
+                                      use_tts, workers, thumb=th or None,
+                                      broll_terms=part.get("broll") or script.get("broll")))
         return finals
     L = script["long"]
     th = L.get("thumb") or {}

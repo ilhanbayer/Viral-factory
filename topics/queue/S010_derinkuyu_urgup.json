@@ -1,0 +1,802 @@
+{
+ "id": "S010_derinkuyu_urgup",
+ "format": "story",
+ "title": "Dizi: Derinkuyu ve Ürgüp",
+ "brand": "İLGİNÇ BİLGİLER",
+ "theme": "dosya",
+ "voice": {
+  "engine": "edge",
+  "speaker": "ahmet",
+  "rate": "+0%",
+  "pitch": "-2Hz"
+ },
+ "broll": [
+  "Cappadocia",
+  "Derinkuyu",
+  "Urgup"
+ ],
+ "parts": [
+  {
+   "beats": [
+    {
+     "say": "1963, Nevşehir. Bir adam evini onarırken bodrum duvarını yıktı. Arkasında *bir şehir* vardı.",
+     "show": {
+      "type": "scene",
+      "land": "underground",
+      "label": "1963 · DERİNKUYU",
+      "props": [
+       {
+        "k": "torch",
+        "x": 0.18
+       }
+      ],
+      "people": {
+       "n": 1,
+       "from": 0.35,
+       "to": 0.5
+      }
+     },
+     "sfx": "hit"
+    },
+    {
+     "say": "Duvarın ardındaki oda, aşağı inen *dar tünellere* açılıyordu.",
+     "show": {
+      "type": "photo",
+      "search": "Derinkuyu tunnel",
+      "label": "AŞAĞI İNEN TÜNELLER",
+      "extra": 2,
+      "fallback_show": {
+       "type": "icon",
+       "name": "camera",
+       "label": "AŞAĞI İNEN TÜNELLER"
+      }
+     }
+    },
+    {
+     "say": "Tüneller indikçe yeni odalar, yeni katlar *çıktı*.",
+     "show": {
+      "type": "photo",
+      "search": "Derinkuyu Underground City",
+      "label": "DERİNKUYU YERALTI ŞEHRİ",
+      "extra": 2,
+      "fallback_show": {
+       "type": "icon",
+       "name": "camera",
+       "label": "DERİNKUYU YERALTI ŞEHRİ"
+      }
+     }
+    },
+    {
+     "say": "Şehir, yerin yaklaşık *85 metre* altına iniyor.",
+     "show": {
+      "type": "number",
+      "value": "85",
+      "label": "DERİNLİK",
+      "suffix": " M"
+     },
+     "sfx": "riser"
+    },
+    {
+     "say": "Tahminlere göre burada *20 bine kadar* insan saklanabiliyordu.",
+     "show": {
+      "type": "number",
+      "value": "20.000",
+      "label": "KİŞİYE KADAR"
+     }
+    },
+    {
+     "say": "Üstelik hayvanları ve *erzaklarıyla* birlikte.",
+     "show": {
+      "type": "list",
+      "items": [
+       "İNSANLAR",
+       "HAYVANLAR",
+       "ERZAK"
+      ]
+     }
+    },
+    {
+     "say": "Derinkuyu'nun adı da buradan: *derin kuyu*.",
+     "show": {
+      "type": "photo",
+      "search": "Derinkuyu well",
+      "label": "DERİN KUYU",
+      "extra": 2,
+      "fallback_show": {
+       "type": "icon",
+       "name": "camera",
+       "label": "DERİN KUYU"
+      }
+     }
+    },
+    {
+     "say": "Bugün bölgede, bazıları evlerin bodrumunda *600'den fazla* tünel girişi bulundu.",
+     "show": {
+      "type": "number",
+      "value": "600+",
+      "label": "TÜNEL GİRİŞİ"
+     }
+    },
+    {
+     "say": "Bölüm 2'de: Binlerce insan yerin altında *nasıl yaşadı*?",
+     "show": {
+      "type": "title",
+      "lines": [
+       "BÖLÜM 2",
+       "YERİN ALTINDA",
+       "HAYAT"
+      ],
+      "red": 1
+     }
+    },
+    {
+     "say": "Kaçırmamak için *takip et*.",
+     "show": {
+      "type": "icon",
+      "name": "eye",
+      "label": "TAKİP ET · BİLDİRİMİ AÇ"
+     }
+    }
+   ],
+   "thumb": {
+    "lines": [
+     "DUVARIN",
+     "ARKASINDA ŞEHİR"
+    ],
+    "red": 1,
+    "photo_search": "Derinkuyu Underground City"
+   },
+   "broll": [
+    "Derinkuyu Underground City",
+    "Derinkuyu",
+    "Cappadocia"
+   ],
+   "publish": {
+    "title": "Duvarı Yıktı, Arkasından Şehir Çıktı 😳 Bölüm 1 #shorts",
+    "description": "1963'te Derinkuyu'da bir ev sahibinin bodrumda bulduğu yeraltı şehri.\n\nDizi: Derinkuyu ve Ürgüp — Bölüm 1/5. Tüm bölümler kanalda.",
+    "hashtags": [
+     "#kapadokya",
+     "#derinkuyu",
+     "#ürgüp",
+     "#nevşehir",
+     "#ilginçbilgiler",
+     "#shorts"
+    ]
+   }
+  },
+  {
+   "beats": [
+    {
+     "say": "Güneş görmeden, yerin 85 metre altında *aylarca* yaşamak mümkün mü?",
+     "show": {
+      "type": "scene",
+      "land": "underground",
+      "label": "YERİN 85 M ALTI",
+      "props": [
+       {
+        "k": "torch",
+        "x": 0.18
+       }
+      ],
+      "people": {
+       "n": 2,
+       "from": 0.5,
+       "to": 0.62
+      }
+     },
+     "sfx": "hit"
+    },
+    {
+     "say": "Derinkuyu'da her kat *bir işe* ayrılmıştı.",
+     "show": {
+      "type": "photo",
+      "search": "Derinkuyu",
+      "label": "KAT KAT ŞEHİR",
+      "extra": 2,
+      "fallback_show": {
+       "type": "icon",
+       "name": "camera",
+       "label": "KAT KAT ŞEHİR"
+      }
+     }
+    },
+    {
+     "say": "Üst katlarda ahırlar, aşağıda mutfaklar, *depolar* ve odalar vardı.",
+     "show": {
+      "type": "list",
+      "items": [
+       "AHIR",
+       "MUTFAK",
+       "DEPO",
+       "ODALAR"
+      ]
+     }
+    },
+    {
+     "say": "En alt katta ise bir *kilise* bulunuyor.",
+     "show": {
+      "type": "photo",
+      "search": "Derinkuyu church",
+      "label": "EN ALT KAT · KİLİSE",
+      "extra": 2,
+      "fallback_show": {
+       "type": "icon",
+       "name": "camera",
+       "label": "EN ALT KAT · KİLİSE"
+      }
+     }
+    },
+    {
+     "say": "Peki bu kadar insan *nasıl nefes alıyordu*?",
+     "show": {
+      "type": "icon",
+      "name": "question"
+     },
+     "sfx": "riser"
+    },
+    {
+     "say": "Cevap: Yüzeye uzanan dikey *havalandırma bacaları*.",
+     "show": {
+      "type": "photo",
+      "search": "Derinkuyu ventilation shaft",
+      "label": "HAVALANDIRMA BACASI",
+      "extra": 2,
+      "fallback_show": {
+       "type": "icon",
+       "name": "camera",
+       "label": "HAVALANDIRMA BACASI"
+      }
+     }
+    },
+    {
+     "say": "Ana bacalardan biri yaklaşık *55 metre* derinliğe iniyor ve kuyu olarak da kullanılıyordu.",
+     "show": {
+      "type": "number",
+      "value": "55",
+      "label": "KUYU BACASI",
+      "suffix": " M"
+     }
+    },
+    {
+     "say": "Yeraltı şehri yaz kış *serin* kalıyor; erzak bozulmadan saklanabiliyordu.",
+     "show": {
+      "type": "photo",
+      "search": "Kaymakli Underground City",
+      "label": "DOĞAL SERİNLİK",
+      "extra": 2,
+      "fallback_show": {
+       "type": "icon",
+       "name": "camera",
+       "label": "DOĞAL SERİNLİK"
+      }
+     }
+    },
+    {
+     "say": "Bölüm 3'te: Sadece *içeriden* açılan taş kapılar.",
+     "show": {
+      "type": "title",
+      "lines": [
+       "BÖLÜM 3",
+       "TAŞ",
+       "KAPILAR"
+      ],
+      "red": 1
+     }
+    },
+    {
+     "say": "*Takip et* ki kaçırma.",
+     "show": {
+      "type": "icon",
+      "name": "eye",
+      "label": "TAKİP ET · BİLDİRİMİ AÇ"
+     }
+    }
+   ],
+   "thumb": {
+    "lines": [
+     "YERİN",
+     "85 M ALTINDA"
+    ],
+    "red": 1,
+    "photo_search": "Derinkuyu"
+   },
+   "broll": [
+    "Derinkuyu",
+    "Kaymakli Underground City",
+    "Derinkuyu ventilation shaft"
+   ],
+   "publish": {
+    "title": "Yerin 85 Metre Altında Nasıl Yaşadılar? 🕯️ Bölüm 2 #shorts",
+    "description": "Derinkuyu'da ahırlar, mutfaklar, kuyular, havalandırma bacaları ve kilise.\n\nDizi: Derinkuyu ve Ürgüp — Bölüm 2/5. Tüm bölümler kanalda.",
+    "hashtags": [
+     "#kapadokya",
+     "#derinkuyu",
+     "#ürgüp",
+     "#nevşehir",
+     "#ilginçbilgiler",
+     "#shorts"
+    ]
+   }
+  },
+  {
+   "beats": [
+    {
+     "say": "Bu dev taş kapılar sadece *içeriden* kapatılabiliyordu.",
+     "show": {
+      "type": "photo",
+      "search": "Derinkuyu stone door",
+      "label": "TAŞ KAPI",
+      "extra": 2,
+      "fallback_show": {
+       "type": "icon",
+       "name": "camera",
+       "label": "TAŞ KAPI"
+      }
+     },
+     "sfx": "hit"
+    },
+    {
+     "say": "Tehlike gelince köylüler, hayvanlarıyla birlikte *yerin altına* iniyordu.",
+     "show": {
+      "type": "scene",
+      "land": "underground",
+      "label": "SIĞINAK",
+      "props": [
+       {
+        "k": "torch",
+        "x": 0.18
+       }
+      ],
+      "people": {
+       "n": 6,
+       "from": 0.85,
+       "to": 0.4,
+       "run": true
+      }
+     }
+    },
+    {
+     "say": "Sonra koridorları, tekerlek gibi *yuvarlanan* taşlarla kapatıyorlardı.",
+     "show": {
+      "type": "scene",
+      "land": "underground",
+      "label": "YUVARLANAN KAPI",
+      "props": [
+       {
+        "k": "stonedoor",
+        "x": 0.5
+       },
+       {
+        "k": "torch",
+        "x": 0.15
+       }
+      ]
+     }
+    },
+    {
+     "say": "Dışarıdan gelen biri bu kapıları *açamıyordu*.",
+     "show": {
+      "type": "title",
+      "lines": [
+       "DIŞARIDAN",
+       "AÇILAMIYORDU"
+      ],
+      "red": 1
+     }
+    },
+    {
+     "say": "Şehrin ilk kısımlarının *Frigler* döneminde oyulduğu düşünülüyor.",
+     "show": {
+      "type": "dossier",
+      "name": "FRİGLER",
+      "no": "MÖ 8-7. YY",
+      "fields": {
+       "İDDİA": "İLK OYMALAR",
+       "DURUM": "TAHMİN"
+      }
+     }
+    },
+    {
+     "say": "Bizans döneminde Arap akınlarına karşı *genişletildi*.",
+     "show": {
+      "type": "photo",
+      "search": "Cappadocia",
+      "label": "BİZANS DÖNEMİ",
+      "extra": 2,
+      "fallback_show": {
+       "type": "icon",
+       "name": "camera",
+       "label": "BİZANS DÖNEMİ"
+      }
+     }
+    },
+    {
+     "say": "Ve en şaşırtıcısı: Derinkuyu'yu Kaymaklı'ya bağlayan *8-9 kilometrelik* tüneller.",
+     "show": {
+      "type": "number",
+      "value": "8-9",
+      "label": "KM TÜNEL · KAYMAKLI",
+      "suffix": " KM"
+     },
+     "sfx": "riser"
+    },
+    {
+     "say": "Kaymaklı da Kapadokya'nın en büyük *yeraltı şehirlerinden* biri.",
+     "show": {
+      "type": "photo",
+      "search": "Kaymakli Underground City",
+      "label": "KAYMAKLI YERALTI ŞEHRİ",
+      "extra": 2,
+      "fallback_show": {
+       "type": "icon",
+       "name": "camera",
+       "label": "KAYMAKLI YERALTI ŞEHRİ"
+      }
+     }
+    },
+    {
+     "say": "Bölüm 4'te: Peribacaları *nasıl oluştu*?",
+     "show": {
+      "type": "title",
+      "lines": [
+       "BÖLÜM 4",
+       "PERİBACALARININ",
+       "SIRRI"
+      ],
+      "red": 1
+     }
+    },
+    {
+     "say": "*Takip et* ki kaçırma.",
+     "show": {
+      "type": "icon",
+      "name": "eye",
+      "label": "TAKİP ET · BİLDİRİMİ AÇ"
+     }
+    }
+   ],
+   "thumb": {
+    "lines": [
+     "SADECE",
+     "İÇERİDEN"
+    ],
+    "red": 1,
+    "photo_search": "Derinkuyu stone door"
+   },
+   "broll": [
+    "Derinkuyu stone door",
+    "Kaymakli",
+    "Derinkuyu tunnel"
+   ],
+   "publish": {
+    "title": "Bu Taş Kapı Sadece İçeriden Kapanıyordu 🪨 Bölüm 3 #shorts",
+    "description": "Derinkuyu'nun yuvarlanan taş kapıları ve Kaymaklı'ya uzanan tünel.\n\nDizi: Derinkuyu ve Ürgüp — Bölüm 3/5. Tüm bölümler kanalda.",
+    "hashtags": [
+     "#kapadokya",
+     "#derinkuyu",
+     "#ürgüp",
+     "#nevşehir",
+     "#ilginçbilgiler",
+     "#shorts"
+    ]
+   }
+  },
+  {
+   "beats": [
+    {
+     "say": "Kapadokya'nın peribacalarını aslında *volkanlar* yaptı.",
+     "show": {
+      "type": "photo",
+      "search": "Fairy chimneys Cappadocia",
+      "label": "PERİBACALARI",
+      "extra": 2,
+      "fallback_show": {
+       "type": "icon",
+       "name": "camera",
+       "label": "PERİBACALARI"
+      }
+     },
+     "sfx": "hit"
+    },
+    {
+     "say": "Milyonlarca yıl önce Erciyes, Hasandağı ve Göllüdağ *püskürdü*.",
+     "show": {
+      "type": "photo",
+      "search": "Erciyes",
+      "label": "ERCİYES DAĞI",
+      "extra": 2,
+      "fallback_show": {
+       "type": "icon",
+       "name": "camera",
+       "label": "ERCİYES DAĞI"
+      }
+     }
+    },
+    {
+     "say": "Volkanik kül katman katman birikti ve yumuşak bir taşa, *tüfe* dönüştü.",
+     "show": {
+      "type": "list",
+      "items": [
+       "KÜL",
+       "KATMAN",
+       "TÜF"
+      ]
+     }
+    },
+    {
+     "say": "Sonra yağmur ve rüzgâr bu taşı binlerce yıl *aşındırdı*.",
+     "show": {
+      "type": "scene",
+      "sky": "storm",
+      "land": "desert",
+      "weather": "rain",
+      "moon": false,
+      "label": "AŞINMA",
+      "props": [
+       {
+        "k": "chimney",
+        "x": 0.4
+       },
+       {
+        "k": "chimney",
+        "x": 0.75,
+        "s": 0.7
+       }
+      ]
+     }
+    },
+    {
+     "say": "Tepede kalan sert kaya *şapka* gibi korudu; altındaki yumuşak taş sivrildi.",
+     "show": {
+      "type": "photo",
+      "search": "Fairy chimney",
+      "label": "SERT ŞAPKA, YUMUŞAK GÖVDE",
+      "extra": 2,
+      "fallback_show": {
+       "type": "icon",
+       "name": "camera",
+       "label": "SERT ŞAPKA, YUMUŞAK GÖVDE"
+      }
+     },
+     "sfx": "riser"
+    },
+    {
+     "say": "Ürgüp'teki en ünlüleri: *Üç Güzeller*.",
+     "show": {
+      "type": "photo",
+      "search": "Three Beauties Urgup",
+      "label": "ÜÇ GÜZELLER · ÜRGÜP",
+      "extra": 2,
+      "fallback_show": {
+       "type": "icon",
+       "name": "camera",
+       "label": "ÜÇ GÜZELLER · ÜRGÜP"
+      }
+     }
+    },
+    {
+     "say": "Halk arasında bu peribacalarına bir *aşk efsanesi* anlatılır.",
+     "show": {
+      "type": "icon",
+      "name": "eye",
+      "label": "EFSANE"
+     }
+    },
+    {
+     "say": "Kapadokya adının ise *güzel atlar ülkesi* anlamına geldiği söylenir.",
+     "show": {
+      "type": "quote",
+      "text": "Katpatuka: güzel atlar ülkesi",
+      "who": "Yaygın anlatım"
+     }
+    },
+    {
+     "say": "Bölüm 5'te: Bir dizi, Ürgüp'ün *kaderini* nasıl değiştirdi?",
+     "show": {
+      "type": "title",
+      "lines": [
+       "BÖLÜM 5",
+       "BİR DİZİ",
+       "HER ŞEYİ DEĞİŞTİRDİ"
+      ],
+      "red": 1
+     }
+    },
+    {
+     "say": "*Takip et* ki kaçırma.",
+     "show": {
+      "type": "icon",
+      "name": "eye",
+      "label": "TAKİP ET · BİLDİRİMİ AÇ"
+     }
+    }
+   ],
+   "thumb": {
+    "lines": [
+     "PERİBACALARI",
+     "NASIL OLUŞTU?"
+    ],
+    "red": 1,
+    "photo_search": "Fairy chimneys Urgup"
+   },
+   "broll": [
+    "Fairy chimneys Cappadocia",
+    "Erciyes",
+    "Urgup"
+   ],
+   "publish": {
+    "title": "Peribacaları Aslında Volkanlardan Doğdu 🌋 Bölüm 4 #shorts",
+    "description": "Peribacalarının oluşumu, Kapadokya adının anlamı ve Ürgüp'teki Üç Güzeller.\n\nDizi: Derinkuyu ve Ürgüp — Bölüm 4/5. Tüm bölümler kanalda.",
+    "hashtags": [
+     "#kapadokya",
+     "#derinkuyu",
+     "#ürgüp",
+     "#nevşehir",
+     "#ilginçbilgiler",
+     "#shorts"
+    ]
+   }
+  },
+  {
+   "beats": [
+    {
+     "say": "Bir televizyon dizisi, koca bir bölgenin *kaderini* değiştirdi.",
+     "show": {
+      "type": "photo",
+      "search": "Urgup",
+      "label": "ÜRGÜP",
+      "extra": 2,
+      "fallback_show": {
+       "type": "icon",
+       "name": "camera",
+       "label": "ÜRGÜP"
+      }
+     },
+     "sfx": "hit"
+    },
+    {
+     "say": "2002-2004 arasında *Asmalı Konak* Ürgüp'te çekildi.",
+     "show": {
+      "type": "number",
+      "value": "2002",
+      "label": "ASMALI KONAK ÇEKİMLERİ"
+     }
+    },
+    {
+     "say": "Dizi, Kapadokya'ya yerli turist akınını *başlatan* etkenlerden biri sayılıyor.",
+     "show": {
+      "type": "photo",
+      "search": "Urgup houses",
+      "label": "TAŞ EVLER",
+      "extra": 2,
+      "fallback_show": {
+       "type": "icon",
+       "name": "camera",
+       "label": "TAŞ EVLER"
+      }
+     }
+    },
+    {
+     "say": "Ürgüp'ün ortasında *Temenni Tepesi* yani dilek tepesi var.",
+     "show": {
+      "type": "photo",
+      "search": "Temenni hill Urgup",
+      "label": "TEMENNİ TEPESİ",
+      "extra": 2,
+      "fallback_show": {
+       "type": "icon",
+       "name": "camera",
+       "label": "TEMENNİ TEPESİ"
+      }
+     }
+    },
+    {
+     "say": "Tepede, Selçuklu sultanı *IV. Kılıçarslan* için yapılmış sembolik bir türbe bulunuyor.",
+     "show": {
+      "type": "dossier",
+      "name": "IV. KILIÇARSLAN",
+      "no": "SELÇUKLU",
+      "fields": {
+       "YER": "TEMENNİ TEPESİ",
+       "TÜRBE": "SEMBOLİK"
+      }
+     }
+    },
+    {
+     "say": "Ve sabahları gökyüzü *yüzlerce balonla* doluyor.",
+     "show": {
+      "type": "photo",
+      "search": "Cappadocia balloons",
+      "label": "KAPADOKYA BALONLARI",
+      "extra": 2,
+      "fallback_show": {
+       "type": "icon",
+       "name": "camera",
+       "label": "KAPADOKYA BALONLARI"
+      }
+     },
+     "sfx": "riser"
+    },
+    {
+     "say": "Kapadokya, dünyanın en ünlü *balon uçuşu* noktalarından biri.",
+     "show": {
+      "type": "scene",
+      "sky": "day",
+      "land": "desert",
+      "weather": "none",
+      "moon": false,
+      "label": "SABAH · KAPADOKYA",
+      "props": [
+       {
+        "k": "chimney",
+        "x": 0.3
+       },
+       {
+        "k": "chimney",
+        "x": 0.7,
+        "s": 0.8
+       }
+      ]
+     }
+    },
+    {
+     "say": "Yerin 85 metre altından gökyüzüne: Kapadokya'nın *iki yüzü*.",
+     "show": {
+      "type": "title",
+      "lines": [
+       "YERİN ALTI",
+       "VE",
+       "GÖKYÜZÜ"
+      ],
+      "red": 2
+     }
+    },
+    {
+     "say": "Dizinin sonu! Sen Kapadokya'ya gittin mi? *Yorumlara yaz*.",
+     "show": {
+      "type": "title",
+      "lines": [
+       "SEN",
+       "KAPADOKYA'YA",
+       "GİTTİN Mİ?"
+      ],
+      "red": 2
+     }
+    },
+    {
+     "say": "Yeni dizi için *takip et*.",
+     "show": {
+      "type": "icon",
+      "name": "eye",
+      "label": "TAKİP ET · BİLDİRİMİ AÇ"
+     }
+    }
+   ],
+   "thumb": {
+    "lines": [
+     "ÜRGÜP'ÜN",
+     "SIRRI"
+    ],
+    "red": 1,
+    "photo_search": "Urgup"
+   },
+   "broll": [
+    "Urgup",
+    "Cappadocia balloons",
+    "Temenni hill Urgup"
+   ],
+   "publish": {
+    "title": "Bir Dizi Ürgüp'ün Kaderini Değiştirdi 🎈 Bölüm 5 #shorts",
+    "description": "Ürgüp: Temenni Tepesi, Asmalı Konak etkisi ve Kapadokya'nın balonları.\n\nDizi: Derinkuyu ve Ürgüp — Bölüm 5/5. Tüm bölümler kanalda.",
+    "hashtags": [
+     "#kapadokya",
+     "#derinkuyu",
+     "#ürgüp",
+     "#nevşehir",
+     "#ilginçbilgiler",
+     "#shorts"
+    ]
+   }
+  }
+ ]
+}

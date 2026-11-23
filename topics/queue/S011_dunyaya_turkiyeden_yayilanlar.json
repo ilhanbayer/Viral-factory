@@ -1,5 +1,5 @@
 {
- "id": "S008_dunyaya_turkiyeden_yayilanlar",
+ "id": "S011_dunyaya_turkiyeden_yayilanlar",
  "format": "story",
  "title": "Dizi: Dünyaya Türkiye'den Yayılan 6 Şey",
  "brand": "İLGİNÇ BİLGİLER",
@@ -1021,5 +1021,13 @@
     ]
    }
   }
+ ],
+ "broll": [
+  "Demre",
+  "Tulips Istanbul",
+  "Giresun",
+  "Hazelnut",
+  "Turkish coffee",
+  "Yogurt"
  ]
 }
