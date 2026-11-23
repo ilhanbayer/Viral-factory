@@ -94,3 +94,9 @@ Uygulananlar (`factory/broll.py`):
 - CTA: videonun %42'sinde "BEĞEN + YORUM YAZ" (başparmak kırmızıya döner, kalpler uçar, pop sesi); son 3,4 sn'de "İB · İLGİNÇ BİLGİLER · TAKİP ET" butonuna imleç tıklıyor → "TAKİP EDİLDİ", zil sallanıyor.
 - Yeni senaryolarda takvim (tarih) animasyonu yok, canlandırma sahnesi az; ağırlık gerçek fotoğrafta.
 Kuyruk (kullanıcının seçtiği konular): S008 Tarsus'un Gizemli Kazısı (5 bölüm) → S009 Göbeklitepe (5) → S010 Derinkuyu ve Ürgüp (5) → S011 Dünyaya Türkiye'den Yayılan 6 Şey.
+
+## 2026-11-24 (01:10) — S008 Tarsus dizisi, 5 bölüm (yeni kurgunun ilk çıktısı)
+- b-roll havuzu: 21 / 21 / 30 / 27 / 26 gerçek fotoğraf; süreler 50 / 53 / 51 / 44 / 53 sn; ses −14,1 LUFS; hata yok.
+- Ekran her ~2 sn değişiyor, boş/siyah kare yok, taşma yok; BEĞEN/YORUM ve TAKİP ET animasyonları görünüyor.
+- Zayıf noktalar: Bölüm 4'teki gece çadır sahnesi (≈5 sn) koyu; bazı fotoğraflar konuyla dolaylı ilgili (genel Tarsus sokakları).
+- Puan: 8,0 / 7,8 / 8,0 / 7,4 / 7,8 → hepsi paylaşılıyor (Metricool: 24 Kas 17:00, 25 Kas 13:00-17:00-20:30, 26 Kas 13:00).
