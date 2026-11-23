@@ -72,3 +72,16 @@ Düzeltmeler:
 - Gizem senaryoları (S005 Derinkuyu, S006 Antikythera, S007 Göbeklitepe) `topics/hazir/` klasörüne alındı; Türkiye konuluları ileride dizi formatına çevrilebilir.
 - Takvim kartı: gün yoksa yıl kutunun içinde büyük yazılıyor; ay/başlık yazısı kutuya sığdırılıyor. Yıllar artık "1.637" gibi noktalı yazılmıyor (string değer).
 - Kuyruk boşsa eski Gemini liste formatı artık otomatik üretilmiyor (AUTO_GEMINI=1 gerekli).
+
+## 2026-11-23 (23:00) — S004 Tunguska (Actions 8. çalışma, başarılı; ilk kez belgesel foto arka planı)
+| Ölçüt | Short1 | Short2 | Short3 | Not |
+|---|---|---|---|---|
+| Kanca | 7 | 8 | 8 | Short1 ilk kare: gün batımında boş orman, ateş topu gecikiyor |
+| Görsel çeşitlilik | 7 | 8 | 8 | 8 Commons görseli bulundu; foto arka planı boş zeminleri doldurdu ✔ |
+| Sahne | 6 | 7 | 7 | Gri sisli kareler neredeyse boş; dikey sahnelerde öğeler küçük |
+| Altyazı / taşma | 8 | 8 | 8 | Taşma yok |
+| Ses | 9 | 9 | 9 | −14,1 LUFS |
+| **Ortalama** | **7,4** | **8,0** | **8,0** | Hepsi eşik üstü |
+
+Yükleme: Short1 ve Short2 Zapier ile denendi → "This action has been throttled without retry" (Zapier kısıtlaması). Yüklenmedi; Zapier görev kotası/oran sınırı kontrol edilmeli.
+Sonraki iyileştirme: sisli/gece dikey sahnelerde ön plan öğesini büyüt, ateş topunu kanca karesinin ilk 0,5 sn'sine al.
