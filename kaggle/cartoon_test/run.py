@@ -1,4 +1,4 @@
-"""Kaggle GPU testi: özgün karakterlerle 3D çizgi film kareleri (FLUX.1-schnell) + kısa hareketli klip (LTX-Video / Wan2.2).
+"""Kaggle GPU testi: özgün karakterlerle 3D çizgi film kareleri (Playground v2.5 / SDXL) + kısa hareketli klip (LTX-Video / Wan2.2).
 Her aşama kendi try/except'inde; çıktılar /kaggle/working altına, günlük log.txt'ye yazılır."""
 import os, sys, time, subprocess, traceback, json
 OUT = "/kaggle/working"
@@ -37,26 +37,34 @@ SCENES = [
     (f"close-up of {PITIR} looking surprised with wide eyes, {WORLD}", 576, 1024),
 ]
 imgs = []
-# ---------------------------------------------------------------- 1) FLUX.1-schnell kareleri
-try:
-    from diffusers import FluxPipeline
-    t0 = time.time()
-    pipe = FluxPipeline.from_pretrained("black-forest-labs/FLUX.1-schnell", torch_dtype=torch.float16)
-    pipe.enable_model_cpu_offload()
-    pipe.vae.enable_tiling()
-    log("flux yüklendi", round(time.time() - t0), "s")
-    for k, (p, w, h) in enumerate(SCENES):
+# ---------------------------------------------------------------- 1) Kareler (kapısız açık modeller)
+SIZES = {(1024, 576): (1344, 768), (576, 1024): (768, 1344)}
+NEG = "photo, photorealistic, realistic, human, text, watermark, blurry, deformed, extra limbs, ugly"
+from diffusers import DiffusionPipeline
+for tag, mid, steps, cfg in (("pg", "playgroundai/playground-v2.5-1024px-aesthetic", 40, 3.0),
+                             ("sdxl", "stabilityai/stable-diffusion-xl-base-1.0", 30, 6.0)):
+    try:
         t0 = time.time()
-        im = pipe(f"{p}. {STYLE}", width=w, height=h, num_inference_steps=4, guidance_scale=0.0,
-                  max_sequence_length=256, generator=torch.Generator("cpu").manual_seed(42 + k)).images[0]
-        path = os.path.join(OUT, f"flux_{k}.jpg")
-        im.save(path, quality=92)
-        imgs.append(path)
-        log("flux kare", k, round(time.time() - t0), "s")
-    del pipe
-    torch.cuda.empty_cache()
-except Exception:
-    log("FLUX HATA", traceback.format_exc()[-2500:])
+        pipe = DiffusionPipeline.from_pretrained(mid, torch_dtype=torch.float16, variant="fp16").to("cuda")
+        if tag == "sdxl":
+            pipe.vae.config.force_upcast = True
+        log(tag, "yüklendi", round(time.time() - t0), "s")
+        got = []
+        for k, (p, w, h) in enumerate(SCENES):
+            W, H = SIZES[(w, h)]
+            t0 = time.time()
+            im = pipe(prompt=f"{p}. {STYLE}", negative_prompt=NEG, width=W, height=H, num_inference_steps=steps,
+                      guidance_scale=cfg, generator=torch.Generator("cpu").manual_seed(42 + k)).images[0]
+            path = os.path.join(OUT, f"{tag}_{k}.jpg")
+            im.save(path, quality=92)
+            got.append(path)
+            log(tag, "kare", k, round(time.time() - t0), "s")
+        if not imgs:
+            imgs = got
+        del pipe
+        torch.cuda.empty_cache()
+    except Exception:
+        log(tag, "HATA", traceback.format_exc()[-2500:])
 
 # ---------------------------------------------------------------- 2) LTX-Video resimden videoya
 try:
