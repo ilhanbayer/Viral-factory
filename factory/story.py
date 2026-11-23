@@ -474,7 +474,13 @@ def draw_visual(img, show, t, dur, cx, cy, u):
             if a <= 0:
                 continue
             size = (170 if i == hl else 90) * u * (1.5 - 0.5 * eo(a))
-            d.text((cx, y), up(ln), font=F(size, 900 if i == hl else 700), fill=A(red if i == hl else txt, 255 * a),
+            wt = 900 if i == hl else 700
+            maxw = min(img.width * 0.88, cx * 2 * 0.88)
+            fnt = F(size, wt)
+            while size > 30 * u and d.textlength(up(ln), font=fnt) > maxw:   # satır ekrana sığsın
+                size *= 0.92
+                fnt = F(size, wt)
+            d.text((cx, y), up(ln), font=fnt, fill=A(red if i == hl else txt, 255 * a),
                    anchor="mm")
             y += (200 if i == hl else 140) * u
     return typ
@@ -1137,6 +1143,24 @@ def draw_scene(img, show, t, dur, W, H, u):
                 if j == 1:
                     d.rectangle((cx_ - s * 0.025, ground - hgt * 0.5, cx_ + s * 0.025, ground - hgt * 0.42),
                                 fill=(40, 28, 20, 255))
+        elif k == "tpillar":   # Göbeklitepe tipi T biçimli dikilitaş: gövde, başlık, kabartma kollar ve hayvan
+            stone, dark = (200, 184, 150, 255), (150, 134, 104, 255)
+            hgt = s * 1.25
+            d.rectangle((x - s * 0.13, ground - hgt, x + s * 0.13, ground), fill=stone)
+            d.rectangle((x - s * 0.13, ground - hgt, x - s * 0.1, ground), fill=dark)
+            d.rectangle((x - s * 0.34, ground - hgt - s * 0.2, x + s * 0.3, ground - hgt), fill=stone)
+            d.line((x - s * 0.34, ground - hgt, x + s * 0.3, ground - hgt), fill=dark, width=max(2, int(4 * u)))
+            lw = max(2, int(5 * u))
+            for sgn in (-1, 1):   # kabartma kol + el
+                d.line((x + sgn * s * 0.11, ground - hgt * 0.78, x + sgn * s * 0.03, ground - hgt * 0.42),
+                       fill=dark, width=lw)
+            d.line((x - s * 0.11, ground - hgt * 0.38, x + s * 0.11, ground - hgt * 0.38), fill=dark, width=lw)  # kemer
+            ax, ay = x, ground - hgt * 0.62   # tilki/yaban domuzu kabartması (basit siluet)
+            d.ellipse((ax - s * 0.07, ay - s * 0.03, ax + s * 0.05, ay + s * 0.03), outline=dark, width=lw)
+            d.polygon([(ax + s * 0.05, ay - s * 0.01), (ax + s * 0.09, ay - s * 0.03), (ax + s * 0.08, ay + s * 0.02)],
+                      outline=dark)
+            if p.get("glow", True):   # alçak güneş vurgusu
+                d.line((x + s * 0.13, ground - hgt, x + s * 0.13, ground), fill=(255, 214, 150, 200), width=lw)
         elif k == "searchlight":
             a0 = 250 + 25 * math.sin(t * 0.8 + x)
             beam = Image.new("RGBA", (W, H), (0, 0, 0, 0))
