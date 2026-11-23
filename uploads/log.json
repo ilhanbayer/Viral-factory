@@ -14,5 +14,34 @@
   "video-7-S003_mary_celeste_hayalet_gemi_short1": "DvocNYZKhBI",
   "video-7-S003_mary_celeste_hayalet_gemi_short2": "ipBS03qNU7o"
  },
- "note": "uploads = Zapier araç çağrısı sayısı (her biri 2 görev); ayda en fazla 45"
+ "note": "uploaded = Zapier ile YouTube (ayda en fazla 45 çağrı); metricool = Metricool zamanlanmış gönderi (YouTube Shorts + Instagram Reels + TikTok)",
+ "metricool": {
+  "video-8-S004_tunguska_olayi_short1": {
+   "post_id": 439384235,
+   "at": "2026-11-23T23:30+03:00",
+   "networks": [
+    "youtube",
+    "instagram",
+    "tiktok"
+   ]
+  },
+  "video-8-S004_tunguska_olayi_short2": {
+   "post_id": 439384544,
+   "at": "2026-11-24T13:00+03:00",
+   "networks": [
+    "youtube",
+    "instagram",
+    "tiktok"
+   ]
+  },
+  "video-8-S004_tunguska_olayi_short3": {
+   "post_id": 439384629,
+   "at": "2026-11-24T20:00+03:00",
+   "networks": [
+    "youtube",
+    "instagram",
+    "tiktok"
+   ]
+  }
+ }
 }
