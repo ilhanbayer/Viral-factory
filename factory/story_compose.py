@@ -8,7 +8,7 @@ from multiprocessing import Pool
 
 import numpy as np
 import cv2
-from PIL import Image
+from PIL import Image, ImageFilter
 
 from . import tts
 from . import audio as A
@@ -68,6 +68,58 @@ def _hot_times(s):
     return out
 
 
+_BD = {}
+BACKDROP_FALLBACK = [None]   # videoda hiç foto yoksa kapak fotoğrafı
+
+
+def _backdrop(path, W, H):
+    """Belgesel arka planı: ilgili arşiv fotoğrafı, tam ekran, hafif bulanık, tema tonunda ve karartılmış.
+    Boş/siyah zemin yerine her karede gerçek bir doku olur."""
+    key = (path, W, H)
+    if key in _BD:
+        return _BD[key]
+    out = None
+    try:
+        im = Image.open(path).convert("RGB")
+        k = 1.16
+        sc = max(W * k / im.width, H * k / im.height)
+        im = im.resize((int(im.width * sc) + 2, int(im.height * sc) + 2), Image.LANCZOS)
+        im = im.filter(ImageFilter.GaussianBlur(9 * min(W, H) / 1080))
+        a = np.array(im).astype(np.float32)
+        g = a.mean(-1, keepdims=True)
+        tone = np.array(ST.C["paper"], np.float32) / 255
+        a = (g * 0.75 + a * 0.25) * tone
+        hh, ww = a.shape[:2]
+        yy, xx = np.mgrid[0:hh, 0:ww].astype(np.float32)
+        d = np.sqrt(((xx - ww / 2) / (ww / 2)) ** 2 + ((yy - hh / 2) / (hh / 2)) ** 2)
+        a *= (0.30 * np.clip(1.25 - 0.75 * d, 0.25, 1))[..., None]
+        out = a.astype(np.float32)
+    except Exception as e:
+        print("  [arka plan] okunamadı:", path, type(e).__name__)
+    _BD[key] = out
+    return out
+
+
+def _bd_frame(bd, W, H, gt, t, D):
+    hh, ww = bd.shape[:2]
+    fx = 0.5 + 0.45 * math.sin(gt * 0.07)
+    fy = 0.5 + 0.45 * math.cos(gt * 0.05)
+    x0, y0 = int((ww - W) * fx), int((hh - H) * fy)
+    return bd[y0:y0 + H, x0:x0 + W]
+
+
+def assign_backdrops(segs, extra=None):
+    """Her sahneye en yakın fotoğrafı arka plan olarak ata (önce kendisi, sonra önceki, sonra sonraki)."""
+    paths = [s["beat"].get("show", {}).get("_local") for s in segs]
+    for i, s in enumerate(segs):
+        typ = s["beat"].get("show", {}).get("type", "title")
+        if typ == "scene":
+            s["bd"] = None
+            continue
+        cand = [paths[j] for j in list(range(i, -1, -1)) + list(range(i + 1, len(segs))) if paths[j]]
+        s["bd"] = cand[0] if cand else extra
+
+
 def render_chunk(args):
     segs, fmt, brand, theme, out_path, preview, total = (list(args) + [None])[:7]
     cv2.setNumThreads(1)
@@ -104,6 +156,11 @@ def render_chunk(args):
             t = k / FPS
             gt = s["start"] + t
             fr = atm.apply(bg, gt, ST.C["glow"])
+            bdp = s.get("bd")
+            if bdp:
+                bd = _backdrop(bdp, W, H)
+                if bd is not None:
+                    fr = np.clip(_bd_frame(bd, W, H, gt, t, D) + fr.astype(np.float32) * 0.55, 0, 255).astype(np.uint8)
             ST.ghost_word(fr, kw, t, D, W, H, u)
             layer = Image.new("RGBA", (W, H), (0, 0, 0, 0))
             ST.draw_visual(layer, show, t, D, cx, cy, u)
@@ -411,6 +468,7 @@ def produce_one(vid, beats, fmt, brand, theme, publish, out_dir, use_tts=True, w
     print(f"▶ {vid} [{fmt}]: seslendirme + zaman çizelgesi")
     fetch_photos(beats, os.path.join(out_dir, "_photos"))
     segs, total = build(beats, os.path.join(out_dir, "_voicecache"), use_tts)
+    assign_backdrops(segs, BACKDROP_FALLBACK[0])
     print(f"  süre {total:.1f}s, {len(segs)} sahne")
     if preview:
         pick = [segs[0], segs[len(segs) // 3], segs[2 * len(segs) // 3], segs[-1]]
@@ -487,6 +545,14 @@ def produce_story(script, out_dir, use_tts=True, workers=None):
     pub = script.get("publish", {})
     finals = []
     L = script["long"]
+    th = L.get("thumb") or {}
+    BACKDROP_FALLBACK[0] = None
+    if th.get("photo_commons") or th.get("photo_search") or th.get("photo_url"):
+        tb = [{"show": {"type": "photo", "url": th.get("photo_url"), "search": th.get("photo_search"),
+                        "commons": th.get("photo_commons")}}]
+        fetch_photos(tb, os.path.join(out_dir, "_photos"))
+        USED_TITLES.clear()
+        BACKDROP_FALLBACK[0] = tb[0]["show"].get("_local")
     finals.append(produce_one(script["id"], L["beats"], "landscape", brand, theme, pub.get("long", {}), out_dir,
                               use_tts, workers, thumb=L.get("thumb"), chapters=L.get("chapters")))
     for k, sh in enumerate(script.get("shorts", [])):

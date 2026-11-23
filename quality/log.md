@@ -59,3 +59,9 @@ Düzeltmeler:
 - README paneli: YouTube'a yüklenenler ✅ bağlantıyla işaretleniyor, sıradaki konular ve Zapier çağrı sayısı gösteriliyor.
 - Kuyruğa S006 Antikythera Mekanizması eklendi (dünya gizemi; Tunguska=doğa olayı, Derinkuyu=Türkiye ile dönüşümlü). 49 beat ≈ 4,3 dk, 8 foto, 6 sahne.
 - Bugün 2 Shorts + 1 uzun yüklendi → günlük Shorts kotası doldu, bu çalışmada ek yükleme yok (ay toplamı 11/45).
+
+## 2026-11-23 (akşam, kullanıcı isteği) — Yalnızca "İlginç Bilgiler / Gizem Dosyası", daha profesyonel görünüm
+- Diğer her şey durduruldu: Kaggle çizgi film testi (çalışan run iptal), Çizgi film testi, Görsel test, Ses örnekleri, Chatterbox ses testi iş akışları devre dışı. Yalnızca `daily.yml` açık.
+- **Belgesel arka planı:** Boş koyu zeminli kareler (sayı, liste, tarih, dosya kartı, alıntı, ikon) artık videodaki en yakın arşiv fotoğrafını tam ekran, hafif bulanık, tema tonunda ve karartılmış olarak arkada gösteriyor (yavaş Ken Burns kayması). Videoda hiç foto yoksa kapak fotoğrafı kullanılıyor. Sahne canlandırmalarında kapalı.
+- Dosya kartında uzun isimler artık kartın dışına taşmıyor (yazı boyutu otomatik küçülüyor).
+- Yerel test: dikey 4 sahnelik tam render sorunsuz (ffmpeg + paralel render).

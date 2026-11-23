@@ -286,8 +286,11 @@ def draw_visual(img, show, t, dur, cx, cy, u):
         # isim (daktilo)
         name = up(show.get("name", "BİLİNMİYOR"))
         nk = int(len(name) * cl((t - 0.15) / max(0.6, dur * 0.45)))
+        nf = M(46 * u)
+        while nf.size > 22 * u and cd.textlength(name + "█", font=nf) > card.width - 90 * u:
+            nf = M(int(nf.size - 2))   # uzun isim kartın dışına taşmasın
         cd.text((50 * u, 470 * u), name[:nk] + ("█" if nk < len(name) and int(t * 6) % 2 == 0 else ""),
-                font=M(46 * u), fill=C["ink"], anchor="lm")
+                font=nf, fill=C["ink"], anchor="lm")
         y = 650 * u
         for i, (k_, v) in enumerate(show.get("fields", {"DOĞUM YERİ": "?", "DURUM": "██"}).items()):
             cd.text((50 * u, y), f"{up(k_)}: ", font=M(26 * u), fill=C["ink"], anchor="lm")
