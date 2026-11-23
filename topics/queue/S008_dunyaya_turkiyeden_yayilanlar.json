@@ -1,0 +1,1025 @@
+{
+ "id": "S008_dunyaya_turkiyeden_yayilanlar",
+ "format": "story",
+ "title": "Dizi: Dünyaya Türkiye'den Yayılan 6 Şey",
+ "brand": "İLGİNÇ BİLGİLER",
+ "theme": "dosya",
+ "voice": {
+  "engine": "edge",
+  "speaker": "ahmet",
+  "rate": "+0%",
+  "pitch": "-2Hz"
+ },
+ "parts": [
+  {
+   "beats": [
+    {
+     "say": "Noel Baba aslında *Antalyalı* olabilir. Şaka değil.",
+     "show": {
+      "type": "photo",
+      "search": "St. Nicholas Church Demre",
+      "label": "AZİZ NİKOLAOS KİLİSESİ, DEMRE",
+      "fallback_show": {
+       "type": "place",
+       "name": "DEMRE",
+       "sub": "ANTALYA"
+      }
+     },
+     "sfx": "hit"
+    },
+    {
+     "say": "Noel Baba'nın ilham kaynağı, 4. yüzyılda yaşamış *Aziz Nikolaos*.",
+     "show": {
+      "type": "dossier",
+      "name": "AZİZ NİKOLAOS",
+      "no": "MS 4. YY",
+      "fields": {
+       "DOĞUM": "PATARA",
+       "GÖREV": "MYRA PİSKOPOSU"
+      }
+     }
+    },
+    {
+     "say": "Bugün Antalya'nın Kaş ilçesindeki antik *Patara* kentinde doğdu.",
+     "show": {
+      "type": "place",
+      "name": "PATARA",
+      "sub": "KAŞ · ANTALYA"
+     }
+    },
+    {
+     "say": "Sonra bugünkü Demre'de, antik Myra kentinde *piskopos* oldu.",
+     "show": {
+      "type": "photo",
+      "search": "Myra rock tombs",
+      "label": "MYRA, DEMRE",
+      "fallback_show": {
+       "type": "place",
+       "name": "MYRA",
+       "sub": "BUGÜNKÜ DEMRE"
+      }
+     }
+    },
+    {
+     "say": "Anlatılana göre fakir bir babanın üç kızına, geceleri gizlice *altın* bıraktı.",
+     "show": {
+      "type": "scene",
+      "sky": "night",
+      "land": "hills",
+      "weather": "none",
+      "moon": true,
+      "label": "EFSANE · GİZLİ HEDİYE",
+      "props": [
+       {
+        "k": "house",
+        "x": 0.62,
+        "s": 1.3
+       }
+      ],
+      "people": {
+       "n": 1,
+       "from": 0.15,
+       "to": 0.4
+      }
+     }
+    },
+    {
+     "say": "Gizlice hediye bırakan Noel Baba efsanesi, *bu hikâyeden* doğdu.",
+     "show": {
+      "type": "list",
+      "items": [
+       "GİZLİ HEDİYE",
+       "GECE",
+       "SÜRPRİZ"
+      ]
+     }
+    },
+    {
+     "say": "Nikolaos adı Hollandacada *Sinterklaas* oldu, oradan da Santa Claus.",
+     "show": {
+      "type": "list",
+      "items": [
+       "NİKOLAOS",
+       "SİNTERKLAAS",
+       "SANTA CLAUS"
+      ]
+     },
+     "sfx": "riser"
+    },
+    {
+     "say": "Peki kilisesi nerede? Demre'deki *Aziz Nikolaos Kilisesi*, bugün müze.",
+     "show": {
+      "type": "photo",
+      "search": "Saint Nicholas Church Myra",
+      "label": "AZİZ NİKOLAOS KİLİSESİ",
+      "fallback_show": {
+       "type": "icon",
+       "name": "documents",
+       "label": "DEMRE · MÜZE"
+      }
+     }
+    },
+    {
+     "say": "Ama 1087'de İtalyan denizciler kemiklerinin bir kısmını *Bari'ye* götürdü.",
+     "show": {
+      "type": "date",
+      "day": "",
+      "month": "BARİ'YE GÖTÜRÜLDÜ",
+      "year": 1087
+     }
+    },
+    {
+     "say": "Bugün her yıl binlerce turist, Noel Baba'nın izini sürmek için *Demre'ye* geliyor.",
+     "show": {
+      "type": "photo",
+      "search": "Demre",
+      "label": "DEMRE",
+      "fallback_show": {
+       "type": "place",
+       "name": "DEMRE",
+       "sub": "NOEL BABA'NIN İZİNDE"
+      }
+     }
+    },
+    {
+     "say": "Bölüm 2'de: Hollanda'nın simgesi lalenin *gerçek memleketi*.",
+     "show": {
+      "type": "title",
+      "lines": [
+       "BÖLÜM 2",
+       "LALENİN",
+       "SIRRI"
+      ],
+      "red": 1
+     }
+    },
+    {
+     "say": "Kaçırmamak için *takip et*.",
+     "show": {
+      "type": "icon",
+      "name": "eye",
+      "label": "TAKİP ET · BİLDİRİMİ AÇ"
+     }
+    }
+   ],
+   "thumb": {
+    "lines": [
+     "NOEL BABA",
+     "ANTALYALI MI?"
+    ],
+    "red": 1,
+    "photo_search": "St. Nicholas Church Demre"
+   },
+   "publish": {
+    "title": "Noel Baba Aslında Antalyalı mı? 🎅 Bölüm 1 #shorts",
+    "description": "Noel Baba'nın ilham kaynağı Aziz Nikolaos; Patara'da doğdu, Myra'da (Demre) piskopos oldu.\n\nDizi: Dünyaya Türkiye'den Yayılan 6 Şey — tüm bölümler kanalda.",
+    "hashtags": [
+     "#shorts",
+     "#noelbaba",
+     "#antalya",
+     "#demre",
+     "#ilginçbilgiler"
+    ]
+   }
+  },
+  {
+   "beats": [
+    {
+     "say": "Hollanda'nın simgesi lale, aslında *bu topraklardan* gitti.",
+     "show": {
+      "type": "photo",
+      "search": "Tulip field",
+      "label": "LALE",
+      "fallback_show": {
+       "type": "title",
+       "lines": [
+        "LALE",
+        "BİZDEN",
+        "GİTTİ"
+       ],
+       "red": 1
+      }
+     },
+     "sfx": "hit"
+    },
+    {
+     "say": "Lale, Orta Asya ve Anadolu'da yüzyıllardır *yetişiyordu*.",
+     "show": {
+      "type": "scene",
+      "sky": "day",
+      "land": "hills",
+      "weather": "none",
+      "moon": false,
+      "label": "ANADOLU",
+      "props": []
+     }
+    },
+    {
+     "say": "Osmanlı'da lale o kadar sevildi ki *çinilere* ve kaftanlara işlendi.",
+     "show": {
+      "type": "photo",
+      "search": "Iznik tile tulip",
+      "label": "İZNİK ÇİNİSİ",
+      "fallback_show": {
+       "type": "icon",
+       "name": "documents",
+       "label": "ÇİNİ VE KAFTANLAR"
+      }
+     }
+    },
+    {
+     "say": "Kanuni'nin sarayına gelen elçi *Busbecq*, laleyi Avrupa'ya götürenlerden biri olarak anılır.",
+     "show": {
+      "type": "dossier",
+      "name": "BUSBECQ",
+      "no": "1554",
+      "fields": {
+       "GÖREV": "ELÇİ",
+       "İDDİA": "LALEYİ GÖTÜRDÜ"
+      }
+     }
+    },
+    {
+     "say": "İngilizcedeki *tulip* kelimesinin, tülbent kelimesinden geldiği düşünülüyor.",
+     "show": {
+      "type": "list",
+      "items": [
+       "TÜLBENT",
+       "TULIPAN",
+       "TULIP"
+      ]
+     }
+    },
+    {
+     "say": "Çünkü çiçek, başa sarılan bir *sarığa* benzetiliyordu.",
+     "show": {
+      "type": "title",
+      "lines": [
+       "SARIĞA",
+       "BENZİYORDU"
+      ],
+      "red": 1
+     }
+    },
+    {
+     "say": "Sonra Hollanda'da öyle bir *lale çılgınlığı* başladı ki...",
+     "show": {
+      "type": "number",
+      "value": "1637",
+      "label": "LALE ÇILGINLIĞI"
+     },
+     "sfx": "riser"
+    },
+    {
+     "say": "Anlatılanlara göre bazı nadir lale soğanları *bir ev fiyatına* satıldı.",
+     "show": {
+      "type": "scene",
+      "sky": "day",
+      "land": "city",
+      "weather": "none",
+      "moon": false,
+      "label": "1637 · HOLLANDA",
+      "props": [
+       {
+        "k": "house",
+        "x": 0.3,
+        "s": 0.7
+       },
+       {
+        "k": "house",
+        "x": 0.7,
+        "s": 0.6
+       }
+      ]
+     }
+    },
+    {
+     "say": "Sonra fiyatlar bir anda *çöktü*. Tarihin ilk ekonomik balonlarından biri sayılır.",
+     "show": {
+      "type": "icon",
+      "name": "documents",
+      "label": "İLK EKONOMİK BALONLARDAN"
+     }
+    },
+    {
+     "say": "Osmanlı'da ise 1718-1730 yıllarına bu çiçeğin adı verildi: *Lale Devri*.",
+     "show": {
+      "type": "date",
+      "day": "",
+      "month": "LALE DEVRİ",
+      "year": "1718-1730"
+     }
+    },
+    {
+     "say": "Bugün her nisan İstanbul Emirgan'da *milyonlarca* lale açıyor.",
+     "show": {
+      "type": "photo",
+      "search": "Emirgan Park tulips",
+      "label": "EMİRGAN, İSTANBUL",
+      "fallback_show": {
+       "type": "place",
+       "name": "EMİRGAN",
+       "sub": "İSTANBUL · NİSAN"
+      }
+     }
+    },
+    {
+     "say": "Bölüm 3'te: Dünyaya adını veren bir *Karadeniz şehri*.",
+     "show": {
+      "type": "title",
+      "lines": [
+       "BÖLÜM 3",
+       "KARADENİZ'İN",
+       "HEDİYESİ"
+      ],
+      "red": 1
+     }
+    },
+    {
+     "say": "*Takip et* ki kaçırma.",
+     "show": {
+      "type": "icon",
+      "name": "eye",
+      "label": "TAKİP ET · BİLDİRİMİ AÇ"
+     }
+    }
+   ],
+   "thumb": {
+    "lines": [
+     "LALE",
+     "BİZİM Mİ?"
+    ],
+    "red": 1,
+    "photo_search": "Emirgan tulips"
+   },
+   "publish": {
+    "title": "Lale Hollanda'ya Buradan Gitti 🌷 Bölüm 2 #shorts",
+    "description": "Lalenin Osmanlı'dan Avrupa'ya yolculuğu, Hollanda'daki lale çılgınlığı ve Lale Devri.\n\nDizi: Dünyaya Türkiye'den Yayılan 6 Şey — tüm bölümler kanalda.",
+    "hashtags": [
+     "#shorts",
+     "#lale",
+     "#osmanlı",
+     "#tarih",
+     "#ilginçbilgiler"
+    ]
+   }
+  },
+  {
+   "beats": [
+    {
+     "say": "Dünyadaki *kiraz* kelimesi, bir Karadeniz şehrinden geliyor.",
+     "show": {
+      "type": "photo",
+      "search": "Cherries",
+      "label": "KİRAZ",
+      "fallback_show": {
+       "type": "title",
+       "lines": [
+        "KİRAZ",
+        "NEREDEN",
+        "GELİYOR?"
+       ],
+       "red": 1
+      }
+     },
+     "sfx": "hit"
+    },
+    {
+     "say": "O şehir: *Giresun*. Antik adı Kerasus.",
+     "show": {
+      "type": "place",
+      "name": "GİRESUN",
+      "sub": "ANTİK ADI: KERASUS"
+     }
+    },
+    {
+     "say": "Anlatılana göre MÖ 1. yüzyılda Romalı komutan *Lucullus* buraya geldi.",
+     "show": {
+      "type": "dossier",
+      "name": "LUCULLUS",
+      "no": "MÖ 1. YY",
+      "fields": {
+       "GÖREV": "ROMALI KOMUTAN",
+       "GÖTÜRDÜĞÜ": "KİRAZ"
+      }
+     }
+    },
+    {
+     "say": "Tadına bayıldığı kirazı gemilerle *Roma'ya* götürdü.",
+     "show": {
+      "type": "scene",
+      "sky": "day",
+      "land": "sea",
+      "weather": "none",
+      "moon": false,
+      "label": "KERASUS → ROMA",
+      "props": [
+       {
+        "k": "sailship",
+        "x": 0.5
+       }
+      ]
+     }
+    },
+    {
+     "say": "Kiraz Avrupa'ya yayıldı, adı da *beraberinde* gitti.",
+     "show": {
+      "type": "list",
+      "items": [
+       "KERASUS",
+       "CERASUM",
+       "CHERRY",
+       "KİRAZ"
+      ]
+     }
+    },
+    {
+     "say": "Bazı tarihçiler kirazın Roma'da daha önce de bilindiğini söylüyor. Yani hikâyenin bir kısmı *efsane*.",
+     "show": {
+      "type": "title",
+      "lines": [
+       "EFSANE Mİ",
+       "GERÇEK Mİ?"
+      ],
+      "red": 0
+     }
+    },
+    {
+     "say": "Ama kesin olan şu: Türkiye bugün dünyanın *en büyük kiraz üreticisi*.",
+     "show": {
+      "type": "number",
+      "value": 1,
+      "label": "DÜNYA KİRAZ ÜRETİMİNDE",
+      "suffix": "."
+     },
+     "sfx": "riser"
+    },
+    {
+     "say": "Giresun ise bugün başka bir ürünle ünlü: *fındık*.",
+     "show": {
+      "type": "photo",
+      "search": "Hazelnuts",
+      "label": "FINDIK",
+      "fallback_show": {
+       "type": "icon",
+       "name": "documents",
+       "label": "FINDIK"
+      }
+     }
+    },
+    {
+     "say": "Doğu Karadeniz'in tek adası da burada: *Giresun Adası*.",
+     "show": {
+      "type": "photo",
+      "search": "Giresun Island",
+      "label": "GİRESUN ADASI",
+      "fallback_show": {
+       "type": "place",
+       "name": "GİRESUN ADASI",
+       "sub": "DOĞU KARADENİZ'İN TEK ADASI"
+      }
+     }
+    },
+    {
+     "say": "Efsaneye göre bu adada bir zamanlar *Amazon kadın savaşçılarının* tapınağı vardı.",
+     "show": {
+      "type": "scene",
+      "sky": "night",
+      "land": "sea",
+      "weather": "none",
+      "moon": true,
+      "label": "EFSANE · AMAZONLAR",
+      "props": [
+       {
+        "k": "castle",
+        "x": 0.6,
+        "s": 0.6
+       }
+      ]
+     }
+    },
+    {
+     "say": "Bölüm 4'te: Kahvaltı sofrandaki *gizli Karadeniz*.",
+     "show": {
+      "type": "title",
+      "lines": [
+       "BÖLÜM 4",
+       "FINDIĞIN",
+       "GÜCÜ"
+      ],
+      "red": 1
+     }
+    },
+    {
+     "say": "*Takip et* ki kaçırma.",
+     "show": {
+      "type": "icon",
+      "name": "eye",
+      "label": "TAKİP ET · BİLDİRİMİ AÇ"
+     }
+    }
+   ],
+   "thumb": {
+    "lines": [
+     "KİRAZ",
+     "GİRESUNLU"
+    ],
+    "red": 1,
+    "photo_search": "Giresun"
+   },
+   "publish": {
+    "title": "Kiraz Adını Bu Karadeniz Şehrinden Aldı 🍒 Bölüm 3 #shorts",
+    "description": "Giresun'un antik adı Kerasus ve kirazın Roma'ya yolculuğu.\n\nDizi: Dünyaya Türkiye'den Yayılan 6 Şey — tüm bölümler kanalda.",
+    "hashtags": [
+     "#shorts",
+     "#giresun",
+     "#kiraz",
+     "#karadeniz",
+     "#ilginçbilgiler"
+    ]
+   }
+  },
+  {
+   "beats": [
+    {
+     "say": "Dünyadaki her 10 fındıktan yaklaşık *6-7'si* Türkiye'den çıkıyor.",
+     "show": {
+      "type": "number",
+      "value": "%65",
+      "label": "DÜNYA FINDIK ÜRETİMİ (YAKLAŞIK)"
+     },
+     "sfx": "hit"
+    },
+    {
+     "say": "Ordu, Giresun, Samsun, Sakarya... Karadeniz kıyısı *fındık bahçeleriyle* dolu.",
+     "show": {
+      "type": "scene",
+      "sky": "day",
+      "land": "forest",
+      "weather": "none",
+      "moon": false,
+      "label": "KARADENİZ · FINDIK BAHÇELERİ",
+      "props": []
+     }
+    },
+    {
+     "say": "Ağustos gelince binlerce aile *fındık toplamaya* çıkıyor.",
+     "show": {
+      "type": "people",
+      "n": 6,
+      "highlight": [],
+      "label": "HASAT · AĞUSTOS"
+     }
+    },
+    {
+     "say": "Peki bu fındık nereye gidiyor? Büyük kısmı *ihraç ediliyor*.",
+     "show": {
+      "type": "list",
+      "items": [
+       "İTALYA",
+       "ALMANYA",
+       "FRANSA"
+      ]
+     }
+    },
+    {
+     "say": "Dünyanın en ünlü fındık kremasını yapan şirket, en büyük *alıcılardan* biri.",
+     "show": {
+      "type": "icon",
+      "name": "documents",
+      "label": "EN BÜYÜK ALICILARDAN"
+     }
+    },
+    {
+     "say": "Yani kahvaltıda sürdüğün kremanın içinde büyük ihtimalle *Karadeniz* var.",
+     "show": {
+      "type": "title",
+      "lines": [
+       "KAHVALTINDA",
+       "KARADENİZ",
+       "VAR"
+      ],
+      "red": 1
+     },
+     "sfx": "riser"
+    },
+    {
+     "say": "Karadeniz'de fındık *binlerce yıldır* yetiştiriliyor.",
+     "show": {
+      "type": "photo",
+      "search": "Hazelnut tree",
+      "label": "FINDIK AĞACI",
+      "fallback_show": {
+       "type": "list",
+       "items": [
+        "ANTİK ÇAĞ",
+        "OSMANLI",
+        "BUGÜN"
+       ]
+      }
+     }
+    },
+    {
+     "say": "Giresun Tombul Fındığı, *coğrafi işaret* tescilli.",
+     "show": {
+      "type": "icon",
+      "name": "documents",
+      "label": "COĞRAFİ İŞARET · TOMBUL FINDIK"
+     }
+    },
+    {
+     "say": "Fındık; E vitamini, lif ve sağlıklı yağ açısından *zengin*.",
+     "show": {
+      "type": "list",
+      "items": [
+       "E VİTAMİNİ",
+       "LİF",
+       "SAĞLIKLI YAĞ"
+      ]
+     }
+    },
+    {
+     "say": "Ama dikkat: Bir avuç fındık yaklaşık *180 kalori*.",
+     "show": {
+      "type": "number",
+      "value": 180,
+      "label": "BİR AVUÇ (≈28 G)",
+      "suffix": " KCAL"
+     }
+    },
+    {
+     "say": "Bölüm 5'te: Avrupa'yı uyandıran *siyah içecek*.",
+     "show": {
+      "type": "title",
+      "lines": [
+       "BÖLÜM 5",
+       "AVRUPA'YI",
+       "UYANDIRAN İÇECEK"
+      ],
+      "red": 1
+     }
+    },
+    {
+     "say": "*Takip et* ki kaçırma.",
+     "show": {
+      "type": "icon",
+      "name": "eye",
+      "label": "TAKİP ET · BİLDİRİMİ AÇ"
+     }
+    }
+   ],
+   "thumb": {
+    "lines": [
+     "HER 10 FINDIĞIN",
+     "6'SI BİZDEN"
+    ],
+    "red": 1,
+    "photo_search": "Hazelnut harvest"
+   },
+   "publish": {
+    "title": "Dünyadaki Her 10 Fındığın 6'sı Bizden 🌰 Bölüm 4 #shorts",
+    "description": "Türkiye dünya fındık üretiminin yaklaşık üçte ikisini karşılıyor.\n\nDizi: Dünyaya Türkiye'den Yayılan 6 Şey — tüm bölümler kanalda.",
+    "hashtags": [
+     "#shorts",
+     "#fındık",
+     "#karadeniz",
+     "#ordu",
+     "#ilginçbilgiler"
+    ]
+   }
+  },
+  {
+   "beats": [
+    {
+     "say": "Dünyanın ilk kahvehanelerinden biri *İstanbul'da* açıldı.",
+     "show": {
+      "type": "photo",
+      "search": "Turkish coffee",
+      "label": "TÜRK KAHVESİ",
+      "fallback_show": {
+       "type": "title",
+       "lines": [
+        "İLK",
+        "KAHVEHANELERDEN",
+        "İSTANBUL"
+       ],
+       "red": 1
+      }
+     },
+     "sfx": "hit"
+    },
+    {
+     "say": "Yıl 1554. İki tüccar, Tahtakale'de bir *kahvehane* açtı.",
+     "show": {
+      "type": "date",
+      "day": "",
+      "month": "TAHTAKALE",
+      "year": 1554
+     }
+    },
+    {
+     "say": "Kahvehaneler kısa sürede sohbetin, oyunun ve *haberin* merkezi oldu.",
+     "show": {
+      "type": "scene",
+      "sky": "dusk",
+      "land": "hills",
+      "weather": "none",
+      "moon": false,
+      "label": "İSTANBUL · KAHVEHANE",
+      "props": [
+       {
+        "k": "house",
+        "x": 0.35,
+        "s": 1.2
+       },
+       {
+        "k": "fire",
+        "x": 0.75,
+        "s": 0.5
+       }
+      ],
+      "people": {
+       "n": 3,
+       "from": 0.55,
+       "to": 0.66
+      }
+     }
+    },
+    {
+     "say": "Hatta IV. Murat, isyan konuşulmasından korkup kahvehaneleri *yasakladı*.",
+     "show": {
+      "type": "dossier",
+      "name": "IV. MURAT",
+      "no": "1633",
+      "fields": {
+       "YASAK": "KAHVE · TÜTÜN",
+       "SEBEP": "İSYAN KORKUSU"
+      }
+     },
+     "sfx": "riser"
+    },
+    {
+     "say": "Kahve, Avrupa'ya büyük ölçüde *Osmanlı üzerinden* yayıldı.",
+     "show": {
+      "type": "list",
+      "items": [
+       "VENEDİK",
+       "VİYANA",
+       "PARİS",
+       "LONDRA"
+      ]
+     }
+    },
+    {
+     "say": "Efsaneye göre 1683'te Viyana önlerinde kalan kahve çuvallarıyla şehrin ilk *kahvehanesi* açıldı.",
+     "show": {
+      "type": "date",
+      "day": "",
+      "month": "VİYANA",
+      "year": 1683
+     }
+    },
+    {
+     "say": "Türk kahvesi 2013'te UNESCO *Somut Olmayan Kültürel Miras* listesine girdi.",
+     "show": {
+      "type": "number",
+      "value": "2013",
+      "label": "UNESCO KÜLTÜREL MİRAS"
+     }
+    },
+    {
+     "say": "Onu özel yapan: ince çekilmesi ve *cezvede* telvesiyle pişmesi.",
+     "show": {
+      "type": "photo",
+      "search": "Cezve",
+      "label": "CEZVE",
+      "fallback_show": {
+       "type": "icon",
+       "name": "documents",
+       "label": "CEZVE · TELVE"
+      }
+     }
+    },
+    {
+     "say": "Ve tabii *fal*. Fincanı ters kapatıp telvede şekil aramak.",
+     "show": {
+      "type": "icon",
+      "name": "eye",
+      "label": "KAHVE FALI"
+     }
+    },
+    {
+     "say": "Atasözü ne diyor? Bir fincan kahvenin *kırk yıl* hatırı vardır.",
+     "show": {
+      "type": "quote",
+      "text": "Bir fincan kahvenin kırk yıl hatırı vardır.",
+      "who": "Türk atasözü"
+     }
+    },
+    {
+     "say": "Bölüm 6'da: Adı dünyaya *Türkçeden* geçen beyaz yiyecek.",
+     "show": {
+      "type": "title",
+      "lines": [
+       "BÖLÜM 6",
+       "DÜNYAYA",
+       "TÜRKÇEDEN GEÇTİ"
+      ],
+      "red": 1
+     }
+    },
+    {
+     "say": "*Takip et* ki kaçırma.",
+     "show": {
+      "type": "icon",
+      "name": "eye",
+      "label": "TAKİP ET · BİLDİRİMİ AÇ"
+     }
+    }
+   ],
+   "thumb": {
+    "lines": [
+     "KAHVEYİ",
+     "BİZDEN ÖĞRENDİLER"
+    ],
+    "red": 1,
+    "photo_search": "Turkish coffee"
+   },
+   "publish": {
+    "title": "Avrupa Kahveyi Bizden Öğrendi ☕ Bölüm 5 #shorts",
+    "description": "1554 Tahtakale kahvehanesi, IV. Murat'ın yasağı, Viyana efsanesi ve UNESCO'daki Türk kahvesi.\n\nDizi: Dünyaya Türkiye'den Yayılan 6 Şey — tüm bölümler kanalda.",
+    "hashtags": [
+     "#shorts",
+     "#türkkahvesi",
+     "#istanbul",
+     "#tarih",
+     "#ilginçbilgiler"
+    ]
+   }
+  },
+  {
+   "beats": [
+    {
+     "say": "Dünyanın her yerinde söylenen bu kelime aslında *Türkçe*: yoğurt.",
+     "show": {
+      "type": "photo",
+      "search": "Yogurt",
+      "label": "YOĞURT",
+      "fallback_show": {
+       "type": "title",
+       "lines": [
+        "YOGURT",
+        "=",
+        "YOĞURT"
+       ],
+       "red": 2
+      }
+     },
+     "sfx": "hit"
+    },
+    {
+     "say": "Yoğurt kelimesi, *yoğurmak* fiilinden geliyor.",
+     "show": {
+      "type": "list",
+      "items": [
+       "YOĞURMAK",
+       "YOĞURT",
+       "YOGURT"
+      ]
+     }
+    },
+    {
+     "say": "Orta Asya'daki göçebe Türkler, sütü saklamak için *mayalıyordu*.",
+     "show": {
+      "type": "scene",
+      "sky": "dusk",
+      "land": "plain",
+      "weather": "none",
+      "moon": false,
+      "label": "ORTA ASYA · GÖÇEBELER",
+      "props": [
+       {
+        "k": "tent",
+        "x": 0.7,
+        "s": 0.7
+       }
+      ],
+      "people": {
+       "n": 2,
+       "from": 0.2,
+       "to": 0.35
+      }
+     }
+    },
+    {
+     "say": "Kelime, 11. yüzyılda Kaşgarlı Mahmud'un *Divânu Lugâti't-Türk'ünde* geçiyor.",
+     "show": {
+      "type": "dossier",
+      "name": "KAŞGARLI MAHMUD",
+      "no": "1072-1074",
+      "fields": {
+       "ESER": "DİVÂNU LUGÂTİ'T-TÜRK",
+       "KELİME": "YUĞRUT"
+      }
+     }
+    },
+    {
+     "say": "Avrupa'da ise yoğurt uzun süre neredeyse *bilinmiyordu*.",
+     "show": {
+      "type": "icon",
+      "name": "question"
+     }
+    },
+    {
+     "say": "1900'lerin başında bilim insanı Metchnikov, yoğurdu *uzun ömürle* ilişkilendirdi.",
+     "show": {
+      "type": "dossier",
+      "name": "ILYA METCHNIKOV",
+      "no": "1908",
+      "fields": {
+       "ÖDÜL": "NOBEL 1908",
+       "FİKİR": "YOĞURT VE UZUN ÖMÜR"
+      }
+     },
+     "sfx": "riser"
+    },
+    {
+     "say": "1919'da Barselona'da bir yoğurt şirketi kuruldu. Kurucusu *Selanik doğumlu* Isaac Carasso'ydu.",
+     "show": {
+      "type": "date",
+      "day": "",
+      "month": "BARSELONA",
+      "year": 1919
+     }
+    },
+    {
+     "say": "Selanik o yıllarda *Osmanlı* şehriydi.",
+     "show": {
+      "type": "place",
+      "name": "SELANİK",
+      "sub": "OSMANLI DÖNEMİ"
+     }
+    },
+    {
+     "say": "O şirket bugün dünyanın en büyük *süt ürünleri* şirketlerinden biri.",
+     "show": {
+      "type": "icon",
+      "name": "documents",
+      "label": "DÜNYA DEVİ"
+     }
+    },
+    {
+     "say": "Biz ise yoğurdu her şeyle yiyoruz: mantı, cacık, ayran, *kebap*...",
+     "show": {
+      "type": "list",
+      "items": [
+       "MANTI",
+       "CACIK",
+       "AYRAN",
+       "KEBAP"
+      ]
+     }
+    },
+    {
+     "say": "Dizinin sonu! Sence dünyaya Türkiye'den yayılan *en önemli şey* ne? Yorumlara yaz.",
+     "show": {
+      "type": "title",
+      "lines": [
+       "SENCE",
+       "EN ÖNEMLİSİ",
+       "HANGİSİ?"
+      ],
+      "red": 1
+     }
+    },
+    {
+     "say": "Yeni dizi için *takip et*.",
+     "show": {
+      "type": "icon",
+      "name": "eye",
+      "label": "TAKİP ET · BİLDİRİMİ AÇ"
+     }
+    }
+   ],
+   "thumb": {
+    "lines": [
+     "TÜM DÜNYA",
+     "TÜRKÇE KONUŞUYOR"
+    ],
+    "red": 1,
+    "photo_search": "Yogurt bowl"
+   },
+   "publish": {
+    "title": "Bu Kelimeyi Tüm Dünya Türkçeden Aldı 🥛 Bölüm 6 #shorts",
+    "description": "Yoğurt kelimesinin kökeni, Kaşgarlı Mahmud, Metchnikov ve Selanik doğumlu Isaac Carasso.\n\nDizi: Dünyaya Türkiye'den Yayılan 6 Şey — tüm bölümler kanalda.",
+    "hashtags": [
+     "#shorts",
+     "#yoğurt",
+     "#türkçe",
+     "#tarih",
+     "#ilginçbilgiler"
+    ]
+   }
+  }
+ ]
+}

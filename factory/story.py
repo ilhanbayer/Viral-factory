@@ -388,10 +388,17 @@ def draw_visual(img, show, t, dur, cx, cy, u):
         d.rounded_rectangle((x0, y0, x0 + cw, y0 + ch), radius=int(24 * u), fill=(235, 232, 225))
         d.rounded_rectangle((x0, y0, x0 + cw, y0 + 140 * u), radius=int(24 * u), fill=red)
         d.rectangle((x0, y0 + 110 * u, x0 + cw, y0 + 140 * u), fill=red)
-        d.text((cx, y0 + 72 * u), up(show.get("month", "")), font=F(64 * u, 800), fill=(255, 255, 255), anchor="mm")
-        d.text((cx, y0 + 140 * u + (ch - 140 * u) * 0.45 + (1 - flip) * 60 * u), str(show.get("day", "")),
-               font=F(270 * u, 900), fill=A((25, 25, 28), 255 * flip), anchor="mm")
-        if show.get("year"):
+        ms, mtxt = 64 * u, up(show.get("month", ""))
+        while ms > 26 * u and d.textlength(mtxt, font=F(ms, 800)) > cw - 40 * u:
+            ms *= 0.92
+        d.text((cx, y0 + 72 * u), mtxt, font=F(ms, 800), fill=(255, 255, 255), anchor="mm")
+        big = str(show.get("day", "")) or str(show.get("year", ""))   # gün yoksa yıl kutunun içinde
+        bs = 270 * u
+        while bs > 60 * u and d.textlength(big, font=F(bs, 900)) > cw - 50 * u:
+            bs *= 0.92
+        d.text((cx, y0 + 140 * u + (ch - 140 * u) * 0.45 + (1 - flip) * 60 * u), big,
+               font=F(bs, 900), fill=A((25, 25, 28), 255 * flip), anchor="mm")
+        if show.get("year") and show.get("day"):
             d.text((cx, y0 + ch + 90 * u), str(show["year"]), font=F(120 * u, 800), fill=org, anchor="mm")
 
     elif typ == "headline":

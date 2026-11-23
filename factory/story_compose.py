@@ -544,6 +544,17 @@ def produce_story(script, out_dir, use_tts=True, workers=None):
     theme = script.get("theme", "dosya")
     pub = script.get("publish", {})
     finals = []
+    if script.get("parts"):   # Shorts dizisi: her bölüm kendi senaryosuyla ~1 dk dikey video (BÖLÜM k/n)
+        n = len(script["parts"])
+        BACKDROP_FALLBACK[0] = None
+        for k, part in enumerate(script["parts"]):
+            th = dict(part.get("thumb") or {})
+            if th and not th.get("tag"):
+                th["tag"] = f"BÖLÜM {k + 1}"
+            finals.append(produce_one(f"{script['id']}_part{k + 1}", part["beats"], "vertical",
+                                      f"{brand} · BÖLÜM {k + 1}/{n}", theme, part.get("publish", {}), out_dir,
+                                      use_tts, workers, thumb=th or None))
+        return finals
     L = script["long"]
     th = L.get("thumb") or {}
     BACKDROP_FALLBACK[0] = None

@@ -31,6 +31,8 @@ def next_topic():
     files = sorted(glob.glob(os.path.join(QUEUE, "*.json")))
     if files:
         return files[0]
+    if os.environ.get("AUTO_GEMINI") != "1":   # eski liste formatını üretmesin; konu kuyruğu asistan tarafından doldurulur
+        return None
     done = [json.load(open(f, encoding="utf-8")).get("series_title", "") for f in glob.glob(os.path.join(DONE, "*.json"))]
     cat = random.choice(scriptgen.CATEGORIES)
     print(f"Kuyruk boş → Gemini ile yeni konu ({cat})")

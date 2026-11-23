@@ -65,3 +65,10 @@ Düzeltmeler:
 - **Belgesel arka planı:** Boş koyu zeminli kareler (sayı, liste, tarih, dosya kartı, alıntı, ikon) artık videodaki en yakın arşiv fotoğrafını tam ekran, hafif bulanık, tema tonunda ve karartılmış olarak arkada gösteriyor (yavaş Ken Burns kayması). Videoda hiç foto yoksa kapak fotoğrafı kullanılıyor. Sahne canlandırmalarında kapalı.
 - Dosya kartında uzun isimler artık kartın dışına taşmıyor (yazı boyutu otomatik küçülüyor).
 - Yerel test: dikey 4 sahnelik tam render sorunsuz (ffmpeg + paralel render).
+
+## 2026-11-23 (gece, kullanıcı isteği) — Yeni yön: Türkiye odaklı, herkesin bildiği konular, Shorts dizileri
+- Yeni format: `parts` → her bölüm ~50-60 sn dikey video, üstte "İLGİNÇ BİLGİLER · BÖLÜM k/n", sonunda bir sonraki bölümün kancası. Uzun video yok.
+- İlk dizi S008 "Dünyaya Türkiye'den Yayılan 6 Şey": Noel Baba (Demre), Lale, Kiraz (Giresun), Fındık, Türk kahvesi, Yoğurt.
+- Gizem senaryoları (S005 Derinkuyu, S006 Antikythera, S007 Göbeklitepe) `topics/hazir/` klasörüne alındı; Türkiye konuluları ileride dizi formatına çevrilebilir.
+- Takvim kartı: gün yoksa yıl kutunun içinde büyük yazılıyor; ay/başlık yazısı kutuya sığdırılıyor. Yıllar artık "1.637" gibi noktalı yazılmıyor (string değer).
+- Kuyruk boşsa eski Gemini liste formatı artık otomatik üretilmiyor (AUTO_GEMINI=1 gerekli).
