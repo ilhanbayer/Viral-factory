@@ -125,6 +125,7 @@ def render_chunk(args):
     segs, fmt, brand, theme, out_path, preview, total = (list(args) + [None])[:7]
     cv2.setNumThreads(1)
     ST.set_theme(theme)
+    ST.LANG = segs[0].get("lang", "tr")
     P = FMT[fmt]
     W, H, u = P["W"], P["H"], P["u"]
     hu = 1.0 if fmt == "vertical" else 0.85
@@ -551,6 +552,8 @@ def produce_one(vid, beats, fmt, brand, theme, publish, out_dir, use_tts=True, w
     fetch_photos(beats, os.path.join(out_dir, "_photos"))
     broll_paths = fetch_broll(broll_terms, os.path.join(out_dir, "_photos"))
     segs, total = build(beats, os.path.join(out_dir, "_voicecache"), use_tts)
+    for s_ in segs:
+        s_["lang"] = ST.LANG
     assign_backdrops(segs, BACKDROP_FALLBACK[0])
     pool = BR.build_pool(beats) + [p for p in (broll_paths or []) if p]
     if not pool and BACKDROP_FALLBACK[0]:
@@ -632,16 +635,20 @@ def produce_story(script, out_dir, use_tts=True, workers=None):
     theme = script.get("theme", "dosya")
     pub = script.get("publish", {})
     finals = []
+    ST.LANG = script.get("lang", "tr")
+    lg = script.get("logo") or {}
+    BR.LOGO.update({"brand": lg.get("brand", script.get("brand", "İLGİNÇ BİLGİLER")), "mono": lg.get("mono", "İB")})
+    PART = {"tr": "BÖLÜM", "en": "PART", "de": "TEIL"}.get(ST.LANG, "PART")
     if script.get("parts"):   # Shorts dizisi: her bölüm kendi senaryosuyla ~1 dk dikey video (BÖLÜM k/n)
         n = len(script["parts"])
         BACKDROP_FALLBACK[0] = None
         for k, part in enumerate(script["parts"]):
             th = dict(part.get("thumb") or {})
             if th and not th.get("tag"):
-                th["tag"] = f"BÖLÜM {k + 1}"
+                th["tag"] = f"{PART} {k + 1}"
             USED_TITLES.clear()
             finals.append(produce_one(f"{script['id']}_part{k + 1}", part["beats"], "vertical",
-                                      f"{brand} · BÖLÜM {k + 1}/{n}", theme, part.get("publish", {}), out_dir,
+                                      f"{brand} · {PART} {k + 1}/{n}", theme, part.get("publish", {}), out_dir,
                                       use_tts, workers, thumb=th or None,
                                       broll_terms=part.get("broll") or script.get("broll")))
         return finals

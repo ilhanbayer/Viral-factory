@@ -1,0 +1,835 @@
+{
+ "id": "S009e_gobekli_tepe_en",
+ "format": "story",
+ "title": "Series: Göbekli Tepe (EN)",
+ "brand": "HIDDEN TÜRKİYE",
+ "theme": "dosya",
+ "lang": "en",
+ "voice": {
+  "engine": "edge",
+  "speaker": "christopher",
+  "rate": "+0%",
+  "pitch": "-2Hz"
+ },
+ "broll": [
+  "Gobekli Tepe",
+  "Sanliurfa"
+ ],
+ "parts": [
+  {
+   "beats": [
+    {
+     "say": "These stones in Türkiye are about *7,000 years* older than the pyramids of Egypt.",
+     "show": {
+      "type": "photo",
+      "search": "Gobekli Tepe",
+      "label": "GÖBEKLİ TEPE · TÜRKİYE",
+      "extra": 2,
+      "fallback_show": {
+       "type": "icon",
+       "name": "camera",
+       "label": "GÖBEKLİ TEPE · TÜRKİYE"
+      }
+     },
+     "sfx": "hit"
+    },
+    {
+     "say": "They were raised about *6,000 years* before Stonehenge.",
+     "show": {
+      "type": "photo",
+      "search": "Stonehenge",
+      "label": "STONEHENGE · MUCH YOUNGER",
+      "extra": 2,
+      "fallback_show": {
+       "type": "icon",
+       "name": "camera",
+       "label": "STONEHENGE · MUCH YOUNGER"
+      }
+     }
+    },
+    {
+     "say": "Their age: roughly *11,600 years*.",
+     "show": {
+      "type": "number",
+      "value": "11,600",
+      "label": "YEARS AGO"
+     }
+    },
+    {
+     "say": "The place is called *Göbekli Tepe*, near the city of Şanlıurfa.",
+     "show": {
+      "type": "place",
+      "name": "GÖBEKLİ TEPE",
+      "sub": "ŞANLIURFA · TÜRKİYE"
+     }
+    },
+    {
+     "say": "The people who built it had no writing, no wheel, and no *farming*.",
+     "show": {
+      "type": "list",
+      "items": [
+       "NO WRITING",
+       "NO WHEEL",
+       "NO FARMING"
+      ]
+     },
+     "sfx": "riser"
+    },
+    {
+     "say": "So how did hunter-gatherers move *giant stones*?",
+     "show": {
+      "type": "scene",
+      "sky": "dusk",
+      "land": "hills",
+      "weather": "none",
+      "moon": false,
+      "label": "9600 BC · UPPER MESOPOTAMIA",
+      "props": [
+       {
+        "k": "tpillar",
+        "x": 0.3
+       },
+       {
+        "k": "tpillar",
+        "x": 0.58,
+        "s": 0.8
+       },
+       {
+        "k": "tpillar",
+        "x": 0.82,
+        "s": 1.1
+       }
+      ],
+      "people": {
+       "n": 5,
+       "from": 0.05,
+       "to": 0.25
+      }
+     }
+    },
+    {
+     "say": "The largest pillars are more than *5 meters* tall.",
+     "show": {
+      "type": "photo",
+      "search": "Gobekli Tepe pillar",
+      "label": "T-SHAPED PILLAR",
+      "extra": 2,
+      "fallback_show": {
+       "type": "icon",
+       "name": "camera",
+       "label": "T-SHAPED PILLAR"
+      }
+     }
+    },
+    {
+     "say": "They stand in huge circles, with two giant pillars *facing each other*.",
+     "show": {
+      "type": "photo",
+      "search": "Gobekli Tepe enclosure",
+      "label": "STONE CIRCLE",
+      "extra": 2,
+      "fallback_show": {
+       "type": "icon",
+       "name": "camera",
+       "label": "STONE CIRCLE"
+      }
+     }
+    },
+    {
+     "say": "For scientists, this was supposed to be *impossible*.",
+     "show": {
+      "type": "title",
+      "lines": [
+       "THIS WAS",
+       "IMPOSSIBLE"
+      ],
+      "red": 1
+     }
+    },
+    {
+     "say": "In part 2: why nobody noticed it for *30 years*.",
+     "show": {
+      "type": "title",
+      "lines": [
+       "PART 2",
+       "HIDDEN FOR",
+       "30 YEARS"
+      ],
+      "red": 1
+     }
+    },
+    {
+     "say": "*Follow* so you don't miss it.",
+     "show": {
+      "type": "icon",
+      "name": "eye",
+      "label": "FOLLOW FOR PART 2"
+     }
+    }
+   ],
+   "thumb": {
+    "lines": [
+     "OLDER THAN",
+     "PYRAMIDS"
+    ],
+    "red": 1,
+    "photo_search": "Gobekli Tepe"
+   },
+   "broll": [
+    "Gobekli Tepe",
+    "Gobekli Tepe pillar",
+    "Sanliurfa"
+   ],
+   "publish": {
+    "title": "7,000 Years Older Than the Pyramids 🤯 Part 1 #shorts",
+    "description": "Göbekli Tepe in Türkiye: giant stone pillars raised about 11,600 years ago, before farming and writing.\n\nSeries: Göbekli Tepe — Part 1/5. Watch all parts on the channel.",
+    "hashtags": [
+     "#gobeklitepe",
+     "#turkey",
+     "#history",
+     "#archaeology",
+     "#shorts"
+    ]
+   }
+  },
+  {
+   "beats": [
+    {
+     "say": "The world's oldest monument was first mistaken for an ordinary *graveyard*.",
+     "show": {
+      "type": "photo",
+      "search": "Gobekli Tepe hill",
+      "label": "THE HILL",
+      "extra": 2,
+      "fallback_show": {
+       "type": "icon",
+       "name": "camera",
+       "label": "THE HILL"
+      }
+     },
+     "sfx": "hit"
+    },
+    {
+     "say": "In 1963, a survey team looked at this hill in southeastern *Türkiye*.",
+     "show": {
+      "type": "photo",
+      "search": "Gobekli Tepe excavation",
+      "label": "1963 · SURVEY",
+      "extra": 2,
+      "fallback_show": {
+       "type": "icon",
+       "name": "camera",
+       "label": "1963 · SURVEY"
+      }
+     }
+    },
+    {
+     "say": "The broken stones on top were thought to be *medieval graves*.",
+     "show": {
+      "type": "icon",
+      "name": "documents",
+      "label": "\"A MEDIEVAL CEMETERY\""
+     }
+    },
+    {
+     "say": "So the site waited, unnoticed, for *30 more years*.",
+     "show": {
+      "type": "number",
+      "value": "30",
+      "label": "YEARS UNNOTICED",
+      "suffix": " YRS"
+     }
+    },
+    {
+     "say": "In 1994, German archaeologist Klaus Schmidt climbed the hill and knew something was *wrong*.",
+     "show": {
+      "type": "dossier",
+      "name": "KLAUS SCHMIDT",
+      "no": "1994",
+      "fields": {
+       "INSTITUTE": "GERMAN ARCH. INST.",
+       "ROLE": "EXCAVATION LEAD"
+      }
+     },
+     "sfx": "riser"
+    },
+    {
+     "say": "In 1995, excavations began with the *Şanlıurfa Museum*.",
+     "show": {
+      "type": "photo",
+      "search": "Sanliurfa Museum",
+      "label": "ŞANLIURFA MUSEUM",
+      "extra": 2,
+      "fallback_show": {
+       "type": "icon",
+       "name": "camera",
+       "label": "ŞANLIURFA MUSEUM"
+      }
+     }
+    },
+    {
+     "say": "Out of the ground came giant *T-shaped* pillars.",
+     "show": {
+      "type": "photo",
+      "search": "Gobekli Tepe pillar",
+      "label": "T-SHAPED PILLARS",
+      "extra": 2,
+      "fallback_show": {
+       "type": "icon",
+       "name": "camera",
+       "label": "T-SHAPED PILLARS"
+      }
+     }
+    },
+    {
+     "say": "Schmidt summed it up in one sentence:",
+     "show": {
+      "type": "photo",
+      "search": "Gobekli Tepe",
+      "label": "GÖBEKLİ TEPE",
+      "extra": 2,
+      "fallback_show": {
+       "type": "icon",
+       "name": "camera",
+       "label": "GÖBEKLİ TEPE"
+      }
+     }
+    },
+    {
+     "say": "First came the temple, *then the city*.",
+     "show": {
+      "type": "quote",
+      "text": "First came the temple, then the city.",
+      "who": "Klaus Schmidt (paraphrased)"
+     }
+    },
+    {
+     "say": "In part 3: the *mysterious animals* carved on the stones.",
+     "show": {
+      "type": "title",
+      "lines": [
+       "PART 3",
+       "SECRETS IN",
+       "THE STONE"
+      ],
+      "red": 1
+     }
+    },
+    {
+     "say": "*Follow* so you don't miss it.",
+     "show": {
+      "type": "icon",
+      "name": "eye",
+      "label": "FOLLOW FOR PART 3"
+     }
+    }
+   ],
+   "thumb": {
+    "lines": [
+     "JUST A",
+     "GRAVEYARD?"
+    ],
+    "red": 1,
+    "photo_search": "Gobekli Tepe hill"
+   },
+   "broll": [
+    "Gobekli Tepe excavation",
+    "Gobekli Tepe hill",
+    "Sanliurfa Museum"
+   ],
+   "publish": {
+    "title": "They Thought It Was a Graveyard 😳 Part 2 #shorts",
+    "description": "Göbekli Tepe was overlooked in 1963 and recognized by Klaus Schmidt in 1994.\n\nSeries: Göbekli Tepe — Part 2/5. Watch all parts on the channel.",
+    "hashtags": [
+     "#gobeklitepe",
+     "#turkey",
+     "#history",
+     "#archaeology",
+     "#shorts"
+    ]
+   }
+  },
+  {
+   "beats": [
+    {
+     "say": "This 11,000-year-old stone shows *vultures*, and maybe a disaster.",
+     "show": {
+      "type": "photo",
+      "search": "Gobekli Tepe vulture stone",
+      "label": "THE VULTURE STONE",
+      "extra": 2,
+      "fallback_show": {
+       "type": "icon",
+       "name": "camera",
+       "label": "THE VULTURE STONE"
+      }
+     },
+     "sfx": "hit"
+    },
+    {
+     "say": "Göbekli Tepe's pillars are covered in *animal carvings*.",
+     "show": {
+      "type": "photo",
+      "search": "Gobekli Tepe relief",
+      "label": "CARVINGS",
+      "extra": 2,
+      "fallback_show": {
+       "type": "icon",
+       "name": "camera",
+       "label": "CARVINGS"
+      }
+     }
+    },
+    {
+     "say": "Foxes, wild boars, snakes, scorpions and *vultures*.",
+     "show": {
+      "type": "list",
+      "items": [
+       "FOX",
+       "WILD BOAR",
+       "SNAKE",
+       "SCORPION",
+       "VULTURE"
+      ]
+     }
+    },
+    {
+     "say": "Some pillars have arms, hands and belts. They may represent *people*.",
+     "show": {
+      "type": "photo",
+      "search": "Gobekli Tepe fox",
+      "label": "STONE PEOPLE?",
+      "extra": 2,
+      "fallback_show": {
+       "type": "icon",
+       "name": "camera",
+       "label": "STONE PEOPLE?"
+      }
+     }
+    },
+    {
+     "say": "Pillar 43, known as the *Vulture Stone*, is special.",
+     "show": {
+      "type": "number",
+      "value": "43",
+      "label": "THE VULTURE STONE"
+     }
+    },
+    {
+     "say": "Some researchers claim it records an ancient *comet impact*.",
+     "show": {
+      "type": "scene",
+      "sky": "night",
+      "land": "hills",
+      "weather": "none",
+      "moon": true,
+      "label": "CLAIM: A COMET",
+      "props": [
+       {
+        "k": "fireball",
+        "x": 0.7
+       },
+       {
+        "k": "tpillar",
+        "x": 0.3,
+        "s": 0.9
+       }
+      ]
+     },
+     "sfx": "riser"
+    },
+    {
+     "say": "But this idea is *controversial*; many archaeologists reject it.",
+     "show": {
+      "type": "dossier",
+      "name": "COMET THEORY",
+      "no": "2017",
+      "fields": {
+       "SUPPORT": "LIMITED",
+       "STATUS": "DEBATED"
+      }
+     }
+    },
+    {
+     "say": "What's certain: these are among humanity's *oldest symbols*.",
+     "show": {
+      "type": "photo",
+      "search": "Gobekli Tepe",
+      "label": "THE OLDEST SYMBOLS",
+      "extra": 2,
+      "fallback_show": {
+       "type": "icon",
+       "name": "camera",
+       "label": "THE OLDEST SYMBOLS"
+      }
+     }
+    },
+    {
+     "say": "What do you think these stones are saying? *Comment below*.",
+     "show": {
+      "type": "title",
+      "lines": [
+       "WHAT ARE",
+       "THEY SAYING?"
+      ],
+      "red": 1
+     }
+    },
+    {
+     "say": "In part 4: temple or village? *New digs* changed everything.",
+     "show": {
+      "type": "title",
+      "lines": [
+       "PART 4",
+       "TEMPLE OR",
+       "VILLAGE?"
+      ],
+      "red": 1
+     }
+    },
+    {
+     "say": "*Follow* so you don't miss it.",
+     "show": {
+      "type": "icon",
+      "name": "eye",
+      "label": "FOLLOW FOR PART 4"
+     }
+    }
+   ],
+   "thumb": {
+    "lines": [
+     "VULTURE",
+     "STONE"
+    ],
+    "red": 1,
+    "photo_search": "Gobekli Tepe vulture stone"
+   },
+   "broll": [
+    "Gobekli Tepe relief",
+    "Gobekli Tepe fox",
+    "Gobekli Tepe vulture stone"
+   ],
+   "publish": {
+    "title": "A Comet Carved in 11,000-Year-Old Stone? ☄️ Part 3 #shorts",
+    "description": "Göbekli Tepe's carvings, the Vulture Stone and the debated comet theory.\n\nSeries: Göbekli Tepe — Part 3/5. Watch all parts on the channel.",
+    "hashtags": [
+     "#gobeklitepe",
+     "#turkey",
+     "#history",
+     "#archaeology",
+     "#shorts"
+    ]
+   }
+  },
+  {
+   "beats": [
+    {
+     "say": "The story of your bread may have started in *Türkiye*.",
+     "show": {
+      "type": "photo",
+      "search": "Einkorn wheat",
+      "label": "EINKORN WHEAT",
+      "extra": 2,
+      "fallback_show": {
+       "type": "icon",
+       "name": "camera",
+       "label": "EINKORN WHEAT"
+      }
+     },
+     "sfx": "hit"
+    },
+    {
+     "say": "For years, Göbekli Tepe was seen only as a *temple*.",
+     "show": {
+      "type": "photo",
+      "search": "Gobekli Tepe",
+      "label": "A TEMPLE?",
+      "extra": 2,
+      "fallback_show": {
+       "type": "icon",
+       "name": "camera",
+       "label": "A TEMPLE?"
+      }
+     }
+    },
+    {
+     "say": "But new excavations found *houses*, water cisterns and traces of daily life.",
+     "show": {
+      "type": "list",
+      "items": [
+       "HOUSES",
+       "WATER CISTERNS",
+       "DAILY LIFE"
+      ]
+     }
+    },
+    {
+     "say": "So it may have been one of humanity's *first settlements*.",
+     "show": {
+      "type": "scene",
+      "sky": "dusk",
+      "land": "hills",
+      "weather": "none",
+      "moon": false,
+      "label": "A FIRST SETTLEMENT?",
+      "props": [
+       {
+        "k": "house",
+        "x": 0.2,
+        "s": 0.5
+       },
+       {
+        "k": "tpillar",
+        "x": 0.5
+       },
+       {
+        "k": "house",
+        "x": 0.8,
+        "s": 0.45
+       }
+      ],
+      "people": {
+       "n": 3,
+       "from": 0.6,
+       "to": 0.7
+      }
+     }
+    },
+    {
+     "say": "Nearby *Karacadağ* is one of the places where wheat was first domesticated.",
+     "show": {
+      "type": "photo",
+      "search": "Karacadag",
+      "label": "KARACADAĞ",
+      "extra": 2,
+      "fallback_show": {
+       "type": "icon",
+       "name": "camera",
+       "label": "KARACADAĞ"
+      }
+     }
+    },
+    {
+     "say": "A 1997 genetic study traced einkorn wheat to *these very hills*.",
+     "show": {
+      "type": "dossier",
+      "name": "GENETIC STUDY",
+      "no": "1997",
+      "fields": {
+       "WHEAT": "EINKORN",
+       "ORIGIN": "KARACADAĞ"
+      }
+     },
+     "sfx": "riser"
+    },
+    {
+     "say": "Farming may have begun with people gathering *around these stones*.",
+     "show": {
+      "type": "scene",
+      "sky": "day",
+      "land": "plain",
+      "weather": "none",
+      "moon": false,
+      "label": "THE BIRTH OF FARMING?",
+      "props": [
+       {
+        "k": "tpillar",
+        "x": 0.75,
+        "s": 0.8
+       }
+      ],
+      "people": {
+       "n": 4,
+       "from": 0.15,
+       "to": 0.4
+      }
+     }
+    },
+    {
+     "say": "In 2018, Göbekli Tepe became a *UNESCO World Heritage* site.",
+     "show": {
+      "type": "number",
+      "value": "2018",
+      "label": "UNESCO WORLD HERITAGE"
+     }
+    },
+    {
+     "say": "In part 5: how many more are still *underground*?",
+     "show": {
+      "type": "title",
+      "lines": [
+       "PART 5",
+       "HOW MANY",
+       "MORE?"
+      ],
+      "red": 1
+     }
+    },
+    {
+     "say": "*Follow* so you don't miss it.",
+     "show": {
+      "type": "icon",
+      "name": "eye",
+      "label": "FOLLOW FOR PART 5"
+     }
+    }
+   ],
+   "thumb": {
+    "lines": [
+     "THE FIRST",
+     "WHEAT"
+    ],
+    "red": 1,
+    "photo_search": "Einkorn wheat"
+   },
+   "broll": [
+    "Einkorn wheat",
+    "Karacadag",
+    "Gobekli Tepe"
+   ],
+   "publish": {
+    "title": "Wheat May Have Started Right Here 🌾 Part 4 #shorts",
+    "description": "Homes and cisterns at Göbekli Tepe, Karacadağ and the origins of farming.\n\nSeries: Göbekli Tepe — Part 4/5. Watch all parts on the channel.",
+    "hashtags": [
+     "#gobeklitepe",
+     "#turkey",
+     "#history",
+     "#archaeology",
+     "#shorts"
+    ]
+   }
+  },
+  {
+   "beats": [
+    {
+     "say": "Only about *one tenth* of the world's oldest monument has been excavated.",
+     "show": {
+      "type": "number",
+      "value": "10%",
+      "label": "ROUGHLY EXCAVATED"
+     },
+     "sfx": "hit"
+    },
+    {
+     "say": "Scans suggest at least *20 more* stone circles are still underground.",
+     "show": {
+      "type": "number",
+      "value": "20+",
+      "label": "CIRCLES STILL BURIED"
+     }
+    },
+    {
+     "say": "And there's more: a dozen sites nearby called the *Taş Tepeler*, the Stone Hills.",
+     "show": {
+      "type": "photo",
+      "search": "Karahan Tepe",
+      "label": "THE STONE HILLS",
+      "extra": 2,
+      "fallback_show": {
+       "type": "icon",
+       "name": "camera",
+       "label": "THE STONE HILLS"
+      }
+     }
+    },
+    {
+     "say": "At *Karahan Tepe*, archaeologists found a human head carved out of the bedrock.",
+     "show": {
+      "type": "photo",
+      "search": "Karahan Tepe head",
+      "label": "KARAHAN TEPE",
+      "extra": 2,
+      "fallback_show": {
+       "type": "icon",
+       "name": "camera",
+       "label": "KARAHAN TEPE"
+      }
+     }
+    },
+    {
+     "say": "Karahan Tepe is close to Göbekli Tepe and from the *same era*.",
+     "show": {
+      "type": "place",
+      "name": "KARAHAN TEPE",
+      "sub": "ŞANLIURFA · TÜRKİYE"
+     }
+    },
+    {
+     "say": "Some experts think this region is where humans first *settled down*.",
+     "show": {
+      "type": "title",
+      "lines": [
+       "WHERE",
+       "CIVILIZATION",
+       "BEGAN?"
+      ],
+      "red": 2
+     },
+     "sfx": "riser"
+    },
+    {
+     "say": "The first page of human history may be written in *Türkiye*.",
+     "show": {
+      "type": "photo",
+      "search": "Sanliurfa Balikligol",
+      "label": "ŞANLIURFA",
+      "extra": 2,
+      "fallback_show": {
+       "type": "icon",
+       "name": "camera",
+       "label": "ŞANLIURFA"
+      }
+     }
+    },
+    {
+     "say": "Series finale! Why do you think they built this 11,000 years ago? *Comment below*.",
+     "show": {
+      "type": "title",
+      "lines": [
+       "WHY DID",
+       "THEY BUILD",
+       "IT?"
+      ],
+      "red": 1
+     }
+    },
+    {
+     "say": "*Follow* for the next series.",
+     "show": {
+      "type": "icon",
+      "name": "eye",
+      "label": "FOLLOW FOR MORE"
+     }
+    }
+   ],
+   "thumb": {
+    "lines": [
+     "ONLY",
+     "10% DUG"
+    ],
+    "red": 1,
+    "photo_search": "Karahan Tepe"
+   },
+   "broll": [
+    "Karahan Tepe",
+    "Gobekli Tepe",
+    "Sanliurfa Balikligol"
+   ],
+   "publish": {
+    "title": "Only 10% of It Has Been Dug Up 😱 Part 5 #shorts",
+    "description": "Göbekli Tepe's unexcavated enclosures, Karahan Tepe and the Taş Tepeler sites.\n\nSeries: Göbekli Tepe — Part 5/5. Watch all parts on the channel.",
+    "hashtags": [
+     "#gobeklitepe",
+     "#turkey",
+     "#history",
+     "#archaeology",
+     "#shorts"
+    ]
+   }
+  }
+ ],
+ "logo": {
+  "brand": "HIDDEN TÜRKİYE",
+  "mono": "HT"
+ }
+}

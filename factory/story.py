@@ -77,7 +77,12 @@ def S(size):
     return _fc[key]
 
 
+LANG = "tr"   # "tr" | "en" | "de" ...: büyük harf kuralı ve ekran yazıları
+
+
 def up(s):
+    if LANG != "tr":
+        return s.upper()
     return s.replace("i", "İ").replace("ı", "I").upper()
 
 
@@ -665,10 +670,10 @@ def hud(fr, gt, total, W, H, u, file_no="001"):
         cv2.circle(fr, (W - m - int(150 * u), m + int(96 * u)), int(9 * u), C["red"], -1, cv2.LINE_AA)
     mm, ss = divmod(int(gt), 60)
     fr_ = int((gt % 1) * 30)
-    txt = f"KAYIT  {mm:02d}:{ss:02d}:{fr_:02d}"
+    txt = f"{'KAYIT' if LANG == 'tr' else 'REC'}  {mm:02d}:{ss:02d}:{fr_:02d}"
     cv2.putText(fr, txt, (W - m - int(130 * u), m + int(104 * u)), cv2.FONT_HERSHEY_SIMPLEX, 0.62 * u, col,
                 max(1, int(1.6 * u)), cv2.LINE_AA)
-    cv2.putText(fr, f"DOSYA #{file_no}", (m + int(20 * u), H - m - int(22 * u)), cv2.FONT_HERSHEY_SIMPLEX,
+    cv2.putText(fr, f"{'DOSYA' if LANG == 'tr' else 'FILE'} #{file_no}", (m + int(20 * u), H - m - int(22 * u)), cv2.FONT_HERSHEY_SIMPLEX,
                 0.6 * u, col, max(1, int(1.5 * u)), cv2.LINE_AA)
     p = min(1.0, gt / max(total, 1))
     y = H - int(8 * u)

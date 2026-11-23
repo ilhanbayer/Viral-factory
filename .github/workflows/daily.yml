@@ -42,7 +42,7 @@ jobs:
           YT_REFRESH_TOKEN: ${{ secrets.YT_REFRESH_TOKEN }}
           VOICE_ENGINE: ${{ vars.VOICE_ENGINE || 'edge' }}
           VOICE_NAME: ${{ vars.VOICE_NAME || 'ahmet' }}
-        run: python run.py --count ${{ github.event.inputs.count || '1' }} --upload
+        run: python run.py --count ${{ github.event.inputs.count || '2' }} --upload
       - uses: actions/upload-artifact@v4
         with:
           name: videolar-${{ github.run_number }}

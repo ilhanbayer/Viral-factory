@@ -14,6 +14,12 @@ from . import story as ST
 
 SHOT = 2.2      # saniye: bir çekimin uzunluğu
 _CACHE = {}
+UI = {
+    "tr": dict(like="BEĞEN", comment="YORUM YAZ", follow="TAKİP ET", followed="TAKİP EDİLDİ"),
+    "en": dict(like="LIKE", comment="COMMENT", follow="FOLLOW", followed="FOLLOWING"),
+    "de": dict(like="GEFÄLLT MIR", comment="KOMMENTIEREN", follow="FOLGEN", followed="GEFOLGT"),
+}
+LOGO = {"brand": "İLGİNÇ BİLGİLER", "mono": "İB"}
 
 
 def _ease(x):
@@ -144,13 +150,15 @@ def _bell(d, cx, cy, s, col, ang):
     d.ellipse((bx - s * 0.09, by - s * 0.09, bx + s * 0.09, by + s * 0.09), fill=col)
 
 
-def cta_layer(W, H, kind, t, u, brand="İLGİNÇ BİLGİLER"):
+def cta_layer(W, H, kind, t, u, brand=None):
     """kind: 'like' (orta) ya da 'follow' (son). t: CTA başlangıcından beri sn. RGBA katman döner ya da None."""
     D = 2.8 if kind == "like" else 3.2
     if t < 0 or t > D:
         return None
     layer = Image.new("RGBA", (W, H), (0, 0, 0, 0))
     d = ImageDraw.Draw(layer)
+    tx = UI.get(ST.LANG, UI["en"])
+    brand = brand or LOGO["brand"]
     a_in = _ease(t / 0.35)
     a_out = 1 - _ease((t - (D - 0.35)) / 0.35)
     a = max(0.0, min(a_in, a_out))
@@ -167,7 +175,7 @@ def cta_layer(W, H, kind, t, u, brand="İLGİNÇ BİLGİLER"):
         bump = 1 + 0.25 * max(0, math.sin((t - 0.5) * 9)) * (0.5 < t < 1.2)
         tcol = red if t > 0.6 else white
         _thumb(d, x0 + s * 0.55, y - s * 0.03, s * 0.55 * bump, tcol)
-        d.text((x0 + s * 1.0, y), "BEĞEN", font=ST.F(int(46 * u * sc), 900), fill=white, anchor="lm")
+        d.text((x0 + s * 1.0, y), tx["like"], font=ST.F(int(46 * u * sc), 900), fill=white, anchor="lm")
         # küçük kalpler
         if 0.6 < t < 1.6:
             for k in range(5):
@@ -180,7 +188,7 @@ def cta_layer(W, H, kind, t, u, brand="İLGİNÇ BİLGİLER"):
         x1 = x0 + w1 + gap
         d.rounded_rectangle((x1, y - s / 2, x1 + w2, y + s / 2), radius=int(s / 2), fill=dark)
         _bubble(d, x1 + s * 0.55, y, s * 0.55, white)
-        d.text((x1 + s * 1.0, y), "YORUM YAZ", font=ST.F(int(46 * u * sc), 900), fill=white, anchor="lm")
+        d.text((x1 + s * 1.0, y), tx["comment"], font=ST.F(int(46 * u * sc), 900), fill=white, anchor="lm")
     else:
         s = 130 * u * sc
         w = 640 * u * sc
@@ -190,7 +198,7 @@ def cta_layer(W, H, kind, t, u, brand="İLGİNÇ BİLGİLER"):
         # logo dairesi
         lx = x0 + s * 0.55
         d.ellipse((lx - s * 0.38, y - s * 0.38, lx + s * 0.38, y + s * 0.38), fill=(255, 205, 40, int(255 * a)))
-        d.text((lx, y + 2 * u), "İB", font=ST.F(int(40 * u * sc), 900), fill=(20, 20, 20, int(255 * a)), anchor="mm")
+        d.text((lx, y + 2 * u), LOGO["mono"], font=ST.F(int(40 * u * sc), 900), fill=(20, 20, 20, int(255 * a)), anchor="mm")
         d.text((x0 + s * 1.05, y), brand, font=ST.F(int(34 * u * sc), 800), fill=white, anchor="lm")
         bw = 250 * u * sc
         bx0 = x0 + w - bw - 18 * u
@@ -198,7 +206,7 @@ def cta_layer(W, H, kind, t, u, brand="İLGİNÇ BİLGİLER"):
         bh = (s - 30 * u) * press
         d.rounded_rectangle((bx0, y - bh / 2, bx0 + bw, y + bh / 2), radius=int(bh / 2),
                             fill=((70, 70, 76, int(255 * a)) if clicked else red))
-        d.text((bx0 + bw / 2, y), "TAKİP EDİLDİ" if clicked else "TAKİP ET",
+        d.text((bx0 + bw / 2, y), tx["followed"] if clicked else tx["follow"],
                font=ST.F(int((30 if clicked else 40) * u * sc), 900), fill=white, anchor="mm")
         # zil
         if clicked:

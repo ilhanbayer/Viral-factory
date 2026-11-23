@@ -23,7 +23,9 @@ import numpy as np
 
 SR = 44100
 GTTS_TEMPO = 1.2
-SPEAKERS = {"ahmet": "tr-TR-AhmetNeural", "emel": "tr-TR-EmelNeural"}
+SPEAKERS = {"ahmet": "tr-TR-AhmetNeural", "emel": "tr-TR-EmelNeural",
+            "christopher": "en-US-ChristopherNeural", "andrew": "en-US-AndrewNeural", "guy": "en-US-GuyNeural",
+            "conrad": "de-DE-ConradNeural", "killian": "de-DE-KillianNeural"}
 
 VOICE_DIR = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "voices")
 CB = {"ref": None, "ex": 0.6, "cfg": 0.4, "shift": 0.0, "temp": 0.8}
