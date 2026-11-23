@@ -49,6 +49,28 @@ def next_topic():
     return None
 
 
+
+def upload_story(script, finals):
+    """Uzun video + Shorts'u YouTube'a yükler (anahtar yoksa atlar; hata üretimi durdurmaz)."""
+    from factory.upload_youtube import upload, set_thumbnail
+    pub = script.get("publish", {})
+    metas = [pub.get("long", {})] + list(pub.get("shorts", []))
+    for k, final in enumerate(finals):
+        p = metas[k] if k < len(metas) else {}
+        base = final[:-4]
+        try:
+            lines = open(base + "_metadata.txt", encoding="utf-8").read().split("\n")
+            title, desc = lines[0].strip(), "\n".join(lines[1:]).strip()
+        except OSError:
+            title, desc = p.get("title", os.path.basename(base)), p.get("description", "")
+        try:
+            vid = upload(final, title, desc, p.get("hashtags", []))
+            if vid and k == 0 and os.path.exists(base + "_kapak.jpg"):
+                set_thumbnail(vid, base + "_kapak.jpg")
+        except Exception as e:  # noqa: BLE001
+            print(f"  [youtube] yükleme hatası ({os.path.basename(final)}): {e}")
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--topic")
@@ -80,7 +102,9 @@ def main():
             final = finals[0]
         else:
             final = produce(path, OUT, use_tts=not a.no_tts)
-        if a.upload and script.get("format") not in ("story", "cartoon"):
+        if a.upload and script.get("format") == "story":
+            upload_story(script, finals)
+        elif a.upload and script.get("format") != "cartoon":
             from factory.upload_youtube import upload
             p = script.get("publish", {})
             upload(final, p.get("title", script["series_title"]),
