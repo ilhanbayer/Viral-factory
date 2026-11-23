@@ -22,27 +22,26 @@ sh("pip install -q -U diffusers transformers accelerate sentencepiece imageio im
 import torch
 log("torch", torch.__version__, "cuda", torch.cuda.is_available(), torch.cuda.device_count())
 
-STYLE = ("high quality 3D animated feature film still, stylized cartoon characters with big expressive eyes, "
+STYLE = ("3D CGI animated movie still, cute stylized cartoon character with big expressive eyes, "
          "soft global illumination, warm rim light, vibrant saturated colors, lush detailed background, "
-         "cinematic composition, depth of field")
-PITIR = ("a small cute young hedgehog boy with a round body covered in soft light-brown spiky quills on his back, "
-         "pointy little snout, big shiny green eyes, wearing a yellow knitted scarf and a small brown satchel")
-FINDIK = ("a lively red squirrel girl with a huge fluffy orange bushy tail, tufted ears, big amber eyes, "
-          "wearing a little green hooded cape")
-WORLD = ("in an enchanted forest village with giant old trees that have tiny wooden doors and glowing round windows, "
-         "oversized red spotted mushrooms, ferns, giant berries, warm golden afternoon sunlight through leaves, blue sky")
+         "cinematic lighting, depth of field, highly detailed fur")
+PITIR = ("a small cute young hedgehog boy with a round body, soft light-brown spiky quills on his back, "
+         "pointy little snout, big shiny green eyes, wearing a yellow knitted scarf")
+WORLD = ("enchanted forest village, giant old trees with tiny wooden doors and glowing round windows, "
+         "oversized red spotted mushrooms, ferns, warm golden afternoon sunlight through leaves")
 SCENES = [
-    (f"{PITIR} and {FINDIK} standing on a stone forest path talking excitedly, {WORLD}", 1024, 576),
-    (f"{FINDIK} proudly carrying a giant acorn above her head while {PITIR} laughs, {WORLD}", 1024, 576),
-    (f"close-up of {PITIR} looking surprised with wide eyes, {WORLD}", 576, 1024),
+    (f"{PITIR} walking happily along a stone forest path, {WORLD}", 1024, 576, "the hedgehog walks forward along the path, camera slowly follows"),
+    (f"{PITIR} finding a giant shiny red apple under a mushroom, amazed, {WORLD}", 1024, 576, "the hedgehog looks at the apple with surprise and smiles, leaves fall gently"),
+    (f"{PITIR} trying to push a giant red apple uphill, struggling, funny, {WORLD}", 1024, 576, "the hedgehog pushes the big apple, the apple rolls slowly"),
+    (f"close-up of {PITIR} laughing joyfully, {WORLD}", 576, 1024, "the hedgehog laughs and blinks, gentle camera push in"),
 ]
 imgs = []
 # ---------------------------------------------------------------- 1) Kareler (kapısız açık modeller)
 SIZES = {(1024, 576): (1344, 768), (576, 1024): (768, 1344)}
-NEG = "photo, photorealistic, realistic, human, text, watermark, blurry, deformed, extra limbs, ugly"
+NEG = "photo, photorealistic, human, 2d, flat, illustration, sketch, sticker, white background, text, watermark, blurry, deformed, extra limbs, two heads, ugly"
 from diffusers import DiffusionPipeline
 for tag, mid, steps, cfg in (("pg", "playgroundai/playground-v2.5-1024px-aesthetic", 40, 3.0),
-                             ("sdxl", "stabilityai/stable-diffusion-xl-base-1.0", 30, 6.0)):
+                             ):
     try:
         t0 = time.time()
         pipe = DiffusionPipeline.from_pretrained(mid, torch_dtype=torch.float16, variant="fp16").to("cuda")
@@ -50,7 +49,7 @@ for tag, mid, steps, cfg in (("pg", "playgroundai/playground-v2.5-1024px-aesthet
             pipe.vae.config.force_upcast = True
         log(tag, "yüklendi", round(time.time() - t0), "s")
         got = []
-        for k, (p, w, h) in enumerate(SCENES):
+        for k, (p, w, h, _m) in enumerate(SCENES):
             W, H = SIZES[(w, h)]
             t0 = time.time()
             im = pipe(prompt=f"{p}. {STYLE}", negative_prompt=NEG, width=W, height=H, num_inference_steps=steps,
@@ -76,15 +75,15 @@ try:
         pipe.enable_model_cpu_offload()
         pipe.vae.enable_tiling()
         log("ltx yüklendi", round(time.time() - t0), "s")
-        for k in (0, 2):
+        for k in range(len(SCENES)):
             if k >= len(imgs):
                 continue
             t0 = time.time()
             img = load_image(imgs[k])
             w, h = (768, 448) if img.width > img.height else (448, 768)
-            frames = pipe(image=img.resize((w, h)), prompt=SCENES[k][0] + ", characters move naturally, gentle camera push in",
-                          negative_prompt="worst quality, blurry, distorted, jittery, deformed",
-                          width=w, height=h, num_frames=97, num_inference_steps=40,
+            frames = pipe(image=img.resize((w, h)), prompt=SCENES[k][3] + ", smooth natural motion, consistent character, 3D animated movie",
+                          negative_prompt="worst quality, inconsistent motion, blurry, jittery, distorted, morphing, scene change, new characters",
+                          width=w, height=h, num_frames=73, num_inference_steps=40, decode_timestep=0.03, decode_noise_scale=0.025,
                           generator=torch.Generator("cpu").manual_seed(7)).frames[0]
             export_to_video(frames, os.path.join(OUT, f"ltx_{k}.mp4"), fps=24)
             log("ltx klip", k, round(time.time() - t0), "s")
@@ -95,7 +94,7 @@ except Exception:
 
 # ---------------------------------------------------------------- 3) Wan2.2 TI2V-5B (süre sınırlı deneme)
 try:
-    if imgs and os.environ.get("SKIP_WAN") != "1":
+    if False:  # Wan2.2: 31 GB RAM yetmedi (çekirdek çöktü); şimdilik kapalı
         from diffusers import WanImageToVideoPipeline, AutoencoderKLWan
         from diffusers.utils import export_to_video, load_image
         t0 = time.time()
