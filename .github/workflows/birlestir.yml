@@ -1,0 +1,59 @@
+name: Dizi birlestir (uzun video)
+
+# Bir dizinin tüm bölümlerini (Release'ler) tek bir yatay ~5 dk videoda birleştirir.
+# Dikey bölümler 1920x1080 kareye bulanık arka planla yerleştirilir (YouTube'da normal video = izlenme saati).
+on:
+  workflow_dispatch:
+    inputs:
+      prefix:
+        description: "Release etiket öneki (ör. video-9-S008_tarsus_gizemli_kazi)"
+        required: true
+      title:
+        description: "Uzun video başlığı"
+        required: true
+
+permissions:
+  contents: write
+
+jobs:
+  concat:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+      - run: sudo apt-get update && sudo apt-get install -y ffmpeg
+      - name: Bölümleri indir ve birleştir
+        env:
+          GH_TOKEN: ${{ github.token }}
+          PREFIX: ${{ github.event.inputs.prefix }}
+          TITLE: ${{ github.event.inputs.title }}
+        run: |
+          set -e
+          mkdir -p work && cd work
+          k=1; t=0; : > list.txt; : > chapters.txt
+          while gh release view "${PREFIX}_part$k" >/dev/null 2>&1; do
+            gh release download "${PREFIX}_part$k" -p "*.mp4" -O "p$k.mp4" --clobber
+            name=$(gh release view "${PREFIX}_part$k" --json name -q .name | sed 's/ *#shorts//')
+            ffmpeg -v error -y -i "p$k.mp4" -filter_complex \
+              "[0:v]split[a][b];[a]scale=1920:1080:force_original_aspect_ratio=increase,crop=1920:1080,boxblur=30:3,eq=brightness=-0.12[bg];[b]scale=-2:1080[fg];[bg][fg]overlay=(W-w)/2:0,fps=30,format=yuv420p[v]" \
+              -map "[v]" -map 0:a -c:v libx264 -preset veryfast -crf 21 -c:a aac -b:a 192k -ar 44100 "h$k.mp4"
+            printf "%02d:%02d %s\n" $((t/60)) $((t%60)) "$name" >> chapters.txt
+            d=$(ffprobe -v error -show_entries format=duration -of csv=p=0 "h$k.mp4")
+            t=$((t + ${d%.*}))
+            echo "file 'h$k.mp4'" >> list.txt
+            k=$((k+1))
+          done
+          n=$((k-1)); [ $n -ge 2 ] || { echo "bölüm bulunamadı"; exit 1; }
+          ffmpeg -v error -y -f concat -safe 0 -i list.txt -c copy full.mp4
+          ffmpeg -v error -y -ss 3 -i h1.mp4 -frames:v 1 full_kapak.jpg
+          body=$(gh release view "${PREFIX}_part1" --json body -q .body | sed -n '3p')
+          {
+            echo "$TITLE"; echo
+            echo "$body"; echo
+            echo "Bölümler / Chapters:"; cat chapters.txt; echo
+            gh release view "${PREFIX}_part1" --json body -q .body | grep -E "^(Görseller|Images|#)" || true
+          } > notes.txt
+          id=$(basename "$PREFIX" | sed 's/^video-[0-9]*-//')
+          cp full.mp4 "${id}_full.mp4"; cp full_kapak.jpg "${id}_full_kapak.jpg"
+          gh release delete "${PREFIX}_full" -y --cleanup-tag 2>/dev/null || true
+          gh release create "${PREFIX}_full" "${id}_full.mp4" "${id}_full_kapak.jpg" --title "$TITLE" --notes-file notes.txt

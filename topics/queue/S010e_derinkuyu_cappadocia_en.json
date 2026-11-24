@@ -1,0 +1,785 @@
+{
+ "id": "S010e_derinkuyu_cappadocia_en",
+ "format": "story",
+ "title": "Series: Derinkuyu & Cappadocia (EN)",
+ "brand": "HIDDEN TÜRKİYE",
+ "theme": "dosya",
+ "lang": "en",
+ "voice": {
+  "engine": "edge",
+  "speaker": "christopher",
+  "rate": "+0%",
+  "pitch": "-2Hz"
+ },
+ "broll": [
+  "Cappadocia",
+  "Derinkuyu",
+  "Goreme"
+ ],
+ "parts": [
+  {
+   "beats": [
+    {
+     "say": "In 1963, a man in Türkiye knocked down a wall in his basement. Behind it was *a whole city*.",
+     "show": {
+      "type": "photo",
+      "search": "Derinkuyu Underground City",
+      "label": "DERINKUYU · TÜRKİYE",
+      "extra": 2,
+      "fallback_show": {
+       "type": "icon",
+       "name": "camera",
+       "label": "DERINKUYU · TÜRKİYE"
+      }
+     },
+     "sfx": "hit"
+    },
+    {
+     "say": "The hidden room led to *narrow tunnels* going down.",
+     "show": {
+      "type": "photo",
+      "search": "Derinkuyu tunnel",
+      "label": "TUNNELS GOING DOWN",
+      "extra": 2,
+      "fallback_show": {
+       "type": "icon",
+       "name": "camera",
+       "label": "TUNNELS GOING DOWN"
+      }
+     }
+    },
+    {
+     "say": "Every tunnel opened into new rooms and *new floors*.",
+     "show": {
+      "type": "photo",
+      "search": "Derinkuyu",
+      "label": "FLOOR AFTER FLOOR",
+      "extra": 2,
+      "fallback_show": {
+       "type": "icon",
+       "name": "camera",
+       "label": "FLOOR AFTER FLOOR"
+      }
+     }
+    },
+    {
+     "say": "The city goes about *85 meters* underground.",
+     "show": {
+      "type": "number",
+      "value": "85",
+      "label": "METERS DEEP",
+      "suffix": " M"
+     },
+     "sfx": "riser"
+    },
+    {
+     "say": "According to estimates, up to *20,000 people* could hide here.",
+     "show": {
+      "type": "number",
+      "value": "20,000",
+      "label": "PEOPLE · ESTIMATED"
+     }
+    },
+    {
+     "say": "Along with their animals and *food supplies*.",
+     "show": {
+      "type": "list",
+      "items": [
+       "PEOPLE",
+       "ANIMALS",
+       "FOOD"
+      ]
+     }
+    },
+    {
+     "say": "Its name, Derinkuyu, means *deep well* in Turkish.",
+     "show": {
+      "type": "photo",
+      "search": "Derinkuyu well",
+      "label": "DERİN KUYU = DEEP WELL",
+      "extra": 2,
+      "fallback_show": {
+       "type": "icon",
+       "name": "camera",
+       "label": "DERİN KUYU = DEEP WELL"
+      }
+     }
+    },
+    {
+     "say": "Today, more than *600 entrances* have been found in the area, some inside homes.",
+     "show": {
+      "type": "number",
+      "value": "600+",
+      "label": "TUNNEL ENTRANCES"
+     }
+    },
+    {
+     "say": "In part 2: how did thousands of people *live down here*?",
+     "show": {
+      "type": "title",
+      "lines": [
+       "PART 2",
+       "LIFE",
+       "UNDERGROUND"
+      ],
+      "red": 1
+     }
+    },
+    {
+     "say": "*Follow* so you don't miss it.",
+     "show": {
+      "type": "icon",
+      "name": "eye",
+      "label": "FOLLOW FOR PART 2"
+     }
+    }
+   ],
+   "thumb": {
+    "lines": [
+     "A CITY BEHIND",
+     "THE WALL"
+    ],
+    "red": 1,
+    "photo_search": "Derinkuyu Underground City"
+   },
+   "broll": [
+    "Derinkuyu Underground City",
+    "Derinkuyu tunnel",
+    "Cappadocia"
+   ],
+   "publish": {
+    "title": "He Broke a Wall and Found a City 😳 Part 1 #shorts",
+    "description": "1963, Derinkuyu, Türkiye: a homeowner knocked down a basement wall and found a lost underground city.\n\nSeries: Derinkuyu & Cappadocia — Part 1/5. Watch all parts on the channel.",
+    "hashtags": [
+     "#cappadocia",
+     "#derinkuyu",
+     "#turkey",
+     "#undergroundcity",
+     "#history",
+     "#shorts"
+    ]
+   }
+  },
+  {
+   "beats": [
+    {
+     "say": "Could you live *85 meters* underground for months without sunlight?",
+     "show": {
+      "type": "photo",
+      "search": "Derinkuyu Underground City",
+      "label": "NO SUNLIGHT",
+      "extra": 2,
+      "fallback_show": {
+       "type": "icon",
+       "name": "camera",
+       "label": "NO SUNLIGHT"
+      }
+     },
+     "sfx": "hit"
+    },
+    {
+     "say": "In Derinkuyu, every level had *a purpose*.",
+     "show": {
+      "type": "photo",
+      "search": "Derinkuyu",
+      "label": "LEVEL BY LEVEL",
+      "extra": 2,
+      "fallback_show": {
+       "type": "icon",
+       "name": "camera",
+       "label": "LEVEL BY LEVEL"
+      }
+     }
+    },
+    {
+     "say": "Stables near the top, then kitchens, *storerooms* and living rooms.",
+     "show": {
+      "type": "list",
+      "items": [
+       "STABLES",
+       "KITCHENS",
+       "STORAGE",
+       "ROOMS"
+      ]
+     }
+    },
+    {
+     "say": "And on one of the deepest levels, *a church*.",
+     "show": {
+      "type": "photo",
+      "search": "Derinkuyu church",
+      "label": "A CHURCH BELOW",
+      "extra": 2,
+      "fallback_show": {
+       "type": "icon",
+       "name": "camera",
+       "label": "A CHURCH BELOW"
+      }
+     }
+    },
+    {
+     "say": "But how did so many people *breathe*?",
+     "show": {
+      "type": "icon",
+      "name": "question",
+      "label": "HOW DID THEY BREATHE?"
+     },
+     "sfx": "riser"
+    },
+    {
+     "say": "The answer: vertical *ventilation shafts* reaching the surface.",
+     "show": {
+      "type": "photo",
+      "search": "Derinkuyu ventilation shaft",
+      "label": "VENTILATION SHAFT",
+      "extra": 2,
+      "fallback_show": {
+       "type": "icon",
+       "name": "camera",
+       "label": "VENTILATION SHAFT"
+      }
+     }
+    },
+    {
+     "say": "One main shaft drops about *55 meters* and also worked as a well.",
+     "show": {
+      "type": "number",
+      "value": "55",
+      "label": "METER SHAFT",
+      "suffix": " M"
+     }
+    },
+    {
+     "say": "Underground it stays *cool* all year, so food could be stored safely.",
+     "show": {
+      "type": "photo",
+      "search": "Kaymakli Underground City",
+      "label": "NATURAL FRIDGE",
+      "extra": 2,
+      "fallback_show": {
+       "type": "icon",
+       "name": "camera",
+       "label": "NATURAL FRIDGE"
+      }
+     }
+    },
+    {
+     "say": "In part 3: stone doors that only *opened from inside*.",
+     "show": {
+      "type": "title",
+      "lines": [
+       "PART 3",
+       "THE STONE",
+       "DOORS"
+      ],
+      "red": 1
+     }
+    },
+    {
+     "say": "*Follow* so you don't miss it.",
+     "show": {
+      "type": "icon",
+      "name": "eye",
+      "label": "FOLLOW FOR PART 3"
+     }
+    }
+   ],
+   "thumb": {
+    "lines": [
+     "85 METERS",
+     "UNDERGROUND"
+    ],
+    "red": 1,
+    "photo_search": "Derinkuyu"
+   },
+   "broll": [
+    "Derinkuyu",
+    "Kaymakli Underground City",
+    "Derinkuyu ventilation shaft"
+   ],
+   "publish": {
+    "title": "How Did They Live 85 Meters Underground? 🕯️ Part 2 #shorts",
+    "description": "Stables, kitchens, wells, ventilation shafts and a church inside Derinkuyu.\n\nSeries: Derinkuyu & Cappadocia — Part 2/5. Watch all parts on the channel.",
+    "hashtags": [
+     "#cappadocia",
+     "#derinkuyu",
+     "#turkey",
+     "#undergroundcity",
+     "#history",
+     "#shorts"
+    ]
+   }
+  },
+  {
+   "beats": [
+    {
+     "say": "These giant stone doors could only be closed *from the inside*.",
+     "show": {
+      "type": "photo",
+      "search": "Derinkuyu stone door",
+      "label": "ROLLING STONE DOOR",
+      "extra": 2,
+      "fallback_show": {
+       "type": "icon",
+       "name": "camera",
+       "label": "ROLLING STONE DOOR"
+      }
+     },
+     "sfx": "hit"
+    },
+    {
+     "say": "When danger came, villagers went *underground* with their animals.",
+     "show": {
+      "type": "photo",
+      "search": "Derinkuyu tunnel",
+      "label": "INTO THE DARK",
+      "extra": 2,
+      "fallback_show": {
+       "type": "icon",
+       "name": "camera",
+       "label": "INTO THE DARK"
+      }
+     }
+    },
+    {
+     "say": "Then they sealed the corridors with stones that *roll like wheels*.",
+     "show": {
+      "type": "scene",
+      "land": "underground",
+      "label": "ROLLING DOOR",
+      "props": [
+       {
+        "k": "stonedoor",
+        "x": 0.5
+       },
+       {
+        "k": "torch",
+        "x": 0.15
+       }
+      ]
+     }
+    },
+    {
+     "say": "From the outside, attackers *couldn't open* them.",
+     "show": {
+      "type": "title",
+      "lines": [
+       "IMPOSSIBLE TO",
+       "OPEN FROM",
+       "OUTSIDE"
+      ],
+      "red": 2
+     }
+    },
+    {
+     "say": "The first rooms are believed to date back to the *Phrygians*, almost 3,000 years ago.",
+     "show": {
+      "type": "dossier",
+      "name": "PHRYGIANS",
+      "no": "8TH-7TH C. BC",
+      "fields": {
+       "CLAIM": "FIRST CARVINGS",
+       "STATUS": "BELIEVED"
+      }
+     }
+    },
+    {
+     "say": "In Byzantine times, the city was *expanded* to hide from raids.",
+     "show": {
+      "type": "photo",
+      "search": "Cappadocia",
+      "label": "BYZANTINE ERA",
+      "extra": 2,
+      "fallback_show": {
+       "type": "icon",
+       "name": "camera",
+       "label": "BYZANTINE ERA"
+      }
+     }
+    },
+    {
+     "say": "And reportedly, a tunnel of about *8 kilometers* links it to another city: Kaymaklı.",
+     "show": {
+      "type": "number",
+      "value": "8",
+      "label": "KM TUNNEL · REPORTEDLY",
+      "suffix": " KM"
+     },
+     "sfx": "riser"
+    },
+    {
+     "say": "Kaymaklı is one of the *largest* underground cities in Cappadocia.",
+     "show": {
+      "type": "photo",
+      "search": "Kaymakli Underground City",
+      "label": "KAYMAKLI",
+      "extra": 2,
+      "fallback_show": {
+       "type": "icon",
+       "name": "camera",
+       "label": "KAYMAKLI"
+      }
+     }
+    },
+    {
+     "say": "In part 4: how volcanoes made Cappadocia's *fairy chimneys*.",
+     "show": {
+      "type": "title",
+      "lines": [
+       "PART 4",
+       "FAIRY",
+       "CHIMNEYS"
+      ],
+      "red": 1
+     }
+    },
+    {
+     "say": "*Follow* so you don't miss it.",
+     "show": {
+      "type": "icon",
+      "name": "eye",
+      "label": "FOLLOW FOR PART 4"
+     }
+    }
+   ],
+   "thumb": {
+    "lines": [
+     "ONLY FROM",
+     "INSIDE"
+    ],
+    "red": 1,
+    "photo_search": "Derinkuyu stone door"
+   },
+   "broll": [
+    "Derinkuyu stone door",
+    "Kaymakli",
+    "Derinkuyu tunnel"
+   ],
+   "publish": {
+    "title": "This Stone Door Only Closed From Inside 🪨 Part 3 #shorts",
+    "description": "Derinkuyu's rolling stone doors, who carved the city, and the tunnel to Kaymaklı.\n\nSeries: Derinkuyu & Cappadocia — Part 3/5. Watch all parts on the channel.",
+    "hashtags": [
+     "#cappadocia",
+     "#derinkuyu",
+     "#turkey",
+     "#undergroundcity",
+     "#history",
+     "#shorts"
+    ]
+   }
+  },
+  {
+   "beats": [
+    {
+     "say": "Cappadocia's famous fairy chimneys were actually made by *volcanoes*.",
+     "show": {
+      "type": "photo",
+      "search": "Fairy chimneys Cappadocia",
+      "label": "FAIRY CHIMNEYS",
+      "extra": 2,
+      "fallback_show": {
+       "type": "icon",
+       "name": "camera",
+       "label": "FAIRY CHIMNEYS"
+      }
+     },
+     "sfx": "hit"
+    },
+    {
+     "say": "Millions of years ago, Mount Erciyes, Hasan Dağı and Göllüdağ *erupted*.",
+     "show": {
+      "type": "photo",
+      "search": "Erciyes",
+      "label": "MOUNT ERCİYES",
+      "extra": 2,
+      "fallback_show": {
+       "type": "icon",
+       "name": "camera",
+       "label": "MOUNT ERCİYES"
+      }
+     }
+    },
+    {
+     "say": "Layers of ash piled up and hardened into a soft rock called *tuff*.",
+     "show": {
+      "type": "list",
+      "items": [
+       "ASH",
+       "LAYERS",
+       "TUFF"
+      ]
+     }
+    },
+    {
+     "say": "Then rain and wind *eroded* it for thousands of years.",
+     "show": {
+      "type": "photo",
+      "search": "Cappadocia valley",
+      "label": "EROSION",
+      "extra": 2,
+      "fallback_show": {
+       "type": "icon",
+       "name": "camera",
+       "label": "EROSION"
+      }
+     }
+    },
+    {
+     "say": "A hard rock cap on top protected the soft *stone below*, like a hat.",
+     "show": {
+      "type": "photo",
+      "search": "Fairy chimney",
+      "label": "HARD CAP · SOFT BODY",
+      "extra": 2,
+      "fallback_show": {
+       "type": "icon",
+       "name": "camera",
+       "label": "HARD CAP · SOFT BODY"
+      }
+     },
+     "sfx": "riser"
+    },
+    {
+     "say": "The most famous are the *Three Beauties* in Ürgüp.",
+     "show": {
+      "type": "photo",
+      "search": "Three Beauties Urgup",
+      "label": "THE THREE BEAUTIES · ÜRGÜP",
+      "extra": 2,
+      "fallback_show": {
+       "type": "icon",
+       "name": "camera",
+       "label": "THE THREE BEAUTIES · ÜRGÜP"
+      }
+     }
+    },
+    {
+     "say": "Locals tell a *love legend* about them.",
+     "show": {
+      "type": "photo",
+      "search": "Urgup",
+      "label": "A LOCAL LEGEND",
+      "extra": 2,
+      "fallback_show": {
+       "type": "icon",
+       "name": "camera",
+       "label": "A LOCAL LEGEND"
+      }
+     }
+    },
+    {
+     "say": "And the name Cappadocia is often said to mean *land of beautiful horses*.",
+     "show": {
+      "type": "quote",
+      "text": "Katpatuka: land of beautiful horses",
+      "who": "Popular explanation"
+     }
+    },
+    {
+     "say": "In part 5: the sky above Cappadocia, full of *balloons*.",
+     "show": {
+      "type": "title",
+      "lines": [
+       "PART 5",
+       "THE",
+       "BALLOON SKY"
+      ],
+      "red": 1
+     }
+    },
+    {
+     "say": "*Follow* so you don't miss it.",
+     "show": {
+      "type": "icon",
+      "name": "eye",
+      "label": "FOLLOW FOR PART 5"
+     }
+    }
+   ],
+   "thumb": {
+    "lines": [
+     "MADE BY",
+     "VOLCANOES"
+    ],
+    "red": 1,
+    "photo_search": "Fairy chimneys Urgup"
+   },
+   "broll": [
+    "Fairy chimneys Cappadocia",
+    "Erciyes",
+    "Urgup"
+   ],
+   "publish": {
+    "title": "Volcanoes Built These Fairy Chimneys 🌋 Part 4 #shorts",
+    "description": "How Cappadocia's fairy chimneys formed from volcanic ash, and the Three Beauties of Ürgüp.\n\nSeries: Derinkuyu & Cappadocia — Part 4/5. Watch all parts on the channel.",
+    "hashtags": [
+     "#cappadocia",
+     "#derinkuyu",
+     "#turkey",
+     "#undergroundcity",
+     "#history",
+     "#shorts"
+    ]
+   }
+  },
+  {
+   "beats": [
+    {
+     "say": "Almost every calm morning, the sky over Cappadocia fills with *hot air balloons*.",
+     "show": {
+      "type": "photo",
+      "search": "Cappadocia balloons",
+      "label": "CAPPADOCIA BALLOONS",
+      "extra": 2,
+      "fallback_show": {
+       "type": "icon",
+       "name": "camera",
+       "label": "CAPPADOCIA BALLOONS"
+      }
+     },
+     "sfx": "hit"
+    },
+    {
+     "say": "It's one of the most famous *balloon flight* spots on Earth.",
+     "show": {
+      "type": "photo",
+      "search": "Goreme balloons",
+      "label": "GÖREME",
+      "extra": 2,
+      "fallback_show": {
+       "type": "icon",
+       "name": "camera",
+       "label": "GÖREME"
+      }
+     }
+    },
+    {
+     "say": "Below them, monks carved *churches* straight into the rock.",
+     "show": {
+      "type": "photo",
+      "search": "Goreme Open Air Museum",
+      "label": "GÖREME OPEN AIR MUSEUM",
+      "extra": 2,
+      "fallback_show": {
+       "type": "icon",
+       "name": "camera",
+       "label": "GÖREME OPEN AIR MUSEUM"
+      }
+     }
+    },
+    {
+     "say": "Some still have *Byzantine frescoes* inside.",
+     "show": {
+      "type": "photo",
+      "search": "Goreme fresco",
+      "label": "BYZANTINE FRESCOES",
+      "extra": 2,
+      "fallback_show": {
+       "type": "icon",
+       "name": "camera",
+       "label": "BYZANTINE FRESCOES"
+      }
+     }
+    },
+    {
+     "say": "In 1985, the region became a *UNESCO World Heritage* site.",
+     "show": {
+      "type": "number",
+      "value": "1985",
+      "label": "UNESCO WORLD HERITAGE"
+     }
+    },
+    {
+     "say": "The highest point is *Uçhisar Castle*, a giant rock full of rooms.",
+     "show": {
+      "type": "photo",
+      "search": "Uchisar",
+      "label": "UÇHİSAR CASTLE",
+      "extra": 2,
+      "fallback_show": {
+       "type": "icon",
+       "name": "camera",
+       "label": "UÇHİSAR CASTLE"
+      }
+     },
+     "sfx": "riser"
+    },
+    {
+     "say": "Today, people sleep in *cave hotels* carved into the same stone.",
+     "show": {
+      "type": "photo",
+      "search": "Cappadocia cave hotel",
+      "label": "CAVE HOTELS",
+      "extra": 2,
+      "fallback_show": {
+       "type": "icon",
+       "name": "camera",
+       "label": "CAVE HOTELS"
+      }
+     }
+    },
+    {
+     "say": "From 85 meters underground to the sky: Cappadocia's *two faces*.",
+     "show": {
+      "type": "title",
+      "lines": [
+       "UNDERGROUND",
+       "AND",
+       "THE SKY"
+      ],
+      "red": 2
+     }
+    },
+    {
+     "say": "Series finale! Would you sleep in a cave hotel? *Comment below*.",
+     "show": {
+      "type": "title",
+      "lines": [
+       "WOULD YOU",
+       "SLEEP IN",
+       "A CAVE?"
+      ],
+      "red": 2
+     }
+    },
+    {
+     "say": "*Follow* for the next series.",
+     "show": {
+      "type": "icon",
+      "name": "eye",
+      "label": "FOLLOW FOR MORE"
+     }
+    }
+   ],
+   "thumb": {
+    "lines": [
+     "THE BALLOON",
+     "SKY"
+    ],
+    "red": 1,
+    "photo_search": "Cappadocia balloons"
+   },
+   "broll": [
+    "Cappadocia balloons",
+    "Goreme Open Air Museum",
+    "Uchisar"
+   ],
+   "publish": {
+    "title": "The Sky Fills With Hundreds of Balloons 🎈 Part 5 #shorts",
+    "description": "Göreme's rock-cut churches, UNESCO 1985, and Cappadocia's hot air balloons.\n\nSeries: Derinkuyu & Cappadocia — Part 5/5. Watch all parts on the channel.",
+    "hashtags": [
+     "#cappadocia",
+     "#derinkuyu",
+     "#turkey",
+     "#undergroundcity",
+     "#history",
+     "#shorts"
+    ]
+   }
+  }
+ ],
+ "logo": {
+  "brand": "HIDDEN TÜRKİYE",
+  "mono": "HT"
+ }
+}

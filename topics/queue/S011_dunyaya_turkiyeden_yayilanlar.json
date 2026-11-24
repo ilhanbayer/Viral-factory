@@ -448,7 +448,7 @@
      "say": "Ama kesin olan şu: Türkiye bugün dünyanın *en büyük kiraz üreticisi*.",
      "show": {
       "type": "number",
-      "value": 1,
+      "value": "1",
       "label": "DÜNYA KİRAZ ÜRETİMİNDE",
       "suffix": "."
      },
@@ -642,7 +642,7 @@
      "say": "Ama dikkat: Bir avuç fındık yaklaşık *180 kalori*.",
      "show": {
       "type": "number",
-      "value": 180,
+      "value": "180",
       "label": "BİR AVUÇ (≈28 G)",
       "suffix": " KCAL"
      }

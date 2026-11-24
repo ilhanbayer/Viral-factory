@@ -100,3 +100,12 @@ Kuyruk (kullanıcının seçtiği konular): S008 Tarsus'un Gizemli Kazısı (5 b
 - Ekran her ~2 sn değişiyor, boş/siyah kare yok, taşma yok; BEĞEN/YORUM ve TAKİP ET animasyonları görünüyor.
 - Zayıf noktalar: Bölüm 4'teki gece çadır sahnesi (≈5 sn) koyu; bazı fotoğraflar konuyla dolaylı ilgili (genel Tarsus sokakları).
 - Puan: 8,0 / 7,8 / 8,0 / 7,4 / 7,8 → hepsi paylaşılıyor (Metricool: 24 Kas 17:00, 25 Kas 13:00-17:00-20:30, 26 Kas 13:00).
+
+## 2026-11-24 (17:00) — S009 Göbeklitepe (TR) + S009e Göbekli Tepe (EN), Actions 10. çalışma
+- Hata yok; süreler TR 41,6 / 42,8 / 48,3 / 41,9 / 41,8 sn, EN 40,8 / 42,1 / 44,1 / 38,8 / 38,1 sn; ses −14,0…−14,2 LUFS; siyah kare yok.
+- Ekran ~2 sn'de bir değişiyor, gerçek fotoğraflar ağırlıkta, BEĞEN/YORUM (EN: LIKE/COMMENT) ve TAKİP ET (FOLLOW) çalışıyor; taşma yok.
+- Kusur: EN Bölüm 3 dosya kartında "DOSYA NO" Türkçe kalmıştı → düzeltildi ("FILE NO"). EN Bölüm 3'teki gece kuyruklu yıldız sahnesi (≈4 sn) koyu.
+- Puan: TR 7,8 / 7,8 / 7,6 / 7,6 / 7,8 · EN 7,8 / 7,8 / 7,2 / 7,6 / 7,6 → hepsi paylaşılıyor.
+- İyileştirme: Shorts dizilerinde marka satırının altına Stories tarzı **dizi ilerleme çubuğu** (biten bölümler beyaz, bu bölüm kırmızı dolar, sonrakiler soluk) — izleyiciye dizinin devam ettiğini gösterip sonraki bölüme geçişi artırmak için.
+- Yeni: `birlestir.yml` — dizi bölümlerini 1920x1080 yatay uzun videoda birleştirir (bulanık arka plan + bölüm zaman damgaları) → izlenme saati için.
+- Kuyruk: S010e Derinkuyu & Cappadocia (EN), S011e Tarsus (EN: Kleopatra/İskender/Aziz Pavlus), S012 Truva (TR) yazıldı.

@@ -1,6 +1,7 @@
 """Hikâye formatı: senaryo -> (1 yatay uzun video + N dikey Shorts) üretimi."""
 import json
 import math
+import re
 import os
 import subprocess
 import time
@@ -135,6 +136,8 @@ def render_chunk(args):
     atm = ST.Atmosphere(W, H, seed=int(segs[0]["start"]))
     grains = [_grain(H, W, k) for k in range(6)]
     brand_spr = ST.brand_sprite(brand, 1.0 if fmt == "vertical" else 0.8)
+    _m = re.search(r"(\d+)\s*/\s*(\d+)\s*$", brand or "")
+    series_kn = (int(_m.group(1)), int(_m.group(2))) if _m and 1 < int(_m.group(2)) <= 12 else None
     yy, xx = np.mgrid[0:H, 0:W].astype(np.float32)
     vig_r = np.sqrt(((xx - W / 2) / (W / 2)) ** 2 + ((yy - H / 2) / (H / 2)) ** 2)
     red_vig = np.clip(vig_r - 0.55, 0, 1)[..., None] ** 1.5
@@ -211,6 +214,8 @@ def render_chunk(args):
             by, bx = int(40 * P["cap_u"]), int((W - bw) / 2) if fmt == "vertical" else int(50)
             al = brand_spr[..., 3:4].astype(np.float32) / 255
             fr[by:by + bh, bx:bx + bw] = (fr[by:by + bh, bx:bx + bw] * (1 - al) + brand_spr[..., :3] * al).astype(np.uint8)
+            if series_kn and fmt == "vertical":
+                _series_bar(fr, series_kn, gt / max(total, 0.1), W, by + bh + int(12 * P["cap_u"]), P["cap_u"])
             if preview is not None:
                 shots.append(fr)
             else:
@@ -669,3 +674,26 @@ def produce_story(script, out_dir, use_tts=True, workers=None):
         finals.append(produce_one(f"{script['id']}_short{k + 1}", beats, "vertical", brand, theme, p, out_dir,
                                   use_tts, workers))
     return finals
+
+def _series_bar(fr, kn, prog, W, y, u):
+    """Dizi ilerleme çubuğu (Stories tarzı): biten bölümler beyaz, bu bölüm kırmızı dolar, sonrakiler soluk.
+    İzleyiciye dizinin devam ettiğini gösterir -> sonraki bölüme geçiş (binge) artar."""
+    k, n = kn
+    sw, gap, sh = int(88 * u), int(10 * u), max(4, int(9 * u))
+    tot = n * sw + (n - 1) * gap
+    x0 = (W - tot) // 2
+    for i in range(n):
+        xa = x0 + i * (sw + gap)
+        reg = fr[y:y + sh, xa:xa + sw].astype(np.float32)
+        fr[y:y + sh, xa:xa + sw] = (reg * 0.45 + np.array((255, 255, 255), np.float32) * 0.55 * 0.45).astype(np.uint8)
+        if i < k - 1:
+            fill = sw
+            col = (245, 245, 240)
+        elif i == k - 1:
+            fill = int(sw * min(1.0, max(0.0, prog)))
+            col = tuple(int(c) for c in ST.C["red"])
+        else:
+            fill = 0
+            col = (0, 0, 0)
+        if fill > 0:
+            fr[y:y + sh, xa:xa + fill] = col

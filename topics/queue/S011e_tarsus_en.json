@@ -1,0 +1,806 @@
+{
+ "id": "S011e_tarsus_en",
+ "format": "story",
+ "title": "Series: Tarsus (EN)",
+ "brand": "HIDDEN TÜRKİYE",
+ "theme": "dosya",
+ "lang": "en",
+ "voice": {
+  "engine": "edge",
+  "speaker": "christopher",
+  "rate": "+0%",
+  "pitch": "-2Hz"
+ },
+ "broll": [
+  "Tarsus",
+  "Cleopatra Gate",
+  "Tarsus waterfall"
+ ],
+ "parts": [
+  {
+   "beats": [
+    {
+     "say": "One of history's most famous love stories began in a city in *Türkiye*: Tarsus.",
+     "show": {
+      "type": "photo",
+      "search": "Cleopatra Gate Tarsus",
+      "label": "CLEOPATRA'S GATE · TARSUS",
+      "extra": 2,
+      "fallback_show": {
+       "type": "icon",
+       "name": "camera",
+       "label": "CLEOPATRA'S GATE · TARSUS"
+      }
+     },
+     "sfx": "hit"
+    },
+    {
+     "say": "41 BC. Rome's powerful general *Mark Antony* was in Tarsus.",
+     "show": {
+      "type": "photo",
+      "search": "Mark Antony bust",
+      "label": "MARK ANTONY",
+      "extra": 2,
+      "fallback_show": {
+       "type": "icon",
+       "name": "camera",
+       "label": "MARK ANTONY"
+      }
+     }
+    },
+    {
+     "say": "He summoned the queen of Egypt, *Cleopatra*.",
+     "show": {
+      "type": "photo",
+      "search": "Cleopatra bust",
+      "label": "CLEOPATRA",
+      "extra": 2,
+      "fallback_show": {
+       "type": "icon",
+       "name": "camera",
+       "label": "CLEOPATRA"
+      }
+     }
+    },
+    {
+     "say": "She came by ship up the river *Cydnus*, today's Berdan.",
+     "show": {
+      "type": "photo",
+      "search": "Berdan River Tarsus",
+      "label": "THE CYDNUS · TODAY'S BERDAN",
+      "extra": 2,
+      "fallback_show": {
+       "type": "icon",
+       "name": "camera",
+       "label": "THE CYDNUS · TODAY'S BERDAN"
+      }
+     }
+    },
+    {
+     "say": "According to Plutarch, the ship had a *golden stern* and purple sails.",
+     "show": {
+      "type": "quote",
+      "text": "The poop was gold, the sails purple, the oars silver.",
+      "who": "Plutarch (paraphrased)"
+     }
+    },
+    {
+     "say": "Silver oars moved to the sound of *flutes*.",
+     "show": {
+      "type": "list",
+      "items": [
+       "GOLD",
+       "PURPLE SAILS",
+       "SILVER OARS"
+      ]
+     },
+     "sfx": "riser"
+    },
+    {
+     "say": "Antony was stunned. Their story became *legend*.",
+     "show": {
+      "type": "photo",
+      "search": "Antony and Cleopatra painting",
+      "label": "A LEGEND BEGINS",
+      "extra": 2,
+      "fallback_show": {
+       "type": "icon",
+       "name": "camera",
+       "label": "A LEGEND BEGINS"
+      }
+     }
+    },
+    {
+     "say": "That's why an old gate in Tarsus is still called *Cleopatra's Gate*.",
+     "show": {
+      "type": "photo",
+      "search": "Cleopatra Gate",
+      "label": "CLEOPATRA'S GATE",
+      "extra": 2,
+      "fallback_show": {
+       "type": "icon",
+       "name": "camera",
+       "label": "CLEOPATRA'S GATE"
+      }
+     }
+    },
+    {
+     "say": "In part 2: the river that almost killed *Alexander the Great*.",
+     "show": {
+      "type": "title",
+      "lines": [
+       "PART 2",
+       "THE RIVER",
+       "VS ALEXANDER"
+      ],
+      "red": 1
+     }
+    },
+    {
+     "say": "*Follow* so you don't miss it.",
+     "show": {
+      "type": "icon",
+      "name": "eye",
+      "label": "FOLLOW FOR PART 2"
+     }
+    }
+   ],
+   "thumb": {
+    "lines": [
+     "CLEOPATRA",
+     "WAS HERE"
+    ],
+    "red": 1,
+    "photo_search": "Cleopatra Gate Tarsus"
+   },
+   "broll": [
+    "Cleopatra bust",
+    "Mark Antony bust",
+    "Berdan River Tarsus",
+    "Cleopatra Gate"
+   ],
+   "publish": {
+    "title": "Cleopatra Met Mark Antony Here 👑 Part 1 #shorts",
+    "description": "41 BC: Cleopatra sailed up the Cydnus river to Tarsus, Türkiye, to meet Mark Antony.\n\nSeries: Tarsus — Part 1/5. Watch all parts on the channel.",
+    "hashtags": [
+     "#tarsus",
+     "#cleopatra",
+     "#turkey",
+     "#history",
+     "#shorts"
+    ]
+   }
+  },
+  {
+   "beats": [
+    {
+     "say": "The river that almost killed *Alexander the Great* still flows through Tarsus.",
+     "show": {
+      "type": "photo",
+      "search": "Alexander the Great mosaic",
+      "label": "ALEXANDER THE GREAT",
+      "extra": 2,
+      "fallback_show": {
+       "type": "icon",
+       "name": "camera",
+       "label": "ALEXANDER THE GREAT"
+      }
+     },
+     "sfx": "hit"
+    },
+    {
+     "say": "In 333 BC, Alexander marched his army into *Tarsus*.",
+     "show": {
+      "type": "number",
+      "value": "333 BC",
+      "label": "ALEXANDER IN TARSUS"
+     }
+    },
+    {
+     "say": "Hot and exhausted, he jumped into the ice-cold *Cydnus river*.",
+     "show": {
+      "type": "photo",
+      "search": "Berdan River",
+      "label": "THE CYDNUS",
+      "extra": 2,
+      "fallback_show": {
+       "type": "icon",
+       "name": "camera",
+       "label": "THE CYDNUS"
+      }
+     }
+    },
+    {
+     "say": "According to ancient writers, he then fell *seriously ill*.",
+     "show": {
+      "type": "title",
+      "lines": [
+       "SERIOUSLY",
+       "ILL"
+      ],
+      "red": 2
+     }
+    },
+    {
+     "say": "His army feared they would *lose their king*.",
+     "show": {
+      "type": "photo",
+      "search": "Alexander the Great",
+      "label": "THE ARMY PANICS",
+      "extra": 2,
+      "fallback_show": {
+       "type": "icon",
+       "name": "camera",
+       "label": "THE ARMY PANICS"
+      }
+     }
+    },
+    {
+     "say": "But he recovered, and months later he won the *Battle of Issus*.",
+     "show": {
+      "type": "list",
+      "items": [
+       "ILLNESS",
+       "RECOVERY",
+       "VICTORY AT ISSUS"
+      ]
+     },
+     "sfx": "riser"
+    },
+    {
+     "say": "Issus is also in today's *Türkiye*, near İskenderun.",
+     "show": {
+      "type": "photo",
+      "search": "Issus battle",
+      "label": "BATTLE OF ISSUS",
+      "extra": 2,
+      "fallback_show": {
+       "type": "icon",
+       "name": "camera",
+       "label": "BATTLE OF ISSUS"
+      }
+     }
+    },
+    {
+     "say": "Today, the same river creates the famous *Tarsus waterfall*.",
+     "show": {
+      "type": "photo",
+      "search": "Tarsus waterfall",
+      "label": "TARSUS WATERFALL",
+      "extra": 2,
+      "fallback_show": {
+       "type": "icon",
+       "name": "camera",
+       "label": "TARSUS WATERFALL"
+      }
+     }
+    },
+    {
+     "say": "In part 3: the man from Tarsus who *changed the world*.",
+     "show": {
+      "type": "title",
+      "lines": [
+       "PART 3",
+       "BORN IN",
+       "TARSUS"
+      ],
+      "red": 1
+     }
+    },
+    {
+     "say": "*Follow* so you don't miss it.",
+     "show": {
+      "type": "icon",
+      "name": "eye",
+      "label": "FOLLOW FOR PART 3"
+     }
+    }
+   ],
+   "thumb": {
+    "lines": [
+     "IT ALMOST",
+     "KILLED HIM"
+    ],
+    "red": 1,
+    "photo_search": "Tarsus waterfall"
+   },
+   "broll": [
+    "Alexander the Great mosaic",
+    "Berdan River",
+    "Tarsus waterfall",
+    "Issus battle"
+   ],
+   "publish": {
+    "title": "The River That Almost Killed Alexander 🌊 Part 2 #shorts",
+    "description": "333 BC: Alexander the Great swam in the icy Cydnus at Tarsus and fell gravely ill.\n\nSeries: Tarsus — Part 2/5. Watch all parts on the channel.",
+    "hashtags": [
+     "#tarsus",
+     "#cleopatra",
+     "#turkey",
+     "#history",
+     "#shorts"
+    ]
+   }
+  },
+  {
+   "beats": [
+    {
+     "say": "One of the most influential people in history was born in *Tarsus*.",
+     "show": {
+      "type": "photo",
+      "search": "Saint Paul icon",
+      "label": "SAINT PAUL",
+      "extra": 2,
+      "fallback_show": {
+       "type": "icon",
+       "name": "camera",
+       "label": "SAINT PAUL"
+      }
+     },
+     "sfx": "hit"
+    },
+    {
+     "say": "*Saint Paul* the Apostle spread Christianity across the Roman world.",
+     "show": {
+      "type": "photo",
+      "search": "Saint Paul Church Tarsus",
+      "label": "SAINT PAUL'S CHURCH",
+      "extra": 2,
+      "fallback_show": {
+       "type": "icon",
+       "name": "camera",
+       "label": "SAINT PAUL'S CHURCH"
+      }
+     }
+    },
+    {
+     "say": "In the Bible, he calls himself a citizen of *no ordinary city*.",
+     "show": {
+      "type": "quote",
+      "text": "I am a man of Tarsus, a citizen of no mean city.",
+      "who": "Acts 21:39"
+     }
+    },
+    {
+     "say": "Back then, Tarsus was a rich center of *learning* and trade.",
+     "show": {
+      "type": "list",
+      "items": [
+       "TRADE",
+       "PHILOSOPHY",
+       "LEARNING"
+      ]
+     }
+    },
+    {
+     "say": "Today pilgrims from around the world visit *St. Paul's Well*.",
+     "show": {
+      "type": "photo",
+      "search": "St. Paul's Well Tarsus",
+      "label": "ST. PAUL'S WELL",
+      "extra": 2,
+      "fallback_show": {
+       "type": "icon",
+       "name": "camera",
+       "label": "ST. PAUL'S WELL"
+      }
+     }
+    },
+    {
+     "say": "The well is said to stand on the site of his *family home*.",
+     "show": {
+      "type": "title",
+      "lines": [
+       "HIS",
+       "FAMILY HOME?"
+      ],
+      "red": 2
+     },
+     "sfx": "riser"
+    },
+    {
+     "say": "Saint Paul's Church in Tarsus is now a *museum*.",
+     "show": {
+      "type": "photo",
+      "search": "Saint Paul's Church Tarsus",
+      "label": "NOW A MUSEUM",
+      "extra": 2,
+      "fallback_show": {
+       "type": "icon",
+       "name": "camera",
+       "label": "NOW A MUSEUM"
+      }
+     }
+    },
+    {
+     "say": "But in 2016, a secret dig started in Tarsus, and rumors *exploded*.",
+     "show": {
+      "type": "photo",
+      "search": "Archaeological excavation Turkey",
+      "label": "2016 · A SECRET DIG",
+      "extra": 2,
+      "fallback_show": {
+       "type": "icon",
+       "name": "camera",
+       "label": "2016 · A SECRET DIG"
+      }
+     }
+    },
+    {
+     "say": "In part 4: what were they *looking for*?",
+     "show": {
+      "type": "title",
+      "lines": [
+       "PART 4",
+       "THE SECRET",
+       "DIG"
+      ],
+      "red": 1
+     }
+    },
+    {
+     "say": "*Follow* so you don't miss it.",
+     "show": {
+      "type": "icon",
+      "name": "eye",
+      "label": "FOLLOW FOR PART 4"
+     }
+    }
+   ],
+   "thumb": {
+    "lines": [
+     "SAINT PAUL'S",
+     "HOMETOWN"
+    ],
+    "red": 1,
+    "photo_search": "St. Paul's Well Tarsus"
+   },
+   "broll": [
+    "Saint Paul Church Tarsus",
+    "St. Paul's Well Tarsus",
+    "Saint Paul icon"
+   ],
+   "publish": {
+    "title": "Saint Paul Was Born in This City ✝️ Part 3 #shorts",
+    "description": "Tarsus, birthplace of Saint Paul the Apostle, and St. Paul's Well.\n\nSeries: Tarsus — Part 3/5. Watch all parts on the channel.",
+    "hashtags": [
+     "#tarsus",
+     "#cleopatra",
+     "#turkey",
+     "#history",
+     "#shorts"
+    ]
+   }
+  },
+  {
+   "beats": [
+    {
+     "say": "For almost *a year*, a house in Tarsus was dug up under police guard.",
+     "show": {
+      "type": "photo",
+      "search": "Tarsus Mersin",
+      "label": "TARSUS · TÜRKİYE",
+      "extra": 2,
+      "fallback_show": {
+       "type": "icon",
+       "name": "camera",
+       "label": "TARSUS · TÜRKİYE"
+      }
+     },
+     "sfx": "hit"
+    },
+    {
+     "say": "It started in *November 2016*. The house was covered with tarps.",
+     "show": {
+      "type": "photo",
+      "search": "Tarsus houses",
+      "label": "NOVEMBER 2016",
+      "extra": 2,
+      "fallback_show": {
+       "type": "icon",
+       "name": "camera",
+       "label": "NOVEMBER 2016"
+      }
+     }
+    },
+    {
+     "say": "Streets were blocked and *special police* guarded the area.",
+     "show": {
+      "type": "list",
+      "items": [
+       "TARPS",
+       "BARRICADES",
+       "SPECIAL POLICE"
+      ]
+     },
+     "sfx": "riser"
+    },
+    {
+     "say": "Officially, it was a dig approved by the *Tarsus Museum*.",
+     "show": {
+      "type": "dossier",
+      "name": "OFFICIAL RECORD",
+      "no": "2016",
+      "fields": {
+       "PERMIT": "TARSUS MUSEUM",
+       "SITE": "ARCHAEOLOGICAL"
+      }
+     }
+    },
+    {
+     "say": "The report mentions a pit and *two tunnels*, but no ancient building.",
+     "show": {
+      "type": "number",
+      "value": "2.3",
+      "label": "METER DEEP PIT",
+      "suffix": " M"
+     }
+    },
+    {
+     "say": "Then a former minister claimed they were searching for *Saint Paul's tomb*.",
+     "show": {
+      "type": "photo",
+      "search": "Saint Paul icon",
+      "label": "CLAIM: PAUL'S TOMB?",
+      "extra": 2,
+      "fallback_show": {
+       "type": "icon",
+       "name": "camera",
+       "label": "CLAIM: PAUL'S TOMB?"
+      }
+     }
+    },
+    {
+     "say": "Others said *treasure*. None of these claims were ever proven.",
+     "show": {
+      "type": "list",
+      "items": [
+       "A TOMB?",
+       "TREASURE?",
+       "NOT PROVEN"
+      ]
+     }
+    },
+    {
+     "say": "The dig ended quietly, and the question is still *unanswered*.",
+     "show": {
+      "type": "photo",
+      "search": "Archaeological excavation Turkey",
+      "label": "NO ANSWER",
+      "extra": 2,
+      "fallback_show": {
+       "type": "icon",
+       "name": "camera",
+       "label": "NO ANSWER"
+      }
+     }
+    },
+    {
+     "say": "What do you think they were looking for? *Comment below*.",
+     "show": {
+      "type": "title",
+      "lines": [
+       "WHAT WERE",
+       "THEY LOOKING FOR?"
+      ],
+      "red": 1
+     }
+    },
+    {
+     "say": "In part 5: there's *another city* under Tarsus.",
+     "show": {
+      "type": "title",
+      "lines": [
+       "PART 5",
+       "A CITY",
+       "BELOW"
+      ],
+      "red": 1
+     }
+    },
+    {
+     "say": "*Follow* so you don't miss it.",
+     "show": {
+      "type": "icon",
+      "name": "eye",
+      "label": "FOLLOW FOR PART 5"
+     }
+    }
+   ],
+   "thumb": {
+    "lines": [
+     "THE SECRET",
+     "DIG"
+    ],
+    "red": 1,
+    "photo_search": "Tarsus Mersin"
+   },
+   "broll": [
+    "Tarsus Mersin",
+    "Tarsus old town",
+    "Archaeological excavation Turkey"
+   ],
+   "publish": {
+    "title": "A Secret Dig Under Police Guard 🚨 Part 4 #shorts",
+    "description": "The mysterious 2016-2017 excavation in Tarsus: official records and the unproven claims.\n\nSeries: Tarsus — Part 4/5. Watch all parts on the channel.",
+    "hashtags": [
+     "#tarsus",
+     "#cleopatra",
+     "#turkey",
+     "#history",
+     "#shorts"
+    ]
+   }
+  },
+  {
+   "beats": [
+    {
+     "say": "When you walk in Tarsus, there's an *ancient city* under your feet.",
+     "show": {
+      "type": "photo",
+      "search": "Ancient road Tarsus",
+      "label": "ANCIENT ROAD · TARSUS",
+      "extra": 2,
+      "fallback_show": {
+       "type": "icon",
+       "name": "camera",
+       "label": "ANCIENT ROAD · TARSUS"
+      }
+     },
+     "sfx": "hit"
+    },
+    {
+     "say": "Tarsus is considered one of the world's oldest *continuously inhabited* cities.",
+     "show": {
+      "type": "title",
+      "lines": [
+       "ONE OF THE",
+       "OLDEST",
+       "CITIES"
+      ],
+      "red": 1
+     }
+    },
+    {
+     "say": "In 1993, a construction pit revealed an *ancient road* by accident.",
+     "show": {
+      "type": "photo",
+      "search": "Ancient road in Tarsus",
+      "label": "1993 · FOUND BY ACCIDENT",
+      "extra": 2,
+      "fallback_show": {
+       "type": "icon",
+       "name": "camera",
+       "label": "1993 · FOUND BY ACCIDENT"
+      }
+     }
+    },
+    {
+     "say": "The basalt-paved road is about *6.5 meters* wide.",
+     "show": {
+      "type": "number",
+      "value": "6.5",
+      "label": "METERS WIDE",
+      "suffix": " M"
+     }
+    },
+    {
+     "say": "Under it runs a *sewer system*. Amazing engineering for its time.",
+     "show": {
+      "type": "list",
+      "items": [
+       "BASALT ROAD",
+       "SEWER BELOW"
+      ]
+     },
+     "sfx": "riser"
+    },
+    {
+     "say": "The building project was cancelled, and the road is now *protected*.",
+     "show": {
+      "type": "photo",
+      "search": "Tarsus Roman road",
+      "label": "PROTECTED",
+      "extra": 2,
+      "fallback_show": {
+       "type": "icon",
+       "name": "camera",
+       "label": "PROTECTED"
+      }
+     }
+    },
+    {
+     "say": "There's also *Donuktaş*, the remains of a giant Roman temple.",
+     "show": {
+      "type": "photo",
+      "search": "Donuktaş Tarsus",
+      "label": "DONUKTAŞ",
+      "extra": 2,
+      "fallback_show": {
+       "type": "icon",
+       "name": "camera",
+       "label": "DONUKTAŞ"
+      }
+     }
+    },
+    {
+     "say": "And a newly displayed *gladiator mosaic* near Cleopatra's Gate.",
+     "show": {
+      "type": "photo",
+      "search": "Tarsus mosaic",
+      "label": "GLADIATOR MOSAIC",
+      "extra": 2,
+      "fallback_show": {
+       "type": "icon",
+       "name": "camera",
+       "label": "GLADIATOR MOSAIC"
+      }
+     }
+    },
+    {
+     "say": "Most of ancient Tarsus is still *waiting* beneath the modern city.",
+     "show": {
+      "type": "photo",
+      "search": "Tarsus old houses",
+      "label": "STILL BURIED",
+      "extra": 2,
+      "fallback_show": {
+       "type": "icon",
+       "name": "camera",
+       "label": "STILL BURIED"
+      }
+     }
+    },
+    {
+     "say": "Series finale! Which story surprised you most? *Comment below*.",
+     "show": {
+      "type": "title",
+      "lines": [
+       "WHICH STORY",
+       "SURPRISED",
+       "YOU MOST?"
+      ],
+      "red": 2
+     }
+    },
+    {
+     "say": "*Follow* for the next series.",
+     "show": {
+      "type": "icon",
+      "name": "eye",
+      "label": "FOLLOW FOR MORE"
+     }
+    }
+   ],
+   "thumb": {
+    "lines": [
+     "A CITY",
+     "BELOW"
+    ],
+    "red": 1,
+    "photo_search": "Ancient road Tarsus"
+   },
+   "broll": [
+    "Ancient road Tarsus",
+    "Donuktaş",
+    "Tarsus mosaic",
+    "Tarsus old houses"
+   ],
+   "publish": {
+    "title": "There's Another City Under This City 🏛️ Part 5 #shorts",
+    "description": "Tarsus's ancient Roman road found by chance in 1993, Donuktaş and the gladiator mosaic.\n\nSeries: Tarsus — Part 5/5. Watch all parts on the channel.",
+    "hashtags": [
+     "#tarsus",
+     "#cleopatra",
+     "#turkey",
+     "#history",
+     "#shorts"
+    ]
+   }
+  }
+ ],
+ "logo": {
+  "brand": "HIDDEN TÜRKİYE",
+  "mono": "HT"
+ }
+}

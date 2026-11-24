@@ -1,0 +1,769 @@
+{
+ "id": "S012_truva",
+ "format": "story",
+ "title": "Dizi: Truva'nın Gerçek Hikâyesi",
+ "brand": "İLGİNÇ BİLGİLER",
+ "theme": "dosya",
+ "lang": "tr",
+ "voice": {
+  "engine": "edge",
+  "speaker": "ahmet",
+  "rate": "+0%",
+  "pitch": "-2Hz"
+ },
+ "broll": [
+  "Troy",
+  "Hisarlik",
+  "Canakkale"
+ ],
+ "parts": [
+  {
+   "beats": [
+    {
+     "say": "Herkes masal sanıyordu. Ama Truva gerçek ve *Çanakkale'de*.",
+     "show": {
+      "type": "photo",
+      "search": "Troy archaeological site",
+      "label": "TRUVA · ÇANAKKALE",
+      "extra": 2,
+      "fallback_show": {
+       "type": "icon",
+       "name": "camera",
+       "label": "TRUVA · ÇANAKKALE"
+      }
+     },
+     "sfx": "hit"
+    },
+    {
+     "say": "Yaklaşık 3 bin yıl önce Homeros, *İlyada* destanında Truva Savaşı'nı anlattı.",
+     "show": {
+      "type": "photo",
+      "search": "Homer bust",
+      "label": "HOMEROS",
+      "extra": 2,
+      "fallback_show": {
+       "type": "icon",
+       "name": "camera",
+       "label": "HOMEROS"
+      }
+     }
+    },
+    {
+     "say": "Asırlarca bu şehrin sadece bir *efsane* olduğu düşünüldü.",
+     "show": {
+      "type": "title",
+      "lines": [
+       "SADECE",
+       "BİR EFSANE?"
+      ],
+      "red": 2
+     }
+    },
+    {
+     "say": "Ta ki arkeologlar *Hisarlık Tepesi'ni* kazana kadar.",
+     "show": {
+      "type": "photo",
+      "search": "Hisarlik",
+      "label": "HİSARLIK TEPESİ",
+      "extra": 2,
+      "fallback_show": {
+       "type": "icon",
+       "name": "camera",
+       "label": "HİSARLIK TEPESİ"
+      }
+     }
+    },
+    {
+     "say": "Tepenin altında tek bir şehir değil, üst üste *9 şehir* çıktı.",
+     "show": {
+      "type": "number",
+      "value": "9",
+      "label": "ÜST ÜSTE ŞEHİR"
+     },
+     "sfx": "riser"
+    },
+    {
+     "say": "Bu katmanlar yaklaşık *4 bin yıllık* bir tarihi anlatıyor.",
+     "show": {
+      "type": "number",
+      "value": "4.000",
+      "label": "YILLIK TARİH"
+     }
+    },
+    {
+     "say": "Dev surlar, kuleler ve *şehir kapıları* bugün hâlâ ayakta.",
+     "show": {
+      "type": "photo",
+      "search": "Troy walls",
+      "label": "TRUVA SURLARI",
+      "extra": 2,
+      "fallback_show": {
+       "type": "icon",
+       "name": "camera",
+       "label": "TRUVA SURLARI"
+      }
+     }
+    },
+    {
+     "say": "Truva, 1998'de *UNESCO Dünya Mirası* listesine girdi.",
+     "show": {
+      "type": "photo",
+      "search": "Troy ruins",
+      "label": "UNESCO · 1998",
+      "extra": 2,
+      "fallback_show": {
+       "type": "icon",
+       "name": "camera",
+       "label": "UNESCO · 1998"
+      }
+     }
+    },
+    {
+     "say": "Bölüm 2'de: Truva'yı bulan adamın *karanlık* yöntemleri.",
+     "show": {
+      "type": "title",
+      "lines": [
+       "BÖLÜM 2",
+       "DİNAMİTLİ",
+       "KAZI"
+      ],
+      "red": 1
+     }
+    },
+    {
+     "say": "Kaçırmamak için *takip et*.",
+     "show": {
+      "type": "icon",
+      "name": "eye",
+      "label": "TAKİP ET · BİLDİRİMİ AÇ"
+     }
+    }
+   ],
+   "thumb": {
+    "lines": [
+     "TRUVA",
+     "GERÇEK"
+    ],
+    "red": 1,
+    "photo_search": "Troy Hisarlik"
+   },
+   "broll": [
+    "Troy archaeological site",
+    "Hisarlik",
+    "Troy walls",
+    "Canakkale"
+   ],
+   "publish": {
+    "title": "Truva Efsane Değil, Çanakkale'de Gerçek 🏛️ Bölüm 1 #shorts",
+    "description": "Homeros'un anlattığı Truva, Çanakkale'deki Hisarlık Tepesi'nde: 9 katmanlı antik kent.\n\nDizi: Truva'nın Gerçek Hikâyesi — Bölüm 1/5. Tüm bölümler kanalda.",
+    "hashtags": [
+     "#truva",
+     "#troya",
+     "#çanakkale",
+     "#tarih",
+     "#ilginçbilgiler",
+     "#shorts"
+    ]
+   }
+  },
+  {
+   "beats": [
+    {
+     "say": "Truva'yı bulan adam, onu bulurken bir kısmını *yok etti*.",
+     "show": {
+      "type": "photo",
+      "search": "Heinrich Schliemann",
+      "label": "HEINRICH SCHLIEMANN",
+      "extra": 2,
+      "fallback_show": {
+       "type": "icon",
+       "name": "camera",
+       "label": "HEINRICH SCHLIEMANN"
+      }
+     },
+     "sfx": "hit"
+    },
+    {
+     "say": "Alman iş insanı *Heinrich Schliemann*, 1870'te Hisarlık'ı kazmaya başladı.",
+     "show": {
+      "type": "number",
+      "value": "1870",
+      "label": "KAZILAR BAŞLIYOR"
+     }
+    },
+    {
+     "say": "Ama asıl ipucunu ona İngiliz *Frank Calvert* vermişti.",
+     "show": {
+      "type": "photo",
+      "search": "Frank Calvert",
+      "label": "FRANK CALVERT",
+      "extra": 2,
+      "fallback_show": {
+       "type": "icon",
+       "name": "camera",
+       "label": "FRANK CALVERT"
+      }
+     }
+    },
+    {
+     "say": "Calvert, tepenin bir kısmının *sahibiydi* ve burası Truva diyordu.",
+     "show": {
+      "type": "dossier",
+      "name": "FRANK CALVERT",
+      "no": "1860'LAR",
+      "fields": {
+       "ROL": "İLK İPUCU",
+       "ÜNÜ": "UNUTULDU"
+      }
+     }
+    },
+    {
+     "say": "Schliemann, Homeros'un Truva'sını bulmak için tepeyi ortadan *yardı*.",
+     "show": {
+      "type": "photo",
+      "search": "Schliemann trench Troy",
+      "label": "SCHLIEMANN YARMASI",
+      "extra": 2,
+      "fallback_show": {
+       "type": "icon",
+       "name": "camera",
+       "label": "SCHLIEMANN YARMASI"
+      }
+     },
+     "sfx": "riser"
+    },
+    {
+     "say": "Anlatılana göre bunun için *dinamit* bile kullandı.",
+     "show": {
+      "type": "title",
+      "lines": [
+       "DİNAMİT",
+       "BİLE",
+       "KULLANDI"
+      ],
+      "red": 2
+     }
+    },
+    {
+     "say": "Aradığı katmanın üstündeki şehirleri *tahrip etti*.",
+     "show": {
+      "type": "list",
+      "items": [
+       "YARMA",
+       "DİNAMİT",
+       "YIKILAN KATMANLAR"
+      ]
+     }
+    },
+    {
+     "say": "Bugün ziyaretçiler hâlâ bu dev *Schliemann yarmasını* görebiliyor.",
+     "show": {
+      "type": "photo",
+      "search": "Troy excavation",
+      "label": "YARMA HÂLÂ ORADA",
+      "extra": 2,
+      "fallback_show": {
+       "type": "icon",
+       "name": "camera",
+       "label": "YARMA HÂLÂ ORADA"
+      }
+     }
+    },
+    {
+     "say": "Bölüm 3'te: 1873'te bulunan *altın hazine*.",
+     "show": {
+      "type": "title",
+      "lines": [
+       "BÖLÜM 3",
+       "PRİAMOS'UN",
+       "HAZİNESİ"
+      ],
+      "red": 1
+     }
+    },
+    {
+     "say": "*Takip et* ki kaçırma.",
+     "show": {
+      "type": "icon",
+      "name": "eye",
+      "label": "TAKİP ET · BİLDİRİMİ AÇ"
+     }
+    }
+   ],
+   "thumb": {
+    "lines": [
+     "DİNAMİTLİ",
+     "KAZI"
+    ],
+    "red": 1,
+    "photo_search": "Heinrich Schliemann"
+   },
+   "broll": [
+    "Heinrich Schliemann",
+    "Schliemann trench Troy",
+    "Frank Calvert",
+    "Troy excavation"
+   ],
+   "publish": {
+    "title": "Truva'yı Bulan Adam Dinamit Kullandı 💥 Bölüm 2 #shorts",
+    "description": "Heinrich Schliemann'ın 1870'lerdeki Truva kazıları ve Frank Calvert'in unutulan rolü.\n\nDizi: Truva'nın Gerçek Hikâyesi — Bölüm 2/5. Tüm bölümler kanalda.",
+    "hashtags": [
+     "#truva",
+     "#troya",
+     "#çanakkale",
+     "#tarih",
+     "#ilginçbilgiler",
+     "#shorts"
+    ]
+   }
+  },
+  {
+   "beats": [
+    {
+     "say": "Truva'da bulunan altın hazine bugün Türkiye'de değil, *Moskova'da*.",
+     "show": {
+      "type": "photo",
+      "search": "Pushkin Museum",
+      "label": "PUŞKİN MÜZESİ · MOSKOVA",
+      "extra": 2,
+      "fallback_show": {
+       "type": "icon",
+       "name": "camera",
+       "label": "PUŞKİN MÜZESİ · MOSKOVA"
+      }
+     },
+     "sfx": "hit"
+    },
+    {
+     "say": "1873'te Schliemann, toprağın altında parlayan *altınlar* gördü.",
+     "show": {
+      "type": "number",
+      "value": "1873",
+      "label": "HAZİNE BULUNDU"
+     }
+    },
+    {
+     "say": "Taçlar, küpeler, kolyeler ve binlerce *altın parça*.",
+     "show": {
+      "type": "list",
+      "items": [
+       "TAÇLAR",
+       "KÜPELER",
+       "KOLYELER"
+      ]
+     }
+    },
+    {
+     "say": "Ona *Priamos'un Hazinesi* adını verdi: Homeros'taki Truva kralının adı.",
+     "show": {
+      "type": "photo",
+      "search": "Priam's Treasure",
+      "label": "PRİAMOS'UN HAZİNESİ",
+      "extra": 2,
+      "fallback_show": {
+       "type": "icon",
+       "name": "camera",
+       "label": "PRİAMOS'UN HAZİNESİ"
+      }
+     }
+    },
+    {
+     "say": "Eşi Sophia bu takıları takıp *fotoğraf* çektirdi.",
+     "show": {
+      "type": "photo",
+      "search": "Sophia Schliemann",
+      "label": "SOPHİA SCHLİEMANN",
+      "extra": 2,
+      "fallback_show": {
+       "type": "icon",
+       "name": "camera",
+       "label": "SOPHİA SCHLİEMANN"
+      }
+     }
+    },
+    {
+     "say": "Ama hazine Osmanlı'dan *gizlice* yurt dışına kaçırıldı.",
+     "show": {
+      "type": "title",
+      "lines": [
+       "GİZLİCE",
+       "KAÇIRILDI"
+      ],
+      "red": 1
+     },
+     "sfx": "riser"
+    },
+    {
+     "say": "Önce Berlin'e gitti. 1945'te savaşın sonunda *ortadan kayboldu*.",
+     "show": {
+      "type": "dossier",
+      "name": "PRİAMOS'UN HAZİNESİ",
+      "no": "1945",
+      "fields": {
+       "SON GÖRÜLDÜĞÜ": "BERLİN",
+       "DURUM": "KAYIP"
+      }
+     }
+    },
+    {
+     "say": "1993'te ortaya çıktı: Hazine *Moskova'daki* Puşkin Müzesi'ndeydi.",
+     "show": {
+      "type": "number",
+      "value": "1993",
+      "label": "HAZİNE ORTAYA ÇIKTI"
+     }
+    },
+    {
+     "say": "Sence bu hazine Türkiye'ye dönmeli mi? *Yorumlara yaz*.",
+     "show": {
+      "type": "title",
+      "lines": [
+       "SENCE",
+       "GERİ DÖNMELİ Mİ?"
+      ],
+      "red": 1
+     }
+    },
+    {
+     "say": "Bölüm 4'te: Truva Atı *gerçekten* var mıydı?",
+     "show": {
+      "type": "title",
+      "lines": [
+       "BÖLÜM 4",
+       "TRUVA ATI",
+       "GERÇEK Mİ?"
+      ],
+      "red": 1
+     }
+    },
+    {
+     "say": "*Takip et* ki kaçırma.",
+     "show": {
+      "type": "icon",
+      "name": "eye",
+      "label": "TAKİP ET · BİLDİRİMİ AÇ"
+     }
+    }
+   ],
+   "thumb": {
+    "lines": [
+     "HAZİNE",
+     "NEREDE?"
+    ],
+    "red": 1,
+    "photo_search": "Priam's Treasure"
+   },
+   "broll": [
+    "Priam's Treasure",
+    "Sophia Schliemann",
+    "Pushkin Museum",
+    "Troy gold"
+   ],
+   "publish": {
+    "title": "Truva'nın Altın Hazinesi Moskova'da 💰 Bölüm 3 #shorts",
+    "description": "1873'te bulunan 'Priamos'un Hazinesi': gizlice çıkarılması ve bugün Moskova'daki Puşkin Müzesi'nde oluşu.\n\nDizi: Truva'nın Gerçek Hikâyesi — Bölüm 3/5. Tüm bölümler kanalda.",
+    "hashtags": [
+     "#truva",
+     "#troya",
+     "#çanakkale",
+     "#tarih",
+     "#ilginçbilgiler",
+     "#shorts"
+    ]
+   }
+  },
+  {
+   "beats": [
+    {
+     "say": "Ünlü Truva Atı, Homeros'un *İlyada* destanında hiç yok.",
+     "show": {
+      "type": "photo",
+      "search": "Trojan horse",
+      "label": "TRUVA ATI",
+      "extra": 2,
+      "fallback_show": {
+       "type": "icon",
+       "name": "camera",
+       "label": "TRUVA ATI"
+      }
+     },
+     "sfx": "hit"
+    },
+    {
+     "say": "İlyada, Truva düşmeden *önce* bitiyor.",
+     "show": {
+      "type": "title",
+      "lines": [
+       "İLYADA",
+       "TRUVA DÜŞMEDEN",
+       "BİTİYOR"
+      ],
+      "red": 2
+     }
+    },
+    {
+     "say": "Tahta attan, Homeros'a atfedilen *Odysseia'da* kısaca söz edilir.",
+     "show": {
+      "type": "photo",
+      "search": "Homer bust",
+      "label": "ODYSSEİA",
+      "extra": 2,
+      "fallback_show": {
+       "type": "icon",
+       "name": "camera",
+       "label": "ODYSSEİA"
+      }
+     }
+    },
+    {
+     "say": "Hikâyeyi en ayrıntılı anlatan ise Romalı şair *Vergilius*.",
+     "show": {
+      "type": "photo",
+      "search": "Virgil Aeneid",
+      "label": "VERGİLİUS · AENEİS",
+      "extra": 2,
+      "fallback_show": {
+       "type": "icon",
+       "name": "camera",
+       "label": "VERGİLİUS · AENEİS"
+      }
+     }
+    },
+    {
+     "say": "Peki tarih ne diyor? Tahta at için *hiçbir kanıt* yok.",
+     "show": {
+      "type": "list",
+      "items": [
+       "ARKEOLOJİK KANIT",
+       "YOK"
+      ]
+     },
+     "sfx": "riser"
+    },
+    {
+     "say": "Bazı tarihçilere göre at, bir *kuşatma makinesinin* sembolü olabilir.",
+     "show": {
+      "type": "icon",
+      "name": "question",
+      "label": "KUŞATMA MAKİNESİ?"
+     }
+    },
+    {
+     "say": "Bazıları ise şehri yıkan bir *depremi* anlattığını düşünüyor.",
+     "show": {
+      "type": "title",
+      "lines": [
+       "YA DA",
+       "BİR DEPREM?"
+      ],
+      "red": 2
+     }
+    },
+    {
+     "say": "Ama Truva'nın bir katmanının *yanarak* yıkıldığı biliniyor.",
+     "show": {
+      "type": "photo",
+      "search": "Troy walls",
+      "label": "YANMIŞ KATMAN",
+      "extra": 2,
+      "fallback_show": {
+       "type": "icon",
+       "name": "camera",
+       "label": "YANMIŞ KATMAN"
+      }
+     }
+    },
+    {
+     "say": "Bölüm 5'te: Çanakkale sahilindeki dev at *nereden* geldi?",
+     "show": {
+      "type": "title",
+      "lines": [
+       "BÖLÜM 5",
+       "SAHİLDEKİ",
+       "DEV AT"
+      ],
+      "red": 1
+     }
+    },
+    {
+     "say": "*Takip et* ki kaçırma.",
+     "show": {
+      "type": "icon",
+      "name": "eye",
+      "label": "TAKİP ET · BİLDİRİMİ AÇ"
+     }
+    }
+   ],
+   "thumb": {
+    "lines": [
+     "TRUVA ATI",
+     "GERÇEK Mİ?"
+    ],
+    "red": 1,
+    "photo_search": "Trojan horse Canakkale"
+   },
+   "broll": [
+    "Trojan horse",
+    "Trojan horse Canakkale",
+    "Troy walls",
+    "Virgil Aeneid"
+   ],
+   "publish": {
+    "title": "Truva Atı Gerçekten Var Mıydı? 🐴 Bölüm 4 #shorts",
+    "description": "Tahta at hikâyesi nereden geliyor, İlyada'da neden yok; tarihçilerin teorileri.\n\nDizi: Truva'nın Gerçek Hikâyesi — Bölüm 4/5. Tüm bölümler kanalda.",
+    "hashtags": [
+     "#truva",
+     "#troya",
+     "#çanakkale",
+     "#tarih",
+     "#ilginçbilgiler",
+     "#shorts"
+    ]
+   }
+  },
+  {
+   "beats": [
+    {
+     "say": "Çanakkale sahilindeki dev Truva Atı aslında bir *film dekoru*.",
+     "show": {
+      "type": "photo",
+      "search": "Trojan horse Canakkale",
+      "label": "ÇANAKKALE SAHİLİ",
+      "extra": 2,
+      "fallback_show": {
+       "type": "icon",
+       "name": "camera",
+       "label": "ÇANAKKALE SAHİLİ"
+      }
+     },
+     "sfx": "hit"
+    },
+    {
+     "say": "2004 yapımı *Troy* filminde kullanılan bu at, Çanakkale'ye hediye edildi.",
+     "show": {
+      "type": "number",
+      "value": "2004",
+      "label": "TROY FİLMİ"
+     }
+    },
+    {
+     "say": "Bugün şehrin en çok fotoğraflanan *simgelerinden* biri.",
+     "show": {
+      "type": "photo",
+      "search": "Canakkale",
+      "label": "ÇANAKKALE",
+      "extra": 2,
+      "fallback_show": {
+       "type": "icon",
+       "name": "camera",
+       "label": "ÇANAKKALE"
+      }
+     }
+    },
+    {
+     "say": "Asıl tarih ise birkaç kilometre ötede, *Troya Müzesi'nde*.",
+     "show": {
+      "type": "photo",
+      "search": "Troy Museum",
+      "label": "TROYA MÜZESİ",
+      "extra": 2,
+      "fallback_show": {
+       "type": "icon",
+       "name": "camera",
+       "label": "TROYA MÜZESİ"
+      }
+     }
+    },
+    {
+     "say": "Müze 2018'de açıldı; o yıl *Troya Yılı* ilan edilmişti.",
+     "show": {
+      "type": "number",
+      "value": "2018",
+      "label": "TROYA YILI"
+     }
+    },
+    {
+     "say": "Ve Truva şimdi yine *gündemde*.",
+     "show": {
+      "type": "title",
+      "lines": [
+       "TRUVA",
+       "YENİDEN",
+       "GÜNDEMDE"
+      ],
+      "red": 2
+     },
+     "sfx": "riser"
+    },
+    {
+     "say": "Christopher Nolan'ın *The Odyssey* filmi, Truva hikâyesini milyonlara yeniden anlattı.",
+     "show": {
+      "type": "icon",
+      "name": "eye",
+      "label": "THE ODYSSEY"
+     }
+    },
+    {
+     "say": "Ama efsanenin gerçek sahnesi burası: *Hisarlık Tepesi*, Çanakkale.",
+     "show": {
+      "type": "photo",
+      "search": "Troy archaeological site",
+      "label": "HİSARLIK · ÇANAKKALE",
+      "extra": 2,
+      "fallback_show": {
+       "type": "icon",
+       "name": "camera",
+       "label": "HİSARLIK · ÇANAKKALE"
+      }
+     }
+    },
+    {
+     "say": "Dizinin sonu! Sen Truva'yı gördün mü? *Yorumlara yaz*.",
+     "show": {
+      "type": "title",
+      "lines": [
+       "SEN",
+       "TRUVA'YI",
+       "GÖRDÜN MÜ?"
+      ],
+      "red": 2
+     }
+    },
+    {
+     "say": "Yeni dizi için *takip et*.",
+     "show": {
+      "type": "icon",
+      "name": "eye",
+      "label": "TAKİP ET · BİLDİRİMİ AÇ"
+     }
+    }
+   ],
+   "thumb": {
+    "lines": [
+     "HOLLYWOOD'DAN",
+     "GELEN AT"
+    ],
+    "red": 1,
+    "photo_search": "Trojan horse Canakkale"
+   },
+   "broll": [
+    "Trojan horse Canakkale",
+    "Canakkale",
+    "Troy Museum",
+    "Troy archaeological site"
+   ],
+   "publish": {
+    "title": "Çanakkale'deki Dev At Hollywood'dan Geldi 🎬 Bölüm 5 #shorts",
+    "description": "Çanakkale sahilindeki Truva Atı 2004 yapımı Troy filminden; Troya Müzesi ve Nolan'ın The Odyssey filmi.\n\nDizi: Truva'nın Gerçek Hikâyesi — Bölüm 5/5. Tüm bölümler kanalda.",
+    "hashtags": [
+     "#truva",
+     "#troya",
+     "#çanakkale",
+     "#tarih",
+     "#ilginçbilgiler",
+     "#shorts"
+    ]
+   }
+  }
+ ]
+}

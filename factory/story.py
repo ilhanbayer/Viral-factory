@@ -282,7 +282,7 @@ def draw_visual(img, show, t, dur, cx, cy, u):
         stain = stain.filter(ImageFilter.GaussianBlur(14 * u))
         card.alpha_composite(stain)
         cd = ImageDraw.Draw(card)
-        cd.text((40 * u, 46 * u), f"DOSYA NO: {show.get('no', '19██/██')}", font=M(26 * u), fill=C["ink"], anchor="lm")
+        cd.text((40 * u, 46 * u), f"{'DOSYA NO' if LANG == 'tr' else 'FILE NO'}: {show.get('no', '19██/██')}", font=M(26 * u), fill=C["ink"], anchor="lm")
         # fotoğraf
         px0, py0, pw, ph = 60 * u, 100 * u, 250 * u, 300 * u
         cd.rectangle((px0, py0, px0 + pw, py0 + ph), fill=(28, 28, 30))
