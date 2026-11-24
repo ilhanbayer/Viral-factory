@@ -4,9 +4,9 @@
 
 **37 video** · **9 tanesi YouTube'da** · yeni videolar her gün otomatik eklenir · [tüm sürümler](https://github.com/ilhanbayer/Viral-factory/releases)
 
-**Sıradaki konular:** Dizi: Derinkuyu ve Ürgüp → Dizi: Dünyaya Türkiye'den Yayılan 6 Şey
+**Sıradaki konular:** Dizi: Derinkuyu ve Ürgüp → Series: Derinkuyu & Cappadocia (EN) → Dizi: Dünyaya Türkiye'den Yayılan 6 Şey → Series: Tarsus (EN) → Dizi: Truva'nın Gerçek Hikâyesi
 
-Zapier yükleme çağrısı (toplam): 11 · aylık sınır 45
+Zapier yükleme çağrısı (toplam): 14 · aylık sınır 45
 
 | Kapak | Video | İndir |
 |:-:|---|:-:|

@@ -610,7 +610,7 @@ def produce_one(vid, beats, fmt, brand, theme, publish, out_dir, use_tts=True, w
     ch = chapters_text(segs, chapters) if fmt == "landscape" else ""
     desc = publish.get("description", "") + (("\n\n" + ch) if ch else "")
     if CREDITS:
-        desc += "\n\nGörseller: Wikimedia Commons — " + "; ".join(CREDITS[:12])
+        desc += ("\n\nGörseller: Wikimedia Commons — " if ST.LANG == "tr" else "\n\nImages: Wikimedia Commons — ") + "; ".join(CREDITS[:12])
     meta = f"{publish.get('title', vid)}\n\n{desc}\n\n{' '.join(publish.get('hashtags', []))}\n"
     open(os.path.join(out_dir, vid + "_metadata.txt"), "w", encoding="utf-8").write(meta)
     kp = os.path.join(out_dir, vid + "_kapak.jpg")

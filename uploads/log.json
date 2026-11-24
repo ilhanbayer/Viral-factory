@@ -1,7 +1,7 @@
 {
  "months": {
   "2026-11": {
-   "uploads": 11
+   "uploads": 14
   }
  },
  "uploaded": {
@@ -36,7 +36,11 @@
     "youtube",
     "instagram",
     "tiktok"
-   ]
+   ],
+   "youtube": "tUBKyi4kO44",
+   "instagram": "https://www.instagram.com/reel/DgHsoQ-MLgP/",
+   "tiktok": "7711676219229621505",
+   "status": "PUBLISHED"
   },
   "video-8-S004_tunguska_olayi_short3": {
    "post_id": 439384629,
@@ -53,7 +57,9 @@
    "networks": [
     "youtube"
    ],
-   "type": "video"
+   "type": "video",
+   "youtube": "Tzx-YsYr39k",
+   "status": "PUBLISHED"
   },
   "video-9-S008_tarsus_gizemli_kazi_part1": {
    "post_id": 439506098,
@@ -99,6 +105,51 @@
     "instagram",
     "tiktok"
    ]
+  },
+  "video-10-S009_gobeklitepe_dizi_part1": {
+   "post_id": 440327914,
+   "at": "2026-11-26T17:00+03:00",
+   "networks": [
+    "youtube",
+    "instagram",
+    "tiktok"
+   ]
+  },
+  "video-10-S009_gobeklitepe_dizi_part2": {
+   "post_id": 440328033,
+   "at": "2026-11-26T20:30+03:00",
+   "networks": [
+    "youtube",
+    "instagram",
+    "tiktok"
+   ]
+  },
+  "video-10-S009_gobeklitepe_dizi_part3": {
+   "post_id": 440328139,
+   "at": "2026-11-27T13:00+03:00",
+   "networks": [
+    "youtube",
+    "instagram",
+    "tiktok"
+   ]
+  },
+  "video-10-S009_gobeklitepe_dizi_part4": {
+   "post_id": 440328247,
+   "at": "2026-11-27T17:00+03:00",
+   "networks": [
+    "youtube",
+    "instagram",
+    "tiktok"
+   ]
+  },
+  "video-10-S009_gobeklitepe_dizi_part5": {
+   "post_id": 440328382,
+   "at": "2026-11-27T20:30+03:00",
+   "networks": [
+    "youtube",
+    "instagram",
+    "tiktok"
+   ]
   }
  },
  "en_channel": {
@@ -106,7 +157,10 @@
   "channel_id": "UCfM5Y0XIpJiT-TAT3n3TmiA",
   "handle": "@hidden.turkiye",
   "zapier_connection_id": "029d7485-680c-8e6b-8b2b-8d3a15bcfd14",
-  "uploaded": {}
+  "uploaded": {
+   "video-10-S009e_gobekli_tepe_en_part1": "WWTsOojKVoI",
+   "video-10-S009e_gobekli_tepe_en_part2": "np26PXpvhRo"
+  }
  },
  "tr_channel": {
   "channel_id": "UCj4AqO637OZjnjqpXxdlmNQ",
