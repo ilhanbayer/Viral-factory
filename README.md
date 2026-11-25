@@ -4,9 +4,9 @@
 
 **58 video** · **9 tanesi YouTube'da** · yeni videolar her gün otomatik eklenir · [tüm sürümler](https://github.com/ilhanbayer/Viral-factory/releases)
 
-**Sıradaki konular:** Dizi: Dünyaya Türkiye'den Yayılan 6 Şey → Series: Tarsus (EN) → Dizi: Truva'nın Gerçek Hikâyesi
+**Sıradaki konular:** Dizi: Dünyaya Türkiye'den Yayılan 6 Şey → Series: Tarsus (EN) → Dizi: Truva'nın Gerçek Hikâyesi → Series: The Real Story of Troy (EN)
 
-Zapier yükleme çağrısı (toplam): 14 · aylık sınır 45
+Zapier yükleme çağrısı (toplam): 18 · aylık sınır 45
 
 | Kapak | Video | İndir |
 |:-:|---|:-:|

@@ -93,6 +93,21 @@ def build_pool(beats):
     return pool
 
 
+def fill_missing_photos(beats, pool):
+    """Fotoğrafı bulunamayan 'photo' sahnelerine (ikon yerine) havuzdan gerçek fotoğraf ver."""
+    if not pool:
+        return 0
+    own = {b.get("show", {}).get("_local") for b in beats}
+    spare = [p for p in pool if p not in own] or list(pool)
+    n = 0
+    for b in beats:
+        sh = b.get("show", {})
+        if sh.get("type") == "photo" and not sh.get("_local"):
+            sh["_local"] = spare[n % len(spare)]
+            n += 1
+    return n
+
+
 def assign_shots(segs, pool):
     """Her sahneye çekim listesi: [(başlangıç_sn, foto_yolu, tohum)]. Sahne animasyonlarında b-roll yok."""
     k = 0

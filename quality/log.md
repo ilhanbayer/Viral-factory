@@ -109,3 +109,12 @@ Kuyruk (kullanıcının seçtiği konular): S008 Tarsus'un Gizemli Kazısı (5 b
 - İyileştirme: Shorts dizilerinde marka satırının altına Stories tarzı **dizi ilerleme çubuğu** (biten bölümler beyaz, bu bölüm kırmızı dolar, sonrakiler soluk) — izleyiciye dizinin devam ettiğini gösterip sonraki bölüme geçişi artırmak için.
 - Yeni: `birlestir.yml` — dizi bölümlerini 1920x1080 yatay uzun videoda birleştirir (bulanık arka plan + bölüm zaman damgaları) → izlenme saati için.
 - Kuyruk: S010e Derinkuyu & Cappadocia (EN), S011e Tarsus (EN: Kleopatra/İskender/Aziz Pavlus), S012 Truva (TR) yazıldı.
+
+## 2026-11-25 (17:00) — S010 Derinkuyu-Ürgüp (TR) + S010e Derinkuyu & Cappadocia (EN), Actions 12. çalışma
+- Not: S010/S010e 24 Kas'ta (video-11) da üretilmişti; kuyruk taşınmadığı için bugün yeniden üretildi. Paylaşımda en yeni sürüm (video-12) kullanılıyor.
+- Hata yok; süreler TR 40,4 / 38,2 / 38,7 / 39,3 / 41,3 sn, EN 38,1 / 35,9 / 40,2 / 39,2 / 40,8 sn; ses −14,1…−14,2 LUFS; siyah kare yok.
+- b-roll havuzu: TR 14 / 19 / 15 / 21 / 21, EN 14 / 20 / 15 / 27 / 22 (hepsi ≥ 8).
+- Kusurlar: fotoğrafı bulunamayan sahnelerde büyük **boş kamera ikonu** çıkıyordu (TR B1, EN B1-B2-B3); TR B4'te ~4 sn koyu gece sahnesi; Commons'ta ara sıra "KeyError" (boş yanıt).
+- Puan: TR 7,4 / 7,8 / 7,8 / 7,4 / 7,8 · EN 7,4 / 7,2 / 7,4 / 7,6 / 7,8 → hepsi paylaşılıyor.
+- İyileştirme (bugün): kamera ikonu yerine videonun **fotoğraf havuzundan gerçek fotoğraf** konuyor (`broll.fill_missing_photos`, `series.P` artık ikon yedeği koymuyor); Commons aramasında boş/sınırlı yanıtta 2 kez yeniden deneme ve tek kelimeye kadar gevşetme ("Derinkuyu tunnel" → "Derinkuyu"). S011'deki 13 tarih/canlandırma sahnesi gerçek fotoğraf sahnesine çevrildi (kullanıcı kuralı: tarih animasyonu yok).
+- Kuyruk: S012e The Real Story of Troy (EN, 5 bölüm) yazıldı.

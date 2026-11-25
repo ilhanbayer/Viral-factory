@@ -263,14 +263,23 @@ def _commons_search(query):
         try:
             res = [r["title"] for r in _get_json(COMMONS + "?" + q)["query"]["search"]]
         except Exception as e:
-            print("  [commons] arama hatası", type(e).__name__)
-            return []
+            res = None
+            for _ in range(2):   # oran sınırı / boş yanıt: bekle ve yeniden dene
+                time.sleep(2)
+                try:
+                    res = [r["title"] for r in _get_json(COMMONS + "?" + q).get("query", {}).get("search", [])]
+                    break
+                except Exception:
+                    res = None
+            if res is None:
+                print("  [commons] arama hatası", type(e).__name__)
+                return []
         res = [t for t in res if not any(b in t.lower() for b in ("map", "harita", "logo", "flag of", "coat of arms", ".svg"))]
         if len([t for t in res if t not in USED_TITLES]) >= 1:
             if len(tried) > 1:
                 print("  [commons] gevşetilmiş arama:", qq)
             return res
-        if len(words) <= 2:
+        if len(words) <= 1:
             break
         words = words[:-1]
     return []
@@ -387,6 +396,8 @@ def fetch_photos(beats, cache):
         if not fn:
             print("  [foto] bulunamadı:", sh.get("commons") or sh.get("search") or sh.get("url"))
             fb = sh.get("fallback_show") or sh.get("fallback_scene")
+            if fb and fb.get("type") == "icon" and fb.get("name", "camera") == "camera":
+                fb = None   # boş kamera ikonu yerine havuzdan gerçek fotoğraf (fill_missing_photos)
             if fb:   # fotoğraf yoksa canlandırma ya da bilgi kartı
                 b["show"] = dict(fb)
                 b["show"].setdefault("type", "scene")
@@ -563,6 +574,9 @@ def produce_one(vid, beats, fmt, brand, theme, publish, out_dir, use_tts=True, w
     pool = BR.build_pool(beats) + [p for p in (broll_paths or []) if p]
     if not pool and BACKDROP_FALLBACK[0]:
         pool = [BACKDROP_FALLBACK[0]]
+    nfill = BR.fill_missing_photos(beats, pool)
+    if nfill:
+        print(f"  [foto] {nfill} eksik fotoğraf havuzdan dolduruldu")
     BR.assign_shots(segs, pool)
     print(f"  b-roll havuzu: {len(pool)} fotoğraf")
     print(f"  süre {total:.1f}s, {len(segs)} sahne")

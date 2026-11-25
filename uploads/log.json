@@ -1,7 +1,8 @@
 {
  "months": {
   "2026-11": {
-   "uploads": 14
+   "uploads": 18,
+   "note": "Zapier çağrıları: yüklemeler + find_channel okumaları dahil"
   }
  },
  "uploaded": {
@@ -49,7 +50,11 @@
     "youtube",
     "instagram",
     "tiktok"
-   ]
+   ],
+   "status": "PUBLISHED",
+   "youtube": "Lrbz_Kp9KNI",
+   "instagram": "https://www.instagram.com/reel/DgIcqkwJn01/",
+   "tiktok": "7711784840391298322"
   },
   "video-8-S004_tunguska_olayi": {
    "post_id": 439402254,
@@ -68,7 +73,11 @@
     "youtube",
     "instagram",
     "tiktok"
-   ]
+   ],
+   "status": "PUBLISHED",
+   "youtube": "F-6jsR6Mjgk",
+   "instagram": "https://www.instagram.com/reel/DgIIOjCT7i-/",
+   "tiktok": "7711738885931339014"
   },
   "video-9-S008_tarsus_gizemli_kazi_part2": {
    "post_id": 439506159,
@@ -77,7 +86,11 @@
     "youtube",
     "instagram",
     "tiktok"
-   ]
+   ],
+   "status": "PUBLISHED",
+   "youtube": "AEMvMQ_DCD4",
+   "instagram": "https://www.instagram.com/reel/DgKRygziZdf/",
+   "tiktok": "7712048538963676437"
   },
   "video-9-S008_tarsus_gizemli_kazi_part3": {
    "post_id": 439506330,
@@ -158,6 +171,51 @@
     "youtube"
    ],
    "type": "video"
+  },
+  "video-12-S010_derinkuyu_urgup_part1": {
+   "post_id": 441778470,
+   "at": "2026-11-28T13:00+03:00",
+   "networks": [
+    "youtube",
+    "instagram",
+    "tiktok"
+   ]
+  },
+  "video-12-S010_derinkuyu_urgup_part2": {
+   "post_id": 441778524,
+   "at": "2026-11-28T17:00+03:00",
+   "networks": [
+    "youtube",
+    "instagram",
+    "tiktok"
+   ]
+  },
+  "video-12-S010_derinkuyu_urgup_part3": {
+   "post_id": 441778574,
+   "at": "2026-11-28T20:30+03:00",
+   "networks": [
+    "youtube",
+    "instagram",
+    "tiktok"
+   ]
+  },
+  "video-12-S010_derinkuyu_urgup_part4": {
+   "post_id": 441778630,
+   "at": "2026-11-29T13:00+03:00",
+   "networks": [
+    "youtube",
+    "instagram",
+    "tiktok"
+   ]
+  },
+  "video-12-S010_derinkuyu_urgup_part5": {
+   "post_id": 441778699,
+   "at": "2026-11-29T17:00+03:00",
+   "networks": [
+    "youtube",
+    "instagram",
+    "tiktok"
+   ]
   }
  },
  "en_channel": {
@@ -167,12 +225,23 @@
   "zapier_connection_id": "029d7485-680c-8e6b-8b2b-8d3a15bcfd14",
   "uploaded": {
    "video-10-S009e_gobekli_tepe_en_part1": "WWTsOojKVoI",
-   "video-10-S009e_gobekli_tepe_en_part2": "np26PXpvhRo"
+   "video-10-S009e_gobekli_tepe_en_part2": "np26PXpvhRo",
+   "video-10-S009e_gobekli_tepe_en_part3": "DGe_bUeDnFg",
+   "video-10-S009e_gobekli_tepe_en_part4": "Wdnl2Sg3IFI"
+  },
+  "stats_2026-11-25": {
+   "subscribers": 0,
+   "views": 188
   }
  },
  "tr_channel": {
   "channel_id": "UCj4AqO637OZjnjqpXxdlmNQ",
   "zapier_connection_id": "0296607e-a729-8263-8c48-19533b30619d",
-  "metricool_blog_id": 8277623
+  "metricool_blog_id": 8277623,
+  "stats_2026-11-25": {
+   "subscribers": 52,
+   "views": 36144,
+   "videos": 53
+  }
  }
 }

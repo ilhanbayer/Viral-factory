@@ -1,0 +1,668 @@
+{
+ "id": "S012e_troy_en",
+ "format": "story",
+ "title": "Series: The Real Story of Troy (EN)",
+ "brand": "HIDDEN TÜRKİYE",
+ "theme": "dosya",
+ "lang": "en",
+ "voice": {
+  "engine": "edge",
+  "speaker": "christopher",
+  "rate": "+0%",
+  "pitch": "-2Hz"
+ },
+ "broll": [
+  "Troy",
+  "Hisarlik",
+  "Canakkale"
+ ],
+ "parts": [
+  {
+   "beats": [
+    {
+     "say": "Everyone thought it was a legend. But Troy is real, and it's in *Türkiye*.",
+     "show": {
+      "type": "photo",
+      "search": "Troy archaeological site",
+      "label": "TROY · ÇANAKKALE",
+      "extra": 2
+     },
+     "sfx": "hit"
+    },
+    {
+     "say": "Almost 3,000 years ago, Homer told the story of the Trojan War in the *Iliad*.",
+     "show": {
+      "type": "photo",
+      "search": "Homer bust",
+      "label": "HOMER",
+      "extra": 2
+     }
+    },
+    {
+     "say": "For centuries, people believed the city was just a *myth*.",
+     "show": {
+      "type": "title",
+      "lines": [
+       "JUST",
+       "A MYTH?"
+      ],
+      "red": 2
+     }
+    },
+    {
+     "say": "Until archaeologists started digging at *Hisarlık Hill*.",
+     "show": {
+      "type": "photo",
+      "search": "Hisarlik",
+      "label": "HİSARLIK HILL",
+      "extra": 2
+     }
+    },
+    {
+     "say": "Under the hill they found not one city, but *nine cities* stacked on top of each other.",
+     "show": {
+      "type": "number",
+      "value": "9",
+      "label": "CITIES STACKED"
+     },
+     "sfx": "riser"
+    },
+    {
+     "say": "Those layers cover roughly *4,000 years* of history.",
+     "show": {
+      "type": "number",
+      "value": "4,000",
+      "label": "YEARS OF HISTORY"
+     }
+    },
+    {
+     "say": "Massive walls, towers and *city gates* are still standing today.",
+     "show": {
+      "type": "photo",
+      "search": "Troy walls",
+      "label": "WALLS OF TROY",
+      "extra": 2
+     }
+    },
+    {
+     "say": "In 1998, Troy became a *UNESCO World Heritage* Site.",
+     "show": {
+      "type": "photo",
+      "search": "Troy ruins",
+      "label": "UNESCO · 1998",
+      "extra": 2
+     }
+    },
+    {
+     "say": "In Part 2: the man who found Troy, and his *explosive* methods.",
+     "show": {
+      "type": "title",
+      "lines": [
+       "PART 2",
+       "DIGGING WITH",
+       "DYNAMITE"
+      ],
+      "red": 1
+     }
+    },
+    {
+     "say": "*Follow* so you don't miss it.",
+     "show": {
+      "type": "icon",
+      "name": "eye",
+      "label": "FOLLOW FOR PART 2"
+     }
+    }
+   ],
+   "thumb": {
+    "lines": [
+     "TROY",
+     "IS REAL"
+    ],
+    "red": 1,
+    "photo_search": "Troy Hisarlik"
+   },
+   "broll": [
+    "Troy archaeological site",
+    "Hisarlik",
+    "Troy walls",
+    "Canakkale"
+   ],
+   "publish": {
+    "title": "Troy Wasn't a Myth. It's in Türkiye 🏛️ Part 1 #shorts",
+    "description": "Homer's Troy is real: Hisarlık Hill near Çanakkale, Türkiye, with nine cities stacked on top of each other.\n\nSeries: The Real Story of Troy — Part 1/5. Watch all parts on the channel.",
+    "hashtags": [
+     "#troy",
+     "#turkey",
+     "#history",
+     "#archaeology",
+     "#shorts"
+    ]
+   }
+  },
+  {
+   "beats": [
+    {
+     "say": "The man who found Troy *destroyed* part of it while he was digging.",
+     "show": {
+      "type": "photo",
+      "search": "Heinrich Schliemann",
+      "label": "HEINRICH SCHLIEMANN",
+      "extra": 2
+     },
+     "sfx": "hit"
+    },
+    {
+     "say": "German businessman *Heinrich Schliemann* began digging at Hisarlık in 1870.",
+     "show": {
+      "type": "number",
+      "value": "1870",
+      "label": "THE DIG BEGINS"
+     }
+    },
+    {
+     "say": "But the real clue came from an Englishman, *Frank Calvert*.",
+     "show": {
+      "type": "photo",
+      "search": "Frank Calvert",
+      "label": "FRANK CALVERT",
+      "extra": 2
+     }
+    },
+    {
+     "say": "Calvert *owned* part of the hill and was sure it was Troy.",
+     "show": {
+      "type": "dossier",
+      "name": "FRANK CALVERT",
+      "no": "1860s",
+      "fields": {
+       "ROLE": "FIRST CLUE",
+       "FAME": "FORGOTTEN"
+      }
+     }
+    },
+    {
+     "say": "Schliemann wanted Homer's Troy, so he cut a giant *trench* through the hill.",
+     "show": {
+      "type": "photo",
+      "search": "Schliemann trench Troy",
+      "label": "SCHLIEMANN'S TRENCH",
+      "extra": 2
+     },
+     "sfx": "riser"
+    },
+    {
+     "say": "Reportedly, he even used *dynamite*.",
+     "show": {
+      "type": "title",
+      "lines": [
+       "HE EVEN",
+       "USED",
+       "DYNAMITE"
+      ],
+      "red": 2
+     }
+    },
+    {
+     "say": "He *wrecked* the cities lying above the layer he was looking for.",
+     "show": {
+      "type": "list",
+      "items": [
+       "THE TRENCH",
+       "DYNAMITE",
+       "LOST LAYERS"
+      ]
+     }
+    },
+    {
+     "say": "Today, visitors can still see the huge *Schliemann trench*.",
+     "show": {
+      "type": "photo",
+      "search": "Troy excavation",
+      "label": "THE TRENCH IS STILL THERE",
+      "extra": 2
+     }
+    },
+    {
+     "say": "In Part 3: the *gold treasure* found in 1873.",
+     "show": {
+      "type": "title",
+      "lines": [
+       "PART 3",
+       "PRIAM'S",
+       "TREASURE"
+      ],
+      "red": 1
+     }
+    },
+    {
+     "say": "*Follow* so you don't miss it.",
+     "show": {
+      "type": "icon",
+      "name": "eye",
+      "label": "FOLLOW FOR PART 3"
+     }
+    }
+   ],
+   "thumb": {
+    "lines": [
+     "DYNAMITE",
+     "DIG"
+    ],
+    "red": 1,
+    "photo_search": "Heinrich Schliemann"
+   },
+   "broll": [
+    "Heinrich Schliemann",
+    "Schliemann trench Troy",
+    "Frank Calvert",
+    "Troy excavation"
+   ],
+   "publish": {
+    "title": "The Man Who Found Troy Used Dynamite 💥 Part 2 #shorts",
+    "description": "Heinrich Schliemann's excavations at Troy in the 1870s, and the forgotten role of Frank Calvert.\n\nSeries: The Real Story of Troy — Part 2/5. Watch all parts on the channel.",
+    "hashtags": [
+     "#troy",
+     "#turkey",
+     "#history",
+     "#archaeology",
+     "#shorts"
+    ]
+   }
+  },
+  {
+   "beats": [
+    {
+     "say": "The gold treasure of Troy isn't in Türkiye today. It's in *Moscow*.",
+     "show": {
+      "type": "photo",
+      "search": "Pushkin Museum",
+      "label": "PUSHKIN MUSEUM · MOSCOW",
+      "extra": 2
+     },
+     "sfx": "hit"
+    },
+    {
+     "say": "In 1873, Schliemann saw *gold* shining in the dirt.",
+     "show": {
+      "type": "number",
+      "value": "1873",
+      "label": "TREASURE FOUND"
+     }
+    },
+    {
+     "say": "Diadems, earrings, necklaces and thousands of *gold pieces*.",
+     "show": {
+      "type": "list",
+      "items": [
+       "DIADEMS",
+       "EARRINGS",
+       "NECKLACES"
+      ]
+     }
+    },
+    {
+     "say": "He named it *Priam's Treasure*, after the king of Troy in Homer.",
+     "show": {
+      "type": "photo",
+      "search": "Priam's Treasure",
+      "label": "PRIAM'S TREASURE",
+      "extra": 2
+     }
+    },
+    {
+     "say": "His wife Sophia posed for a *photo* wearing the jewels.",
+     "show": {
+      "type": "photo",
+      "search": "Sophia Schliemann",
+      "label": "SOPHIA SCHLIEMANN",
+      "extra": 2
+     }
+    },
+    {
+     "say": "But the treasure was *smuggled* out of the Ottoman Empire.",
+     "show": {
+      "type": "title",
+      "lines": [
+       "SECRETLY",
+       "SMUGGLED",
+       "OUT"
+      ],
+      "red": 1
+     },
+     "sfx": "riser"
+    },
+    {
+     "say": "It went to Berlin. Then in 1945, at the end of the war, it *vanished*.",
+     "show": {
+      "type": "dossier",
+      "name": "PRIAM'S TREASURE",
+      "no": "1945",
+      "fields": {
+       "LAST SEEN": "BERLIN",
+       "STATUS": "MISSING"
+      }
+     }
+    },
+    {
+     "say": "In 1993 the truth came out: it was in Moscow's *Pushkin Museum*.",
+     "show": {
+      "type": "number",
+      "value": "1993",
+      "label": "TREASURE RESURFACES"
+     }
+    },
+    {
+     "say": "Should it go back to Türkiye? *Comment below*.",
+     "show": {
+      "type": "title",
+      "lines": [
+       "SHOULD IT",
+       "GO BACK?"
+      ],
+      "red": 1
+     }
+    },
+    {
+     "say": "In Part 4: was the Trojan Horse *real*?",
+     "show": {
+      "type": "title",
+      "lines": [
+       "PART 4",
+       "THE TROJAN HORSE",
+       "REAL?"
+      ],
+      "red": 1
+     }
+    },
+    {
+     "say": "*Follow* so you don't miss it.",
+     "show": {
+      "type": "icon",
+      "name": "eye",
+      "label": "FOLLOW FOR PART 4"
+     }
+    }
+   ],
+   "thumb": {
+    "lines": [
+     "WHERE IS",
+     "THE GOLD?"
+    ],
+    "red": 1,
+    "photo_search": "Priam's Treasure"
+   },
+   "broll": [
+    "Priam's Treasure",
+    "Sophia Schliemann",
+    "Pushkin Museum",
+    "Troy gold"
+   ],
+   "publish": {
+    "title": "Troy's Gold Treasure Is in Moscow 💰 Part 3 #shorts",
+    "description": "'Priam's Treasure', found in 1873, smuggled out of the Ottoman Empire, lost in 1945 and now in Moscow's Pushkin Museum.\n\nSeries: The Real Story of Troy — Part 3/5. Watch all parts on the channel.",
+    "hashtags": [
+     "#troy",
+     "#turkey",
+     "#history",
+     "#archaeology",
+     "#shorts"
+    ]
+   }
+  },
+  {
+   "beats": [
+    {
+     "say": "The famous Trojan Horse never appears in Homer's *Iliad*.",
+     "show": {
+      "type": "photo",
+      "search": "Trojan horse",
+      "label": "THE TROJAN HORSE",
+      "extra": 2
+     },
+     "sfx": "hit"
+    },
+    {
+     "say": "The Iliad ends *before* Troy falls.",
+     "show": {
+      "type": "title",
+      "lines": [
+       "THE ILIAD ENDS",
+       "BEFORE",
+       "TROY FALLS"
+      ],
+      "red": 2
+     }
+    },
+    {
+     "say": "The wooden horse gets only a short mention in the *Odyssey*.",
+     "show": {
+      "type": "photo",
+      "search": "Homer bust",
+      "label": "THE ODYSSEY",
+      "extra": 2
+     }
+    },
+    {
+     "say": "The most detailed version comes from the Roman poet *Virgil*.",
+     "show": {
+      "type": "photo",
+      "search": "Virgil Aeneid",
+      "label": "VIRGIL · AENEID",
+      "extra": 2
+     }
+    },
+    {
+     "say": "So what does history say? There's *no evidence* of a wooden horse.",
+     "show": {
+      "type": "list",
+      "items": [
+       "ARCHAEOLOGICAL EVIDENCE",
+       "NONE"
+      ]
+     },
+     "sfx": "riser"
+    },
+    {
+     "say": "Some historians think the horse stood for a *siege engine*.",
+     "show": {
+      "type": "icon",
+      "name": "question",
+      "label": "A SIEGE ENGINE?"
+     }
+    },
+    {
+     "say": "Others think it describes an *earthquake* that broke the walls.",
+     "show": {
+      "type": "title",
+      "lines": [
+       "OR MAYBE",
+       "AN EARTHQUAKE?"
+      ],
+      "red": 2
+     }
+    },
+    {
+     "say": "But we do know one layer of Troy was destroyed by *fire*.",
+     "show": {
+      "type": "photo",
+      "search": "Troy walls",
+      "label": "THE BURNED LAYER",
+      "extra": 2
+     }
+    },
+    {
+     "say": "In Part 5: where did the giant horse in Çanakkale *come from*?",
+     "show": {
+      "type": "title",
+      "lines": [
+       "PART 5",
+       "THE GIANT",
+       "HORSE"
+      ],
+      "red": 1
+     }
+    },
+    {
+     "say": "*Follow* so you don't miss it.",
+     "show": {
+      "type": "icon",
+      "name": "eye",
+      "label": "FOLLOW FOR PART 5"
+     }
+    }
+   ],
+   "thumb": {
+    "lines": [
+     "TROJAN HORSE",
+     "REAL?"
+    ],
+    "red": 1,
+    "photo_search": "Trojan horse Canakkale"
+   },
+   "broll": [
+    "Trojan horse",
+    "Trojan horse Canakkale",
+    "Troy walls",
+    "Virgil Aeneid"
+   ],
+   "publish": {
+    "title": "Was the Trojan Horse Real? 🐴 Part 4 #shorts",
+    "description": "Where the wooden horse story comes from, why it isn't in the Iliad, and what historians think.\n\nSeries: The Real Story of Troy — Part 4/5. Watch all parts on the channel.",
+    "hashtags": [
+     "#troy",
+     "#turkey",
+     "#history",
+     "#archaeology",
+     "#shorts"
+    ]
+   }
+  },
+  {
+   "beats": [
+    {
+     "say": "The giant Trojan Horse on Çanakkale's seafront is actually a *movie prop*.",
+     "show": {
+      "type": "photo",
+      "search": "Trojan horse Canakkale",
+      "label": "ÇANAKKALE SEAFRONT",
+      "extra": 2
+     },
+     "sfx": "hit"
+    },
+    {
+     "say": "It was used in the 2004 film *Troy* and then gifted to the city.",
+     "show": {
+      "type": "number",
+      "value": "2004",
+      "label": "THE MOVIE TROY"
+     }
+    },
+    {
+     "say": "Today it's one of the most *photographed* spots in town.",
+     "show": {
+      "type": "photo",
+      "search": "Canakkale",
+      "label": "ÇANAKKALE",
+      "extra": 2
+     }
+    },
+    {
+     "say": "The real history is a short drive away, at the *Troy Museum*.",
+     "show": {
+      "type": "photo",
+      "search": "Troy Museum",
+      "label": "TROY MUSEUM",
+      "extra": 2
+     }
+    },
+    {
+     "say": "The museum opened in 2018, which Türkiye declared the *Year of Troy*.",
+     "show": {
+      "type": "number",
+      "value": "2018",
+      "label": "YEAR OF TROY"
+     }
+    },
+    {
+     "say": "And Troy is back in the *spotlight*.",
+     "show": {
+      "type": "title",
+      "lines": [
+       "TROY",
+       "IS BACK"
+      ],
+      "red": 2
+     },
+     "sfx": "riser"
+    },
+    {
+     "say": "Christopher Nolan's *The Odyssey* brought the Troy story to millions again.",
+     "show": {
+      "type": "icon",
+      "name": "eye",
+      "label": "THE ODYSSEY"
+     }
+    },
+    {
+     "say": "But the real stage of the legend is right here: *Hisarlık Hill*, Türkiye.",
+     "show": {
+      "type": "photo",
+      "search": "Troy archaeological site",
+      "label": "HİSARLIK · ÇANAKKALE",
+      "extra": 2
+     }
+    },
+    {
+     "say": "That's the end of the series! Have you been to Troy? *Comment below*.",
+     "show": {
+      "type": "title",
+      "lines": [
+       "HAVE YOU",
+       "BEEN TO",
+       "TROY?"
+      ],
+      "red": 2
+     }
+    },
+    {
+     "say": "*Follow* for the next hidden story.",
+     "show": {
+      "type": "icon",
+      "name": "eye",
+      "label": "FOLLOW · TURN ON NOTIFICATIONS"
+     }
+    }
+   ],
+   "thumb": {
+    "lines": [
+     "FROM",
+     "HOLLYWOOD"
+    ],
+    "red": 1,
+    "photo_search": "Trojan horse Canakkale"
+   },
+   "broll": [
+    "Trojan horse Canakkale",
+    "Canakkale",
+    "Troy Museum",
+    "Troy archaeological site"
+   ],
+   "publish": {
+    "title": "Türkiye's Giant Horse Came From Hollywood 🎬 Part 5 #shorts",
+    "description": "The Trojan Horse in Çanakkale is the prop from the 2004 film Troy; the Troy Museum and Troy's return to the spotlight.\n\nSeries: The Real Story of Troy — Part 5/5. Watch all parts on the channel.",
+    "hashtags": [
+     "#troy",
+     "#turkey",
+     "#history",
+     "#archaeology",
+     "#shorts"
+    ]
+   }
+  }
+ ],
+ "logo": {
+  "brand": "HIDDEN TÜRKİYE",
+  "mono": "HT"
+ }
+}

@@ -63,24 +63,9 @@
     {
      "say": "Anlatılana göre fakir bir babanın üç kızına, geceleri gizlice *altın* bıraktı.",
      "show": {
-      "type": "scene",
-      "sky": "night",
-      "land": "hills",
-      "weather": "none",
-      "moon": true,
-      "label": "EFSANE · GİZLİ HEDİYE",
-      "props": [
-       {
-        "k": "house",
-        "x": 0.62,
-        "s": 1.3
-       }
-      ],
-      "people": {
-       "n": 1,
-       "from": 0.15,
-       "to": 0.4
-      }
+      "type": "photo",
+      "search": "Saint Nicholas icon",
+      "label": "EFSANE · GİZLİ HEDİYE"
      }
     },
     {
@@ -122,10 +107,9 @@
     {
      "say": "Ama 1087'de İtalyan denizciler kemiklerinin bir kısmını *Bari'ye* götürdü.",
      "show": {
-      "type": "date",
-      "day": "",
-      "month": "BARİ'YE GÖTÜRÜLDÜ",
-      "year": 1087
+      "type": "photo",
+      "search": "Basilica di San Nicola Bari",
+      "label": "1087 · BARİ"
      }
     },
     {
@@ -205,13 +189,9 @@
     {
      "say": "Lale, Orta Asya ve Anadolu'da yüzyıllardır *yetişiyordu*.",
      "show": {
-      "type": "scene",
-      "sky": "day",
-      "land": "hills",
-      "weather": "none",
-      "moon": false,
-      "label": "ANADOLU",
-      "props": []
+      "type": "photo",
+      "search": "Tulipa wild Turkey",
+      "label": "ANADOLU"
      }
     },
     {
@@ -273,24 +253,9 @@
     {
      "say": "Anlatılanlara göre bazı nadir lale soğanları *bir ev fiyatına* satıldı.",
      "show": {
-      "type": "scene",
-      "sky": "day",
-      "land": "city",
-      "weather": "none",
-      "moon": false,
-      "label": "1637 · HOLLANDA",
-      "props": [
-       {
-        "k": "house",
-        "x": 0.3,
-        "s": 0.7
-       },
-       {
-        "k": "house",
-        "x": 0.7,
-        "s": 0.6
-       }
-      ]
+      "type": "photo",
+      "search": "Tulip mania",
+      "label": "1637 · HOLLANDA"
      }
     },
     {
@@ -304,10 +269,9 @@
     {
      "say": "Osmanlı'da ise 1718-1730 yıllarına bu çiçeğin adı verildi: *Lale Devri*.",
      "show": {
-      "type": "date",
-      "day": "",
-      "month": "LALE DEVRİ",
-      "year": "1718-1730"
+      "type": "photo",
+      "search": "Fountain of Ahmed III",
+      "label": "1718-1730 · LALE DEVRİ"
      }
     },
     {
@@ -407,18 +371,9 @@
     {
      "say": "Tadına bayıldığı kirazı gemilerle *Roma'ya* götürdü.",
      "show": {
-      "type": "scene",
-      "sky": "day",
-      "land": "sea",
-      "weather": "none",
-      "moon": false,
-      "label": "KERASUS → ROMA",
-      "props": [
-       {
-        "k": "sailship",
-        "x": 0.5
-       }
-      ]
+      "type": "photo",
+      "search": "Cherries",
+      "label": "KERASUS → ROMA"
      }
     },
     {
@@ -483,19 +438,9 @@
     {
      "say": "Efsaneye göre bu adada bir zamanlar *Amazon kadın savaşçılarının* tapınağı vardı.",
      "show": {
-      "type": "scene",
-      "sky": "night",
-      "land": "sea",
-      "weather": "none",
-      "moon": true,
-      "label": "EFSANE · AMAZONLAR",
-      "props": [
-       {
-        "k": "castle",
-        "x": 0.6,
-        "s": 0.6
-       }
-      ]
+      "type": "photo",
+      "search": "Giresun Island",
+      "label": "EFSANE · AMAZONLAR"
      }
     },
     {
@@ -553,13 +498,9 @@
     {
      "say": "Ordu, Giresun, Samsun, Sakarya... Karadeniz kıyısı *fındık bahçeleriyle* dolu.",
      "show": {
-      "type": "scene",
-      "sky": "day",
-      "land": "forest",
-      "weather": "none",
-      "moon": false,
-      "label": "KARADENİZ · FINDIK BAHÇELERİ",
-      "props": []
+      "type": "photo",
+      "search": "Hazelnut orchard",
+      "label": "KARADENİZ · FINDIK BAHÇELERİ"
      }
     },
     {
@@ -711,38 +652,17 @@
     {
      "say": "Yıl 1554. İki tüccar, Tahtakale'de bir *kahvehane* açtı.",
      "show": {
-      "type": "date",
-      "day": "",
-      "month": "TAHTAKALE",
-      "year": 1554
+      "type": "photo",
+      "search": "Tahtakale Istanbul",
+      "label": "1554 · TAHTAKALE"
      }
     },
     {
      "say": "Kahvehaneler kısa sürede sohbetin, oyunun ve *haberin* merkezi oldu.",
      "show": {
-      "type": "scene",
-      "sky": "dusk",
-      "land": "hills",
-      "weather": "none",
-      "moon": false,
-      "label": "İSTANBUL · KAHVEHANE",
-      "props": [
-       {
-        "k": "house",
-        "x": 0.35,
-        "s": 1.2
-       },
-       {
-        "k": "fire",
-        "x": 0.75,
-        "s": 0.5
-       }
-      ],
-      "people": {
-       "n": 3,
-       "from": 0.55,
-       "to": 0.66
-      }
+      "type": "photo",
+      "search": "Ottoman coffeehouse",
+      "label": "İSTANBUL · KAHVEHANE"
      }
     },
     {
@@ -773,10 +693,9 @@
     {
      "say": "Efsaneye göre 1683'te Viyana önlerinde kalan kahve çuvallarıyla şehrin ilk *kahvehanesi* açıldı.",
      "show": {
-      "type": "date",
-      "day": "",
-      "month": "VİYANA",
-      "year": 1683
+      "type": "photo",
+      "search": "Vienna coffee house",
+      "label": "1683 · VİYANA"
      }
     },
     {
@@ -891,24 +810,9 @@
     {
      "say": "Orta Asya'daki göçebe Türkler, sütü saklamak için *mayalıyordu*.",
      "show": {
-      "type": "scene",
-      "sky": "dusk",
-      "land": "plain",
-      "weather": "none",
-      "moon": false,
-      "label": "ORTA ASYA · GÖÇEBELER",
-      "props": [
-       {
-        "k": "tent",
-        "x": 0.7,
-        "s": 0.7
-       }
-      ],
-      "people": {
-       "n": 2,
-       "from": 0.2,
-       "to": 0.35
-      }
+      "type": "photo",
+      "search": "Yurt Kyrgyzstan",
+      "label": "ORTA ASYA · GÖÇEBELER"
      }
     },
     {
@@ -946,10 +850,9 @@
     {
      "say": "1919'da Barselona'da bir yoğurt şirketi kuruldu. Kurucusu *Selanik doğumlu* Isaac Carasso'ydu.",
      "show": {
-      "type": "date",
-      "day": "",
-      "month": "BARSELONA",
-      "year": 1919
+      "type": "photo",
+      "search": "Barcelona Gothic Quarter",
+      "label": "1919 · BARSELONA"
      }
     },
     {
