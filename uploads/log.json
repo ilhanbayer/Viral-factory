@@ -1,7 +1,7 @@
 {
  "months": {
   "2026-11": {
-   "uploads": 18,
+   "uploads": 20,
    "note": "Zapier çağrıları: yüklemeler + find_channel okumaları dahil"
   }
  },
@@ -216,6 +216,22 @@
     "instagram",
     "tiktok"
    ]
+  },
+  "video-10-S009_gobeklitepe_dizi_full": {
+   "post_id": 441788382,
+   "at": "2026-11-28T15:00+03:00",
+   "networks": [
+    "youtube"
+   ],
+   "type": "video"
+  },
+  "video-12-S010_derinkuyu_urgup_full": {
+   "post_id": 441788654,
+   "at": "2026-11-30T15:00+03:00",
+   "networks": [
+    "youtube"
+   ],
+   "type": "video"
   }
  },
  "en_channel": {
@@ -227,12 +243,14 @@
    "video-10-S009e_gobekli_tepe_en_part1": "WWTsOojKVoI",
    "video-10-S009e_gobekli_tepe_en_part2": "np26PXpvhRo",
    "video-10-S009e_gobekli_tepe_en_part3": "DGe_bUeDnFg",
-   "video-10-S009e_gobekli_tepe_en_part4": "Wdnl2Sg3IFI"
+   "video-10-S009e_gobekli_tepe_en_part4": "Wdnl2Sg3IFI",
+   "video-10-S009e_gobekli_tepe_en_full": "VHKSKHNlxus"
   },
   "stats_2026-11-25": {
    "subscribers": 0,
    "views": 188
-  }
+  },
+  "note": "Zapier upload_video'da 'thumbnail' GÖNDERME: kanal doğrulanmadığı için hata veriyor (video yine de yükleniyor)."
  },
  "tr_channel": {
   "channel_id": "UCj4AqO637OZjnjqpXxdlmNQ",
