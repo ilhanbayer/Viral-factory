@@ -128,3 +128,8 @@ Kuyruk (kullanıcının seçtiği konular): S008 Tarsus'un Gizemli Kazısı (5 b
 - Paylaşım: S011 6 bölüm Metricool ile 29 Kas 20:30 → 1 Ara 17:00 zamanlandı; S011 uzun video birleştirme tetiklendi. EN: Göbekli Tepe Bölüm 5 (dljTdxC3rXE) ve Derinkuyu Bölüm 1 (iQajBXDT1j8) yüklendi.
 - İyileştirme (bugün): (1) Kanca fotoğrafında 0,25 sn'den itibaren kendini çizen **el çizimi kırmızı daire** vurgusu (`story.red_circle`, `show.circle`; ilk sahne fotoğrafsa otomatik). (2) **Görsel künyesi bölüm başına**: önceden tüm bölümler 1. bölümün ilk 12 görselini listeliyordu; artık her bölüm kendi kullandığı görselleri (en çok 30) yazıyor (CC BY-SA atıf doğruluğu).
 - Kuyruk: S013 Yerebatan Sarnıcı'nın Sırları (TR, 5 bölüm) + S013e Secrets of the Basilica Cistern (EN, 5 bölüm) yazıldı.
+
+## 2026-11-26 (19:00) — Kullanıcı geri bildirimi: uzun videolar dikey görünüyordu
+- Sorun: `birlestir.yml` dikey bölümleri 1920x1080 kareye bulanık kenarla koyuyordu; izleyiciye dikey video gibi görünüyor.
+- Çözüm: `tools/uzun_yatay.py` + `yatay.yml` — dizinin tüm bölümleri baştan **gerçek yatay** (tam ekran yatay fotoğraflar, yatay yazı yerleşimi) render ediliyor; bölüm sonu "Bölüm k'de / takip et" cümleleri çıkarılıyor, sonda "ABONE OL" animasyonu; YouTube bölüm zaman damgaları otomatik.
+- Üretildi ve kontrol edildi (1920x1080, siyah kare yok, −13,9 LUFS): Göbeklitepe 3:11, Derinkuyu-Ürgüp 2:54, 6 Şey 4:46. Metricool'daki 28 Kas, 30 Kas, 2 Ara uzun video gönderileri bu yatay sürümlerle değiştirildi.

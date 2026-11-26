@@ -232,20 +232,24 @@
    ]
   },
   "video-10-S009_gobeklitepe_dizi_full": {
-   "post_id": 441788382,
+   "post_id": 443267430,
    "at": "2026-11-28T15:00+03:00",
    "networks": [
     "youtube"
    ],
-   "type": "video"
+   "type": "video",
+   "media": "yatay-S009_gobeklitepe_dizi",
+   "format": "yatay 1920x1080"
   },
   "video-12-S010_derinkuyu_urgup_full": {
-   "post_id": 441788654,
+   "post_id": 443288117,
    "at": "2026-11-30T15:00+03:00",
    "networks": [
     "youtube"
    ],
-   "type": "video"
+   "type": "video",
+   "media": "yatay-S010_derinkuyu_urgup",
+   "format": "yatay 1920x1080"
   },
   "video-13-S011_dunyaya_turkiyeden_yayilanlar_part1": {
    "post_id": 443164709,
@@ -302,12 +306,14 @@
    ]
   },
   "video-13-S011_dunyaya_turkiyeden_yayilanlar_full": {
-   "post_id": 443175610,
+   "post_id": 443321689,
    "at": "2026-12-02T15:00+03:00",
    "networks": [
     "youtube"
    ],
-   "type": "video"
+   "type": "video",
+   "media": "yatay-S011_dunyaya_turkiyeden_yayilanlar",
+   "format": "yatay 1920x1080"
   }
  },
  "en_channel": {
@@ -349,5 +355,6 @@
    "views": 36194,
    "videos": 58
   }
- }
+ },
+ "note_yon": "26 Kas: kullanıcı isteği — Shorts dikey, normal videolar gerçek yatay (yatay.yml). Eski birlestir.yml çıktıları (Tarsus TR vK2BinGNMCM, Göbekli Tepe EN VHKSKHNlxus) dikey görünümlü yayınlandı."
 }
