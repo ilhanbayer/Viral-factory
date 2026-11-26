@@ -495,7 +495,7 @@ def chapters_text(segs, chapters):
         m, s = divmod(int(ts), 60)
         out.append(f"{m:02d}:{s:02d} {name}")
         last = ts
-    return "Bölümler:\n" + "\n".join(out) if len(out) >= 3 else ""
+    return ("Bölümler:\n" if ST.LANG == "tr" else "Chapters:\n") + "\n".join(out) if len(out) >= 3 else ""
 
 
 def make_thumbnail(path, thumb, fmt, theme, brand):

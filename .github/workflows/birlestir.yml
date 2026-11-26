@@ -1,4 +1,6 @@
 name: Dizi birlestir (uzun video)
+# ESKİ YÖNTEM — KULLANMA: dikey bölümleri yatay kareye bulanık kenarla koyar, izleyiciye dikey görünür.
+# Normal (uzun) videolar için .github/workflows/yatay.yml kullan (tam yatay render).
 
 # Bir dizinin tüm bölümlerini (Release'ler) tek bir yatay ~5 dk videoda birleştirir.
 # Dikey bölümler 1920x1080 kareye bulanık arka planla yerleştirilir (YouTube'da normal video = izlenme saati).

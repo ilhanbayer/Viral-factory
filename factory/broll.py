@@ -172,7 +172,10 @@ def cta_layer(W, H, kind, t, u, brand=None):
         return None
     layer = Image.new("RGBA", (W, H), (0, 0, 0, 0))
     d = ImageDraw.Draw(layer)
-    tx = UI.get(ST.LANG, UI["en"])
+    tx = dict(UI.get(ST.LANG, UI["en"]))
+    if W > H:   # yatay uzun video: takip değil abone ol
+        tx.update({"tr": dict(follow="ABONE OL", followed="ABONE OLUNDU"),
+                   "en": dict(follow="SUBSCRIBE", followed="SUBSCRIBED")}.get(ST.LANG, {}))
     brand = brand or LOGO["brand"]
     a_in = _ease(t / 0.35)
     a_out = 1 - _ease((t - (D - 0.35)) / 0.35)

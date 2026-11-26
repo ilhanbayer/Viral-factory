@@ -1,0 +1,44 @@
+name: Yatay uzun video
+
+# Biten Shorts dizilerini YATAY (1920x1080) uzun videoya baştan render eder (dikey bölümleri yapıştırmaz).
+# Normal YouTube videoları her zaman yatay; Shorts her zaman dikey.
+on:
+  workflow_dispatch:
+    inputs:
+      ids:
+        description: "Dizi kimlikleri, boşlukla (ör. S010_derinkuyu_urgup S009_gobeklitepe_dizi)"
+        required: true
+
+permissions:
+  contents: write
+
+concurrency:
+  group: yatay-uzun
+  cancel-in-progress: false
+
+jobs:
+  render:
+    runs-on: ubuntu-latest
+    timeout-minutes: 330
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+      - run: sudo apt-get update && sudo apt-get install -y ffmpeg
+      - run: pip install -r requirements.txt
+      - name: Yatay uzun videoları üret ve Releases'a koy
+        env:
+          GH_TOKEN: ${{ github.token }}
+          IDS: ${{ github.event.inputs.ids }}
+        run: |
+          set -e
+          for sid in $IDS; do
+            python tools/uzun_yatay.py "$sid"
+            id="${sid}_yatay"
+            gh release delete "yatay-$sid" -y --cleanup-tag 2>/dev/null || true
+            gh release create "yatay-$sid" "output/$id.mp4" "output/${id}_kapak.jpg" "output/$id.srt" \
+              --title "$(head -n1 output/${id}_metadata.txt)" --notes-file "output/${id}_metadata.txt"
+            rm -rf output/*_work
+          done
