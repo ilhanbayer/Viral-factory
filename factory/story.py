@@ -770,6 +770,24 @@ def draw_photo(img, show, t, dur, cx, cy, u):
     sh = sh.filter(ImageFilter.GaussianBlur(18 * u))
     img.alpha_composite(sh, (int(cx - frame.width / 2 + 16 * u), int(cy - frame.height / 2 + 24 * u)))
     img.alpha_composite(frame, (int(cx - frame.width / 2), int(cy - frame.height / 2)))
+    if show.get("circle"):
+        red_circle(img, cx, cy - 20 * u, fw * 0.34, fh * 0.30, t, u)
+
+
+def red_circle(img, cx, cy, rx, ry, t, u, t0=0.25, tin=0.45):
+    """El çizimi kırmızı daire: t0'dan itibaren tin sn'de kendini çizer, hafif titrer (izleyicinin gözünü odağa çeker)."""
+    if t < t0:
+        return
+    p = min(1.0, (t - t0) / tin)
+    p = 1 - (1 - p) ** 3
+    d = ImageDraw.Draw(img)
+    col = tuple(C["red"][:3]) + (235,)
+    wob = 1 + 0.015 * math.sin(t * 9)
+    w = max(4, int(11 * u))
+    for k, (ox, oy, sc, a0) in enumerate([(0, 0, 1.0, -100), (4 * u, -3 * u, 1.05, -92)]):
+        ext = 360 * p + (25 if k == 0 else 0) * p
+        box = [cx + ox - rx * sc * wob, cy + oy - ry * sc, cx + ox + rx * sc * wob, cy + oy + ry * sc]
+        d.arc(box, a0, a0 + ext, fill=col, width=w if k == 0 else max(3, w // 2))
 
 
 # ============================================================ SAHNE CANLANDIRMA (diorama)

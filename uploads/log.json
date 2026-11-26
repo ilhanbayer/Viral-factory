@@ -1,7 +1,7 @@
 {
  "months": {
   "2026-11": {
-   "uploads": 20,
+   "uploads": 25,
    "note": "Zapier çağrıları: yüklemeler + find_channel okumaları dahil"
   }
  },
@@ -99,7 +99,11 @@
     "youtube",
     "instagram",
     "tiktok"
-   ]
+   ],
+   "youtube": "pLhCTSM5qEs",
+   "instagram": "https://www.instagram.com/reel/DgKtIpbggIY/",
+   "tiktok": "7712109935869398324",
+   "status": "PUBLISHED"
   },
   "video-9-S008_tarsus_gizemli_kazi_part4": {
    "post_id": 439506384,
@@ -108,7 +112,11 @@
     "youtube",
     "instagram",
     "tiktok"
-   ]
+   ],
+   "youtube": "s1b0vb0WfEw",
+   "instagram": "https://www.instagram.com/reel/DgLErhyMJJx/",
+   "tiktok": "7712163145359363336",
+   "status": "PUBLISHED"
   },
   "video-9-S008_tarsus_gizemli_kazi_part5": {
    "post_id": 439506429,
@@ -117,7 +125,11 @@
     "youtube",
     "instagram",
     "tiktok"
-   ]
+   ],
+   "youtube": "gKuFA6fsh_c",
+   "instagram": "https://www.instagram.com/reel/DgM2dmONPpu/",
+   "tiktok": "7712419429031726388",
+   "status": "PUBLISHED"
   },
   "video-10-S009_gobeklitepe_dizi_part1": {
    "post_id": 440327914,
@@ -170,7 +182,9 @@
    "networks": [
     "youtube"
    ],
-   "type": "video"
+   "type": "video",
+   "youtube": "vK2BinGNMCM",
+   "status": "PUBLISHED"
   },
   "video-12-S010_derinkuyu_urgup_part1": {
    "post_id": 441778470,
@@ -232,6 +246,60 @@
     "youtube"
    ],
    "type": "video"
+  },
+  "video-13-S011_dunyaya_turkiyeden_yayilanlar_part1": {
+   "post_id": 443164709,
+   "at": "2026-11-29T20:30+03:00",
+   "networks": [
+    "youtube",
+    "instagram",
+    "tiktok"
+   ]
+  },
+  "video-13-S011_dunyaya_turkiyeden_yayilanlar_part2": {
+   "post_id": 443164802,
+   "at": "2026-11-30T13:00+03:00",
+   "networks": [
+    "youtube",
+    "instagram",
+    "tiktok"
+   ]
+  },
+  "video-13-S011_dunyaya_turkiyeden_yayilanlar_part3": {
+   "post_id": 443164875,
+   "at": "2026-11-30T17:00+03:00",
+   "networks": [
+    "youtube",
+    "instagram",
+    "tiktok"
+   ]
+  },
+  "video-13-S011_dunyaya_turkiyeden_yayilanlar_part4": {
+   "post_id": 443164958,
+   "at": "2026-11-30T20:30+03:00",
+   "networks": [
+    "youtube",
+    "instagram",
+    "tiktok"
+   ]
+  },
+  "video-13-S011_dunyaya_turkiyeden_yayilanlar_part5": {
+   "post_id": 443165026,
+   "at": "2026-12-01T13:00+03:00",
+   "networks": [
+    "youtube",
+    "instagram",
+    "tiktok"
+   ]
+  },
+  "video-13-S011_dunyaya_turkiyeden_yayilanlar_part6": {
+   "post_id": 443165121,
+   "at": "2026-12-01T17:00+03:00",
+   "networks": [
+    "youtube",
+    "instagram",
+    "tiktok"
+   ]
   }
  },
  "en_channel": {
@@ -244,13 +312,20 @@
    "video-10-S009e_gobekli_tepe_en_part2": "np26PXpvhRo",
    "video-10-S009e_gobekli_tepe_en_part3": "DGe_bUeDnFg",
    "video-10-S009e_gobekli_tepe_en_part4": "Wdnl2Sg3IFI",
-   "video-10-S009e_gobekli_tepe_en_full": "VHKSKHNlxus"
+   "video-10-S009e_gobekli_tepe_en_full": "VHKSKHNlxus",
+   "video-10-S009e_gobekli_tepe_en_part5": "dljTdxC3rXE",
+   "video-12-S010e_derinkuyu_cappadocia_en_part1": "iQajBXDT1j8"
   },
   "stats_2026-11-25": {
    "subscribers": 0,
    "views": 188
   },
-  "note": "Zapier upload_video'da 'thumbnail' GÖNDERME: kanal doğrulanmadığı için hata veriyor (video yine de yükleniyor)."
+  "note": "Zapier upload_video'da 'thumbnail' GÖNDERME: kanal doğrulanmadığı için hata veriyor (video yine de yükleniyor).",
+  "stats_2026-11-26": {
+   "subscribers": 0,
+   "views": 354,
+   "videos": 5
+  }
  },
  "tr_channel": {
   "channel_id": "UCj4AqO637OZjnjqpXxdlmNQ",
@@ -260,6 +335,11 @@
    "subscribers": 52,
    "views": 36144,
    "videos": 53
+  },
+  "stats_2026-11-26": {
+   "subscribers": 52,
+   "views": 36194,
+   "videos": 58
   }
  }
 }

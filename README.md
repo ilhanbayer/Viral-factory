@@ -2,14 +2,15 @@
 
 # 🎬 Video Paneli
 
-**72 video** · **9 tanesi YouTube'da** · yeni videolar her gün otomatik eklenir · [tüm sürümler](https://github.com/ilhanbayer/Viral-factory/releases)
+**73 video** · **9 tanesi YouTube'da** · yeni videolar her gün otomatik eklenir · [tüm sürümler](https://github.com/ilhanbayer/Viral-factory/releases)
 
-**Sıradaki konular:** Dizi: Truva'nın Gerçek Hikâyesi → Series: The Real Story of Troy (EN)
+**Sıradaki konular:** Dizi: Truva'nın Gerçek Hikâyesi → Series: The Real Story of Troy (EN) → Dizi: Yerebatan Sarnıcı'nın Sırları → Series: Secrets of the Basilica Cistern (EN)
 
-Zapier yükleme çağrısı (toplam): 20 · aylık sınır 45
+Zapier yükleme çağrısı (toplam): 25 · aylık sınır 45
 
 | Kapak | Video | İndir |
 |:-:|---|:-:|
+| <a href="https://github.com/ilhanbayer/Viral-factory/releases/download/video-13-S011_dunyaya_turkiyeden_yayilanlar_full/S011_dunyaya_turkiyeden_yayilanlar_full.mp4"><img src="https://github.com/ilhanbayer/Viral-factory/releases/download/video-13-S011_dunyaya_turkiyeden_yayilanlar_full/S011_dunyaya_turkiyeden_yayilanlar_full_kapak.jpg" width="120"></a> | **🎬 UZUN VİDEO · Dünyaya Türkiye'den Yayılan 6 Şey: Noel Baba, Lale, Kiraz, Fındık, Kahve, Yoğurt**<br>2026-11-26 | [▶️ MP4 (217 MB)](https://github.com/ilhanbayer/Viral-factory/releases/download/video-13-S011_dunyaya_turkiyeden_yayilanlar_full/S011_dunyaya_turkiyeden_yayilanlar_full.mp4)<br>[📝 Metin](https://github.com/ilhanbayer/Viral-factory/releases/tag/video-13-S011_dunyaya_turkiyeden_yayilanlar_full) |
 | <a href="https://github.com/ilhanbayer/Viral-factory/releases/download/video-13-S011e_tarsus_en_part5/S011e_tarsus_en_part5.mp4"><img src="https://github.com/ilhanbayer/Viral-factory/releases/download/video-13-S011e_tarsus_en_part5/S011e_tarsus_en_part5_kapak.jpg" width="120"></a> | **🎬 UZUN VİDEO · There's Another City Under This City 🏛️ Part 5**<br>2026-11-25 | [▶️ MP4 (48 MB)](https://github.com/ilhanbayer/Viral-factory/releases/download/video-13-S011e_tarsus_en_part5/S011e_tarsus_en_part5.mp4)<br>[💬 Altyazı](https://github.com/ilhanbayer/Viral-factory/releases/download/video-13-S011e_tarsus_en_part5/S011e_tarsus_en_part5.srt)<br>[📝 Metin](https://github.com/ilhanbayer/Viral-factory/releases/tag/video-13-S011e_tarsus_en_part5) |
 | <a href="https://github.com/ilhanbayer/Viral-factory/releases/download/video-13-S011e_tarsus_en_part4/S011e_tarsus_en_part4.mp4"><img src="https://github.com/ilhanbayer/Viral-factory/releases/download/video-13-S011e_tarsus_en_part4/S011e_tarsus_en_part4_kapak.jpg" width="120"></a> | **🎬 UZUN VİDEO · A Secret Dig Under Police Guard 🚨 Part 4**<br>2026-11-25 | [▶️ MP4 (44 MB)](https://github.com/ilhanbayer/Viral-factory/releases/download/video-13-S011e_tarsus_en_part4/S011e_tarsus_en_part4.mp4)<br>[💬 Altyazı](https://github.com/ilhanbayer/Viral-factory/releases/download/video-13-S011e_tarsus_en_part4/S011e_tarsus_en_part4.srt)<br>[📝 Metin](https://github.com/ilhanbayer/Viral-factory/releases/tag/video-13-S011e_tarsus_en_part4) |
 | <a href="https://github.com/ilhanbayer/Viral-factory/releases/download/video-13-S011e_tarsus_en_part3/S011e_tarsus_en_part3.mp4"><img src="https://github.com/ilhanbayer/Viral-factory/releases/download/video-13-S011e_tarsus_en_part3/S011e_tarsus_en_part3_kapak.jpg" width="120"></a> | **🎬 UZUN VİDEO · Saint Paul Was Born in This City ✝️ Part 3**<br>2026-11-25 | [▶️ MP4 (40 MB)](https://github.com/ilhanbayer/Viral-factory/releases/download/video-13-S011e_tarsus_en_part3/S011e_tarsus_en_part3.mp4)<br>[💬 Altyazı](https://github.com/ilhanbayer/Viral-factory/releases/download/video-13-S011e_tarsus_en_part3/S011e_tarsus_en_part3.srt)<br>[📝 Metin](https://github.com/ilhanbayer/Viral-factory/releases/tag/video-13-S011e_tarsus_en_part3) |

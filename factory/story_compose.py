@@ -566,6 +566,8 @@ def produce_one(vid, beats, fmt, brand, theme, publish, out_dir, use_tts=True, w
     os.makedirs(work, exist_ok=True)
     print(f"▶ {vid} [{fmt}]: seslendirme + zaman çizelgesi")
     fetch_photos(beats, os.path.join(out_dir, "_photos"))
+    if beats and beats[0].get("show", {}).get("type") == "photo":
+        beats[0]["show"].setdefault("circle", True)   # kanca: ilk fotoğrafta kırmızı daire vurgusu
     broll_paths = fetch_broll(broll_terms, os.path.join(out_dir, "_photos"))
     segs, total = build(beats, os.path.join(out_dir, "_voicecache"), use_tts)
     for s_ in segs:
@@ -624,7 +626,7 @@ def produce_one(vid, beats, fmt, brand, theme, publish, out_dir, use_tts=True, w
     ch = chapters_text(segs, chapters) if fmt == "landscape" else ""
     desc = publish.get("description", "") + (("\n\n" + ch) if ch else "")
     if CREDITS:
-        desc += ("\n\nGörseller: Wikimedia Commons — " if ST.LANG == "tr" else "\n\nImages: Wikimedia Commons — ") + "; ".join(CREDITS[:12])
+        desc += ("\n\nGörseller: Wikimedia Commons — " if ST.LANG == "tr" else "\n\nImages: Wikimedia Commons — ") + "; ".join(CREDITS[:30])
     meta = f"{publish.get('title', vid)}\n\n{desc}\n\n{' '.join(publish.get('hashtags', []))}\n"
     open(os.path.join(out_dir, vid + "_metadata.txt"), "w", encoding="utf-8").write(meta)
     kp = os.path.join(out_dir, vid + "_kapak.jpg")
@@ -666,6 +668,7 @@ def produce_story(script, out_dir, use_tts=True, workers=None):
             if th and not th.get("tag"):
                 th["tag"] = f"{PART} {k + 1}"
             USED_TITLES.clear()
+            CREDITS.clear()   # künye bölüm başına: yalnızca o bölümde kullanılan görseller
             finals.append(produce_one(f"{script['id']}_part{k + 1}", part["beats"], "vertical",
                                       f"{brand} · {PART} {k + 1}/{n}", theme, part.get("publish", {}), out_dir,
                                       use_tts, workers, thumb=th or None,

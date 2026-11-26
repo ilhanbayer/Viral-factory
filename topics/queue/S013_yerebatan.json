@@ -1,0 +1,670 @@
+{
+ "id": "S013_yerebatan",
+ "format": "story",
+ "title": "Dizi: Yerebatan Sarnıcı'nın Sırları",
+ "brand": "İLGİNÇ BİLGİLER",
+ "theme": "dosya",
+ "lang": "tr",
+ "voice": {
+  "engine": "edge",
+  "speaker": "ahmet",
+  "rate": "+0%",
+  "pitch": "-2Hz"
+ },
+ "broll": [
+  "Basilica Cistern",
+  "Istanbul",
+  "Sultanahmet"
+ ],
+ "parts": [
+  {
+   "beats": [
+    {
+     "say": "Ayasofya'nın birkaç adım ötesinde, yerin altında *336 sütun* var.",
+     "show": {
+      "type": "photo",
+      "search": "Basilica Cistern columns",
+      "label": "YEREBATAN SARNICI",
+      "extra": 2
+     },
+     "sfx": "hit"
+    },
+    {
+     "say": "Burası saray değil; dev bir *su deposu*: Yerebatan Sarnıcı.",
+     "show": {
+      "type": "photo",
+      "search": "Basilica Cistern",
+      "label": "SULTANAHMET · İSTANBUL",
+      "extra": 2
+     }
+    },
+    {
+     "say": "532 yılında Bizans İmparatoru *Justinianus* döneminde yapıldı.",
+     "show": {
+      "type": "photo",
+      "search": "Justinian mosaic Ravenna",
+      "label": "JUSTİNİANUS",
+      "extra": 2
+     }
+    },
+    {
+     "say": "Sütunların her biri yaklaşık *9 metre* yüksekliğinde.",
+     "show": {
+      "type": "number",
+      "value": "9",
+      "label": "METRE SÜTUN"
+     },
+     "sfx": "riser"
+    },
+    {
+     "say": "Yaklaşık 140 metre boyunda ve 65 metre *genişliğinde*.",
+     "show": {
+      "type": "photo",
+      "search": "Basilica Cistern interior",
+      "label": "140 × 65 METRE",
+      "extra": 2
+     }
+    },
+    {
+     "say": "Tamamen dolunca yaklaşık *80 bin ton* su alabiliyordu.",
+     "show": {
+      "type": "number",
+      "value": "80.000",
+      "label": "TON SU"
+     }
+    },
+    {
+     "say": "Bu su, saraylara ve çevredeki *yapılara* gidiyordu.",
+     "show": {
+      "type": "photo",
+      "search": "Great Palace of Constantinople",
+      "label": "BÜYÜK SARAY",
+      "extra": 2
+     }
+    },
+    {
+     "say": "Halk ise suyun içinden yükselen sütunlara bakıp ona *saray* dedi.",
+     "show": {
+      "type": "title",
+      "lines": [
+       "YERE BATAN",
+       "SARAY"
+      ],
+      "red": 2
+     }
+    },
+    {
+     "say": "Bölüm 2'de: Bu sarnıç neden *yüz yıllarca* unutuldu?",
+     "show": {
+      "type": "title",
+      "lines": [
+       "BÖLÜM 2",
+       "UNUTULAN",
+       "SARNIÇ"
+      ],
+      "red": 1
+     }
+    },
+    {
+     "say": "Kaçırmamak için *takip et*.",
+     "show": {
+      "type": "icon",
+      "name": "eye",
+      "label": "TAKİP ET · BİLDİRİMİ AÇ"
+     }
+    }
+   ],
+   "thumb": {
+    "lines": [
+     "YERİN ALTINDA",
+     "SARAY"
+    ],
+    "red": 1,
+    "photo_search": "Basilica Cistern"
+   },
+   "broll": [
+    "Basilica Cistern",
+    "Basilica Cistern columns",
+    "Sultanahmet Square",
+    "Hagia Sophia"
+   ],
+   "publish": {
+    "title": "İstanbul'un Altında 336 Sütunlu Saray 🏛️ Bölüm 1 #shorts",
+    "description": "Sultanahmet'in altındaki Yerebatan Sarnıcı: 532'de Bizans İmparatoru Justinianus döneminde yapılan dev su deposu.\n\nDizi: Yerebatan Sarnıcı'nın Sırları — Bölüm 1/5. Tüm bölümler kanalda.",
+    "hashtags": [
+     "#yerebatansarnıcı",
+     "#istanbul",
+     "#sultanahmet",
+     "#tarih",
+     "#ilginçbilgiler",
+     "#shorts"
+    ]
+   }
+  },
+  {
+   "beats": [
+    {
+     "say": "İstanbul'da bazı evlerin bodrumundan kova sarkıtıp *balık* tutulurdu.",
+     "show": {
+      "type": "photo",
+      "search": "Basilica Cistern fish",
+      "label": "SARNIÇ BALIKLARI",
+      "extra": 2
+     },
+     "sfx": "hit"
+    },
+    {
+     "say": "Çünkü evlerin altında, kimsenin hatırlamadığı *dev bir sarnıç* vardı.",
+     "show": {
+      "type": "photo",
+      "search": "Basilica Cistern",
+      "label": "UNUTULAN SARNIÇ",
+      "extra": 2
+     }
+    },
+    {
+     "say": "İstanbul'un fethinden sonra sarnıç yavaş yavaş *unutuldu*.",
+     "show": {
+      "type": "title",
+      "lines": [
+       "YÜZ YILLARCA",
+       "UNUTULDU"
+      ],
+      "red": 2
+     }
+    },
+    {
+     "say": "1540'larda Fransız gezgin *Petrus Gyllius* şehrin eski yapılarını araştırıyordu.",
+     "show": {
+      "type": "dossier",
+      "name": "PETRUS GYLLİUS",
+      "no": "1540'LAR",
+      "fields": {
+       "GÖREV": "GEZGİN, BİLGİN",
+       "ARADIĞI": "BİZANS İZLERİ"
+      }
+     }
+    },
+    {
+     "say": "Anlatılana göre halk ona bodrumdaki *delikleri* gösterdi.",
+     "show": {
+      "type": "photo",
+      "search": "Istanbul old houses",
+      "label": "ESKİ İSTANBUL EVLERİ",
+      "extra": 2
+     }
+    },
+    {
+     "say": "Gyllius bir *meşaleyle* aşağı indi ve sütun ormanını gördü.",
+     "show": {
+      "type": "photo",
+      "search": "Basilica Cistern columns",
+      "label": "SÜTUN ORMANI",
+      "extra": 2
+     },
+     "sfx": "riser"
+    },
+    {
+     "say": "Bugün de sarnıçta yüzen *balıklar* var.",
+     "show": {
+      "type": "photo",
+      "search": "Basilica Cistern carp",
+      "label": "BUGÜN DE BALIK VAR",
+      "extra": 2
+     }
+    },
+    {
+     "say": "Sence evinin altında böyle bir yer olsa ne yapardın? *Yorumlara yaz*.",
+     "show": {
+      "type": "title",
+      "lines": [
+       "EVİNİN ALTINDA",
+       "OLSA?"
+      ],
+      "red": 2
+     }
+    },
+    {
+     "say": "Bölüm 3'te: Ters duran *Medusa* başlarının sırrı.",
+     "show": {
+      "type": "title",
+      "lines": [
+       "BÖLÜM 3",
+       "MEDUSA'NIN",
+       "SIRRI"
+      ],
+      "red": 1
+     }
+    },
+    {
+     "say": "*Takip et* ki kaçırma.",
+     "show": {
+      "type": "icon",
+      "name": "eye",
+      "label": "TAKİP ET · BİLDİRİMİ AÇ"
+     }
+    }
+   ],
+   "thumb": {
+    "lines": [
+     "BODRUMDAN",
+     "BALIK"
+    ],
+    "red": 1,
+    "photo_search": "Basilica Cistern fish"
+   },
+   "broll": [
+    "Basilica Cistern",
+    "Basilica Cistern fish",
+    "Istanbul old houses",
+    "Sultanahmet"
+   ],
+   "publish": {
+    "title": "Evinin Altından Balık Tuttular 🐟 Bölüm 2 #shorts",
+    "description": "Osmanlı döneminde unutulan sarnıcı 1540'larda Fransız gezgin Petrus Gyllius yeniden keşfetti; anlatılana göre halk bodrumlardan balık tutuyordu.\n\nDizi: Yerebatan Sarnıcı'nın Sırları — Bölüm 2/5. Tüm bölümler kanalda.",
+    "hashtags": [
+     "#yerebatansarnıcı",
+     "#istanbul",
+     "#sultanahmet",
+     "#tarih",
+     "#ilginçbilgiler",
+     "#shorts"
+    ]
+   }
+  },
+  {
+   "beats": [
+    {
+     "say": "Sarnıcın en dip köşesinde iki sütun, *Medusa başlarının* üstünde duruyor.",
+     "show": {
+      "type": "photo",
+      "search": "Basilica Cistern Medusa",
+      "label": "MEDUSA BAŞI",
+      "extra": 2
+     },
+     "sfx": "hit"
+    },
+    {
+     "say": "Biri *yan* yatırılmış, diğeri tamamen *ters* çevrilmiş.",
+     "show": {
+      "type": "title",
+      "lines": [
+       "BİRİ YAN",
+       "BİRİ TERS"
+      ],
+      "red": 2
+     }
+    },
+    {
+     "say": "Mitolojide Medusa'nın bakışı insanları *taşa* çevirirdi.",
+     "show": {
+      "type": "photo",
+      "search": "Roman Medusa sculpture",
+      "label": "MİTOLOJİDE MEDUSA",
+      "extra": 2
+     }
+    },
+    {
+     "say": "Bu başların nereden geldiği hâlâ tam olarak *bilinmiyor*.",
+     "show": {
+      "type": "icon",
+      "name": "question",
+      "label": "KİM GETİRDİ?"
+     },
+     "sfx": "riser"
+    },
+    {
+     "say": "Tarihçilere göre eski bir Roma yapısından alınıp *yeniden kullanıldı*.",
+     "show": {
+      "type": "photo",
+      "search": "Medusa head",
+      "label": "ROMA DÖNEMİ",
+      "extra": 2
+     }
+    },
+    {
+     "say": "Ters konmaları belki sadece sütunun *boyuna* uydurmak içindi.",
+     "show": {
+      "type": "list",
+      "items": [
+       "BOY UYDURMAK?",
+       "KÖTÜLÜĞÜ ÖNLEMEK?",
+       "TESADÜF?"
+      ]
+     }
+    },
+    {
+     "say": "Ama bir efsaneye göre ters koyarak bakışının *gücünü* yok ettiler.",
+     "show": {
+      "type": "title",
+      "lines": [
+       "BAKIŞI",
+       "ETKİSİZ",
+       "KALSIN DİYE"
+      ],
+      "red": 2
+     }
+    },
+    {
+     "say": "Bugün sarnıcın en çok fotoğraflanan *köşesi* burası.",
+     "show": {
+      "type": "photo",
+      "search": "Basilica Cistern Medusa column",
+      "label": "EN ÜNLÜ KÖŞE",
+      "extra": 2
+     }
+    },
+    {
+     "say": "Sence neden ters koydular? *Yorumlara yaz*.",
+     "show": {
+      "type": "title",
+      "lines": [
+       "SENCE",
+       "NEDEN TERS?"
+      ],
+      "red": 1
+     }
+    },
+    {
+     "say": "Bölüm 4'te: *Ağlayan* sütun.",
+     "show": {
+      "type": "title",
+      "lines": [
+       "BÖLÜM 4",
+       "AĞLAYAN",
+       "SÜTUN"
+      ],
+      "red": 1
+     }
+    },
+    {
+     "say": "*Takip et* ki kaçırma.",
+     "show": {
+      "type": "icon",
+      "name": "eye",
+      "label": "TAKİP ET · BİLDİRİMİ AÇ"
+     }
+    }
+   ],
+   "thumb": {
+    "lines": [
+     "MEDUSA",
+     "NEDEN TERS?"
+    ],
+    "red": 1,
+    "photo_search": "Basilica Cistern Medusa"
+   },
+   "broll": [
+    "Basilica Cistern Medusa",
+    "Medusa head",
+    "Basilica Cistern",
+    "Roman Medusa sculpture"
+   ],
+   "publish": {
+    "title": "Medusa'nın Başı Neden Ters Duruyor? 🐍 Bölüm 3 #shorts",
+    "description": "Yerebatan Sarnıcı'ndaki iki Medusa başı: biri yan, biri ters. Nereden geldikleri bilinmiyor, efsaneler ve olası açıklamalar.\n\nDizi: Yerebatan Sarnıcı'nın Sırları — Bölüm 3/5. Tüm bölümler kanalda.",
+    "hashtags": [
+     "#yerebatansarnıcı",
+     "#istanbul",
+     "#sultanahmet",
+     "#tarih",
+     "#ilginçbilgiler",
+     "#shorts"
+    ]
+   }
+  },
+  {
+   "beats": [
+    {
+     "say": "Yerebatan'da sürekli *ıslak* duran bir sütun var: Ağlayan Sütun.",
+     "show": {
+      "type": "photo",
+      "search": "Hen's Eye column Basilica Cistern",
+      "label": "AĞLAYAN SÜTUN",
+      "extra": 2
+     },
+     "sfx": "hit"
+    },
+    {
+     "say": "Üstü göz ya da *gözyaşı* damlası gibi desenlerle kaplı.",
+     "show": {
+      "type": "photo",
+      "search": "Basilica Cistern columns",
+      "label": "GÖZYAŞI DESENLERİ",
+      "extra": 2
+     }
+    },
+    {
+     "say": "Anlatılana göre sarnıcın yapımında *yüzlerce işçi* hayatını kaybetti.",
+     "show": {
+      "type": "title",
+      "lines": [
+       "YÜZLERCE",
+       "İŞÇİ"
+      ],
+      "red": 1
+     },
+     "sfx": "riser"
+    },
+    {
+     "say": "Efsaneye göre sütun, onlar için *ağlıyor*.",
+     "show": {
+      "type": "title",
+      "lines": [
+       "ONLAR İÇİN",
+       "AĞLIYOR"
+      ],
+      "red": 2
+     }
+    },
+    {
+     "say": "Bilim ise basit konuşuyor: Sarnıçtaki *nem* yüzeyi hep ıslak tutuyor.",
+     "show": {
+      "type": "list",
+      "items": [
+       "YÜKSEK NEM",
+       "SERİN TAŞ",
+       "DAMLAYAN SU"
+      ]
+     }
+    },
+    {
+     "say": "Benzer desenli sütunlar bir zamanlar *Theodosius Forumu'nda* da vardı.",
+     "show": {
+      "type": "photo",
+      "search": "Theodosius Forum column",
+      "label": "THEODOSİUS FORUMU",
+      "extra": 2
+     }
+    },
+    {
+     "say": "Yani sütun büyük ihtimalle başka bir yapıdan *getirildi*.",
+     "show": {
+      "type": "photo",
+      "search": "Basilica Cistern",
+      "label": "DEVŞİRME SÜTUN",
+      "extra": 2
+     }
+    },
+    {
+     "say": "Ziyaretçiler hâlâ sütunun deliğine parmağını sokup *dilek* tutuyor.",
+     "show": {
+      "type": "icon",
+      "name": "star",
+      "label": "DİLEK TUT"
+     }
+    },
+    {
+     "say": "Bölüm 5'te: *James Bond* bu sarnıçta ne arıyordu?",
+     "show": {
+      "type": "title",
+      "lines": [
+       "BÖLÜM 5",
+       "JAMES BOND",
+       "BURADA"
+      ],
+      "red": 1
+     }
+    },
+    {
+     "say": "*Takip et* ki kaçırma.",
+     "show": {
+      "type": "icon",
+      "name": "eye",
+      "label": "TAKİP ET · BİLDİRİMİ AÇ"
+     }
+    }
+   ],
+   "thumb": {
+    "lines": [
+     "AĞLAYAN",
+     "SÜTUN"
+    ],
+    "red": 1,
+    "photo_search": "Hen's Eye column Basilica Cistern"
+   },
+   "broll": [
+    "Hen's Eye column Basilica Cistern",
+    "Basilica Cistern",
+    "Basilica Cistern columns",
+    "Theodosius Forum column"
+   ],
+   "publish": {
+    "title": "Bu Sütun Yüzyıllardır Ağlıyor mu? 💧 Bölüm 4 #shorts",
+    "description": "Yerebatan'daki 'Ağlayan Sütun': gözyaşı desenleri, ıslak yüzeyi ve sarnıcın yapımında ölen işçilerle ilgili efsane.\n\nDizi: Yerebatan Sarnıcı'nın Sırları — Bölüm 4/5. Tüm bölümler kanalda.",
+    "hashtags": [
+     "#yerebatansarnıcı",
+     "#istanbul",
+     "#sultanahmet",
+     "#tarih",
+     "#ilginçbilgiler",
+     "#shorts"
+    ]
+   }
+  },
+  {
+   "beats": [
+    {
+     "say": "James Bond bu sarnıçta *kayıkla* gezdi.",
+     "show": {
+      "type": "photo",
+      "search": "Basilica Cistern",
+      "label": "YEREBATAN · İSTANBUL",
+      "extra": 2
+     },
+     "sfx": "hit"
+    },
+    {
+     "say": "1963 yapımı *Rusya'dan Sevgilerle* filminin sahneleri burada çekildi.",
+     "show": {
+      "type": "number",
+      "value": "1963",
+      "label": "BOND FİLMİ"
+     }
+    },
+    {
+     "say": "O yıllarda sarnıcın içi *çamur ve su* doluydu.",
+     "show": {
+      "type": "photo",
+      "search": "Basilica Cistern columns",
+      "label": "ESKİ HÂLİ",
+      "extra": 2
+     }
+    },
+    {
+     "say": "Dan Brown'un *Cehennem* romanının büyük finali de burada geçiyor.",
+     "show": {
+      "type": "photo",
+      "search": "Basilica Cistern lights",
+      "label": "CEHENNEM · DAN BROWN",
+      "extra": 2
+     }
+    },
+    {
+     "say": "2017'de sarnıç *depreme* karşı güçlendirme için kapatıldı.",
+     "show": {
+      "type": "title",
+      "lines": [
+       "DEPREME KARŞI",
+       "GÜÇLENDİRME"
+      ],
+      "red": 2
+     },
+     "sfx": "riser"
+    },
+    {
+     "say": "2022'de yeni ışıkları ve *sanat eserleriyle* yeniden açıldı.",
+     "show": {
+      "type": "number",
+      "value": "2022",
+      "label": "YENİDEN AÇILDI"
+     }
+    },
+    {
+     "say": "İstanbul'un altında yüzlerce sarnıç daha var; *Şerefiye* ve *Binbirdirek* gibi.",
+     "show": {
+      "type": "photo",
+      "search": "Theodosius Cistern",
+      "label": "ŞEREFİYE SARNICI",
+      "extra": 2
+     }
+    },
+    {
+     "say": "Binbirdirek ise bugün etkinlik ve *konserlere* ev sahipliği yapıyor.",
+     "show": {
+      "type": "photo",
+      "search": "Binbirdirek Cistern",
+      "label": "BİNBİRDİREK SARNICI",
+      "extra": 2
+     }
+    },
+    {
+     "say": "Dizinin sonu! Sen Yerebatan'a gittin mi? *Yorumlara yaz*.",
+     "show": {
+      "type": "title",
+      "lines": [
+       "SEN",
+       "YEREBATAN'A",
+       "GİTTİN Mİ?"
+      ],
+      "red": 2
+     }
+    },
+    {
+     "say": "Yeni dizi için *takip et*.",
+     "show": {
+      "type": "icon",
+      "name": "eye",
+      "label": "TAKİP ET · BİLDİRİMİ AÇ"
+     }
+    }
+   ],
+   "thumb": {
+    "lines": [
+     "JAMES BOND",
+     "BURADAYDI"
+    ],
+    "red": 1,
+    "photo_search": "Basilica Cistern"
+   },
+   "broll": [
+    "Basilica Cistern",
+    "Basilica Cistern lights",
+    "Theodosius Cistern",
+    "Binbirdirek Cistern"
+   ],
+   "publish": {
+    "title": "James Bond Bu Sarnıçta Kayıkla Gezdi 🎬 Bölüm 5 #shorts",
+    "description": "1963 yapımı 'Rusya'dan Sevgilerle' filmi, Dan Brown'un 'Cehennem'i, 2017-2022 restorasyonu ve İstanbul'un diğer sarnıçları.\n\nDizi: Yerebatan Sarnıcı'nın Sırları — Bölüm 5/5. Tüm bölümler kanalda.",
+    "hashtags": [
+     "#yerebatansarnıcı",
+     "#istanbul",
+     "#sultanahmet",
+     "#tarih",
+     "#ilginçbilgiler",
+     "#shorts"
+    ]
+   }
+  }
+ ]
+}

@@ -1,0 +1,639 @@
+{
+ "id": "S013e_basilica_cistern_en",
+ "format": "story",
+ "title": "Series: Secrets of the Basilica Cistern (EN)",
+ "brand": "HIDDEN TÜRKİYE",
+ "theme": "dosya",
+ "lang": "en",
+ "voice": {
+  "engine": "edge",
+  "speaker": "christopher",
+  "rate": "+0%",
+  "pitch": "-2Hz"
+ },
+ "broll": [
+  "Basilica Cistern",
+  "Istanbul",
+  "Sultanahmet"
+ ],
+ "parts": [
+  {
+   "beats": [
+    {
+     "say": "A few steps from Hagia Sophia, there are *336 columns* hidden underground.",
+     "show": {
+      "type": "photo",
+      "search": "Basilica Cistern columns",
+      "label": "BASILICA CISTERN",
+      "extra": 2
+     },
+     "sfx": "hit"
+    },
+    {
+     "say": "It's not a palace. It's a giant *water tank*: the Basilica Cistern.",
+     "show": {
+      "type": "photo",
+      "search": "Basilica Cistern",
+      "label": "SULTANAHMET · ISTANBUL",
+      "extra": 2
+     }
+    },
+    {
+     "say": "It was built in 532 under the Byzantine emperor *Justinian*.",
+     "show": {
+      "type": "photo",
+      "search": "Justinian mosaic Ravenna",
+      "label": "EMPEROR JUSTINIAN",
+      "extra": 2
+     }
+    },
+    {
+     "say": "Each column is about *9 meters* tall.",
+     "show": {
+      "type": "number",
+      "value": "9",
+      "label": "METER COLUMNS"
+     },
+     "sfx": "riser"
+    },
+    {
+     "say": "It's roughly 140 meters long and 65 meters *wide*.",
+     "show": {
+      "type": "photo",
+      "search": "Basilica Cistern interior",
+      "label": "140 × 65 METERS",
+      "extra": 2
+     }
+    },
+    {
+     "say": "When full, it held around *80,000 tons* of water.",
+     "show": {
+      "type": "number",
+      "value": "80,000",
+      "label": "TONS OF WATER"
+     }
+    },
+    {
+     "say": "Locals in Istanbul call it *Yerebatan*: the sunken palace.",
+     "show": {
+      "type": "title",
+      "lines": [
+       "THE SUNKEN",
+       "PALACE"
+      ],
+      "red": 2
+     }
+    },
+    {
+     "say": "In Part 2: how this place was *forgotten* for a century.",
+     "show": {
+      "type": "title",
+      "lines": [
+       "PART 2",
+       "THE FORGOTTEN",
+       "CISTERN"
+      ],
+      "red": 1
+     }
+    },
+    {
+     "say": "*Follow* so you don't miss it.",
+     "show": {
+      "type": "icon",
+      "name": "eye",
+      "label": "FOLLOW · TURN ON NOTIFICATIONS"
+     }
+    }
+   ],
+   "thumb": {
+    "lines": [
+     "A PALACE",
+     "UNDERGROUND"
+    ],
+    "red": 1,
+    "photo_search": "Basilica Cistern"
+   },
+   "broll": [
+    "Basilica Cistern",
+    "Basilica Cistern columns",
+    "Sultanahmet Square",
+    "Hagia Sophia"
+   ],
+   "publish": {
+    "title": "A Palace of 336 Columns Under Istanbul 🏛️ Part 1 #shorts",
+    "description": "The Basilica Cistern under Sultanahmet, Istanbul: a giant Byzantine water reservoir built in 532 under Emperor Justinian.\n\nSeries: Secrets of the Basilica Cistern — Part 1/5. Watch all parts on the channel.",
+    "hashtags": [
+     "#istanbul",
+     "#basilicacistern",
+     "#turkey",
+     "#history",
+     "#shorts"
+    ]
+   }
+  },
+  {
+   "beats": [
+    {
+     "say": "In old Istanbul, some people caught *fish* through holes in their basements.",
+     "show": {
+      "type": "photo",
+      "search": "Basilica Cistern fish",
+      "label": "CISTERN FISH",
+      "extra": 2
+     },
+     "sfx": "hit"
+    },
+    {
+     "say": "Under their houses was a giant *cistern* nobody remembered.",
+     "show": {
+      "type": "photo",
+      "search": "Basilica Cistern",
+      "label": "THE FORGOTTEN CISTERN",
+      "extra": 2
+     }
+    },
+    {
+     "say": "After 1453, the cistern slowly *disappeared* from memory.",
+     "show": {
+      "type": "title",
+      "lines": [
+       "FORGOTTEN",
+       "FOR A CENTURY"
+      ],
+      "red": 2
+     }
+    },
+    {
+     "say": "In the 1540s, French scholar *Petrus Gyllius* was searching for Byzantine ruins.",
+     "show": {
+      "type": "dossier",
+      "name": "PETRUS GYLLIUS",
+      "no": "1540S",
+      "fields": {
+       "JOB": "SCHOLAR",
+       "SEARCHING": "BYZANTINE RUINS"
+      }
+     }
+    },
+    {
+     "say": "Reportedly, locals showed him the *holes* in their basements.",
+     "show": {
+      "type": "photo",
+      "search": "Istanbul old houses",
+      "label": "OLD ISTANBUL HOUSES",
+      "extra": 2
+     }
+    },
+    {
+     "say": "He went down with a *torch* and found a forest of columns.",
+     "show": {
+      "type": "photo",
+      "search": "Basilica Cistern columns",
+      "label": "A FOREST OF COLUMNS",
+      "extra": 2
+     },
+     "sfx": "riser"
+    },
+    {
+     "say": "Fish still swim in the cistern *today*.",
+     "show": {
+      "type": "photo",
+      "search": "Basilica Cistern carp",
+      "label": "STILL HOME TO FISH",
+      "extra": 2
+     }
+    },
+    {
+     "say": "In Part 3: the *upside-down* Medusa heads.",
+     "show": {
+      "type": "title",
+      "lines": [
+       "PART 3",
+       "THE MEDUSA",
+       "MYSTERY"
+      ],
+      "red": 1
+     }
+    },
+    {
+     "say": "*Follow* so you don't miss it.",
+     "show": {
+      "type": "icon",
+      "name": "eye",
+      "label": "FOLLOW · TURN ON NOTIFICATIONS"
+     }
+    }
+   ],
+   "thumb": {
+    "lines": [
+     "FISHING IN",
+     "THE BASEMENT"
+    ],
+    "red": 1,
+    "photo_search": "Basilica Cistern fish"
+   },
+   "broll": [
+    "Basilica Cistern",
+    "Basilica Cistern fish",
+    "Istanbul old houses",
+    "Sultanahmet"
+   ],
+   "publish": {
+    "title": "They Fished Through Their Basements 🐟 Part 2 #shorts",
+    "description": "After 1453 the cistern was forgotten; in the 1540s the French scholar Petrus Gyllius rediscovered it. Reportedly, locals were fishing through holes in their basements.\n\nSeries: Secrets of the Basilica Cistern — Part 2/5. Watch all parts on the channel.",
+    "hashtags": [
+     "#istanbul",
+     "#basilicacistern",
+     "#turkey",
+     "#history",
+     "#shorts"
+    ]
+   }
+  },
+  {
+   "beats": [
+    {
+     "say": "In the darkest corner, two columns stand on *Medusa heads*.",
+     "show": {
+      "type": "photo",
+      "search": "Basilica Cistern Medusa",
+      "label": "MEDUSA HEAD",
+      "extra": 2
+     },
+     "sfx": "hit"
+    },
+    {
+     "say": "One lies *sideways*. The other is completely *upside down*.",
+     "show": {
+      "type": "title",
+      "lines": [
+       "ONE SIDEWAYS",
+       "ONE UPSIDE DOWN"
+      ],
+      "red": 2
+     }
+    },
+    {
+     "say": "In Greek myth, Medusa's gaze turned people into *stone*.",
+     "show": {
+      "type": "photo",
+      "search": "Roman Medusa sculpture",
+      "label": "MEDUSA IN MYTH",
+      "extra": 2
+     }
+    },
+    {
+     "say": "Nobody knows exactly where these heads *came from*.",
+     "show": {
+      "type": "icon",
+      "name": "question",
+      "label": "WHO BROUGHT THEM?"
+     },
+     "sfx": "riser"
+    },
+    {
+     "say": "Historians think they were *reused* from an older Roman building.",
+     "show": {
+      "type": "photo",
+      "search": "Medusa head",
+      "label": "ROMAN ERA",
+      "extra": 2
+     }
+    },
+    {
+     "say": "Maybe they were turned just to fit the column's *height*.",
+     "show": {
+      "type": "list",
+      "items": [
+       "TO FIT THE HEIGHT?",
+       "TO BLOCK EVIL?",
+       "PURE CHANCE?"
+      ]
+     }
+    },
+    {
+     "say": "But according to legend, flipping her *cancels* her deadly gaze.",
+     "show": {
+      "type": "title",
+      "lines": [
+       "HER GAZE",
+       "CANCELLED"
+      ],
+      "red": 2
+     }
+    },
+    {
+     "say": "Why do you think they flipped her? *Comment* below.",
+     "show": {
+      "type": "title",
+      "lines": [
+       "WHY",
+       "UPSIDE DOWN?"
+      ],
+      "red": 1
+     }
+    },
+    {
+     "say": "In Part 4: the column that *cries*.",
+     "show": {
+      "type": "title",
+      "lines": [
+       "PART 4",
+       "THE CRYING",
+       "COLUMN"
+      ],
+      "red": 1
+     }
+    },
+    {
+     "say": "*Follow* so you don't miss it.",
+     "show": {
+      "type": "icon",
+      "name": "eye",
+      "label": "FOLLOW · TURN ON NOTIFICATIONS"
+     }
+    }
+   ],
+   "thumb": {
+    "lines": [
+     "MEDUSA",
+     "UPSIDE DOWN"
+    ],
+    "red": 1,
+    "photo_search": "Basilica Cistern Medusa"
+   },
+   "broll": [
+    "Basilica Cistern Medusa",
+    "Medusa head",
+    "Basilica Cistern",
+    "Roman Medusa sculpture"
+   ],
+   "publish": {
+    "title": "Why Is Medusa's Head Upside Down? 🐍 Part 3 #shorts",
+    "description": "The two Medusa heads in the Basilica Cistern: one sideways, one upside down. Nobody knows exactly where they came from.\n\nSeries: Secrets of the Basilica Cistern — Part 3/5. Watch all parts on the channel.",
+    "hashtags": [
+     "#istanbul",
+     "#basilicacistern",
+     "#turkey",
+     "#history",
+     "#shorts"
+    ]
+   }
+  },
+  {
+   "beats": [
+    {
+     "say": "One column in the cistern is always *wet*: the Crying Column.",
+     "show": {
+      "type": "photo",
+      "search": "Hen's Eye column Basilica Cistern",
+      "label": "THE CRYING COLUMN",
+      "extra": 2
+     },
+     "sfx": "hit"
+    },
+    {
+     "say": "It's covered in carvings that look like eyes or *tears*.",
+     "show": {
+      "type": "photo",
+      "search": "Basilica Cistern columns",
+      "label": "TEAR-DROP CARVINGS",
+      "extra": 2
+     }
+    },
+    {
+     "say": "Reportedly, *hundreds of workers* died building the cistern.",
+     "show": {
+      "type": "title",
+      "lines": [
+       "HUNDREDS",
+       "OF WORKERS"
+      ],
+      "red": 1
+     },
+     "sfx": "riser"
+    },
+    {
+     "say": "Legend says the column is *crying* for them.",
+     "show": {
+      "type": "title",
+      "lines": [
+       "CRYING",
+       "FOR THEM"
+      ],
+      "red": 2
+     }
+    },
+    {
+     "say": "Science is simpler: the cistern's *humidity* keeps the stone wet.",
+     "show": {
+      "type": "list",
+      "items": [
+       "HIGH HUMIDITY",
+       "COOL STONE",
+       "DRIPPING WATER"
+      ]
+     }
+    },
+    {
+     "say": "Similar columns once stood in the *Forum of Theodosius*.",
+     "show": {
+      "type": "photo",
+      "search": "Theodosius Forum column",
+      "label": "FORUM OF THEODOSIUS",
+      "extra": 2
+     }
+    },
+    {
+     "say": "So it was probably *recycled* from another building.",
+     "show": {
+      "type": "photo",
+      "search": "Basilica Cistern",
+      "label": "A RECYCLED COLUMN",
+      "extra": 2
+     }
+    },
+    {
+     "say": "Visitors still put a finger in its hole and make a *wish*.",
+     "show": {
+      "type": "icon",
+      "name": "star",
+      "label": "MAKE A WISH"
+     }
+    },
+    {
+     "say": "In Part 5: what was *James Bond* doing down here?",
+     "show": {
+      "type": "title",
+      "lines": [
+       "PART 5",
+       "JAMES BOND",
+       "WAS HERE"
+      ],
+      "red": 1
+     }
+    },
+    {
+     "say": "*Follow* so you don't miss it.",
+     "show": {
+      "type": "icon",
+      "name": "eye",
+      "label": "FOLLOW · TURN ON NOTIFICATIONS"
+     }
+    }
+   ],
+   "thumb": {
+    "lines": [
+     "THE CRYING",
+     "COLUMN"
+    ],
+    "red": 1,
+    "photo_search": "Hen's Eye column Basilica Cistern"
+   },
+   "broll": [
+    "Hen's Eye column Basilica Cistern",
+    "Basilica Cistern",
+    "Basilica Cistern columns",
+    "Theodosius Forum column"
+   ],
+   "publish": {
+    "title": "This Column Has Been Crying for Centuries 💧 Part 4 #shorts",
+    "description": "The 'Crying Column' of the Basilica Cistern: tear-drop carvings, a wet surface and the legend of the workers who died building it.\n\nSeries: Secrets of the Basilica Cistern — Part 4/5. Watch all parts on the channel.",
+    "hashtags": [
+     "#istanbul",
+     "#basilicacistern",
+     "#turkey",
+     "#history",
+     "#shorts"
+    ]
+   }
+  },
+  {
+   "beats": [
+    {
+     "say": "James Bond rowed a *boat* through this cistern.",
+     "show": {
+      "type": "photo",
+      "search": "Basilica Cistern",
+      "label": "BASILICA CISTERN · ISTANBUL",
+      "extra": 2
+     },
+     "sfx": "hit"
+    },
+    {
+     "say": "Scenes of *From Russia with Love* were filmed here in 1963.",
+     "show": {
+      "type": "number",
+      "value": "1963",
+      "label": "BOND FILM"
+     }
+    },
+    {
+     "say": "Back then, the cistern was full of *mud and water*.",
+     "show": {
+      "type": "photo",
+      "search": "Basilica Cistern columns",
+      "label": "HOW IT LOOKED",
+      "extra": 2
+     }
+    },
+    {
+     "say": "Dan Brown's *Inferno* also has its big finale down here.",
+     "show": {
+      "type": "photo",
+      "search": "Basilica Cistern lights",
+      "label": "INFERNO · DAN BROWN",
+      "extra": 2
+     }
+    },
+    {
+     "say": "In 2017 it closed for *earthquake* strengthening.",
+     "show": {
+      "type": "title",
+      "lines": [
+       "EARTHQUAKE",
+       "STRENGTHENING"
+      ],
+      "red": 1
+     },
+     "sfx": "riser"
+    },
+    {
+     "say": "It reopened in 2022 with new lights and *art installations*.",
+     "show": {
+      "type": "number",
+      "value": "2022",
+      "label": "REOPENED"
+     }
+    },
+    {
+     "say": "And Istanbul hides *hundreds* more cisterns underground.",
+     "show": {
+      "type": "photo",
+      "search": "Theodosius Cistern",
+      "label": "THEODOSIUS CISTERN",
+      "extra": 2
+     }
+    },
+    {
+     "say": "Like *Binbirdirek*, which now hosts concerts and events.",
+     "show": {
+      "type": "photo",
+      "search": "Binbirdirek Cistern",
+      "label": "BINBIRDIREK CISTERN",
+      "extra": 2
+     }
+    },
+    {
+     "say": "Series finale! Would you visit? *Comment* below.",
+     "show": {
+      "type": "title",
+      "lines": [
+       "WOULD YOU",
+       "GO DOWN",
+       "THERE?"
+      ],
+      "red": 2
+     }
+    },
+    {
+     "say": "*Follow* for the next hidden story.",
+     "show": {
+      "type": "icon",
+      "name": "eye",
+      "label": "FOLLOW · TURN ON NOTIFICATIONS"
+     }
+    }
+   ],
+   "thumb": {
+    "lines": [
+     "JAMES BOND",
+     "WAS HERE"
+    ],
+    "red": 1,
+    "photo_search": "Basilica Cistern"
+   },
+   "broll": [
+    "Basilica Cistern",
+    "Basilica Cistern lights",
+    "Theodosius Cistern",
+    "Binbirdirek Cistern"
+   ],
+   "publish": {
+    "title": "James Bond Rowed a Boat Through Here 🎬 Part 5 #shorts",
+    "description": "From Russia with Love (1963), Dan Brown's Inferno, the 2017–2022 restoration and Istanbul's other hidden cisterns.\n\nSeries: Secrets of the Basilica Cistern — Part 5/5. Watch all parts on the channel.",
+    "hashtags": [
+     "#istanbul",
+     "#basilicacistern",
+     "#turkey",
+     "#history",
+     "#shorts"
+    ]
+   }
+  }
+ ],
+ "logo": {
+  "brand": "HIDDEN TÜRKİYE",
+  "mono": "HT"
+ }
+}

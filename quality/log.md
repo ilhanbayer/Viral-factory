@@ -118,3 +118,13 @@ Kuyruk (kullanıcının seçtiği konular): S008 Tarsus'un Gizemli Kazısı (5 b
 - Puan: TR 7,4 / 7,8 / 7,8 / 7,4 / 7,8 · EN 7,4 / 7,2 / 7,4 / 7,6 / 7,8 → hepsi paylaşılıyor.
 - İyileştirme (bugün): kamera ikonu yerine videonun **fotoğraf havuzundan gerçek fotoğraf** konuyor (`broll.fill_missing_photos`, `series.P` artık ikon yedeği koymuyor); Commons aramasında boş/sınırlı yanıtta 2 kez yeniden deneme ve tek kelimeye kadar gevşetme ("Derinkuyu tunnel" → "Derinkuyu"). S011'deki 13 tarih/canlandırma sahnesi gerçek fotoğraf sahnesine çevrildi (kullanıcı kuralı: tarih animasyonu yok).
 - Kuyruk: S012e The Real Story of Troy (EN, 5 bölüm) yazıldı.
+
+## 2026-11-26 (17:00) — S011 Dünyaya Türkiye'den Yayılan 6 Şey (TR) + S011e Tarsus (EN), Actions 13. çalışma
+- Hata yok; süreler TR 53,5 / 57,1 / 49,1 / 48,1 / 54,3 / 53,6 sn, EN 38,0 / 36,9 / 36,6 / 40,9 / 44,2 sn; ses −14,0…−14,3 LUFS; siyah kare yok, 2,5 sn'den uzun donma yok.
+- b-roll havuzu: TR 36 / 35 / 33 / 24 / 33 / 27, EN 30 / 27 / 24 / 21 / 29 (hepsi ≥ 8).
+- Ekran ~2 sn'de bir değişiyor, tarih animasyonu yok, gerçek fotoğraflar ağırlıkta; BEĞEN/YORUM (LIKE/COMMENT) ve TAKİP ET (FOLLOW) çalışıyor; İngilizcede Türkçe yazı kalmamış.
+- Zayıf noktalar: TR B2 ve B4'te genel "belge" ikonu kartları (fotoğraf yerine); TR B4'te etiket ile altyazı aynı kelimeyi tekrarlıyor ("ALICILARDAN"). EN B1'deki Plutarkhos alıntısında "poop" (kıç güvertesi) kelimesi yanlış anlaşılabilir.
+- Puan: TR 8,0 / 7,4 / 7,8 / 7,4 / 7,8 / 7,8 · EN 7,6 / 7,8 / 7,8 / 7,6 / 7,8 → hepsi paylaşılıyor.
+- Paylaşım: S011 6 bölüm Metricool ile 29 Kas 20:30 → 1 Ara 17:00 zamanlandı; S011 uzun video birleştirme tetiklendi. EN: Göbekli Tepe Bölüm 5 (dljTdxC3rXE) ve Derinkuyu Bölüm 1 (iQajBXDT1j8) yüklendi.
+- İyileştirme (bugün): (1) Kanca fotoğrafında 0,25 sn'den itibaren kendini çizen **el çizimi kırmızı daire** vurgusu (`story.red_circle`, `show.circle`; ilk sahne fotoğrafsa otomatik). (2) **Görsel künyesi bölüm başına**: önceden tüm bölümler 1. bölümün ilk 12 görselini listeliyordu; artık her bölüm kendi kullandığı görselleri (en çok 30) yazıyor (CC BY-SA atıf doğruluğu).
+- Kuyruk: S013 Yerebatan Sarnıcı'nın Sırları (TR, 5 bölüm) + S013e Secrets of the Basilica Cistern (EN, 5 bölüm) yazıldı.
