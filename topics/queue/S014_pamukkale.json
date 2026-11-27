@@ -32,18 +32,26 @@
     {
      "say": "Bu beyazlık yerin altından gelen *sıcak sudan* doğdu.",
      "show": {
-      "type": "photo",
-      "search": "Pamukkale terraces",
-      "label": "SICAK SU KAYNAKLARI",
-      "extra": 2
+      "type": "map",
+      "pins": [
+       {
+        "at": "Denizli",
+        "label": "Pamukkale"
+       }
+      ],
+      "focus": "Denizli",
+      "zoom": 2.6
      }
     },
     {
      "say": "Su yaklaşık *35 derece* ve içinde bolca kireç taşıyor.",
      "show": {
-      "type": "number",
+      "type": "doc",
+      "org": "ÖLÇÜM",
+      "row": "PAMUKKALE SUYU",
       "value": "35",
-      "label": "DERECE SU"
+      "unit": "DERECE",
+      "sub": "TERMAL KAYNAK · YAKLAŞIK"
      },
      "sfx": "riser"
     },
@@ -59,11 +67,10 @@
     {
      "say": "Bu teraslara *traverten* deniyor.",
      "show": {
-      "type": "title",
-      "lines": [
-       "TRAVERTEN"
-      ],
-      "red": 1
+      "type": "building",
+      "kind": "columns",
+      "label": "TRAVERTEN",
+      "tag": "KİREÇ TAŞI"
      }
     },
     {
@@ -78,12 +85,10 @@
     {
      "say": "Uzaktan pamuktan bir *kale* gibi göründüğü için adı Pamukkale.",
      "show": {
-      "type": "title",
-      "lines": [
-       "PAMUK",
-       "+ KALE"
-      ],
-      "red": 2
+      "type": "sign",
+      "text": "PAMUKKALE",
+      "style": "brown",
+      "tag": "PAMUK + KALE"
      }
     },
     {
@@ -178,12 +183,10 @@
     {
      "say": "Sıcak su otellerin *havuzlarına* çekildi.",
      "show": {
-      "type": "list",
-      "items": [
-       "OTEL HAVUZLARI",
-       "YOLLAR",
-       "ARABALAR"
-      ]
+      "type": "building",
+      "kind": "house",
+      "label": "OTEL HAVUZLARI",
+      "tag": "1980'LER"
      }
     },
     {
@@ -246,9 +249,10 @@
     {
      "say": "Su artık havuzlara *sırayla* veriliyor ki beyaz kalsın.",
      "show": {
-      "type": "icon",
-      "name": "star",
-      "label": "SIRAYLA SULAMA"
+      "type": "ratio",
+      "n": 10,
+      "k": 4,
+      "title": "SIRAYLA SULAMA"
      }
     },
     {
@@ -365,19 +369,18 @@
     {
      "say": "Sır: yerden yükselen *karbondioksit* gazı.",
      "show": {
-      "type": "title",
-      "lines": [
-       "KARBONDİOKSİT"
-      ],
-      "red": 1
+      "type": "tape",
+      "text": "ZEHİRLİ GAZ"
      }
     },
     {
      "say": "Ölçümlerde gaz yerde *yüzde 91*'e kadar çıktı.",
      "show": {
-      "type": "number",
+      "type": "doc",
+      "org": "ÖLÇÜM",
+      "row": "CO₂ · YER SEVİYESİ",
       "value": "%91",
-      "label": "CO₂ · YER SEVİYESİ"
+      "sub": "PLUTONİON · 2018 ÇALIŞMASI"
      }
     },
     {
@@ -392,13 +395,10 @@
     {
      "say": "Sence rahipler sırrı biliyor muydu? *Yorumlara yaz*.",
      "show": {
-      "type": "title",
-      "lines": [
-       "RAHİPLER",
-       "SIRRI BİLİYOR",
-       "MUYDU?"
-      ],
-      "red": 2
+      "type": "split",
+      "top": "BİLİYORLARDI",
+      "bottom": "ŞANS",
+      "badge": "RAHİPLER"
      }
     },
     {
@@ -461,21 +461,21 @@
     {
      "say": "Su yıl boyu yaklaşık *36 derece*.",
      "show": {
-      "type": "number",
+      "type": "doc",
+      "org": "ÖLÇÜM",
+      "row": "ANTİK HAVUZ",
       "value": "36",
-      "label": "DERECE · YIL BOYU"
+      "unit": "DERECE",
+      "sub": "YIL BOYU · YAKLAŞIK"
      },
      "sfx": "riser"
     },
     {
      "say": "Havuzun bilinen adı *Kleopatra Havuzu*.",
      "show": {
-      "type": "title",
-      "lines": [
-       "KLEOPATRA",
-       "HAVUZU"
-      ],
-      "red": 1
+      "type": "sign",
+      "text": "KLEOPATRA HAVUZU",
+      "style": "brown"
      }
     },
     {
@@ -492,12 +492,8 @@
     {
      "say": "Ama Kleopatra'nın burada yüzdüğüne dair *kanıt yok*.",
      "show": {
-      "type": "title",
-      "lines": [
-       "KANIT",
-       "YOK"
-      ],
-      "red": 2
+      "type": "tape",
+      "text": "KANIT YOK"
      }
     },
     {
@@ -629,31 +625,28 @@
     {
      "say": "Bu, krank ve biyel düzeneğinin bilinen *en eski* tasviri.",
      "show": {
-      "type": "title",
-      "lines": [
-       "BİLİNEN",
-       "EN ESKİ"
-      ],
-      "red": 2
+      "type": "podium",
+      "win": "HİERAPOLİS",
+      "title": "EN ESKİ TASVİR"
      }
     },
     {
      "say": "Yaklaşık *1.700 yıl* önce, MS 3. yüzyılda yapıldı.",
      "show": {
-      "type": "number",
+      "type": "doc",
+      "org": "TARİHLEME",
+      "row": "AMMİANOS MEZARI",
       "value": "1.700",
-      "label": "YILLIK MAKİNE"
+      "unit": "YILLIK",
+      "sub": "MS 3. YÜZYIL"
      }
     },
     {
      "say": "Yani bu taş, sanayi devriminden çok önceki bir *mühendisliğin* kanıtı.",
      "show": {
-      "type": "title",
-      "lines": [
-       "ANTİK",
-       "MÜHENDİSLİK"
-      ],
-      "red": 2
+      "type": "building",
+      "kind": "bridge",
+      "label": "ANTİK MÜHENDİSLİK"
      }
     },
     {
@@ -677,12 +670,10 @@
     {
      "say": "Dizinin sonu! Pamukkale'ye gittin mi? *Yorumlara yaz*.",
      "show": {
-      "type": "title",
-      "lines": [
-       "PAMUKKALE'YE",
-       "GİTTİN Mİ?"
-      ],
-      "red": 2
+      "type": "split",
+      "top": "GİTTİM",
+      "bottom": "GİTMEDİM",
+      "badge": "PAMUKKALE"
      }
     },
     {

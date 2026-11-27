@@ -32,18 +32,26 @@
     {
      "say": "It was built by *hot water* rising from underground.",
      "show": {
-      "type": "photo",
-      "search": "Pamukkale terraces",
-      "label": "HOT SPRINGS",
-      "extra": 2
+      "type": "map",
+      "pins": [
+       {
+        "at": "Denizli",
+        "label": "Pamukkale"
+       }
+      ],
+      "focus": "Denizli",
+      "zoom": 2.6
      }
     },
     {
      "say": "The water is about *35 degrees Celsius* and full of calcium.",
      "show": {
-      "type": "number",
+      "type": "doc",
+      "org": "MEASUREMENT",
+      "row": "PAMUKKALE SPRING",
       "value": "35",
-      "label": "°C SPRING WATER"
+      "unit": "°C",
+      "sub": "THERMAL SPRING · APPROX."
      },
      "sfx": "riser"
     },
@@ -59,11 +67,10 @@
     {
      "say": "These terraces are called *travertines*.",
      "show": {
-      "type": "title",
-      "lines": [
-       "TRAVERTINE"
-      ],
-      "red": 1
+      "type": "building",
+      "kind": "columns",
+      "label": "TRAVERTINE",
+      "tag": "LIMESTONE"
      }
     },
     {
@@ -78,12 +85,10 @@
     {
      "say": "From afar it looks like a castle of cotton: *Pamukkale* means cotton castle.",
      "show": {
-      "type": "title",
-      "lines": [
-       "COTTON",
-       "CASTLE"
-      ],
-      "red": 2
+      "type": "sign",
+      "text": "PAMUKKALE",
+      "style": "brown",
+      "tag": "COTTON CASTLE"
      }
     },
     {
@@ -177,12 +182,10 @@
     {
      "say": "The hot spring water was pumped into hotel *swimming pools*.",
      "show": {
-      "type": "list",
-      "items": [
-       "HOTEL POOLS",
-       "ROADS",
-       "CARS"
-      ]
+      "type": "building",
+      "kind": "house",
+      "label": "HOTEL POOLS",
+      "tag": "1980S"
      }
     },
     {
@@ -245,9 +248,10 @@
     {
      "say": "Water is now sent to the pools in *rotation* to keep them white.",
      "show": {
-      "type": "icon",
-      "name": "star",
-      "label": "WATER IN ROTATION"
+      "type": "ratio",
+      "n": 10,
+      "k": 4,
+      "title": "WATER IN ROTATION"
      }
     },
     {
@@ -363,20 +367,18 @@
     {
      "say": "The secret: *carbon dioxide* rising from the ground.",
      "show": {
-      "type": "title",
-      "lines": [
-       "CARBON",
-       "DIOXIDE"
-      ],
-      "red": 1
+      "type": "tape",
+      "text": "TOXIC GAS"
      }
     },
     {
      "say": "Measurements found up to *91 percent* CO2 near the floor.",
      "show": {
-      "type": "number",
+      "type": "doc",
+      "org": "MEASUREMENT",
+      "row": "CO₂ AT GROUND LEVEL",
       "value": "91%",
-      "label": "CO₂ AT GROUND LEVEL"
+      "sub": "PLOUTONION · 2018 STUDY"
      }
     },
     {
@@ -391,13 +393,10 @@
     {
      "say": "Did the priests know the trick? *Comment* below.",
      "show": {
-      "type": "title",
-      "lines": [
-       "DID THEY",
-       "KNOW THE",
-       "TRICK?"
-      ],
-      "red": 2
+      "type": "split",
+      "top": "THEY KNEW",
+      "bottom": "PURE LUCK",
+      "badge": "PRIESTS"
      }
     },
     {
@@ -459,21 +458,21 @@
     {
      "say": "The water stays around *36 degrees* all year.",
      "show": {
-      "type": "number",
+      "type": "doc",
+      "org": "MEASUREMENT",
+      "row": "ANTIQUE POOL",
       "value": "36",
-      "label": "°C ALL YEAR"
+      "unit": "°C",
+      "sub": "ALL YEAR · APPROX."
      },
      "sfx": "riser"
     },
     {
      "say": "Its famous nickname: *Cleopatra's Pool*.",
      "show": {
-      "type": "title",
-      "lines": [
-       "CLEOPATRA'S",
-       "POOL"
-      ],
-      "red": 1
+      "type": "sign",
+      "text": "CLEOPATRA'S POOL",
+      "style": "brown"
      }
     },
     {
@@ -490,12 +489,8 @@
     {
      "say": "But there's *no evidence* she ever swam here.",
      "show": {
-      "type": "title",
-      "lines": [
-       "NO",
-       "EVIDENCE"
-      ],
-      "red": 2
+      "type": "tape",
+      "text": "NO EVIDENCE"
      }
     },
     {
@@ -626,31 +621,28 @@
     {
      "say": "It's the earliest known image of a *crank and connecting rod*.",
      "show": {
-      "type": "title",
-      "lines": [
-       "EARLIEST",
-       "KNOWN"
-      ],
-      "red": 2
+      "type": "podium",
+      "win": "HIERAPOLIS",
+      "title": "EARLIEST KNOWN"
      }
     },
     {
      "say": "It was carved about *1,700 years* ago, in the 3rd century AD.",
      "show": {
-      "type": "number",
+      "type": "doc",
+      "org": "DATING",
+      "row": "TOMB OF AMMIANOS",
       "value": "1,700",
-      "label": "YEARS OLD"
+      "unit": "YEARS OLD",
+      "sub": "3RD CENTURY AD"
      }
     },
     {
      "say": "Engineering long before the *Industrial Revolution*.",
      "show": {
-      "type": "title",
-      "lines": [
-       "ANCIENT",
-       "ENGINEERING"
-      ],
-      "red": 2
+      "type": "building",
+      "kind": "bridge",
+      "label": "ANCIENT ENGINEERING"
      }
     },
     {
@@ -674,12 +666,10 @@
     {
      "say": "Series finale! Would you visit Pamukkale? *Comment* below.",
      "show": {
-      "type": "title",
-      "lines": [
-       "WOULD YOU",
-       "VISIT?"
-      ],
-      "red": 2
+      "type": "split",
+      "top": "I WOULD",
+      "bottom": "NOT FOR ME",
+      "badge": "PAMUKKALE"
      }
     },
     {
