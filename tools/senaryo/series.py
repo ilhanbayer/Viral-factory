@@ -1,3 +1,15 @@
+"""SENARYO YARDIMCILARI — GÖRSEL DİL (kullanıcı isteği, 27 Kasım 2026; referans: "Spesifik Kayseri" tarzı infografik Shorts)
+Kalite hedefi: her bölüm en az 9/10 (görsel-konu uyumu, kanca, hareket/ritim, içerik zenginliği, ses/yazı; her biri 0-2).
+Her bölümde yaklaşık yarı yarıya: 5-6 gerçek fotoğraf P(...) + 4-6 hareketli infografik (factory/mograph.py):
+  yer adı geçince  -> MAP(pins=[{"at":"İl","label":..}], x=[il], dots=N, route={...}, fill=[il], focus=il, zoom=2.5, title, sub) ya da SIGN(metin, stil)
+  sayı geçince     -> DOC(kurum, satır, değer, birim, yıl, alt) / RATIO(n,k,başlık) / RANK(sıra, ad, başlık) / POD(kazanan)
+  tartışma/efsane  -> TAPE(kelime) ya da SPLIT(üst, alt, rozet)
+  soru anı         -> QM(kelime);  yapı/mimari -> BLD("mosque|castle|house|columns|tower|bridge", etiket, rozet)
+Eski düz yazı kartlarını (T/NU/L/IC/DO) yeni senaryolarda kullanma (yalnız "BÖLÜM k" kapanış kartı T kalabilir).
+AI görseli (P(..., ai="...", ai_first=True)) yalnızca gerçekten gerekli 1-2 sahnede; Pollinations sık başarısız oluyor.
+10-14 kısa beat, ~550-750 karakter, sayı/yıl string, bilgiler web aramasıyla doğrulanmış; açıklamaya kaynak satırı.
+Örnek: s_yerebatan.py, s_pamukkale.py (TR) ve *_en.py (EN).
+"""
 import json
 def P(search, label, fb=None, extra=2, ai=None, ai_first=False):
     """Commons fotoğrafı; ai=İngilizce sahne tarifi verilirse fotoğraf bulunamazsa (ai_first=True ise doğrudan)
