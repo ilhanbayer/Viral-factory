@@ -133,3 +133,13 @@ Kuyruk (kullanıcının seçtiği konular): S008 Tarsus'un Gizemli Kazısı (5 b
 - Sorun: `birlestir.yml` dikey bölümleri 1920x1080 kareye bulanık kenarla koyuyordu; izleyiciye dikey video gibi görünüyor.
 - Çözüm: `tools/uzun_yatay.py` + `yatay.yml` — dizinin tüm bölümleri baştan **gerçek yatay** (tam ekran yatay fotoğraflar, yatay yazı yerleşimi) render ediliyor; bölüm sonu "Bölüm k'de / takip et" cümleleri çıkarılıyor, sonda "ABONE OL" animasyonu; YouTube bölüm zaman damgaları otomatik.
 - Üretildi ve kontrol edildi (1920x1080, siyah kare yok, −13,9 LUFS): Göbeklitepe 3:11, Derinkuyu-Ürgüp 2:54, 6 Şey 4:46. Metricool'daki 28 Kas, 30 Kas, 2 Ara uzun video gönderileri bu yatay sürümlerle değiştirildi.
+
+## 2026-11-27 (17:00) — S012 Truva (TR) + S012e Troy (EN), Actions 14. çalışma
+- Hata yok; süreler TR 39,1 / 38,6 / 45,0 / 36,8 / 39,3 sn, EN 40,9 / 36,5 / 42,5 / 33,7 / 38,9 sn; hepsi 1080x1920 dikey; ses −14,1…−14,2 LUFS; siyah kare yok, 2,5 sn'den uzun donma yok.
+- b-roll havuzu: 27 / 21 / 21 / 24 / 24 (TR ve EN aynı; hepsi ≥ 8).
+- Ekran ~2 sn'de bir değişiyor, gerçek fotoğraflar ağırlıkta, kanca fotoğrafında kırmızı daire, BEĞEN/YORUM (LIKE/COMMENT) ve TAKİP ET (FOLLOW) çalışıyor; İngilizcede Türkçe yazı kalmamış.
+- Zayıf noktalar: B3'te "Priamos'un Hazinesi" etiketli görsel konuyla zayıf ilişkili bir resim, kanca heykeli Puşkin Müzesi'nden alakasız; B4 kancası İngilizce yazılı bir tahta çizimi (TR'de).
+- Puan: TR 7,6 / 7,6 / 7,4 / 7,4 / 7,6 · EN 7,6 / 7,6 / 7,4 / 7,4 / 7,6 → hepsi paylaşılıyor.
+- Paylaşım: S012 5 bölüm Metricool ile 1 Ara 20:30 → 3 Ara 13:00 zamanlandı; S012+S012e yatay uzun video render'ı tetiklendi. EN: Derinkuyu Part 2 (be3mFN04DKw) ve Part 3 (JYKZ5FxI8Aw) yüklendi.
+- İyileştirme (bugün): vurgulu (*) kelime söylendiği anda artık sadece yazı katmanı değil **tüm kare (arka plan fotoğrafı dahil) 0,22 sn'lik zoom darbesi** yapıyor (`story_compose.render_chunk`); yerel önizleme ile doğrulandı.
+- Kuyruk: S014 Pamukkale ve Hierapolis'in Sırları (TR, 5 bölüm) + S014e Secrets of Pamukkale & Hierapolis (EN, 5 bölüm) yazıldı.

@@ -173,6 +173,12 @@ def render_chunk(args):
                     if si > 0 and t - t0s < 0.12:   # çekim içi kesme: kısa flaş
                         fr = fr + 90 * (1 - (t - t0s) / 0.12)
                     fr = np.clip(fr, 0, 255).astype(np.uint8)
+            # anahtar kelimede tüm kare (arka plan fotoğrafı dahil) kısa zoom darbesi
+            bpunch = sum(max(0.0, 1 - (t - h) / 0.22) for h in hot if t >= h)
+            if bpunch > 0.01 and cs:
+                zb = 1.0 + 0.045 * min(1.0, bpunch)
+                Mb = cv2.getRotationMatrix2D((cx, cy), 0, zb)
+                fr = cv2.warpAffine(fr, Mb, (W, H), flags=cv2.INTER_LINEAR, borderMode=cv2.BORDER_REFLECT)
             if bdp:
                 bd = _backdrop(bdp, W, H)
                 if bd is not None:

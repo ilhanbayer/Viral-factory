@@ -1,0 +1,715 @@
+{
+ "id": "S014_pamukkale",
+ "format": "story",
+ "title": "Dizi: Pamukkale ve Hierapolis'in Sırları",
+ "brand": "İLGİNÇ BİLGİLER",
+ "theme": "dosya",
+ "lang": "tr",
+ "voice": {
+  "engine": "edge",
+  "speaker": "ahmet",
+  "rate": "+0%",
+  "pitch": "-2Hz"
+ },
+ "broll": [
+  "Pamukkale",
+  "Hierapolis",
+  "Denizli"
+ ],
+ "parts": [
+  {
+   "beats": [
+    {
+     "say": "Denizli'deki bu bembeyaz tepe *kar değil*, buz da değil.",
+     "show": {
+      "type": "photo",
+      "search": "Pamukkale travertines",
+      "label": "PAMUKKALE · DENİZLİ",
+      "extra": 2
+     },
+     "sfx": "hit"
+    },
+    {
+     "say": "Bu beyazlık yerin altından gelen *sıcak sudan* doğdu.",
+     "show": {
+      "type": "photo",
+      "search": "Pamukkale terraces",
+      "label": "SICAK SU KAYNAKLARI",
+      "extra": 2
+     }
+    },
+    {
+     "say": "Su yaklaşık *35 derece* ve içinde bolca kireç taşıyor.",
+     "show": {
+      "type": "number",
+      "value": "35",
+      "label": "DERECE SU"
+     },
+     "sfx": "riser"
+    },
+    {
+     "say": "Su akarken kireç taşa dönüşüp *beyaz teraslar* kuruyor.",
+     "show": {
+      "type": "photo",
+      "search": "Pamukkale pools",
+      "label": "TRAVERTEN HAVUZLARI",
+      "extra": 2
+     }
+    },
+    {
+     "say": "Bu teraslara *traverten* deniyor.",
+     "show": {
+      "type": "title",
+      "lines": [
+       "TRAVERTEN"
+      ],
+      "red": 1
+     }
+    },
+    {
+     "say": "Teraslar yaklaşık *2,7 kilometre* boyunca uzanıyor.",
+     "show": {
+      "type": "photo",
+      "search": "Pamukkale",
+      "label": "2,7 KM BEYAZ TEPE",
+      "extra": 2
+     }
+    },
+    {
+     "say": "Uzaktan pamuktan bir *kale* gibi göründüğü için adı Pamukkale.",
+     "show": {
+      "type": "title",
+      "lines": [
+       "PAMUK",
+       "+ KALE"
+      ],
+      "red": 2
+     }
+    },
+    {
+     "say": "1988'de antik Hierapolis ile birlikte *UNESCO* listesine girdi.",
+     "show": {
+      "type": "photo",
+      "search": "Hierapolis",
+      "label": "HİERAPOLİS · UNESCO",
+      "extra": 2
+     }
+    },
+    {
+     "say": "Ama bir dönem bu beyaz tepe *kahverengiye* döndü.",
+     "show": {
+      "type": "photo",
+      "search": "Pamukkale terraces",
+      "label": "NE OLDU?",
+      "extra": 2
+     }
+    },
+    {
+     "say": "Bölüm 2'de: travertenlerin üstüne kurulan *oteller*.",
+     "show": {
+      "type": "title",
+      "lines": [
+       "BÖLÜM 2",
+       "TEPENİN ÜSTÜNDEKİ",
+       "OTELLER"
+      ],
+      "red": 1
+     }
+    },
+    {
+     "say": "Kaçırmamak için *takip et*.",
+     "show": {
+      "type": "icon",
+      "name": "eye",
+      "label": "TAKİP ET · BİLDİRİMİ AÇ"
+     }
+    }
+   ],
+   "thumb": {
+    "lines": [
+     "KAR DEĞİL",
+     "BAKIN NE?"
+    ],
+    "red": 1,
+    "photo_search": "Pamukkale travertines"
+   },
+   "broll": [
+    "Pamukkale",
+    "Pamukkale travertines",
+    "Pamukkale terraces",
+    "Hierapolis"
+   ],
+   "publish": {
+    "title": "Pamukkale Kar Değil, Bakın Ne? ☁️ Bölüm 1 #shorts",
+    "description": "Denizli'deki Pamukkale travertenleri: sıcak su kaynaklarındaki kireçten binlerce yılda oluşan beyaz teraslar. 1988'den beri UNESCO Dünya Mirası.\n\nDizi: Pamukkale ve Hierapolis'in Sırları — Bölüm 1/5. Tüm bölümler kanalda.",
+    "hashtags": [
+     "#pamukkale",
+     "#hierapolis",
+     "#denizli",
+     "#tarih",
+     "#ilginçbilgiler",
+     "#shorts"
+    ]
+   }
+  },
+  {
+   "beats": [
+    {
+     "say": "Bir zamanlar Pamukkale'nin *tam üstünde* oteller vardı.",
+     "show": {
+      "type": "photo",
+      "search": "Pamukkale travertines",
+      "label": "PAMUKKALE · DENİZLİ",
+      "extra": 2
+     },
+     "sfx": "hit"
+    },
+    {
+     "say": "Turizm patlayınca tepeye *oteller* ve yollar yapıldı.",
+     "show": {
+      "type": "photo",
+      "search": "Pamukkale",
+      "label": "TEPEDEKİ OTELLER",
+      "extra": 2
+     }
+    },
+    {
+     "say": "Sıcak su otellerin *havuzlarına* çekildi.",
+     "show": {
+      "type": "list",
+      "items": [
+       "OTEL HAVUZLARI",
+       "YOLLAR",
+       "ARABALAR"
+      ]
+     }
+    },
+    {
+     "say": "Su gelmeyen teraslar kurudu ve *kararmaya* başladı.",
+     "show": {
+      "type": "photo",
+      "search": "Pamukkale terraces",
+      "label": "KURUYAN TERASLAR",
+      "extra": 2
+     },
+     "sfx": "riser"
+    },
+    {
+     "say": "Anlatılana göre insanlar teraslarda *motosikletle* bile geziyordu.",
+     "show": {
+      "type": "title",
+      "lines": [
+       "TERASLARDA",
+       "MOTOSİKLET"
+      ],
+      "red": 2
+     }
+    },
+    {
+     "say": "Kar gibi beyaz teraslar *gri-kahverengi* bir renge döndü.",
+     "show": {
+      "type": "photo",
+      "search": "Pamukkale travertines",
+      "label": "RENGİ KARARDI",
+      "extra": 2
+     }
+    },
+    {
+     "say": "UNESCO listesine girince oteller *yıkıldı*.",
+     "show": {
+      "type": "photo",
+      "search": "Hierapolis",
+      "label": "OTELLER YIKILDI",
+      "extra": 2
+     }
+    },
+    {
+     "say": "Tepeden geçen yol da *kaldırıldı*.",
+     "show": {
+      "type": "photo",
+      "search": "Pamukkale pools",
+      "label": "YOL KALDIRILDI",
+      "extra": 2
+     }
+    },
+    {
+     "say": "Bugün teraslarda sadece *çıplak ayakla* yürünebiliyor.",
+     "show": {
+      "type": "photo",
+      "search": "Pamukkale tourists",
+      "label": "ÇIPLAK AYAK KURALI",
+      "extra": 2
+     }
+    },
+    {
+     "say": "Su artık havuzlara *sırayla* veriliyor ki beyaz kalsın.",
+     "show": {
+      "type": "icon",
+      "name": "star",
+      "label": "SIRAYLA SULAMA"
+     }
+    },
+    {
+     "say": "Bölüm 3'te: tepenin üstündeki *Cehennem Kapısı*.",
+     "show": {
+      "type": "title",
+      "lines": [
+       "BÖLÜM 3",
+       "CEHENNEM",
+       "KAPISI"
+      ],
+      "red": 1
+     }
+    },
+    {
+     "say": "Kaçırmamak için *takip et*.",
+     "show": {
+      "type": "icon",
+      "name": "eye",
+      "label": "TAKİP ET · BİLDİRİMİ AÇ"
+     }
+    }
+   ],
+   "thumb": {
+    "lines": [
+     "TEPENİN ÜSTÜNE",
+     "OTEL"
+    ],
+    "red": 1,
+    "photo_search": "Pamukkale travertines"
+   },
+   "broll": [
+    "Pamukkale",
+    "Pamukkale travertines",
+    "Pamukkale tourists",
+    "Hierapolis"
+   ],
+   "publish": {
+    "title": "Pamukkale'nin Üstüne Otel Yapılmıştı 🏨 Bölüm 2 #shorts",
+    "description": "Travertenlerin üstüne yapılan oteller, havuzları kurutan su ve UNESCO sonrası yıkım: bugün teraslarda neden çıplak ayakla yürünüyor?\n\nDizi: Pamukkale ve Hierapolis'in Sırları — Bölüm 2/5. Tüm bölümler kanalda.",
+    "hashtags": [
+     "#pamukkale",
+     "#hierapolis",
+     "#denizli",
+     "#tarih",
+     "#ilginçbilgiler",
+     "#shorts"
+    ]
+   }
+  },
+  {
+   "beats": [
+    {
+     "say": "Pamukkale'nin hemen üstünde bir *Cehennem Kapısı* var.",
+     "show": {
+      "type": "photo",
+      "search": "Ploutonion Hierapolis",
+      "label": "PLUTONİON · HİERAPOLİS",
+      "extra": 2
+     },
+     "sfx": "hit"
+    },
+    {
+     "say": "Antik çağda adı *Plutonion*: yeraltı tanrısı Pluton'un mağarası.",
+     "show": {
+      "type": "photo",
+      "search": "Pluto statue",
+      "label": "YERALTI TANRISI PLUTON",
+      "extra": 2
+     }
+    },
+    {
+     "say": "Coğrafyacı *Strabon* içine kuş attığını, kuşların hemen öldüğünü yazdı.",
+     "show": {
+      "type": "quote",
+      "text": "İçeri giren her canlı hemen ölür.",
+      "who": "STRABON"
+     }
+    },
+    {
+     "say": "Ama rahipler içeri girip *sağ* çıkıyordu.",
+     "show": {
+      "type": "title",
+      "lines": [
+       "RAHİPLER",
+       "SAĞ ÇIKIYORDU"
+      ],
+      "red": 2
+     },
+     "sfx": "riser"
+    },
+    {
+     "say": "2013'te İtalyan arkeologlar mağarayı *yeniden buldu*.",
+     "show": {
+      "type": "photo",
+      "search": "Hierapolis ruins",
+      "label": "2013 · YENİDEN KEŞİF",
+      "extra": 2
+     }
+    },
+    {
+     "say": "Kazı sırasında yaklaşan *kuşların* öldüğü görüldü.",
+     "show": {
+      "type": "icon",
+      "name": "question",
+      "label": "KUŞLAR NEDEN ÖLDÜ?"
+     }
+    },
+    {
+     "say": "Sır: yerden yükselen *karbondioksit* gazı.",
+     "show": {
+      "type": "title",
+      "lines": [
+       "KARBONDİOKSİT"
+      ],
+      "red": 1
+     }
+    },
+    {
+     "say": "Ölçümlerde gaz yerde *yüzde 91*'e kadar çıktı.",
+     "show": {
+      "type": "number",
+      "value": "%91",
+      "label": "CO₂ · YER SEVİYESİ"
+     }
+    },
+    {
+     "say": "Gaz ağır olduğu için yere çöküyor; boylu rahipler belki de bu yüzden *kurtuldu*.",
+     "show": {
+      "type": "photo",
+      "search": "Hierapolis",
+      "label": "GAZ YERDE KALIYOR",
+      "extra": 2
+     }
+    },
+    {
+     "say": "Sence rahipler sırrı biliyor muydu? *Yorumlara yaz*.",
+     "show": {
+      "type": "title",
+      "lines": [
+       "RAHİPLER",
+       "SIRRI BİLİYOR",
+       "MUYDU?"
+      ],
+      "red": 2
+     }
+    },
+    {
+     "say": "Bölüm 4'te: *Kleopatra Havuzu*. Kaçırmamak için takip et.",
+     "show": {
+      "type": "icon",
+      "name": "eye",
+      "label": "TAKİP ET · BİLDİRİMİ AÇ"
+     }
+    }
+   ],
+   "thumb": {
+    "lines": [
+     "CEHENNEM",
+     "KAPISI"
+    ],
+    "red": 1,
+    "photo_search": "Ploutonion Hierapolis"
+   },
+   "broll": [
+    "Ploutonion Hierapolis",
+    "Hierapolis",
+    "Pluto statue",
+    "Hierapolis ruins"
+   ],
+   "publish": {
+    "title": "Cehennem Kapısı Pamukkale'de 🔥 Bölüm 3 #shorts",
+    "description": "Hierapolis'teki Plutonion: içine girenin öldüğü anlatılan antik mağara. 2013'te İtalyan arkeologlar yeniden buldu; ölümlerin sırrı karbondioksit.\n\nDizi: Pamukkale ve Hierapolis'in Sırları — Bölüm 3/5. Tüm bölümler kanalda.",
+    "hashtags": [
+     "#pamukkale",
+     "#hierapolis",
+     "#denizli",
+     "#tarih",
+     "#ilginçbilgiler",
+     "#shorts"
+    ]
+   }
+  },
+  {
+   "beats": [
+    {
+     "say": "Bu havuzda insanlar *antik sütunların* arasında yüzüyor.",
+     "show": {
+      "type": "photo",
+      "search": "Antique Pool Pamukkale",
+      "label": "ANTİK HAVUZ · PAMUKKALE",
+      "extra": 2
+     },
+     "sfx": "hit"
+    },
+    {
+     "say": "Sütunlar Hierapolis'teki bir *depremde* suya devrildi.",
+     "show": {
+      "type": "photo",
+      "search": "Cleopatra pool Hierapolis",
+      "label": "DEPREMDE DÜŞEN SÜTUNLAR",
+      "extra": 2
+     }
+    },
+    {
+     "say": "Su yıl boyu yaklaşık *36 derece*.",
+     "show": {
+      "type": "number",
+      "value": "36",
+      "label": "DERECE · YIL BOYU"
+     },
+     "sfx": "riser"
+    },
+    {
+     "say": "Havuzun bilinen adı *Kleopatra Havuzu*.",
+     "show": {
+      "type": "title",
+      "lines": [
+       "KLEOPATRA",
+       "HAVUZU"
+      ],
+      "red": 1
+     }
+    },
+    {
+     "say": "Efsaneye göre Antonius burayı Kleopatra'ya *hediye* etti.",
+     "show": {
+      "type": "icon",
+      "name": "star",
+      "label": "EFSANE"
+     }
+    },
+    {
+     "say": "Ama Kleopatra'nın burada yüzdüğüne dair *kanıt yok*.",
+     "show": {
+      "type": "title",
+      "lines": [
+       "KANIT",
+       "YOK"
+      ],
+      "red": 2
+     }
+    },
+    {
+     "say": "Havuzun dibinde mermer *sütun parçaları* hâlâ yatıyor.",
+     "show": {
+      "type": "photo",
+      "search": "Cleopatra pool Hierapolis",
+      "label": "SUYUN ALTINDAKİ SÜTUNLAR",
+      "extra": 2
+     }
+    },
+    {
+     "say": "Antik çağda Hierapolis zaten bir *şifa* şehriydi.",
+     "show": {
+      "type": "photo",
+      "search": "Hierapolis",
+      "label": "ŞİFALI SULAR ŞEHRİ",
+      "extra": 2
+     }
+    },
+    {
+     "say": "İnsanlar uzaklardan *sıcak sulara* girmeye gelirdi.",
+     "show": {
+      "type": "photo",
+      "search": "Pamukkale",
+      "label": "ANTİK KAPLICA",
+      "extra": 2
+     }
+    },
+    {
+     "say": "Bugün de su kabarcıklarla *köpürüyor*.",
+     "show": {
+      "type": "photo",
+      "search": "Antique Pool Pamukkale",
+      "label": "KABARCIKLI SU",
+      "extra": 2
+     }
+    },
+    {
+     "say": "Bölüm 5'te: Hierapolis'teki *dünyanın en eski makinesi*.",
+     "show": {
+      "type": "title",
+      "lines": [
+       "BÖLÜM 5",
+       "EN ESKİ",
+       "MAKİNE"
+      ],
+      "red": 1
+     }
+    },
+    {
+     "say": "Kaçırmamak için *takip et*.",
+     "show": {
+      "type": "icon",
+      "name": "eye",
+      "label": "TAKİP ET · BİLDİRİMİ AÇ"
+     }
+    }
+   ],
+   "thumb": {
+    "lines": [
+     "SÜTUNLARIN",
+     "ARASINDA YÜZ"
+    ],
+    "red": 1,
+    "photo_search": "Antique Pool Pamukkale"
+   },
+   "broll": [
+    "Antique Pool Pamukkale",
+    "Cleopatra pool Hierapolis",
+    "Hierapolis",
+    "Pamukkale"
+   ],
+   "publish": {
+    "title": "Antik Sütunların Arasında Yüzülen Havuz 🏊 Bölüm 4 #shorts",
+    "description": "Pamukkale Antik Havuz (Kleopatra Havuzu): depremde düşen antik sütunların arasında sıcak suda yüzmek. Kleopatra efsanesi ve gerçek.\n\nDizi: Pamukkale ve Hierapolis'in Sırları — Bölüm 4/5. Tüm bölümler kanalda.",
+    "hashtags": [
+     "#pamukkale",
+     "#hierapolis",
+     "#denizli",
+     "#tarih",
+     "#ilginçbilgiler",
+     "#shorts"
+    ]
+   }
+  },
+  {
+   "beats": [
+    {
+     "say": "Pamukkale'deki bir mezar taşında *bir makine* çizili.",
+     "show": {
+      "type": "photo",
+      "search": "Hierapolis sawmill",
+      "label": "AMMİANOS'UN MEZARI",
+      "extra": 2
+     },
+     "sfx": "hit"
+    },
+    {
+     "say": "Hierapolis'in nekropolünde *1.200'den fazla* mezar var.",
+     "show": {
+      "type": "photo",
+      "search": "Hierapolis necropolis",
+      "label": "HİERAPOLİS NEKROPOLÜ",
+      "extra": 2
+     }
+    },
+    {
+     "say": "Bunlardan biri Marcus Aurelius *Ammianos* adlı bir ustanın.",
+     "show": {
+      "type": "photo",
+      "search": "Hierapolis necropolis tomb",
+      "label": "USTANIN MEZARI",
+      "extra": 2
+     }
+    },
+    {
+     "say": "Taşta su gücüyle çalışan bir *taş kesme* makinesi var.",
+     "show": {
+      "type": "list",
+      "items": [
+       "SU ÇARKI",
+       "KRANK",
+       "TESTERE"
+      ]
+     },
+     "sfx": "riser"
+    },
+    {
+     "say": "Bu, krank ve biyel düzeneğinin bilinen *en eski* tasviri.",
+     "show": {
+      "type": "title",
+      "lines": [
+       "BİLİNEN",
+       "EN ESKİ"
+      ],
+      "red": 2
+     }
+    },
+    {
+     "say": "Yaklaşık *1.700 yıl* önce, MS 3. yüzyılda yapıldı.",
+     "show": {
+      "type": "number",
+      "value": "1.700",
+      "label": "YILLIK MAKİNE"
+     }
+    },
+    {
+     "say": "Yani bu taş, sanayi devriminden çok önceki bir *mühendisliğin* kanıtı.",
+     "show": {
+      "type": "title",
+      "lines": [
+       "ANTİK",
+       "MÜHENDİSLİK"
+      ],
+      "red": 2
+     }
+    },
+    {
+     "say": "Şehrin dev tiyatrosu bugün hâlâ *ayakta*.",
+     "show": {
+      "type": "photo",
+      "search": "Hierapolis theatre",
+      "label": "HİERAPOLİS TİYATROSU",
+      "extra": 2
+     }
+    },
+    {
+     "say": "Havari *Filipus*'un burada öldüğüne inanılıyor.",
+     "show": {
+      "type": "photo",
+      "search": "Martyrium of Saint Philip Hierapolis",
+      "label": "AZİZ FİLİPUS ANITI",
+      "extra": 2
+     }
+    },
+    {
+     "say": "Dizinin sonu! Pamukkale'ye gittin mi? *Yorumlara yaz*.",
+     "show": {
+      "type": "title",
+      "lines": [
+       "PAMUKKALE'YE",
+       "GİTTİN Mİ?"
+      ],
+      "red": 2
+     }
+    },
+    {
+     "say": "Yeni dizi için *takip et*.",
+     "show": {
+      "type": "icon",
+      "name": "eye",
+      "label": "TAKİP ET · BİLDİRİMİ AÇ"
+     }
+    }
+   ],
+   "thumb": {
+    "lines": [
+     "MEZARDA",
+     "MAKİNE"
+    ],
+    "red": 1,
+    "photo_search": "Hierapolis sawmill"
+   },
+   "broll": [
+    "Hierapolis necropolis",
+    "Hierapolis sawmill",
+    "Hierapolis theatre",
+    "Martyrium of Saint Philip Hierapolis"
+   ],
+   "publish": {
+    "title": "Bu Mezar Taşında Bir Makine Var ⚙️ Bölüm 5 #shorts",
+    "description": "Hierapolis Nekropolü, Ammianos'un mezarındaki taş kesme makinesi kabartması (krank-biyel düzeneğinin bilinen en eski tasviri) ve Aziz Filipus.\n\nDizi: Pamukkale ve Hierapolis'in Sırları — Bölüm 5/5. Tüm bölümler kanalda.",
+    "hashtags": [
+     "#pamukkale",
+     "#hierapolis",
+     "#denizli",
+     "#tarih",
+     "#ilginçbilgiler",
+     "#shorts"
+    ]
+   }
+  }
+ ]
+}

@@ -4,9 +4,9 @@
 
 **83 video** · **9 tanesi YouTube'da** · yeni videolar her gün otomatik eklenir · [tüm sürümler](https://github.com/ilhanbayer/Viral-factory/releases)
 
-**Sıradaki konular:** Dizi: Yerebatan Sarnıcı'nın Sırları → Series: Secrets of the Basilica Cistern (EN)
+**Sıradaki konular:** Dizi: Yerebatan Sarnıcı'nın Sırları → Series: Secrets of the Basilica Cistern (EN) → Dizi: Pamukkale ve Hierapolis'in Sırları → Series: Secrets of Pamukkale & Hierapolis (EN)
 
-Zapier yükleme çağrısı (toplam): 25 · aylık sınır 45
+Zapier yükleme çağrısı (toplam): 29 · aylık sınır 45
 
 | Kapak | Video | İndir |
 |:-:|---|:-:|

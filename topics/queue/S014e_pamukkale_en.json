@@ -1,0 +1,715 @@
+{
+ "id": "S014e_pamukkale_en",
+ "format": "story",
+ "title": "Series: Secrets of Pamukkale & Hierapolis (EN)",
+ "brand": "HIDDEN TÜRKİYE",
+ "theme": "dosya",
+ "lang": "en",
+ "voice": {
+  "engine": "edge",
+  "speaker": "christopher",
+  "rate": "+0%",
+  "pitch": "-2Hz"
+ },
+ "broll": [
+  "Pamukkale",
+  "Hierapolis",
+  "Denizli"
+ ],
+ "parts": [
+  {
+   "beats": [
+    {
+     "say": "This white hill in Türkiye isn't *snow*, and it isn't ice.",
+     "show": {
+      "type": "photo",
+      "search": "Pamukkale travertines",
+      "label": "PAMUKKALE · DENİZLİ",
+      "extra": 2
+     },
+     "sfx": "hit"
+    },
+    {
+     "say": "It was built by *hot water* rising from underground.",
+     "show": {
+      "type": "photo",
+      "search": "Pamukkale terraces",
+      "label": "HOT SPRINGS",
+      "extra": 2
+     }
+    },
+    {
+     "say": "The water is about *35 degrees Celsius* and full of calcium.",
+     "show": {
+      "type": "number",
+      "value": "35",
+      "label": "°C SPRING WATER"
+     },
+     "sfx": "riser"
+    },
+    {
+     "say": "As it flows, the calcium turns into stone and builds *white terraces*.",
+     "show": {
+      "type": "photo",
+      "search": "Pamukkale pools",
+      "label": "TRAVERTINE POOLS",
+      "extra": 2
+     }
+    },
+    {
+     "say": "These terraces are called *travertines*.",
+     "show": {
+      "type": "title",
+      "lines": [
+       "TRAVERTINE"
+      ],
+      "red": 1
+     }
+    },
+    {
+     "say": "They stretch for about *2.7 kilometers*.",
+     "show": {
+      "type": "photo",
+      "search": "Pamukkale",
+      "label": "2.7 KM OF WHITE",
+      "extra": 2
+     }
+    },
+    {
+     "say": "From afar it looks like a castle of cotton: *Pamukkale* means cotton castle.",
+     "show": {
+      "type": "title",
+      "lines": [
+       "COTTON",
+       "CASTLE"
+      ],
+      "red": 2
+     }
+    },
+    {
+     "say": "In 1988 it joined the *UNESCO* list with the ancient city of Hierapolis.",
+     "show": {
+      "type": "photo",
+      "search": "Hierapolis",
+      "label": "HIERAPOLIS · UNESCO",
+      "extra": 2
+     }
+    },
+    {
+     "say": "But for years, this white hill was turning *brown*.",
+     "show": {
+      "type": "photo",
+      "search": "Pamukkale terraces",
+      "label": "WHAT HAPPENED?",
+      "extra": 2
+     }
+    },
+    {
+     "say": "In Part 2: the *hotels* built on top of it.",
+     "show": {
+      "type": "title",
+      "lines": [
+       "PART 2",
+       "HOTELS ON",
+       "THE TERRACES"
+      ],
+      "red": 1
+     }
+    },
+    {
+     "say": "*Follow* so you don't miss it.",
+     "show": {
+      "type": "icon",
+      "name": "eye",
+      "label": "FOLLOW · TURN ON NOTIFICATIONS"
+     }
+    }
+   ],
+   "thumb": {
+    "lines": [
+     "NOT SNOW",
+     "SO WHAT IS IT?"
+    ],
+    "red": 1,
+    "photo_search": "Pamukkale travertines"
+   },
+   "broll": [
+    "Pamukkale",
+    "Pamukkale travertines",
+    "Pamukkale terraces",
+    "Hierapolis"
+   ],
+   "publish": {
+    "title": "This Isn't Snow. It's Pamukkale ☁️ Part 1 #shorts",
+    "description": "The travertine terraces of Pamukkale in Denizli, Türkiye: white limestone pools built by hot spring water over thousands of years. A UNESCO World Heritage Site since 1988.\n\nSeries: Secrets of Pamukkale & Hierapolis — Part 1/5. Watch all parts on the channel.",
+    "hashtags": [
+     "#pamukkale",
+     "#hierapolis",
+     "#turkey",
+     "#history",
+     "#shorts"
+    ]
+   }
+  },
+  {
+   "beats": [
+    {
+     "say": "There used to be *hotels* right on top of Pamukkale.",
+     "show": {
+      "type": "photo",
+      "search": "Pamukkale travertines",
+      "label": "PAMUKKALE · DENİZLİ",
+      "extra": 2
+     },
+     "sfx": "hit"
+    },
+    {
+     "say": "When tourism boomed, hotels and *roads* went up on the hill.",
+     "show": {
+      "type": "photo",
+      "search": "Pamukkale",
+      "label": "HOTELS ON THE HILL",
+      "extra": 2
+     }
+    },
+    {
+     "say": "The hot spring water was pumped into hotel *swimming pools*.",
+     "show": {
+      "type": "list",
+      "items": [
+       "HOTEL POOLS",
+       "ROADS",
+       "CARS"
+      ]
+     }
+    },
+    {
+     "say": "Terraces without water dried out and started to turn *dark*.",
+     "show": {
+      "type": "photo",
+      "search": "Pamukkale terraces",
+      "label": "DRYING TERRACES",
+      "extra": 2
+     },
+     "sfx": "riser"
+    },
+    {
+     "say": "Reportedly, people even rode *motorbikes* across the terraces.",
+     "show": {
+      "type": "title",
+      "lines": [
+       "MOTORBIKES",
+       "ON THE POOLS"
+      ],
+      "red": 2
+     }
+    },
+    {
+     "say": "The snow-white stone turned *grey and brown*.",
+     "show": {
+      "type": "photo",
+      "search": "Pamukkale travertines",
+      "label": "LOSING ITS WHITE",
+      "extra": 2
+     }
+    },
+    {
+     "say": "After the UNESCO listing, the hotels were *demolished*.",
+     "show": {
+      "type": "photo",
+      "search": "Hierapolis",
+      "label": "HOTELS DEMOLISHED",
+      "extra": 2
+     }
+    },
+    {
+     "say": "The road over the terraces was *removed* too.",
+     "show": {
+      "type": "photo",
+      "search": "Pamukkale pools",
+      "label": "ROAD REMOVED",
+      "extra": 2
+     }
+    },
+    {
+     "say": "Today you can only walk the terraces *barefoot*.",
+     "show": {
+      "type": "photo",
+      "search": "Pamukkale tourists",
+      "label": "BAREFOOT ONLY",
+      "extra": 2
+     }
+    },
+    {
+     "say": "Water is now sent to the pools in *rotation* to keep them white.",
+     "show": {
+      "type": "icon",
+      "name": "star",
+      "label": "WATER IN ROTATION"
+     }
+    },
+    {
+     "say": "In Part 3: the *Gate to Hell* above the terraces.",
+     "show": {
+      "type": "title",
+      "lines": [
+       "PART 3",
+       "THE GATE",
+       "TO HELL"
+      ],
+      "red": 1
+     }
+    },
+    {
+     "say": "*Follow* so you don't miss it.",
+     "show": {
+      "type": "icon",
+      "name": "eye",
+      "label": "FOLLOW · TURN ON NOTIFICATIONS"
+     }
+    }
+   ],
+   "thumb": {
+    "lines": [
+     "HOTELS ON",
+     "TOP OF IT"
+    ],
+    "red": 1,
+    "photo_search": "Pamukkale travertines"
+   },
+   "broll": [
+    "Pamukkale",
+    "Pamukkale travertines",
+    "Pamukkale tourists",
+    "Hierapolis"
+   ],
+   "publish": {
+    "title": "They Built Hotels on Top of Pamukkale 🏨 Part 2 #shorts",
+    "description": "Hotels on the travertines, spring water diverted into their pools, and the demolition after UNESCO listing: why you now walk Pamukkale barefoot.\n\nSeries: Secrets of Pamukkale & Hierapolis — Part 2/5. Watch all parts on the channel.",
+    "hashtags": [
+     "#pamukkale",
+     "#hierapolis",
+     "#turkey",
+     "#history",
+     "#shorts"
+    ]
+   }
+  },
+  {
+   "beats": [
+    {
+     "say": "Right above Pamukkale there's a real *Gate to Hell*.",
+     "show": {
+      "type": "photo",
+      "search": "Ploutonion Hierapolis",
+      "label": "PLOUTONION · HIERAPOLIS",
+      "extra": 2
+     },
+     "sfx": "hit"
+    },
+    {
+     "say": "The ancients called it the *Ploutonion*, the cave of Pluto, god of the underworld.",
+     "show": {
+      "type": "photo",
+      "search": "Pluto statue",
+      "label": "PLUTO · GOD OF THE UNDERWORLD",
+      "extra": 2
+     }
+    },
+    {
+     "say": "The geographer *Strabo* wrote that sparrows he threw inside died at once.",
+     "show": {
+      "type": "quote",
+      "text": "Any animal that enters meets instant death.",
+      "who": "STRABO"
+     }
+    },
+    {
+     "say": "Yet the priests walked in and came out *alive*.",
+     "show": {
+      "type": "title",
+      "lines": [
+       "THE PRIESTS",
+       "SURVIVED"
+      ],
+      "red": 2
+     },
+     "sfx": "riser"
+    },
+    {
+     "say": "In 2013, Italian archaeologists *rediscovered* the cave.",
+     "show": {
+      "type": "photo",
+      "search": "Hierapolis ruins",
+      "label": "2013 · REDISCOVERED",
+      "extra": 2
+     }
+    },
+    {
+     "say": "During the dig, birds flying too close *dropped dead*.",
+     "show": {
+      "type": "icon",
+      "name": "question",
+      "label": "WHY DID BIRDS DIE?"
+     }
+    },
+    {
+     "say": "The secret: *carbon dioxide* rising from the ground.",
+     "show": {
+      "type": "title",
+      "lines": [
+       "CARBON",
+       "DIOXIDE"
+      ],
+      "red": 1
+     }
+    },
+    {
+     "say": "Measurements found up to *91 percent* CO2 near the floor.",
+     "show": {
+      "type": "number",
+      "value": "91%",
+      "label": "CO₂ AT GROUND LEVEL"
+     }
+    },
+    {
+     "say": "The gas is heavy and stays low, so tall priests may have *breathed above it*.",
+     "show": {
+      "type": "photo",
+      "search": "Hierapolis",
+      "label": "THE GAS STAYS LOW",
+      "extra": 2
+     }
+    },
+    {
+     "say": "Did the priests know the trick? *Comment* below.",
+     "show": {
+      "type": "title",
+      "lines": [
+       "DID THEY",
+       "KNOW THE",
+       "TRICK?"
+      ],
+      "red": 2
+     }
+    },
+    {
+     "say": "In Part 4: *Cleopatra's Pool*. *Follow* so you don't miss it.",
+     "show": {
+      "type": "icon",
+      "name": "eye",
+      "label": "FOLLOW · TURN ON NOTIFICATIONS"
+     }
+    }
+   ],
+   "thumb": {
+    "lines": [
+     "GATE",
+     "TO HELL"
+    ],
+    "red": 1,
+    "photo_search": "Ploutonion Hierapolis"
+   },
+   "broll": [
+    "Ploutonion Hierapolis",
+    "Hierapolis",
+    "Pluto statue",
+    "Hierapolis ruins"
+   ],
+   "publish": {
+    "title": "The Real Gate to Hell Is in Türkiye 🔥 Part 3 #shorts",
+    "description": "The Ploutonion of Hierapolis: an ancient cave where animals died instantly. Rediscovered by Italian archaeologists in 2013; the killer was carbon dioxide.\n\nSeries: Secrets of Pamukkale & Hierapolis — Part 3/5. Watch all parts on the channel.",
+    "hashtags": [
+     "#pamukkale",
+     "#hierapolis",
+     "#turkey",
+     "#history",
+     "#shorts"
+    ]
+   }
+  },
+  {
+   "beats": [
+    {
+     "say": "In this pool, people swim between *ancient columns*.",
+     "show": {
+      "type": "photo",
+      "search": "Antique Pool Pamukkale",
+      "label": "ANTIQUE POOL · PAMUKKALE",
+      "extra": 2
+     },
+     "sfx": "hit"
+    },
+    {
+     "say": "The columns fell into the water during an *earthquake* in Hierapolis.",
+     "show": {
+      "type": "photo",
+      "search": "Cleopatra pool Hierapolis",
+      "label": "TOPPLED BY AN EARTHQUAKE",
+      "extra": 2
+     }
+    },
+    {
+     "say": "The water stays around *36 degrees* all year.",
+     "show": {
+      "type": "number",
+      "value": "36",
+      "label": "°C ALL YEAR"
+     },
+     "sfx": "riser"
+    },
+    {
+     "say": "Its famous nickname: *Cleopatra's Pool*.",
+     "show": {
+      "type": "title",
+      "lines": [
+       "CLEOPATRA'S",
+       "POOL"
+      ],
+      "red": 1
+     }
+    },
+    {
+     "say": "According to legend, Mark Antony gave it to Cleopatra as a *gift*.",
+     "show": {
+      "type": "icon",
+      "name": "star",
+      "label": "THE LEGEND"
+     }
+    },
+    {
+     "say": "But there's *no evidence* she ever swam here.",
+     "show": {
+      "type": "title",
+      "lines": [
+       "NO",
+       "EVIDENCE"
+      ],
+      "red": 2
+     }
+    },
+    {
+     "say": "Marble column pieces still lie on the *bottom* of the pool.",
+     "show": {
+      "type": "photo",
+      "search": "Cleopatra pool Hierapolis",
+      "label": "COLUMNS UNDERWATER",
+      "extra": 2
+     }
+    },
+    {
+     "say": "In ancient times, Hierapolis was already a *healing* city.",
+     "show": {
+      "type": "photo",
+      "search": "Hierapolis",
+      "label": "CITY OF HEALING WATERS",
+      "extra": 2
+     }
+    },
+    {
+     "say": "People traveled from far away to bathe in its *hot springs*.",
+     "show": {
+      "type": "photo",
+      "search": "Pamukkale",
+      "label": "ANCIENT SPA",
+      "extra": 2
+     }
+    },
+    {
+     "say": "And the water still *fizzes* with bubbles today.",
+     "show": {
+      "type": "photo",
+      "search": "Antique Pool Pamukkale",
+      "label": "BUBBLING WATER",
+      "extra": 2
+     }
+    },
+    {
+     "say": "In Part 5: one of the *oldest machines* ever drawn.",
+     "show": {
+      "type": "title",
+      "lines": [
+       "PART 5",
+       "THE OLDEST",
+       "MACHINE"
+      ],
+      "red": 1
+     }
+    },
+    {
+     "say": "*Follow* so you don't miss it.",
+     "show": {
+      "type": "icon",
+      "name": "eye",
+      "label": "FOLLOW · TURN ON NOTIFICATIONS"
+     }
+    }
+   ],
+   "thumb": {
+    "lines": [
+     "SWIM WITH",
+     "RUINS"
+    ],
+    "red": 1,
+    "photo_search": "Antique Pool Pamukkale"
+   },
+   "broll": [
+    "Antique Pool Pamukkale",
+    "Cleopatra pool Hierapolis",
+    "Hierapolis",
+    "Pamukkale"
+   ],
+   "publish": {
+    "title": "Swim Between 2,000-Year-Old Columns 🏊 Part 4 #shorts",
+    "description": "The Antique Pool of Pamukkale, known as Cleopatra's Pool: warm spring water over ancient columns toppled by an earthquake. The legend and the facts.\n\nSeries: Secrets of Pamukkale & Hierapolis — Part 4/5. Watch all parts on the channel.",
+    "hashtags": [
+     "#pamukkale",
+     "#hierapolis",
+     "#turkey",
+     "#history",
+     "#shorts"
+    ]
+   }
+  },
+  {
+   "beats": [
+    {
+     "say": "A tomb near Pamukkale has a *machine* carved on it.",
+     "show": {
+      "type": "photo",
+      "search": "Hierapolis sawmill",
+      "label": "TOMB OF AMMIANOS",
+      "extra": 2
+     },
+     "sfx": "hit"
+    },
+    {
+     "say": "The necropolis of Hierapolis holds *more than 1,200* tombs.",
+     "show": {
+      "type": "photo",
+      "search": "Hierapolis necropolis",
+      "label": "HIERAPOLIS NECROPOLIS",
+      "extra": 2
+     }
+    },
+    {
+     "say": "One belongs to a craftsman named Marcus Aurelius *Ammianos*.",
+     "show": {
+      "type": "photo",
+      "search": "Hierapolis necropolis tomb",
+      "label": "A CRAFTSMAN'S TOMB",
+      "extra": 2
+     }
+    },
+    {
+     "say": "It shows a water-powered *stone-cutting saw*.",
+     "show": {
+      "type": "list",
+      "items": [
+       "WATER WHEEL",
+       "CRANK",
+       "SAW BLADES"
+      ]
+     },
+     "sfx": "riser"
+    },
+    {
+     "say": "It's the earliest known image of a *crank and connecting rod*.",
+     "show": {
+      "type": "title",
+      "lines": [
+       "EARLIEST",
+       "KNOWN"
+      ],
+      "red": 2
+     }
+    },
+    {
+     "say": "It was carved about *1,700 years* ago, in the 3rd century AD.",
+     "show": {
+      "type": "number",
+      "value": "1,700",
+      "label": "YEARS OLD"
+     }
+    },
+    {
+     "say": "Engineering long before the *Industrial Revolution*.",
+     "show": {
+      "type": "title",
+      "lines": [
+       "ANCIENT",
+       "ENGINEERING"
+      ],
+      "red": 2
+     }
+    },
+    {
+     "say": "The city's huge *theatre* is still standing.",
+     "show": {
+      "type": "photo",
+      "search": "Hierapolis theatre",
+      "label": "HIERAPOLIS THEATRE",
+      "extra": 2
+     }
+    },
+    {
+     "say": "And the apostle *Philip* is believed to have died here.",
+     "show": {
+      "type": "photo",
+      "search": "Martyrium of Saint Philip Hierapolis",
+      "label": "MARTYRIUM OF ST PHILIP",
+      "extra": 2
+     }
+    },
+    {
+     "say": "Series finale! Would you visit Pamukkale? *Comment* below.",
+     "show": {
+      "type": "title",
+      "lines": [
+       "WOULD YOU",
+       "VISIT?"
+      ],
+      "red": 2
+     }
+    },
+    {
+     "say": "*Follow* for the next hidden story.",
+     "show": {
+      "type": "icon",
+      "name": "eye",
+      "label": "FOLLOW · TURN ON NOTIFICATIONS"
+     }
+    }
+   ],
+   "thumb": {
+    "lines": [
+     "A MACHINE",
+     "ON A TOMB"
+    ],
+    "red": 1,
+    "photo_search": "Hierapolis sawmill"
+   },
+   "broll": [
+    "Hierapolis necropolis",
+    "Hierapolis sawmill",
+    "Hierapolis theatre",
+    "Martyrium of Saint Philip Hierapolis"
+   ],
+   "publish": {
+    "title": "There's a Machine Carved on This Tomb ⚙️ Part 5 #shorts",
+    "description": "The Hierapolis necropolis and the tomb of Marcus Aurelius Ammianos, whose relief shows a water-powered stone saw: the earliest known crank and connecting rod. Plus Saint Philip.\n\nSeries: Secrets of Pamukkale & Hierapolis — Part 5/5. Watch all parts on the channel.",
+    "hashtags": [
+     "#pamukkale",
+     "#hierapolis",
+     "#turkey",
+     "#history",
+     "#shorts"
+    ]
+   }
+  }
+ ],
+ "logo": {
+  "brand": "HIDDEN TÜRKİYE",
+  "mono": "HT"
+ }
+}
