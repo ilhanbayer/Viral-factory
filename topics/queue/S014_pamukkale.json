@@ -170,7 +170,9 @@
       "type": "photo",
       "search": "Pamukkale",
       "label": "TEPEDEKİ OTELLER",
-      "extra": 2
+      "extra": 2,
+      "ai": "1980s hotels and a paved road built directly on top of the white travertine terraces of Pamukkale, tourists and parked cars, faded color photograph",
+      "ai_first": true
      }
     },
     {
@@ -197,12 +199,12 @@
     {
      "say": "Anlatılana göre insanlar teraslarda *motosikletle* bile geziyordu.",
      "show": {
-      "type": "title",
-      "lines": [
-       "TERASLARDA",
-       "MOTOSİKLET"
-      ],
-      "red": 2
+      "type": "photo",
+      "search": "Pamukkale travertines",
+      "label": "TERASLARDA MOTOSİKLET",
+      "extra": 2,
+      "ai": "a 1980s motorbike riding across the white travertine pools of Pamukkale, splashing water, faded color photograph",
+      "ai_first": true
      }
     },
     {
@@ -321,20 +323,22 @@
     {
      "say": "Coğrafyacı *Strabon* içine kuş attığını, kuşların hemen öldüğünü yazdı.",
      "show": {
-      "type": "quote",
-      "text": "İçeri giren her canlı hemen ölür.",
-      "who": "STRABON"
+      "type": "photo",
+      "search": "Strabo",
+      "label": "COĞRAFYACI STRABON",
+      "extra": 2,
+      "ai": "ancient Greek geographer Strabo in a white himation releasing small sparrows toward a dark misty cave entrance among Roman ruins, early morning"
      }
     },
     {
      "say": "Ama rahipler içeri girip *sağ* çıkıyordu.",
      "show": {
-      "type": "title",
-      "lines": [
-       "RAHİPLER",
-       "SAĞ ÇIKIYORDU"
-      ],
-      "red": 2
+      "type": "photo",
+      "search": "Ploutonion Hierapolis",
+      "label": "RAHİPLER SAĞ ÇIKIYOR",
+      "extra": 2,
+      "ai": "tall ancient eunuch priests of Cybele in long robes walking out of a steaming cave entrance at Hierapolis, a sacrificial bull collapsed on the misty ground, dawn light",
+      "ai_first": true
      },
      "sfx": "riser"
     },
@@ -350,9 +354,12 @@
     {
      "say": "Kazı sırasında yaklaşan *kuşların* öldüğü görüldü.",
      "show": {
-      "type": "icon",
-      "name": "question",
-      "label": "KUŞLAR NEDEN ÖLDÜ?"
+      "type": "photo",
+      "search": "Hierapolis ruins",
+      "label": "KUŞLAR NEDEN ÖLDÜ?",
+      "extra": 2,
+      "ai": "modern archaeologists in a Roman excavation at Hierapolis looking at small dead birds lying on the ground near an ancient stone arch, misty morning",
+      "ai_first": true
      }
     },
     {
@@ -474,9 +481,12 @@
     {
      "say": "Efsaneye göre Antonius burayı Kleopatra'ya *hediye* etti.",
      "show": {
-      "type": "icon",
-      "name": "star",
-      "label": "EFSANE"
+      "type": "photo",
+      "search": "Cleopatra pool Hierapolis",
+      "label": "EFSANE",
+      "extra": 2,
+      "ai": "Queen Cleopatra bathing in a warm turquoise thermal pool among marble Roman columns, steam rising, golden hour",
+      "ai_first": true
      }
     },
     {
@@ -607,12 +617,12 @@
     {
      "say": "Taşta su gücüyle çalışan bir *taş kesme* makinesi var.",
      "show": {
-      "type": "list",
-      "items": [
-       "SU ÇARKI",
-       "KRANK",
-       "TESTERE"
-      ]
+      "type": "photo",
+      "search": "Hierapolis sawmill",
+      "label": "SU GÜCÜYLE TAŞ KESME",
+      "extra": 2,
+      "ai": "reconstruction of a 3rd century Roman water-powered stone sawmill: a large wooden water wheel driving cranks and connecting rods that move two saw blades through marble blocks, Hierapolis",
+      "ai_first": true
      },
      "sfx": "riser"
     },

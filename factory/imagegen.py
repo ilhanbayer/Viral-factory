@@ -15,10 +15,20 @@ STYLE = ("soft global illumination, subsurface scattering, warm rim light, vibra
 UA = {"User-Agent": "viral-factory/1.0 (https://github.com/ilhanbayer/viral-factory)"}
 
 
-def gen(prompt, w, h, seed, out, model="flux", tries=5):
+DOC_PRE = "photorealistic historical documentary reconstruction, cinematic still: "
+DOC_STYLE = ("shot on 35mm film, natural light, realistic textures, accurate period details, muted documentary color grade, "
+             "shallow depth of field, highly detailed, no text, no letters, no watermark, no logo, no modern objects")
+
+
+def gen_doc(prompt, w, h, seed, out, tries=4):
+    """Belgesel tarzı foto-gerçekçi canlandırma (Commons'ta uygun fotoğraf olmayan sahneler için)."""
+    return gen(prompt, w, h, seed, out, tries=tries, pre=DOC_PRE, style=DOC_STYLE)
+
+
+def gen(prompt, w, h, seed, out, model="flux", tries=5, pre=None, style=None):
     if os.path.exists(out) and os.path.getsize(out) > 20000:
         return out
-    full = f"{PRE}{prompt}. {STYLE}"
+    full = f"{PRE if pre is None else pre}{prompt}. {STYLE if style is None else style}"
     q = urllib.parse.quote(full[:1800], safe="")
     url = (f"https://image.pollinations.ai/prompt/{q}?width={w}&height={h}&seed={seed}&model={model}"
            f"&nologo=true&private=true&enhance=false")

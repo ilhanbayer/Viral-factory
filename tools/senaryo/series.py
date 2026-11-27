@@ -1,6 +1,12 @@
 import json
-def P(search, label, fb=None, extra=2):
-    return {"type":"photo","search":search,"label":label,"extra":extra,**({"fallback_show":fb} if fb else {})}
+def P(search, label, fb=None, extra=2, ai=None, ai_first=False):
+    """Commons fotoğrafı; ai=İngilizce sahne tarifi verilirse fotoğraf bulunamazsa (ai_first=True ise doğrudan)
+    yapay zekâ ile belgesel tarzı temsili canlandırma üretilir (etikete 'AI · TEMSİLİ' eklenir)."""
+    d={"type":"photo","search":search,"label":label,"extra":extra,**({"fallback_show":fb} if fb else {})}
+    if ai:
+        d["ai"]=ai
+        if ai_first: d["ai_first"]=True
+    return d
 def T(l,r=1): return {"type":"title","lines":l,"red":r}
 def L(*it): return {"type":"list","items":list(it)}
 def PL(n,s): return {"type":"place","name":n,"sub":s}

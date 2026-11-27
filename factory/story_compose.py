@@ -374,6 +374,32 @@ def fetch_broll(terms, cache, n=3):
     return paths
 
 
+def _ai_photo(sh, cache):
+    """Sahne için yapay zekâ ile belgesel tarzı canlandırma üret (Pollinations, ücretsiz). Etikete 'TEMSİLİ' eklenir."""
+    sh["_ai_tried"] = True
+    try:
+        from factory import imagegen as IG
+        fn = os.path.join(cache, "ai_" + str(IG.seed_for(sh["ai"])) + ".jpg")
+        r = IG.gen_doc(sh["ai"], 1088, 1344, IG.seed_for(sh["ai"]) % 100000, fn)
+    except Exception as e:
+        print("  [ai-görsel] hata:", type(e).__name__, str(e)[:80])
+        r = None
+    if not r:
+        print("  [ai-görsel] üretilemedi:", sh["ai"][:60])
+        return False
+    sh["_local"] = r
+    sh["_ai"] = True
+    tag = "AI · TEMSİLİ" if ST.LANG != "en" else "AI ILLUSTRATION"
+    lab = sh.get("label") or ""
+    sh["label"] = (lab + " · " + tag) if lab else tag
+    AI_USED[0] = True
+    print("  [ai-görsel] üretildi:", sh["ai"][:60])
+    return True
+
+
+AI_USED = [False]
+
+
 def fetch_photos(beats, cache):
     """'photo' sahneleri: url, commons (dosya adı) ya da search (arama) ile telifsiz görsel indir.
     Bulunamazsa 'fallback_scene' varsa sahne canlandırmasına, yoksa ikona düşer."""
@@ -385,6 +411,9 @@ def fetch_photos(beats, cache):
         if sh.get("type") != "photo" or sh.get("_local"):
             continue
         url, credit = sh.get("url"), sh.get("credit")
+        if sh.get("ai") and (sh.get("ai_first") or not (sh.get("commons") or sh.get("search") or url)):
+            if _ai_photo(sh, cache):
+                continue
         if not url and (sh.get("commons") or sh.get("search")):
             url, credit = commons_lookup(sh.get("commons"), sh.get("search"))
             if not url and sh.get("commons") and sh.get("search"):
@@ -399,6 +428,9 @@ def fetch_photos(beats, cache):
                 except Exception as e:
                     print("  [foto] indirilemedi:", url[:80], type(e).__name__)
                     fn = None
+        if not fn and sh.get("ai") and not sh.get("_ai_tried"):
+            if _ai_photo(sh, cache):
+                continue
         if not fn:
             print("  [foto] bulunamadı:", sh.get("commons") or sh.get("search") or sh.get("url"))
             fb = sh.get("fallback_show") or sh.get("fallback_scene")
@@ -571,6 +603,7 @@ def produce_one(vid, beats, fmt, brand, theme, publish, out_dir, use_tts=True, w
     work = os.path.join(out_dir, vid + "_work")
     os.makedirs(work, exist_ok=True)
     print(f"▶ {vid} [{fmt}]: seslendirme + zaman çizelgesi")
+    AI_USED[0] = False
     fetch_photos(beats, os.path.join(out_dir, "_photos"))
     if beats and beats[0].get("show", {}).get("type") == "photo":
         beats[0]["show"].setdefault("circle", True)   # kanca: ilk fotoğrafta kırmızı daire vurgusu
@@ -633,6 +666,9 @@ def produce_one(vid, beats, fmt, brand, theme, publish, out_dir, use_tts=True, w
     desc = publish.get("description", "") + (("\n\n" + ch) if ch else "")
     if CREDITS:
         desc += ("\n\nGörseller: Wikimedia Commons — " if ST.LANG == "tr" else "\n\nImages: Wikimedia Commons — ") + "; ".join(CREDITS[:30])
+    if AI_USED[0]:
+        desc += ("\n\n'AI · TEMSİLİ' etiketli sahneler yapay zekâyla üretilmiş temsili canlandırmalardır."
+                 if ST.LANG == "tr" else "\n\nScenes labeled 'AI ILLUSTRATION' are AI-generated reconstructions, not real photos.")
     meta = f"{publish.get('title', vid)}\n\n{desc}\n\n{' '.join(publish.get('hashtags', []))}\n"
     open(os.path.join(out_dir, vid + "_metadata.txt"), "w", encoding="utf-8").write(meta)
     kp = os.path.join(out_dir, vid + "_kapak.jpg")

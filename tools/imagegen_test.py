@@ -1,30 +1,17 @@
-"""Yeni özgün karakterlerle 3D çizgi film kalitesi testi (kullanıcının referans görseli tarzında)."""
+"""Belgesel tarzı yapay zekâ canlandırma testi (Pollinations flux, ücretsiz): S014 Pamukkale sahneleri."""
 import os, sys, time
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-from factory.imagegen import gen
+from factory.imagegen import gen_doc
 
 os.makedirs("imgtest", exist_ok=True)
-
-PITIR = ("Pitir, a small cute young hedgehog boy with a round chubby body, soft light-brown quills, big shiny green eyes, "
-         "freckled pink nose, wearing a yellow knitted scarf and a small brown leather satchel, real hedgehog anatomy")
-FINDIK = ("Findik, a lively red squirrel girl with a huge fluffy orange tail, big amber eyes, wearing a little green hooded cape "
-          "and an acorn-cap hat, real squirrel anatomy")
-HUMA = ("Huma, a wise old snowy owl grandmother with round golden spectacles on her beak, soft white feathers "
-        "and a knitted purple shawl, real owl anatomy")
-WORLD = ("in an enchanted lush forest village with giant old trees that have tiny wooden doors and glowing round windows, "
-         "oversized colorful mushrooms, ferns, giant fruits and berries, warm golden afternoon sunlight through the leaves, "
-         "blue sky with fluffy clouds, depth of field")
-
 scenes = [
-    (f"{PITIR} and {FINDIK} standing on a stone forest path talking excitedly, {WORLD}", 1344, 768),
-    (f"{FINDIK} proudly carrying a giant acorn above her head while {PITIR} laughs, {WORLD}", 1344, 768),
-    (f"{HUMA} reading an old book to {PITIR} by a glowing lantern on a tree branch at dusk, fireflies, warm magical light", 1344, 768),
-    (f"{PITIR} and {FINDIK} sheltering together under a big green leaf umbrella in the rain, puddles, cozy tree house lights behind", 1344, 768),
-    (f"close-up of {PITIR} looking surprised with wide eyes, {WORLD}", 768, 1344),
-    (f"{FINDIK} jumping between branches with her tail flowing, {WORLD}", 768, 1344),
+    "tall ancient eunuch priests of Cybele in long robes walking out of a steaming cave entrance at Hierapolis, a sacrificial bull collapsed on the misty ground, dawn light",
+    "1980s hotels and a paved road built directly on top of the white travertine terraces of Pamukkale, tourists and parked cars, faded color photograph",
+    "reconstruction of a 3rd century Roman water-powered stone sawmill: a large wooden water wheel driving cranks and connecting rods that move two saw blades through marble blocks, Hierapolis",
+    "Queen Cleopatra bathing in a warm turquoise thermal pool among marble Roman columns, steam rising, golden hour",
 ]
-for k, (p, w, h) in enumerate(scenes):
+for k, p in enumerate(scenes):
     t0 = time.time()
-    r = gen(p, w, h, 900 + k, f"imgtest/{k}_flux.jpg", model="flux", tries=4)
+    r = gen_doc(p, 1088, 1344, 4200 + k, f"imgtest/doc{k}.jpg")
     time.sleep(5)
     print(k, "OK" if r else "FAIL", round(time.time() - t0, 1), "s", flush=True)

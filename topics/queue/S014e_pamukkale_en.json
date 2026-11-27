@@ -169,7 +169,9 @@
       "type": "photo",
       "search": "Pamukkale",
       "label": "HOTELS ON THE HILL",
-      "extra": 2
+      "extra": 2,
+      "ai": "1980s hotels and a paved road built directly on top of the white travertine terraces of Pamukkale, tourists and parked cars, faded color photograph",
+      "ai_first": true
      }
     },
     {
@@ -196,12 +198,12 @@
     {
      "say": "Reportedly, people even rode *motorbikes* across the terraces.",
      "show": {
-      "type": "title",
-      "lines": [
-       "MOTORBIKES",
-       "ON THE POOLS"
-      ],
-      "red": 2
+      "type": "photo",
+      "search": "Pamukkale travertines",
+      "label": "MOTORBIKES ON THE POOLS",
+      "extra": 2,
+      "ai": "a 1980s motorbike riding across the white travertine pools of Pamukkale, splashing water, faded color photograph",
+      "ai_first": true
      }
     },
     {
@@ -319,20 +321,22 @@
     {
      "say": "The geographer *Strabo* wrote that sparrows he threw inside died at once.",
      "show": {
-      "type": "quote",
-      "text": "Any animal that enters meets instant death.",
-      "who": "STRABO"
+      "type": "photo",
+      "search": "Strabo",
+      "label": "GEOGRAPHER STRABO",
+      "extra": 2,
+      "ai": "ancient Greek geographer Strabo in a white himation releasing small sparrows toward a dark misty cave entrance among Roman ruins, early morning"
      }
     },
     {
      "say": "Yet the priests walked in and came out *alive*.",
      "show": {
-      "type": "title",
-      "lines": [
-       "THE PRIESTS",
-       "SURVIVED"
-      ],
-      "red": 2
+      "type": "photo",
+      "search": "Ploutonion Hierapolis",
+      "label": "THE PRIESTS SURVIVED",
+      "extra": 2,
+      "ai": "tall ancient eunuch priests of Cybele in long robes walking out of a steaming cave entrance at Hierapolis, a sacrificial bull collapsed on the misty ground, dawn light",
+      "ai_first": true
      },
      "sfx": "riser"
     },
@@ -348,9 +352,12 @@
     {
      "say": "During the dig, birds flying too close *dropped dead*.",
      "show": {
-      "type": "icon",
-      "name": "question",
-      "label": "WHY DID BIRDS DIE?"
+      "type": "photo",
+      "search": "Hierapolis ruins",
+      "label": "WHY DID BIRDS DIE?",
+      "extra": 2,
+      "ai": "modern archaeologists in a Roman excavation at Hierapolis looking at small dead birds lying on the ground near an ancient stone arch, misty morning",
+      "ai_first": true
      }
     },
     {
@@ -472,9 +479,12 @@
     {
      "say": "According to legend, Mark Antony gave it to Cleopatra as a *gift*.",
      "show": {
-      "type": "icon",
-      "name": "star",
-      "label": "THE LEGEND"
+      "type": "photo",
+      "search": "Cleopatra pool Hierapolis",
+      "label": "THE LEGEND",
+      "extra": 2,
+      "ai": "Queen Cleopatra bathing in a warm turquoise thermal pool among marble Roman columns, steam rising, golden hour",
+      "ai_first": true
      }
     },
     {
@@ -604,12 +614,12 @@
     {
      "say": "It shows a water-powered *stone-cutting saw*.",
      "show": {
-      "type": "list",
-      "items": [
-       "WATER WHEEL",
-       "CRANK",
-       "SAW BLADES"
-      ]
+      "type": "photo",
+      "search": "Hierapolis sawmill",
+      "label": "WATER-POWERED STONE SAW",
+      "extra": 2,
+      "ai": "reconstruction of a 3rd century Roman water-powered stone sawmill: a large wooden water wheel driving cranks and connecting rods that move two saw blades through marble blocks, Hierapolis",
+      "ai_first": true
      },
      "sfx": "riser"
     },
