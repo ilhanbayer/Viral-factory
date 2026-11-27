@@ -50,9 +50,10 @@
     {
      "say": "Each column is about *9 meters* tall.",
      "show": {
-      "type": "number",
-      "value": "9",
-      "label": "METER COLUMNS"
+      "type": "building",
+      "kind": "columns",
+      "label": "9 METERS",
+      "tag": "336 COLUMNS"
      },
      "sfx": "riser"
     },
@@ -68,20 +69,22 @@
     {
      "say": "When full, it held around *80,000 tons* of water.",
      "show": {
-      "type": "number",
+      "type": "doc",
+      "org": "CISTERN",
+      "row": "BASILICA CISTERN",
       "value": "80,000",
-      "label": "TONS OF WATER"
+      "unit": "TONS OF WATER",
+      "year": "532",
+      "sub": "BYZANTINE ERA · APPROXIMATE"
      }
     },
     {
      "say": "Locals in Istanbul call it *Yerebatan*: the sunken palace.",
      "show": {
-      "type": "title",
-      "lines": [
-       "THE SUNKEN",
-       "PALACE"
-      ],
-      "red": 2
+      "type": "sign",
+      "text": "YEREBATAN SARAYI",
+      "style": "brown",
+      "tag": "THE SUNKEN PALACE"
      }
     },
     {
@@ -155,12 +158,17 @@
     {
      "say": "After 1453, the cistern slowly *disappeared* from memory.",
      "show": {
-      "type": "title",
-      "lines": [
-       "FORGOTTEN",
-       "FOR A CENTURY"
+      "type": "map",
+      "pins": [
+       {
+        "at": "İstanbul",
+        "label": "Sultanahmet"
+       }
       ],
-      "red": 2
+      "focus": "İstanbul",
+      "zoom": 3,
+      "title": "1453",
+      "sub": "then forgotten"
      }
     },
     {
@@ -265,12 +273,10 @@
     {
      "say": "One lies *sideways*. The other is completely *upside down*.",
      "show": {
-      "type": "title",
-      "lines": [
-       "ONE SIDEWAYS",
-       "ONE UPSIDE DOWN"
-      ],
-      "red": 2
+      "type": "split",
+      "top": "SIDEWAYS",
+      "bottom": "UPSIDE DOWN",
+      "badge": "MEDUSA"
      }
     },
     {
@@ -285,9 +291,8 @@
     {
      "say": "Nobody knows exactly where these heads *came from*.",
      "show": {
-      "type": "icon",
-      "name": "question",
-      "label": "WHO BROUGHT THEM?"
+      "type": "qmark",
+      "word": "WHO BROUGHT THEM?"
      },
      "sfx": "riser"
     },
@@ -314,12 +319,8 @@
     {
      "say": "But according to legend, flipping her *cancels* her deadly gaze.",
      "show": {
-      "type": "title",
-      "lines": [
-       "HER GAZE",
-       "CANCELLED"
-      ],
-      "red": 2
+      "type": "tape",
+      "text": "LEGEND"
      }
     },
     {
@@ -404,24 +405,18 @@
     {
      "say": "Reportedly, *hundreds of workers* died building the cistern.",
      "show": {
-      "type": "title",
-      "lines": [
-       "HUNDREDS",
-       "OF WORKERS"
-      ],
-      "red": 1
+      "type": "ratio",
+      "n": 10,
+      "k": 10,
+      "title": "HUNDREDS OF WORKERS"
      },
      "sfx": "riser"
     },
     {
      "say": "Legend says the column is *crying* for them.",
      "show": {
-      "type": "title",
-      "lines": [
-       "CRYING",
-       "FOR THEM"
-      ],
-      "red": 2
+      "type": "tape",
+      "text": "LEGEND"
      }
     },
     {
@@ -523,9 +518,10 @@
     {
      "say": "Scenes of *From Russia with Love* were filmed here in 1963.",
      "show": {
-      "type": "number",
-      "value": "1963",
-      "label": "BOND FILM"
+      "type": "sign",
+      "text": "FROM RUSSIA WITH LOVE",
+      "style": "white",
+      "tag": "1963"
      }
     },
     {
@@ -549,21 +545,20 @@
     {
      "say": "In 2017 it closed for *earthquake* strengthening.",
      "show": {
-      "type": "title",
-      "lines": [
-       "EARTHQUAKE",
-       "STRENGTHENING"
-      ],
-      "red": 1
+      "type": "building",
+      "kind": "columns",
+      "label": "STRENGTHENING",
+      "tag": "2017"
      },
      "sfx": "riser"
     },
     {
      "say": "It reopened in 2022 with new lights and *art installations*.",
      "show": {
-      "type": "number",
-      "value": "2022",
-      "label": "REOPENED"
+      "type": "sign",
+      "text": "REOPENED",
+      "style": "green",
+      "tag": "2022"
      }
     },
     {
@@ -587,13 +582,10 @@
     {
      "say": "Series finale! Would you visit? *Comment* below.",
      "show": {
-      "type": "title",
-      "lines": [
-       "WOULD YOU",
-       "GO DOWN",
-       "THERE?"
-      ],
-      "red": 2
+      "type": "split",
+      "top": "I WOULD",
+      "bottom": "NO WAY",
+      "badge": "GO DOWN?"
      }
     },
     {

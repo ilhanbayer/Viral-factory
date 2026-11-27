@@ -50,9 +50,10 @@
     {
      "say": "Sütunların her biri yaklaşık *9 metre* yüksekliğinde.",
      "show": {
-      "type": "number",
-      "value": "9",
-      "label": "METRE SÜTUN"
+      "type": "building",
+      "kind": "columns",
+      "label": "9 METRE",
+      "tag": "336 SÜTUN"
      },
      "sfx": "riser"
     },
@@ -68,9 +69,13 @@
     {
      "say": "Tamamen dolunca yaklaşık *80 bin ton* su alabiliyordu.",
      "show": {
-      "type": "number",
+      "type": "doc",
+      "org": "SARNIÇ",
+      "row": "YEREBATAN",
       "value": "80.000",
-      "label": "TON SU"
+      "unit": "TON SU",
+      "year": "532",
+      "sub": "BİZANS DÖNEMİ · YAKLAŞIK DEĞER"
      }
     },
     {
@@ -85,12 +90,9 @@
     {
      "say": "Halk ise suyun içinden yükselen sütunlara bakıp ona *saray* dedi.",
      "show": {
-      "type": "title",
-      "lines": [
-       "YERE BATAN",
-       "SARAY"
-      ],
-      "red": 2
+      "type": "sign",
+      "text": "YEREBATAN SARAYI",
+      "style": "brown"
      }
     },
     {
@@ -165,12 +167,17 @@
     {
      "say": "İstanbul'un fethinden sonra sarnıç yavaş yavaş *unutuldu*.",
      "show": {
-      "type": "title",
-      "lines": [
-       "YÜZ YILLARCA",
-       "UNUTULDU"
+      "type": "map",
+      "pins": [
+       {
+        "at": "İstanbul",
+        "label": "Sultanahmet"
+       }
       ],
-      "red": 2
+      "focus": "İstanbul",
+      "zoom": 3,
+      "title": "1453",
+      "sub": "sonra unutuldu"
      }
     },
     {
@@ -216,12 +223,8 @@
     {
      "say": "Sence evinin altında böyle bir yer olsa ne yapardın? *Yorumlara yaz*.",
      "show": {
-      "type": "title",
-      "lines": [
-       "EVİNİN ALTINDA",
-       "OLSA?"
-      ],
-      "red": 2
+      "type": "qmark",
+      "word": "EVİNİN ALTINDA?"
      }
     },
     {
@@ -287,12 +290,10 @@
     {
      "say": "Biri *yan* yatırılmış, diğeri tamamen *ters* çevrilmiş.",
      "show": {
-      "type": "title",
-      "lines": [
-       "BİRİ YAN",
-       "BİRİ TERS"
-      ],
-      "red": 2
+      "type": "split",
+      "top": "BİRİ YAN",
+      "bottom": "BİRİ TERS",
+      "badge": "MEDUSA"
      }
     },
     {
@@ -307,9 +308,8 @@
     {
      "say": "Bu başların nereden geldiği hâlâ tam olarak *bilinmiyor*.",
      "show": {
-      "type": "icon",
-      "name": "question",
-      "label": "KİM GETİRDİ?"
+      "type": "qmark",
+      "word": "KİM GETİRDİ?"
      },
      "sfx": "riser"
     },
@@ -336,13 +336,8 @@
     {
      "say": "Ama bir efsaneye göre ters koyarak bakışının *gücünü* yok ettiler.",
      "show": {
-      "type": "title",
-      "lines": [
-       "BAKIŞI",
-       "ETKİSİZ",
-       "KALSIN DİYE"
-      ],
-      "red": 2
+      "type": "tape",
+      "text": "EFSANE"
      }
     },
     {
@@ -437,24 +432,18 @@
     {
      "say": "Anlatılana göre sarnıcın yapımında *yüzlerce işçi* hayatını kaybetti.",
      "show": {
-      "type": "title",
-      "lines": [
-       "YÜZLERCE",
-       "İŞÇİ"
-      ],
-      "red": 1
+      "type": "ratio",
+      "n": 10,
+      "k": 10,
+      "title": "YÜZLERCE İŞÇİ"
      },
      "sfx": "riser"
     },
     {
      "say": "Efsaneye göre sütun, onlar için *ağlıyor*.",
      "show": {
-      "type": "title",
-      "lines": [
-       "ONLAR İÇİN",
-       "AĞLIYOR"
-      ],
-      "red": 2
+      "type": "tape",
+      "text": "EFSANE"
      }
     },
     {
@@ -557,9 +546,10 @@
     {
      "say": "1963 yapımı *Rusya'dan Sevgilerle* filminin sahneleri burada çekildi.",
      "show": {
-      "type": "number",
-      "value": "1963",
-      "label": "BOND FİLMİ"
+      "type": "sign",
+      "text": "RUSYA'DAN SEVGİLERLE",
+      "style": "white",
+      "tag": "1963"
      }
     },
     {
@@ -583,21 +573,20 @@
     {
      "say": "2017'de sarnıç *depreme* karşı güçlendirme için kapatıldı.",
      "show": {
-      "type": "title",
-      "lines": [
-       "DEPREME KARŞI",
-       "GÜÇLENDİRME"
-      ],
-      "red": 2
+      "type": "building",
+      "kind": "columns",
+      "label": "GÜÇLENDİRME",
+      "tag": "2017"
      },
      "sfx": "riser"
     },
     {
      "say": "2022'de yeni ışıkları ve *sanat eserleriyle* yeniden açıldı.",
      "show": {
-      "type": "number",
-      "value": "2022",
-      "label": "YENİDEN AÇILDI"
+      "type": "sign",
+      "text": "YENİDEN AÇIK",
+      "style": "green",
+      "tag": "2022"
      }
     },
     {
@@ -621,13 +610,10 @@
     {
      "say": "Dizinin sonu! Sen Yerebatan'a gittin mi? *Yorumlara yaz*.",
      "show": {
-      "type": "title",
-      "lines": [
-       "SEN",
-       "YEREBATAN'A",
-       "GİTTİN Mİ?"
-      ],
-      "red": 2
+      "type": "split",
+      "top": "GİTTİM",
+      "bottom": "GİTMEDİM",
+      "badge": "YEREBATAN"
      }
     },
     {

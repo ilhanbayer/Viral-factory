@@ -44,3 +44,23 @@ def build(sid, title, brand, theme, broll, parts, series_name, lang="tr", voice=
        "voice":voice or {"engine":"edge","speaker":"ahmet","rate":"+0%","pitch":"-2Hz"},"broll":broll,"parts":out}
     if logo: d["logo"]=logo
     json.dump(d,open(f"/home/claude/viral-factory/topics/queue/{sid}.json","w"),ensure_ascii=False,indent=1)
+
+# ---- hareketli infografik sahneleri (factory/mograph.py) ----
+def MAP(**k): return {"type":"map",**k}
+def SIGN(text, style="blue", **k): return {"type":"sign","text":text,"style":style,**k}
+def DOC(org, row, value=None, unit=None, year=None, sub=None):
+    d={"type":"doc","org":org,"row":row}
+    for kk,v in (("value",value),("unit",unit),("year",year),("sub",sub)):
+        if v: d[kk]=str(v)
+    return d
+def POD(win, **k): return {"type":"podium","win":win,**k}
+def RANK(pos, name, title=None): return {"type":"rank","pos":pos,"name":name,**({"title":title} if title else {})}
+def RATIO(n, k, title=None): return {"type":"ratio","n":n,"k":k,**({"title":title} if title else {})}
+def SPLIT(top, bottom, badge=None): return {"type":"split","top":top,"bottom":bottom,**({"badge":badge} if badge else {})}
+def TAPE(text): return {"type":"tape","text":text}
+def BLD(kind, label=None, tag=None, title=None):
+    d={"type":"building","kind":kind}
+    for kk,v in (("label",label),("tag",tag),("title",title)):
+        if v: d[kk]=v
+    return d
+def QM(word): return {"type":"qmark","word":word}

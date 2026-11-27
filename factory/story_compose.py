@@ -15,6 +15,7 @@ from . import tts
 from . import audio as A
 from . import story as ST
 from . import broll as BR
+from . import mograph as MG
 from .graphics import word_timings
 
 FPS = 30
@@ -160,9 +161,13 @@ def render_chunk(args):
         for k in frames:
             t = k / FPS
             gt = s["start"] + t
-            fr = atm.apply(bg, gt, ST.C["glow"])
-            cs = BR.current_shot(s, t)
-            bdp = None if cs else s.get("bd")
+            is_mg = show.get("type") in MG.TYPES
+            if is_mg:   # hareketli infografik: düz renkli dokulu zemin, b-roll yok
+                fr = MG.background(MG.bg_kind(show), W, H).copy()
+            else:
+                fr = atm.apply(bg, gt, ST.C["glow"])
+            cs = None if is_mg else BR.current_shot(s, t)
+            bdp = None if (cs or is_mg) else s.get("bd")
             if cs:
                 si, (t0s, sp, seed) = cs
                 bdi = BR.load_bd(sp, W, H)
@@ -183,9 +188,12 @@ def render_chunk(args):
                 bd = _backdrop(bdp, W, H)
                 if bd is not None:
                     fr = np.clip(_bd_frame(bd, W, H, gt, t, D) + fr.astype(np.float32) * 0.55, 0, 255).astype(np.uint8)
-            ST.ghost_word(fr, kw, t, D, W, H, u)
             layer = Image.new("RGBA", (W, H), (0, 0, 0, 0))
-            ST.draw_visual(layer, show, t, D, cx, cy, u)
+            if is_mg:
+                MG.draw(layer, show, t, D, u)
+            else:
+                ST.ghost_word(fr, kw, t, D, W, H, u)
+                ST.draw_visual(layer, show, t, D, cx, cy, u)
             la = np.array(layer)
             # sürekli kamera hareketi + vurgulu kelimede darbe
             punch = sum(max(0.0, 1 - (t - h) / 0.28) for h in hot if t >= h)

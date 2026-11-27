@@ -108,12 +108,15 @@ def fill_missing_photos(beats, pool):
     return n
 
 
+NO_BROLL = {"scene", "map", "sign", "doc", "podium", "rank", "ratio", "split", "tape", "building", "qmark"}
+
+
 def assign_shots(segs, pool):
     """Her sahneye çekim listesi: [(başlangıç_sn, foto_yolu, tohum)]. Sahne animasyonlarında b-roll yok."""
     k = 0
     for s in segs:
         sh = s["beat"].get("show", {})
-        if sh.get("type") == "scene" or not pool:
+        if sh.get("type") in NO_BROLL or not pool:
             s["shots"] = []
             continue
         n = max(1, int(round(s["dur"] / SHOT)))
