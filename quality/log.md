@@ -143,3 +143,10 @@ Kuyruk (kullanıcının seçtiği konular): S008 Tarsus'un Gizemli Kazısı (5 b
 - Paylaşım: S012 5 bölüm Metricool ile 1 Ara 20:30 → 3 Ara 13:00 zamanlandı; S012+S012e yatay uzun video render'ı tetiklendi. EN: Derinkuyu Part 2 (be3mFN04DKw) ve Part 3 (JYKZ5FxI8Aw) yüklendi.
 - İyileştirme (bugün): vurgulu (*) kelime söylendiği anda artık sadece yazı katmanı değil **tüm kare (arka plan fotoğrafı dahil) 0,22 sn'lik zoom darbesi** yapıyor (`story_compose.render_chunk`); yerel önizleme ile doğrulandı.
 - Kuyruk: S014 Pamukkale ve Hierapolis'in Sırları (TR, 5 bölüm) + S014e Secrets of Pamukkale & Hierapolis (EN, 5 bölüm) yazıldı.
+
+## 2026-11-27 (19:10) — S013 Yerebatan (TR) + S013e Basilica Cistern (EN): yeni hareketli infografik stilinin ilk üretimi (video-15)
+- Hata yok; süreler TR 38,5-39,6 sn, EN 33,2-35,9 sn; siyah kare yok; b-roll havuzu 21-27 (hepsi ≥ 8).
+- Yeni sahneler çalışıyor: harita + iğne, tabela, sayaçlı belge, sütun çizimi, bölünmüş ekran, uyarı şeridi, soru işareti. Altyazı çakışması yok, İngilizcede Türkçe yazı yok.
+- Referans videoya göre eksikler: (1) infografik sahneleri 3-5 sn boyunca tek görüntüde kalıyor (referansta her ~1 sn'de yeni öğe giriyor); (2) tabela/rozet yazıları (ör. "1963", "9 METRE") küçük; (3) B1'de sütun çizimi art arda iki beat'te tekrar; (4) fotoğraf sahneleri hâlâ polaroid kartı + bulanık zemin (referansta yok).
+- Puan (yeni 5 ölçüt, referansa göre): TR 8,2 / 8,0 / 8,4 / 8,0 / 8,2 · EN 8,0 / 7,8 / 8,2 / 8,0 / 8,2 → 9 hedefinin altında, PAYLAŞILMADI (takvim 3 Ara 13:00'e kadar dolu olduğu için yayın boşluğu yok).
+- Sonraki iyileştirme: infografik sahnelerine beat içinde ikinci/üçüncü öğe girişi ve sürekli kamera itmesi, tabela/rozet yazılarını büyütme, art arda aynı sahne türünü engelleme; sonra S013'ü yeniden üretip tekrar puanlama.
